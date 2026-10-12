@@ -176,3 +176,15 @@ Lecture : aucune mise à jour de plugin important (cache, SEO, thème, construct
 - Date exacte de fin du contrat et rapports mensuels de l'agence (liste des liens et articles placés).
 - Inventaire des comptes que l'agence contrôle : hébergement, WordPress, MainWP, Google Tag Manager, Analytics, Search Console, fiche Google Business Profile, droits d'auteur des articles.
 - Historique des liens perdus avec dates : Ahrefs Webmaster Tools (gratuit pour son propre site) après validation du domaine.
+
+## 14. Ahrefs Webmaster Tools (plan gratuit) : premières observations, 2026-10-12
+Limites du plan gratuit : l'historique (onglet « Lost », périodes) et l'export CSV sont verrouillés ; l'analyse se fait par captures d'écran.
+
+- Ahrefs recense 1 332 backlinks et 1 046 domaines référents (contre 192 liens et environ 92 domaines dans Google). Une grande partie est du bruit automatique.
+- Les domaines apparus le 29 septembre 2026 (37486168.xyz, ailinkbuildingtool.website, mertio.shop, strongestbacklinks.shop, competitorlinkanalysis.online, s-tribe.net, etc.) sont étiquetés SPAM par Ahrefs : sites de vente de « link building » qui lient des millions de domaines. Ils ne sont pas ciblés sur cbedard.com et sont postérieurs à la baisse de juillet. Pas de désaveu recommandé.
+- Liens de contenu dofollow les plus récents (503 au total) : annonces d'emploi `jobcqc.ca` (4 octobre) pointant vers `/carrieres` (redirigé vers `/carrieres/`), anciens PDF du journal APQ de 2010 (publicités avec le téléphone et `www.cbedard.com`, découverts fin septembre), fiches d'annuaires (`quebec-annuaire.com`, `unitedstatescompanies.org`). La date « First seen » est la date de découverte par Ahrefs, pas de création du lien.
+- Chaîne de redirections inutile : `http://www.cbedard.com/` → `https://www.cbedard.com/` → `https://cbedard.com/` (deux sauts). Cible : un seul saut.
+- Les liens vers `/carrieres` montrent que cette URL doit être conservée (CTR de 13 % dans Google).
+- Les publireportages (Les Versants, La Nouvelle Union, etc.) sont toujours en ligne.
+
+Prochaine étape : filtrer les backlinks sur « publireportage » dans l'URL de la page référente et trier par « First seen » pour dater les placements de l'ancienne agence.
