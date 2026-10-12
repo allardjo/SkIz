@@ -22,7 +22,7 @@ La cause est inconnue. À élucider avant la migration : changement de plugin, d
 - 68 pages indexées, 69 non indexées.
 - Raisons : 24 exclues par `noindex`, 16 « autre page avec canonique correcte », 12 redirections, 1 introuvable (404), 1 bloquée par robots.txt, 9 « détectées, non indexées », 6 « explorées, non indexées ».
 - À vérifier URL par URL dans Search Console (rapport Pages) : quelles 24 pages sont en `noindex`, et si ce sont bien des pages techniques (panier, compte, etc.).
-- Mon crawl du sitemap n'a trouvé aucune page `noindex` parmi les 77 URL du sitemap : les 24 sont donc ailleurs (versions `/en/`, étiquettes, paramètres, etc.).
+- Mon crawl du sitemap (corrigé après une première lecture fautive des balises) trouve 6 pages `noindex` parmi les 77 URL : panier, commande, mon-compte et leurs versions `/en/`. Les 18 autres pages `noindex` vues par Google sont hors sitemap : à identifier dans Search Console.
 
 ## 4. Les vraies pages qui rapportent (URL à protéger en priorité)
 | Page | Clics | Impressions | Position | Note |
@@ -80,3 +80,23 @@ Presque toutes les pages principales reçoivent 71-72 liens : ce sont le menu et
 - Mettre à jour le nom, le logo et les coordonnées dans les annuaires listés ci-dessus et sur Google Business Profile (cohérence NAP).
 - Demander à Aldes de vérifier que le lien fonctionne encore (leur ancien sous-domaine).
 - Demander la mise à jour du nom dans les médias régionaux quand c'est possible.
+
+## 10. Enquête sur la baisse de trafic (état au 2026-10-12)
+Réponse du client : une mise à jour ou un plugin a été modifié (détails inconnus).
+
+Vérifié, sans anomalie :
+- Googlebot et un navigateur reçoivent la même réponse (200, même poids) sur l'accueil et l'article phare : pas de blocage selon le visiteur.
+- Les dates de modification du sitemap n'indiquent aucune page modifiée depuis mars 2026 : la baisse ne vient pas d'une modification de contenu.
+- `robots.txt` ne bloque rien d'important. 71 pages sont en `index, follow`, 6 pages techniques en `noindex` (normal).
+- Les 3 anciennes URL connues de Google qui répondent en 404 ont un trafic négligeable (0 à 2 impressions) : pas la cause.
+- `robots.txt` mentionne encore des dossiers NitroPack et LiteSpeed alors que seul LiteSpeed Cache est détecté sur les pages : un ancien plugin d'optimisation a peut-être été retiré.
+
+Non vérifiable d'ici : Wayback Machine (connexion coupée), PageSpeed (quota de l'API dépassé), rapport par page dans le temps.
+
+Pistes à confirmer (par ordre de probabilité) :
+1. Mise à jour d'un plugin de cache ou d'optimisation (LiteSpeed, ancien NitroPack) qui aurait changé le rendu pour Google (JavaScript, images chargées en différé, CSS critique).
+2. Changement chez Google (mise à jour de l'algorithme ou réponses de l'IA dans les résultats), qui toucherait surtout les articles « prix ». Position moyenne stable mais impressions en baisse = moins de visibilité.
+3. Problème de vitesse ou de Core Web Vitals.
+
+Vérifications à faire dans Search Console : Comparer les 28 derniers jours à la même période de l'an passé (par pages et par requêtes), puis les rapports « Actions manuelles », « Problèmes de sécurité » et « Core Web Vitals ».
+Vérification dans le cPanel : trier `wp-content/plugins` par date de modification pour voir quel plugin a été mis à jour et quand.
