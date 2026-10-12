@@ -215,3 +215,21 @@ Lecture :
 Conclusion provisoire : l'arrêt du link building seul explique mal une baisse de 47 à 67 % des clics. Il reste un facteur possible parmi d'autres (contenu et fiche d'entreprise Google non entretenus, concurrents plus actifs, changements dans les résultats de Google).
 
 À vérifier ensuite : la fiche Google Business Profile (vues, appels, clics vers le site, par mois) et le contenu exact du contrat de l'ancienne agence (fiche d'entreprise, avis, citations, publications).
+
+## 16. Google Business Profile (mai à octobre 2026, lecture des graphiques, valeurs approximatives)
+Totaux de la période : 2 109 interactions, 875 appels, 613 clics vers le site Web.
+
+| Mois | Interactions | Appels | Clics vers le site |
+|---|---|---|---|
+| Mai 2026 | 370 | 140 | 125 |
+| Juin 2026 | 530 | 240 | 168 |
+| Juillet 2026 | 405 | 185 | 120 |
+| Août 2026 | 390 | 155 | 105 |
+| Septembre 2026 | 330 | 125 | 83 |
+| Octobre 2026 (partiel) | 90 | 40 | 20 |
+
+Lecture :
+- Pic en juin, puis baisse régulière : de juin à septembre, interactions -38 %, appels -48 %, clics vers le site -51 %.
+- La fiche génère environ 145 appels par mois, plus que les clics vers le site. C'est une source de leads majeure à protéger et à exploiter dans la refonte (lien vers une page d'atterrissage avec UTM, services, photos, avis, publications).
+- La baisse de la fiche est progressive, sans cassure en juillet, et plus modérée que celle du site dans Google (clics Search Console : juin 430, juillet 293, août 148, septembre 161). Une partie de la baisse est saisonnière (pic de climatisation en juin).
+- Il manque la comparaison avec mai à octobre 2025 pour isoler la part saisonnière.
