@@ -188,3 +188,30 @@ Limites du plan gratuit : l'historique (onglet « Lost », périodes) et l'expor
 - Les publireportages (Les Versants, La Nouvelle Union, etc.) sont toujours en ligne.
 
 Prochaine étape : filtrer les backlinks sur « publireportage » dans l'URL de la page référente et trier par « First seen » pour dater les placements de l'ancienne agence.
+
+## 15. Publireportages de l'ancienne agence (Ahrefs : dofollow, dans le contenu, URL contenant « publireportage »)
+Résultat : 32 liens, tous considérés comme actifs par Ahrefs (le rapport « sans historique » n'affiche que les liens vivants).
+
+Premières détections (« First seen »), du plus récent au plus ancien :
+| Date | Site |
+|---|---|
+| 16 avril 2026 | infodunordvalleedelarouge.ca (chauffage : erreurs à éviter) |
+| 15 avril 2026 | infodunordmontlaurier.ca (climatisation de la maison) |
+| 30 octobre 2025 | infodunordtremblant.ca (puissance d'une climatisation murale) |
+| 20 septembre 2025 | infodunordvalleedelarouge.ca (climatisation économique) |
+| 2 septembre 2025 | infodunordsainteagathe.ca (choisir sa fournaise) |
+| 1er septembre 2025 | laction.com (durée de vie d'un climatiseur mural) |
+| 21 mai 2025 | lanouvelle.net (4 raisons de choisir une thermopompe) |
+| 15 mars 2025 | leprogres.net (efficacité énergétique) |
+| 14 mars 2025 | lerefletdulac.com, lechodemaskinonge.com, lechodelatuque.com |
+
+Lecture :
+- Le dernier placement détecté date de mi-avril 2026, soit trois mois avant le début de la baisse (13 au 20 juillet).
+- Le rythme est faible : une trentaine de liens répartis sur 14 mois, surtout sur des sites régionaux de faible autorité (DR 27 à 64).
+- Ces liens sont toujours actifs. Il n'y a pas de preuve de retrait à la fin du contrat.
+- Ils pointent surtout vers les pages qui ont perdu des rangs (thermopompes centrales, climatiseur mural, climatisation Lanaudière, page « climatiseur mural… joliette »).
+- Ce sont des articles commandités avec lien dofollow. Selon les consignes de Google, les liens payants devraient porter `rel="sponsored"` ou `nofollow`. Risque faible mais réel de neutralisation.
+
+Conclusion provisoire : l'arrêt du link building seul explique mal une baisse de 47 à 67 % des clics. Il reste un facteur possible parmi d'autres (contenu et fiche d'entreprise Google non entretenus, concurrents plus actifs, changements dans les résultats de Google).
+
+À vérifier ensuite : la fiche Google Business Profile (vues, appels, clics vers le site, par mois) et le contenu exact du contrat de l'ancienne agence (fiche d'entreprise, avis, citations, publications).
