@@ -100,3 +100,38 @@ Pistes à confirmer (par ordre de probabilité) :
 
 Vérifications à faire dans Search Console : Comparer les 28 derniers jours à la même période de l'an passé (par pages et par requêtes), puis les rapports « Actions manuelles », « Problèmes de sécurité » et « Core Web Vitals ».
 Vérification dans le cPanel : trier `wp-content/plugins` par date de modification pour voir quel plugin a été mis à jour et quand.
+
+## 11. Comparaison : 28 derniers jours (13 sept. au 10 oct. 2026) contre la même période de 2025
+Données : `data/search-console/comparaison-28j-vs-an-passe/`.
+
+| Mesure | 2025 | 2026 | Écart |
+|---|---|---|---|
+| Clics (tous appareils) | 204 | 168 | -18 % |
+| Impressions | 25 750 | 11 160 | -57 % |
+| CTR | 0,82 % (Canada) | 1,61 % (Canada) | doublé |
+| Position moyenne (Canada) | 34,5 | 24,1 | meilleure |
+| Clics de marque (requêtes exportées) | 26 | 53 | doublés |
+
+Évolution mensuelle des clics d'une année à l'autre : juin -3 %, juillet -47 %, août -67 %, septembre -33 %, 28 derniers jours -18 %. La perte est concentrée sur juillet et août 2026, en pleine saison de la climatisation.
+
+Constats :
+1. **Ce n'est pas un effondrement global.** Les positions moyennes s'améliorent et la marque progresse. La baisse d'impressions vient en grande partie de requêtes sans valeur (« ferblantier ventilation brossard », « chauffage et climatisation beauport », « installation climatisation québec »…) où le site était classé 55 à 85 et qui ont disparu.
+2. **Les requêtes locales à forte valeur ont perdu des rangs :**
+   - thermopompe joliette : position 2,9 → 22,1
+   - installation climatiseur joliette : 2,8 → 18,6
+   - ventilation commerciale joliette : 2,9 → 15,4
+   - air climatisé joliette : 3,0 → 11,1
+   - chauffage auxiliaire joliette : 9,0 → 20,7
+   - nettoyage thermopompe joliette : 10,2 → 42,2
+   Les requêtes contenant « joliette » : clics 8 → 3, impressions 2 994 → 1 660.
+3. **Pages locales en recul :** `/contact-climatisation-joliette/` position 7,1 → 17,2 ; `/climatiseur-mural-air-climatise-thermopompe-joliette/` 18,4 → 35,2 ; `/produits/chauffage/thermopompes-centrales/` 16,9 → 24,4.
+4. **Article phare :** `/air-climatise-mural-a-quel-prix-sattendre/` clics 34 → 3 (-91 %), impressions -83 %, alors que sa position moyenne s'améliore (15,6 → 7,1). La requête « air climatisé mural » passe de 524 à 17 impressions presque sans changer de rang (14,7 → 13,5). Un changement dans l'affichage des résultats de Google (réponses IA, autres blocs) est plus probable qu'un problème technique du site.
+5. **Contenu vieilli :** l'article phare date de 2022 (modifié le 2022-08-30), celui sur le remplacement de thermopompe de 2023 (modifié le 2023-05-18). Les prix cités (2 500 $ à 4 200 $) sont probablement dépassés pour des requêtes « prix ».
+6. Appareils : ordinateur 102 clics (position 31,4), mobile 58 clics (position 8,7), tablette 8.
+7. Aucun des éléments mesurés n'incrimine directement un plugin ou un problème technique. L'hypothèse du plugin reste à tester avec les dates de modification des dossiers (`wp-content/plugins`).
+
+## 12. Conséquences pour la refonte
+- Pages locales dédiées pour chaque service à Joliette (installation, réparation, entretien et nettoyage, ventilation commerciale, chauffage auxiliaire), avec titres précis, contenu récent, preuve locale (avis, projets, adresse) et formulaire.
+- Rafraîchir les trois articles « prix » : prix à jour, date de mise à jour visible, FAQ structurée, calculateur ou formulaire de soumission, liens vers les pages de services.
+- Données structurées d'entreprise locale, avis, FAQ.
+- Suivre les mêmes indicateurs après le lancement : requêtes « joliette », position des pages locales, clics de marque, soumissions.
