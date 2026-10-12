@@ -24,7 +24,7 @@ Règle d'accessibilité : le cyan sur blanc ne passe pas (contraste 2,53). Cyan 
 
 ## Typographies
 - **Mona Sans** (gratuite, Google Fonts) : texte courant.
-- **Ballinger** (Adobe Fonts, condensée grasse) : titres. Il faut une licence Adobe Fonts qui couvre le web. À confirmer avec toi. Sinon, on utilise Mona Sans en graisse forte pour les titres.
+- **Ballinger** (Adobe Fonts, condensée grasse) : titres. Le client confirme détenir la licence (2026-10-12). Chargement par un projet Web Adobe Fonts (identifiant de kit) lié à cbedard.com ; la licence dépend de l'abonnement Adobe, qui doit rester actif. La maquette v2 est prête : un lien commenté dans `<head>` à activer avec l'identifiant, et `--font-titre` avec repli sur Mona Sans.
 - Pour la vitesse et la conformité à la Loi 25, j'hébergerais Mona Sans sur le site plutôt que de passer par Google Fonts.
 
 ## Attention SEO : le changement de nom

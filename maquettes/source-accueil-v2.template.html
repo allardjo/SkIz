@@ -7,12 +7,16 @@
 <meta name="description" content="Plus de 65 professionnels en chauffage, climatisation, thermopompe, ventilation et réfrigération à Joliette et dans Lanaudière. Plus de 40 ans d'expertise. Service d'urgence 24 h.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Ballinger (titres) : décommenter et remplacer KIT_ID par l'identifiant du projet Web Adobe Fonts
+<link rel="stylesheet" href="https://use.typekit.net/KIT_ID.css">
+-->
 <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wdth,wght@0,75..125,200..900&display=swap" rel="stylesheet">
 <style>
 :root{
   --ciel:#bbe4eb; --cyan:#28b0d8; --bleu:#006492; --marine:#003650; --nuit:#000014;
   --beige:#e5e4d9; --rouille:#8a4d3a; --rouille-f:#6f3b2c; --blanc:#fff;
   --texte:#0a2331; --doux:#51656f;
+  --font-titre:"ballinger","ballinger-condensed","Ballinger","Mona Sans",system-ui,sans-serif;
   --font:"Mona Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --max:1240px; --r:22px;
   --degrade:linear-gradient(180deg,#000014 0%,#003650 30%,#006492 52%,#28b0d8 74%,#bbe4eb 90%,#e5e4d9 100%);
@@ -24,6 +28,7 @@ img,svg{display:block;max-width:100%}
 a{color:inherit}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
 .ico{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+h1,h2,h3,h4,.chiffre .n,.note-globale .grand,.atout .num,.etape .n,.flottant .gros{font-family:var(--font-titre)}
 h1,h2,h3,h4{font-weight:800;color:var(--marine);line-height:1.02;letter-spacing:-.025em;font-stretch:88%}
 h2{font-size:clamp(2.2rem,4.4vw,3.7rem)}
 h3{font-size:1.35rem;letter-spacing:-.015em;line-height:1.12}
