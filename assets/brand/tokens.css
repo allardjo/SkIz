@@ -1,0 +1,27 @@
+/* Jetons de design Bédard, tirés de Bedard-Normes.pdf */
+:root {
+  /* Froides */
+  --bd-ciel: #bbe4eb;     /* PMS 628 C */
+  --bd-cyan: #28b0d8;     /* PMS 298 C */
+  --bd-bleu: #006492;     /* PMS 7691 C */
+  /* Neutres */
+  --bd-marine: #003650;   /* PMS 7694 C : couleur principale du logo */
+  --bd-nuit: #000014;     /* PMS 433 C */
+  --bd-beige: #e5e4d9;    /* PMS 4545 C à 29 % */
+  /* Chaude */
+  --bd-rouille: #8a4d3a;  /* PMS 7601 C */
+  --bd-blanc: #ffffff;
+
+  /* Dégradé de marque (vertical) */
+  --bd-degrade: linear-gradient(to bottom, #000014 0%, #006492 35%, #28b0d8 65%, #bbe4eb 85%, #e5e4d9 100%);
+
+  /* Typographies */
+  --bd-font-texte: "Mona Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --bd-font-titre: "Ballinger", "Mona Sans", system-ui, sans-serif;
+}
+
+/* Contrastes WCAG vérifiés (texte normal : 4,5 minimum)
+   marine/blanc 12,78 · marine/beige 10,0 · marine/ciel 9,38 · bleu/blanc 6,49
+   bleu/beige 5,07 · rouille/blanc 6,56 · rouille/beige 5,13 · cyan/marine 5,05
+   cyan/nuit 8,21 · nuit/beige 16,27
+   À ÉVITER : cyan sur blanc = 2,53 (insuffisant, même pour un lien ou un bouton) */
