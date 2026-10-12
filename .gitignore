@@ -1,0 +1,8 @@
+# Polices sous licence : ne jamais les publier dans le dépôt
+*.woff
+*.woff2
+*.otf
+*.ttf
+*.eot
+maquettes/fonts/
+fonts/
