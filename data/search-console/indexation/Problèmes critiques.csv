@@ -1,0 +1,8 @@
+Raison,Source,Validation,Pages
+"Exclue par la balise ""noindex""",Site Web,Non commencé,24
+Autre page avec balise canonique correcte,Site Web,Non commencé,16
+Page avec redirection,Site Web,Non commencé,12
+Introuvable (404),Site Web,Non commencé,1
+Bloquée par le fichier robots.txt,Site Web,Non commencé,1
+"Détectée, actuellement non indexée",Systèmes Google,Non commencé,9
+"Explorée, actuellement non indexée",Systèmes Google,Non commencé,6
