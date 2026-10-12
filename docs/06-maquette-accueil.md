@@ -1,21 +1,43 @@
-# Maquette de la page d'accueil (v1)
+# Maquette de la page d'accueil
 
-Fichier : `maquettes/accueil.html` (page autonome, ouvrable dans un navigateur ; logos intégrés ; polices Mona Sans via Google Fonts, à héberger sur le site final).
+## Version 2 : `maquettes/accueil-v2.html`
+Page autonome (images, logos et styles intégrés ; seule la police Mona Sans est chargée depuis Google Fonts, à héberger sur le site final). Source modifiable : `maquettes/source-accueil-v2.template.html`, images dans `maquettes/img/`, assemblage avec `maquettes/build_v2.py`.
 
-## Intentions
-- **Leads :** téléphone cliquable en permanence (barre du haut, en-tête, barre fixe sur mobile), formulaire de soumission dans l'écran d'accueil, appel final à l'action, urgence 24 h visible dès le haut.
-- **SEO local :** H1 « Thermopompe, climatisation et chauffage à Joliette », une grille de 8 services qui devient 8 pages locales, guides de prix (les trois articles qui génèrent 44 % des clics), FAQ avec données structurées `FAQPage`, `HVACBusiness`/`LocalBusiness` avec nom légal, adresse, heures et zone desservie (JSON-LD dans la page).
-- **Marque :** marine pour les fonds forts, beige pour les sections alternées, rouille réservé aux boutons d'action (contraste 6,6 sur blanc), cyan seulement sur fond foncé (règle de contraste), symbole en filigrane, Mona Sans partout. Les titres utilisent Mona Sans en graisse forte tant que la licence web de Ballinger n'est pas confirmée.
-- **Mobile d'abord :** une colonne, barre fixe « Appeler / Soumission ».
+### Positionnement
+Retour du client sur la v1 : « site trop générique, on dirait une petite entreprise ». Or l'entreprise compte plus de 65 employés et se présente comme un chef de file régional. La v2 reprend ce positionnement : grande échelle typographique, photographie, chiffres de preuve, deux univers (résidentiel / commercial), section carrières.
 
-## Contenu réel repris du site actuel
-Adresse, téléphones, heures, urgence 24 h, « plus de 40 ans d'expérience », entretien périodique personnalisé, trois avis clients (initiales telles qu'affichées), services.
+### Structure
+1. En-tête fixe transparent puis blanc au défilement, barre d'urgence 24 h, téléphone cliquable, bouton de soumission.
+2. Hero : H1 SEO « Chauffage, climatisation et ventilation à Joliette », photo avec pastilles (urgence 24 h, note 4,9/5).
+3. Barre de soumission rapide (3 champs) qui chevauche le hero.
+4. Bande de chiffres animée : 65+ professionnels, 40+ ans, 4,9/5 (180+ avis), 24 h.
+5. Deux univers : résidentiel et commercial.
+6. Services en grille asymétrique (8 tuiles, dont l'urgence 24 h en rouille).
+7. « Pourquoi Bédard » : la taille d'une grande entreprise, le soin d'une équipe locale.
+8. Avis : note globale et trois avis réels du site.
+9. Guides de prix (les trois articles qui génèrent 44 % des clics).
+10. Carrières : « Rejoignez une équipe de plus de 65 professionnels » (postes réels vus sur jobcqc.ca).
+11. Étapes, zone desservie, FAQ (données structurées `FAQPage`), appel final, pied de page.
+Mobile : une colonne, barre fixe « Appeler / Soumission ».
 
-## À confirmer ou à fournir avant publication
-- Fourchettes de prix (FAQ) et mise à jour 2026 des trois guides de prix.
-- Secteurs desservis (liste des villes), « appareils en inventaire ».
-- Note moyenne et nombre d'avis (non inventés dans la maquette).
-- Photos réelles de projets et de l'équipe.
-- Adresses des 8 pages de services (proposition : `/thermopompe-joliette/`, `/climatiseur-mural-joliette/`, etc.) et redirections vers les URL existantes.
-- Maintien des URL à forte valeur : `/`, `/carrieres/`, `/climatiseur-mural-air-climatise-thermopompe-joliette/` et les trois articles « prix ».
-- Suivi : conserver les événements `call_tracking` et `form_submit` et les conversions Google Ads dans Google Tag Manager.
+### Marque
+Marine, beige, rouille (boutons d'action uniquement), cyan sur fond foncé seulement, dégradé de marque en pied de page, symbole en filigrane, Mona Sans avec axe de largeur pour les titres (en attendant la licence web de Ballinger).
+
+### Origine des chiffres
+- 65+ professionnels et « chef de file régional » : déclarés par le client, à pouvoir justifier publiquement.
+- 40+ ans : tiré du site actuel.
+- 4,9/5 et 180+ avis : 188 avis affichés sur la page Avis du site (176 Google, 12 Facebook), moyenne calculée 4,93. À valider contre la fiche Google.
+- Postes : annonces réelles trouvées sur jobcqc.ca (frigoriste apprenti, ferblantier, dessinateur en ventilation).
+
+### Images
+Photos tirées de la médiathèque du site actuel (banque d'images : à confirmer que la licence couvre le nouveau site). À remplacer, quand possible, par de vraies photos de l'équipe, des camions, des installations et du bâtiment.
+
+### À confirmer avant publication
+- Fourchettes de prix (FAQ) et mise à jour 2026 des trois guides.
+- Secteurs desservis, rôles de l'équipe, « appareils en inventaire ».
+- Licence Adobe Fonts (Ballinger), hébergement local de Mona Sans.
+- Suivi : conserver `call_tracking`, `form_submit` et les conversions Google Ads dans Google Tag Manager ; ajouter le consentement aux cookies (Loi 25).
+- URL à conserver : `/`, `/carrieres/`, `/climatiseur-mural-air-climatise-thermopompe-joliette/` et les trois articles « prix ».
+
+## Version 1 : `maquettes/accueil.html`
+Première proposition, jugée trop générique. Conservée pour référence.
