@@ -245,3 +245,12 @@ Production visible (API WordPress et Ahrefs) :
 Conclusion : la production sur le site s'est arrêtée 21 mois avant la baisse, et la dernière publication externe date d'avril 2026. La fin du contrat n'explique donc pas à elle seule la chute de juillet. Le vrai problème : personne n'entretenait le référencement (contenu vieillissant, fiche Google, technique) pendant que les concurrents continuaient.
 
 À demander à l'agence : liste complète des articles et liens livrés (URL, date, cible), clause sur la durée de maintien des liens, propriété et droit de réutilisation des textes, retrait de ses accès (dont MainWP).
+
+## 18. Suivi déjà installé sur le site (lu dans le conteneur Google Tag Manager `GTM-WBRNDF7`)
+- Deux identifiants Google Analytics 4 : `G-W6VHEMGHS1` (avec les événements `call_tracking` et `form_submit`) et `G-Z8DXJE4D6X` (avec `call_tracking`).
+- Suivi de conversions Google Ads : compte `868743737`, deux étiquettes de conversion.
+- Aucun GA4 directement dans le code de la page : tout passe par GTM.
+- Le bandeau de cookies précise que Google Analytics est un cookie « tiers » soumis au consentement : les données sont donc incomplètes (visiteurs qui refusent).
+
+Conséquence : une propriété Analytics existe probablement déjà, sous un autre compte Google (ancienne agence ou ancien webmestre). Récupérer l'accès administrateur vaut mieux que d'en créer une nouvelle (on garde l'historique des appels et des formulaires).
+Question ouverte : y a-t-il, ou y avait-il, des campagnes Google Ads ? Une pause estivale aurait réduit les leads sans toucher au référencement naturel.
