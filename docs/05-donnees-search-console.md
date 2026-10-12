@@ -233,3 +233,15 @@ Lecture :
 - La fiche génère environ 145 appels par mois, plus que les clics vers le site. C'est une source de leads majeure à protéger et à exploiter dans la refonte (lien vers une page d'atterrissage avec UTM, services, photos, avis, publications).
 - La baisse de la fiche est progressive, sans cassure en juillet, et plus modérée que celle du site dans Google (clics Search Console : juin 430, juillet 293, août 148, septembre 161). Une partie de la baisse est saisonnière (pic de climatisation en juin).
 - Il manque la comparaison avec mai à octobre 2025 pour isoler la part saisonnière.
+
+## 17. Périmètre du contrat avec l'ancienne agence et production visible
+Réponse du client : le contrat portait principalement sur des liens et des articles de blogue (pas la fiche Google, pas l'entretien technique, pas la gestion du site).
+
+Production visible (API WordPress et Ahrefs) :
+- Blogue du site : 6 articles seulement, publiés le 2022-05-31, 2022-08-30, 2022-11-15, 2023-03-29, 2023-07-20 et 2024-01-18. Aucun depuis janvier 2024. Les trois articles « prix » qui génèrent 44 % des clics datent de 2022 et 2023 (dernières modifications 2022-08-30, 2023-05-18, 2023-12-21).
+- Articles commandités sur des médias régionaux : environ 32, de mars 2025 à avril 2026.
+- Pages du site modifiées en 2026 : accueil (25 mars), avis (4 mars), carrières (27 février).
+
+Conclusion : la production sur le site s'est arrêtée 21 mois avant la baisse, et la dernière publication externe date d'avril 2026. La fin du contrat n'explique donc pas à elle seule la chute de juillet. Le vrai problème : personne n'entretenait le référencement (contenu vieillissant, fiche Google, technique) pendant que les concurrents continuaient.
+
+À demander à l'agence : liste complète des articles et liens livrés (URL, date, cible), clause sur la durée de maintien des liens, propriété et droit de réutilisation des textes, retrait de ses accès (dont MainWP).
