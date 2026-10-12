@@ -135,3 +135,44 @@ Constats :
 - Rafraîchir les trois articles « prix » : prix à jour, date de mise à jour visible, FAQ structurée, calculateur ou formulaire de soumission, liens vers les pages de services.
 - Données structurées d'entreprise locale, avis, FAQ.
 - Suivre les mêmes indicateurs après le lancement : requêtes « joliette », position des pages locales, clics de marque, soumissions.
+
+## 13. Fin du contrat de link building et dates de mise à jour des plugins
+
+### Contexte fourni par le client
+Un forfait de link building, avec l'entreprise qui rédigeait aussi les articles de blogue, n'a pas été renouvelé à partir de l'été 2026. La date exacte de fin est à confirmer. Le dossier `nitropack` n'existe pas dans `wp-content`.
+
+### Vérification des pages qui nous lient (2026-10-12, `data/search-console/liens/verification-liens-2026-10-12.csv`)
+Sur 163 URL de l'échantillon « autres exemples de liens » :
+- 131 pages sont en ligne, 0 retournent 404/410.
+- 88 contiennent encore un lien vers cbedard.com.
+- 42 sont accessibles sans lien visible dans le HTML : 35 sont des fiches de l'ancien site `old.aldes-na.com` (le lien est peut-être chargé par script ou retiré ; le site actuel d'Aldes n'en montre aucun dans sa page d'accueil), 7 autres (lemeilleurduquebec.ca, stayonpro.com, canpages, cetaf.qc.ca).
+- 32 ne peuvent pas être vérifiées (blocage anti-robots : Cylex, Datanyze, etc.).
+Limite : Search Console ne garde pas l'historique des liens perdus. Les liens déjà retirés avant l'export n'apparaissent pas.
+Conclusion provisoire : aucune preuve que les liens aient été retirés à la fin du contrat, mais l'historique complet manque.
+
+### Dates de modification des plugins (cPanel, `wp-content/plugins`)
+| Date | Plugins |
+|---|---|
+| 29 sept. 2026, 22 h 58-59 | wordpress-seo (Yoast), wpforms-lite, redirection, really-simple-ssl, post-smtp, advanced-custom-fields (mise à jour groupée) |
+| 28 sept. 2026 | mainwp-child |
+| 7 sept. 2026 | litespeed-cache, contact-form-7 et son module de téléversement |
+| 27 juil. 2026 | gdpr-cookie-compliance |
+| 6 juil. 2026 | duplicate-post |
+| 14 mai 2026 | wp-review-slider-pro, post-smtp-pro |
+| 1er mai 2026 | WPML (sitepress, string-translation, seo-multilingual) |
+| 25 mars 2026 | woocommerce-gateway-stripe, woocommerce-multilingual, pdf-invoices |
+
+Lecture : aucune mise à jour de plugin important (cache, SEO, thème, constructeur de pages) ne coïncide avec la baisse, qui débute entre le 13 et le 20 juillet. La mise à jour la plus proche avant est duplicate-post (6 juillet), sans impact SEO connu ; la plus proche après est le bandeau de cookies (27 juillet). L'hypothèse « plugin » est donc peu soutenue par ces données.
+
+**`mainwp-child` est installé.** C'est l'extension qui permet à un tableau de bord MainWP (souvent d'une agence ou d'un webmestre) de gérer le site à distance. À identifier : qui contrôle ce tableau de bord, et est-ce toujours souhaité après la fin du contrat.
+
+### Hypothèses liées au link building (ni confirmées ni écartées)
+1. Arrêt de l'acquisition de nouveaux liens et de contenu pendant que les concurrents continuent : l'érosion des rangs locaux se manifeste en 1 à 3 mois, ce qui est compatible avec juillet-août.
+2. Liens temporaires (loués) retirés à la fin du contrat : non soutenu par la vérification, mais l'historique manque.
+3. Liens de faible qualité neutralisés par Google (articles génériques sur des sites français, annuaires automatiques) : indépendant de la fin du contrat, possible.
+4. L'ancienne agence conserve un accès au site (MainWP ou autre) : risque de sécurité et de dépendance.
+
+### À obtenir
+- Date exacte de fin du contrat et rapports mensuels de l'agence (liste des liens et articles placés).
+- Inventaire des comptes que l'agence contrôle : hébergement, WordPress, MainWP, Google Tag Manager, Analytics, Search Console, fiche Google Business Profile, droits d'auteur des articles.
+- Historique des liens perdus avec dates : Ahrefs Webmaster Tools (gratuit pour son propre site) après validation du domaine.
