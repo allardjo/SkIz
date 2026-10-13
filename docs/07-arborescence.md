@@ -189,3 +189,10 @@ Une unité murale simple zone peut couvrir un plein pied complet avec plusieurs 
 - À faire valider par un conseiller : la limite de couverture d'une unité simple zone (superficie, circulation de l'air, chambres fermées) avant publication de la FAQ.
 
 Correction (13 octobre 2026) : le client précise qu'il n'y a que des systèmes simple zone et multizone. La ligne « Deux zones » est retirée de l'article, la page pilier parle de « système multizone ».
+
+## SEER et conseiller (13 octobre 2026)
+
+- SEER : « les appareils muraux que nous proposons aujourd'hui affichent une cote SEER de 17 à 28 » (remplace « 13 ou 14 » de l'ancien guide).
+- Conseiller : Jonathan Allard, conseiller. Bloc auteur de l'article (« Guide rédigé par l'équipe Bédard et validé par Jonathan Allard, conseiller ») et balisage Article (author Person, jobTitle « Conseiller »). Titre exact à confirmer s'il diffère de « Conseiller ».
+- FAQ « secteurs » de l'article et de la page pilier : liste des municipalités (MRC de Joliette + secteurs voisins) inscrite.
+- Restent à confirmer : prix multizone, format 12 000 BTU « très courant pour une zone moyenne », vérification de la liste de la MRC sur le site de la MRC.
