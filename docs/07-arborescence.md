@@ -180,3 +180,10 @@ Encore ouvert :
 - Les anciens prix de 2022 (2 500 $ à 4 200 $, moyenne 3 500 $) sont retirés.
 - Encore à obtenir : prix « deux zones » et « multizone » (lignes du tableau), SEER typique, nom du conseiller. La mention « mis à jour en octobre 2026 » est inscrite.
 - Remarque : la fourchette est large (écart de 1 800 $). L'article explique déjà les facteurs (puissance, bruit, efficacité, options). Reformuler pour 2 zones et multizone dès que les ventes répondent.
+
+## Vocabulaire : « simple zone » plutôt que « une pièce » (13 octobre 2026)
+
+Une unité murale simple zone peut couvrir un plein pied complet avec plusieurs pièces. Le vocabulaire est donc par zone, pas par pièce :
+- Article « prix » : « climatiseur mural simple zone (une unité intérieure) » dans « En bref », la FAQ et le balisage; tableau en trois lignes « Simple zone », « Deux zones », « Multizone ».
+- Page pilier : puce « Une unité simple zone peut couvrir un plein pied complet, selon l'aménagement », tableau comparatif (« une zone ou un étage complet ») et réponse de la FAQ « Peut-on climatiser plusieurs pièces avec un seul climatiseur mural? » réécrite (« Oui, dans bien des cas… »).
+- À faire valider par un conseiller : la limite de couverture d'une unité simple zone (superficie, circulation de l'air, chambres fermées) avant publication de la FAQ.
