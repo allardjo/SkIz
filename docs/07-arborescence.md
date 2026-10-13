@@ -155,3 +155,21 @@ Les champs obligatoires passent de 6 (formulaire actuel) à 5, et seuls produit,
 3. Enregistrer aussi la demande partielle à l'étape 2 (nom + téléphone) pour ne pas perdre les abandons : à valider avec l'équipe des ventes.
 4. Valider : municipalités desservies, délai de rappel, mention Loi 25, URL Facebook et LinkedIn, lien direct d'avis Google, textes d'avis (reprise de la page de service).
 5. Carte Google : prévoir un chargement après consentement (Loi 25).
+
+## Validations faites avec le client (13 octobre 2026)
+
+| Point | Décision |
+|---|---|
+| Délai de rappel (soumission et contact) | Sous 24 heures ouvrables. Appliqué aux pages Contact et Soumission. |
+| Municipalités desservies | Les 10 municipalités de la MRC de Joliette (Crabtree, Joliette, Notre-Dame-de-Lourdes, Notre-Dame-des-Prairies, Saint-Ambroise-de-Kildare, Saint-Charles-Borromée, Sainte-Mélanie, Saint-Paul, Saint-Pierre, Saint-Thomas) + Lavaltrie, Berthierville, Saint-Félix-de-Valois, Saint-Jean-de-Matha, Rawdon, Repentigny. La liste de la MRC vient de sources de 2001 et 2011 : à confirmer sur le site de la MRC de Joliette. |
+| Postes ouverts (Carrières) | Ferblantier, frigoriste, magasinier. Le poste de dessinateur en ventilation est retiré de la maquette (compté « 3 postes ouverts », 3 JobPosting). |
+| Adresse des candidatures | info@cbedard.com |
+| Facebook, LinkedIn, avis Google | Liens repris du site actuel : facebook.com/climatisationbedard, linkedin.com/company/climatisation-claude-bedard, g.page/r/Ceb7Vf7wbTIAEB0/review. |
+| Mention de confidentialité (Loi 25) | Texte court sous chaque formulaire, avec lien vers une politique de confidentialité qui reste à publier. |
+
+Encore ouvert :
+1. Prix 2026 (ventes) pour l'article phare, SEER typique, nom du conseiller, date de mise à jour.
+2. `datePosted` réelles des 3 JobPosting. Le poste « dessinateur » reste visible sur le site actuel tant que la page n'est pas remplacée : à retirer au lancement.
+3. Page « politique de confidentialité » à rédiger et publier (nom du responsable de la protection des renseignements personnels requis par la Loi 25).
+4. Chiffres « 4,9 sur 5 » et « plus de 180 avis » à comparer avec la fiche Google.
+5. Techniques : noms de champs CF7, tracking GTM, enregistrement de la demande partielle à l'étape 2.

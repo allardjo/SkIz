@@ -13,7 +13,7 @@ I={
 def ic(n): return f'<svg class="ico" viewBox="0 0 24 24">{I[n]}</svg>'
 TEL='<a href="tel:+14507539426" data-track="call_tracking">450-753-9426</a>'
 
-zones=['Joliette','Notre-Dame-des-Prairies','Saint-Charles-Borromée','Crabtree','Saint-Paul','Saint-Thomas','Lavaltrie','Berthierville','Saint-Félix-de-Valois','Saint-Jean-de-Matha','Rawdon','Repentigny']
+zones=['Joliette','Notre-Dame-des-Prairies','Saint-Charles-Borromée','Crabtree','Saint-Paul','Saint-Thomas','Notre-Dame-de-Lourdes','Saint-Ambroise-de-Kildare','Sainte-Mélanie','Saint-Pierre','Lavaltrie','Berthierville','Saint-Félix-de-Valois','Saint-Jean-de-Matha','Rawdon','Repentigny']
 zh=''.join(f'<span>{z}</span>' for z in zones)
 
 contact=f'''<main>
@@ -42,7 +42,7 @@ contact=f'''<main>
 <section><div class="wrap contact-lay">
   <form class="form-contact reveal" action="#" onsubmit="return false" data-form="contact">
     <h2>Joindre un spécialiste</h2>
-    <p class="sous">Laissez-nous vos coordonnées et votre question : on vous rappelle.</p>
+    <p class="sous">Laissez-nous vos coordonnées et votre question : on vous rappelle sous 24 heures ouvrables.</p>
     <div class="grille2">
       <div class="champ"><label for="k-nom">Prénom et nom*</label><input id="k-nom" autocomplete="name" placeholder="Votre nom"></div>
       <div class="champ"><label for="k-tel">Téléphone*</label><input id="k-tel" type="tel" autocomplete="tel" placeholder="450 000-0000"></div>
@@ -50,7 +50,7 @@ contact=f'''<main>
       <div class="champ plein"><label for="k-msg">Votre message</label><textarea id="k-msg" placeholder="Décrivez brièvement votre besoin…"></textarea></div>
     </div>
     <button class="btn btn-r" type="submit">Envoyer le message {ARROW}</button>
-    <p class="legal">Pour une demande de prix, utilisez plutôt la <a href="#" style="color:var(--bleu);font-weight:700">soumission gratuite</a>. <em>[Mention Loi 25 à valider]</em></p>
+    <p class="legal">Pour une demande de prix, utilisez plutôt la <a href="#" style="color:var(--bleu);font-weight:700">soumission gratuite</a>. Vos renseignements personnels servent uniquement à répondre à votre demande. Consultez notre <a href="#" style="color:var(--bleu);font-weight:700">politique de confidentialité</a>.</p>
   </form>
 
   <div>
@@ -64,9 +64,9 @@ contact=f'''<main>
     </div>
     <a class="btn btn-m reveal d3" href="https://www.google.com/maps/dir/?api=1&destination=304+boulevard+de+l%27Industrie+Joliette+QC" target="_blank" rel="noopener">Obtenir l'itinéraire {ARROW}</a>
     <div class="reseaux reveal d3">
-      <a href="#">{ic('fb')}Facebook</a>
-      <a href="#">{ic('in')}LinkedIn</a>
-      <a href="#">{ic('star')}Laissez-nous un avis Google</a>
+      <a href="https://www.facebook.com/climatisationbedard/" target="_blank" rel="noopener">{ic('fb')}Facebook</a>
+      <a href="https://www.linkedin.com/company/climatisation-claude-bedard/" target="_blank" rel="noopener">{ic('in')}LinkedIn</a>
+      <a href="https://g.page/r/Ceb7Vf7wbTIAEB0/review" target="_blank" rel="noopener">{ic('star')}Laissez-nous un avis Google</a>
     </div>
   </div>
 </div></section>
@@ -89,7 +89,7 @@ contact=f'''<main>
     <p class="reveal">Depuis plus de 40 ans, Bédard conseille, installe et entretient des systèmes de chauffage, de ventilation, de climatisation et de réfrigération pour les résidences, les commerces et les institutions de la région.</p>
     <p class="reveal d1">Nos spécialistes vous guident dans le choix du bon appareil et vous informent des programmes gouvernementaux qui peuvent s'appliquer à votre projet : climatisation, chauffage, ventilation, géothermie ou plancher chauffant. L'estimation à votre domicile ou à nos bureaux est gratuite.</p>
     <div class="zones reveal d2">{zh}</div>
-    <p class="placeholder reveal">[Liste des municipalités desservies à valider]</p>
+    <p class="note-zone reveal">Toutes les municipalités de la MRC de Joliette, et plusieurs secteurs voisins de Lanaudière.</p>
   </div>
 </div></section>
 
@@ -122,7 +122,7 @@ soum=f'''<main>
       <nav class="fil" aria-label="Fil d'Ariane"><a href="#">Accueil</a><span>›</span><b>Soumission</b></nav>
       <div class="pastille reveal"><b>{CHECK}</b>Gratuit · Sans engagement</div>
       <h1 class="reveal d1">Votre soumission gratuite, <em>en 2 minutes</em></h1>
-      <p class="lead reveal d2"><b>Dites-nous ce qu'il vous faut.</b> Un spécialiste Bédard vous rappelle pour évaluer votre projet et vous remettre une soumission détaillée. Chauffage, climatisation, ventilation, géothermie, commercial.</p>
+      <p class="lead reveal d2"><b>Dites-nous ce qu'il vous faut.</b> Un spécialiste Bédard vous rappelle sous 24 heures ouvrables pour évaluer votre projet et vous remettre une soumission détaillée. Chauffage, climatisation, ventilation, géothermie, commercial.</p>
     </div>
   </div>
 </div>
@@ -176,13 +176,13 @@ soum=f'''<main>
         <div class="champ plein"><label for="s-file">Photos ou plans (facultatif)</label><div class="fichier"><input id="s-file" name="fichier" type="file" accept=".jpg,.jpeg,.png,.gif,.tiff,.bmp,.pdf" multiple></div></div>
       </div>
       <div class="soum-nav"><button class="btn-retour" type="button" data-next="2">← Retour</button><button class="btn btn-r" type="submit">Envoyer ma demande {ARROW}</button></div>
-      <p class="legal">Photos (JPG, PNG, PDF…) acceptées. Vos renseignements servent seulement à traiter votre demande. <em>[Mention Loi 25 à valider]</em></p>
+      <p class="legal">Photos (JPG, PNG, PDF…) acceptées. Vos renseignements personnels servent uniquement à répondre à votre demande. Consultez notre <a href="#" style="color:var(--bleu);font-weight:700">politique de confidentialité</a>.</p>
     </div>
 
     <div class="merci" id="merci" role="status">
       <div class="rond">{CHECK}</div>
       <h2>Merci, votre demande est envoyée!</h2>
-      <p class="sous" style="max-width:30em;margin:.6rem auto 1.6rem">Un spécialiste Bédard vous rappelle sous peu. Une urgence? Appelez-nous tout de suite.</p>
+      <p class="sous" style="max-width:30em;margin:.6rem auto 1.6rem">Un spécialiste Bédard vous rappelle sous 24 heures ouvrables. Une urgence? Appelez-nous tout de suite.</p>
       <a class="btn btn-m" href="tel:+14507539426" data-track="call_tracking">450-753-9426</a>
     </div>
   </form>
@@ -191,7 +191,7 @@ soum=f'''<main>
     <div class="aide-carte reveal d1">
       <h3>Et après votre demande?</h3>
       <ol class="suite">
-        <li><b>On vous rappelle</b>Un spécialiste valide votre besoin. <em>[Délai à confirmer]</em></li>
+        <li><b>On vous rappelle</b>Un spécialiste valide votre besoin, sous 24 heures ouvrables.</li>
         <li><b>Évaluation</b>À votre domicile ou à nos bureaux, sans frais.</li>
         <li><b>Soumission détaillée</b>Vous savez exactement ce qui est inclus.</li>
       </ol>
