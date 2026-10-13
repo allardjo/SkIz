@@ -118,3 +118,21 @@ Requêtes ciblées (Search Console) : air climatisé mural prix (6 547 impressio
 3. Le nom et le titre du conseiller qui valide l'article (signature, crédibilité).
 4. La date de mise à jour à afficher (la date de publication d'origine, 2022-05-31, est conservée dans les données structurées).
 Risque : l'article génère 28 % des clics. Publier la version rafraîchie à la même adresse, avec le même sujet, et surveiller la page 90 jours.
+
+## Page Carrières (maquette)
+
+Fichier : `maquettes/carrieres.html` (source : `maquettes/src/carrieres.body.html`, `carrieres-extra.css`, `build_carrieres.py`). URL conservée : `/carrieres/` (CTR de 13 %, liens depuis jobcqc.ca).
+
+- Contenu repris de la page actuelle (valeurs, vision, mission, 4 postes, salaire du magasinier, exigences, avantages). Rien d'inventé, sauf les éléments marqués ci-dessous.
+- Structure : héros avec liste des postes ouverts, 4 faits, culture et valeurs, avantages (fond marine), 4 postes en accordéon avec bouton « Postuler à ce poste » qui présélectionne le poste dans le formulaire, déroulement en 3 étapes, formulaire de candidature (CV, lettre), appel final.
+- SEO : title de 59 caractères (« Emplois en CVAC à Joliette et Lanaudière | Carrières Bédard »), description de 143 caractères, canonical, JSON-LD `JobPosting` pour chaque poste + fil d'Ariane.
+- Titre actuel du site : « Emplois en CVAC à Joliette — C.Bédard » (le mot-clé « emplois CVAC Joliette » est conservé).
+
+À valider avant publication :
+1. `datePosted` des 4 JobPosting est fixée au 2026-10-13 par défaut : mettre la vraie date de chaque annonce, et retirer un poste dès qu'il est comblé (sinon Google peut ignorer ou pénaliser le balisage).
+2. Les 4 postes sont-ils tous encore ouverts? (compte affiché : « 4 postes ouverts »).
+3. Étape « On vous rappelle » : délai de réponse à confirmer par les RH.
+4. Avantages du magasinier (assurance, retraite) : confirmer; le dessinateur n'a pas de régime de retraite listé.
+5. Mention de protection des renseignements (Loi 25) du formulaire.
+6. Le formulaire doit envoyer à info@cbedard.com ou à une adresse RH, avec suivi GTM (événement `form_submit`, distinct des soumissions clients).
+7. Image du héros : photo de la bibliothèque du site, licence à confirmer; idéalement remplacer par une vraie photo d'équipe.

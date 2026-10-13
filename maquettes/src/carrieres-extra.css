@@ -1,0 +1,86 @@
+/* ===== page Carrières ===== */
+.hero-carr .bg{background:var(--img-equipe) 60% 40%/cover no-repeat;opacity:.5}
+.hero-carr .wrap{grid-template-columns:1.2fr .8fr}
+.postes-carte{background:rgba(255,255,255,.97);color:var(--texte);border-radius:1.75rem;padding:2.2rem;box-shadow:0 40px 90px rgba(0,0,20,.5);position:relative;z-index:2}
+.postes-carte h2{font-size:1.5rem;font-stretch:92%;margin-bottom:.3rem}
+.postes-carte .sous{color:var(--doux);font-size:.95rem;margin-bottom:1.2rem}
+.postes-carte ul{list-style:none;display:grid;gap:.5rem;margin-bottom:1.4rem}
+.postes-carte li a{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.95rem 1.1rem;border-radius:1rem;background:#f3f8f9;border:1px solid #dbe6ea;text-decoration:none;color:var(--marine);font-weight:700;transition:background .2s,transform .2s}
+.postes-carte li a:hover{background:var(--ciel);transform:translateX(4px)}
+.postes-carte li a span{font-weight:500;font-size:.85rem;color:var(--doux)}
+.postes-carte .btn{width:100%}
+.postes-carte .note{font-size:.84rem;color:var(--doux);text-align:center;margin-top:.9rem}
+.postes-carte .note a{color:var(--bleu);font-weight:700;text-decoration:none}
+
+.valeurs{display:grid;grid-template-columns:repeat(5,1fr);gap:1.2rem}
+.valeur{background:#fff;border-radius:1.5rem;padding:1.9rem 1.6rem;border:1px solid #dde5e8}
+.valeur .ico{width:2.6rem;height:2.6rem;padding:.6rem;border-radius:.9rem;background:var(--marine);color:var(--ciel);margin-bottom:1.1rem}
+.valeur b{display:block;color:var(--marine);font-size:1.15rem;margin-bottom:.4rem;letter-spacing:-.01em}
+.valeur span{color:var(--doux);font-size:.95rem;line-height:1.4;display:block}
+.mission{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-bottom:1.6rem}
+.mission .choix{padding:2.4rem}
+
+.avantages{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem}
+.avantage{border-radius:1.6rem;padding:2rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16)}
+.avantage .ico{width:2.8rem;height:2.8rem;padding:.65rem;border-radius:1rem;background:var(--cyan);color:var(--marine);margin-bottom:1.1rem}
+.avantage b{display:block;color:#fff;font-size:1.2rem;margin-bottom:.35rem;letter-spacing:-.01em}
+.avantage span{color:#c4dae0;font-size:.97rem;line-height:1.45;display:block}
+.avantage-gros{grid-column:span 2;background:var(--beige);border-color:var(--beige);display:flex;flex-direction:column;justify-content:flex-end}
+.avantage-gros .grand{font-family:var(--font-titre);font-size:clamp(3.6rem,7vw,6rem);font-weight:800;line-height:.95;color:var(--marine);letter-spacing:-.04em;font-stretch:82%}
+.avantage-gros b{color:var(--marine);font-size:1.3rem;margin:.6rem 0 .4rem}
+.avantage-gros span{color:#3e5a66}
+
+.poste,.poste:first-of-type{background:#fff;border:1px solid #dbe6ea;border-radius:1.75rem;margin-bottom:1.2rem;overflow:hidden;scroll-margin-top:7rem;padding:0}
+.poste,.poste:first-of-type{display:block!important}
+.poste summary::after{content:none!important}
+.poste p{max-width:none;margin-top:0;font-size:1rem}
+.poste summary{list-style:none;cursor:pointer;display:grid!important;font-size:1rem;grid-template-columns:1fr auto;gap:1.5rem;align-items:center;padding:2rem 2.4rem}
+.poste summary::-webkit-details-marker{display:none}
+.poste summary h3{font-size:clamp(1.5rem,2.4vw,2rem);font-stretch:90%;margin:.5rem 0 .6rem}
+.poste .tags{display:flex;flex-wrap:wrap;gap:.5rem}
+.poste .tag{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.4rem .85rem;border-radius:999px;background:var(--ciel);color:var(--marine)}
+.poste .tag-clair{background:#eef3f4;color:var(--doux)}
+.poste .plus{width:3.2rem;height:3.2rem;border-radius:50%;display:grid;place-items:center;background:var(--beige);color:var(--marine);transition:transform .3s}
+.poste[open] .plus{transform:rotate(45deg)}
+.poste-corps{display:grid;grid-template-columns:1.3fr .7fr;gap:3rem;padding:0 2.4rem 2.4rem;border-top:1px solid #e3eaec;padding-top:2rem}
+.poste-corps h4{font-size:1.05rem;color:var(--marine);margin:1.4rem 0 .6rem;letter-spacing:-.005em}
+.poste-corps h4:first-child{margin-top:0}
+.poste-corps p{color:var(--doux)}
+.poste-corps ul{list-style:none;display:grid;gap:.55rem}
+.poste-corps li{padding-left:1.7rem;position:relative;color:var(--texte)}
+.poste-corps li::before{content:"";position:absolute;left:0;top:.5rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--cyan)}
+.poste-cote{background:#f3f8f9;border-radius:1.3rem;padding:1.7rem;align-self:start}
+.poste-cote dl{display:grid;gap:1rem;margin-bottom:1.4rem}
+.poste-cote dt{font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--bleu)}
+.poste-cote dd{color:var(--marine);font-weight:600}
+.poste-cote .btn{width:100%}
+
+.cand-zone{display:grid;grid-template-columns:.8fr 1.2fr;gap:5rem;align-items:start}
+.cand-zone .intro{color:var(--doux);font-size:1.12rem;margin:1.2rem 0 2rem;max-width:26em}
+.cand{background:#fff;border-radius:1.9rem;padding:2.6rem;box-shadow:0 30px 80px rgba(0,40,60,.12);border:1px solid #e1e8ea}
+.cand .grille{display:grid;grid-template-columns:1fr 1fr;gap:0 1.2rem}
+.cand .plein{grid-column:1/-1}
+.cand textarea{width:100%;min-height:7.5rem;font:500 1rem var(--font);line-height:1.4;padding:1rem 1.125rem;border:1.5px solid #cfd8dc;border-radius:14px;background:#f7fafb;color:var(--texte);resize:vertical}
+.cand textarea:focus{outline:0;border-color:var(--bleu);background:#fff;box-shadow:0 0 0 .25rem rgba(40,176,216,.2)}
+.fichier{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;border:1.5px dashed #aebfc5;border-radius:14px;background:#fafcfc}
+.fichier input{font:500 .95rem var(--font);color:var(--doux);width:100%;height:auto;border:0;background:none;padding:0;box-shadow:none}
+.cand .legal{font-size:.82rem;color:var(--doux);margin-top:1rem}
+.cand .btn{margin-top:.6rem}
+.signaux{display:flex;gap:1.6rem;flex-wrap:wrap;margin-top:2rem;color:var(--marine);font-weight:600;font-size:.95rem}
+.signaux span{display:inline-flex;align-items:center;gap:.5rem}
+.signaux .ico{width:1.2rem;height:1.2rem;stroke:var(--bleu);fill:none;stroke-width:2.5}
+
+@media (min-width:721px){.etapes-3{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:1100px){
+  .hero-carr .wrap{grid-template-columns:1fr}
+  .valeurs{grid-template-columns:1fr 1fr}
+  .mission,.cand-zone,.poste-corps{grid-template-columns:1fr;gap:2rem}
+  .avantages{grid-template-columns:1fr 1fr}
+  .avantage-gros{grid-column:1/-1}
+}
+@media (max-width:720px){
+  .valeurs,.avantages,.cand .grille{grid-template-columns:1fr}
+  .poste summary{padding:1.5rem}
+  .poste-corps{padding:1.5rem}
+  .cand{padding:1.6rem}
+}
