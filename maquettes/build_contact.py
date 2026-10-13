@@ -31,6 +31,14 @@ PAGES = {
    title='Services commerciaux CVAC-R à Joliette | Bédard',
    desc="Ventilation, réfrigération et ferblanterie pour commerces, industries et institutions à Joliette et Lanaudière. Conception, entretien, urgence 24 h.",
    ld='{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://cbedard.com/commercial/#page","url":"https://cbedard.com/commercial/","name":"Services commerciaux","about":{"@id":"https://cbedard.com/#entreprise"}},{"@type":"Service","@id":"https://cbedard.com/commercial/#service","name":"Ventilation, réfrigération et ferblanterie commerciales","serviceType":"CVAC-R commercial, industriel et institutionnel","provider":{"@id":"https://cbedard.com/#entreprise"},"areaServed":{"@type":"AdministrativeArea","name":"Lanaudière"}},' + bc('Commercial','') + ',{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Pour quels types de bâtiments travaillez-vous?","acceptedAnswer":{"@type":"Answer","text":"Nous réalisons des projets résidentiels, commerciaux, industriels et institutionnels."}},{"@type":"Question","name":"Faites-vous la conception des systèmes de ventilation?","acceptedAnswer":{"@type":"Answer","text":"Oui. Nos professionnels réalisent le design, la conception et l\'installation de systèmes de ventilation personnalisés, y compris les dessins d\'intégration et les dessins d\'atelier."}},{"@type":"Question","name":"Offrez-vous un entretien périodique?","acceptedAnswer":{"@type":"Answer","text":"Oui, nous offrons un service d\'entretien périodique personnalisé pour vos équipements de ventilation, de réfrigération et de climatisation."}},{"@type":"Question","name":"Avez-vous un service d\'urgence?","acceptedAnswer":{"@type":"Answer","text":"Oui, un service d\'urgence est offert 24 heures sur 24."}}]}]}'),
+ 'ventilation': dict(BODY='ventilation.body.html', OUT='ventilation-commerciale-joliette.html', CANON='https://cbedard.com/commercial/ventilation-commerciale-joliette/',
+   title='Ventilation commerciale à Joliette | Bédard',
+   desc="Conception, ferblanterie sur mesure, installation et nettoyage de ventilation commerciale à Joliette et Lanaudière. Soumission détaillée, urgence 24 h.",
+   ld=json.dumps({"@context":"https://schema.org","@graph":[
+     {"@type":"WebPage","@id":"https://cbedard.com/commercial/ventilation-commerciale-joliette/#page","url":"https://cbedard.com/commercial/ventilation-commerciale-joliette/","name":"Ventilation commerciale à Joliette","about":{"@id":"https://cbedard.com/#entreprise"}},
+     {"@type":"Service","@id":"https://cbedard.com/commercial/ventilation-commerciale-joliette/#service","name":"Ventilation commerciale","serviceType":"Conception, fabrication, installation et nettoyage de systèmes de ventilation","provider":{"@id":"https://cbedard.com/#entreprise"},"areaServed":{"@type":"AdministrativeArea","name":"Lanaudière"}},
+     {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://cbedard.com/"},{"@type":"ListItem","position":2,"name":"Commercial","item":"https://cbedard.com/commercial/"},{"@type":"ListItem","position":3,"name":"Ventilation commerciale"}]},
+     {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":x["q"],"acceptedAnswer":{"@type":"Answer","text":x["a"]}} for x in json.load(open('/home/user/SkIz/maquettes/src/ventilation.faq.json',encoding='utf-8'))]}]}, ensure_ascii=False)),
  'soumission': dict(BODY='soumission.body.html', OUT='soumission.html', CANON='https://cbedard.com/soumission/',
    title='Soumission gratuite chauffage et climatisation | Bédard',
    desc="Demandez une soumission gratuite en 2 minutes : thermopompe, climatisation, ventilation, géothermie ou projet commercial à Joliette et Lanaudière.",
@@ -39,7 +47,7 @@ PAGES = {
 for key, P in PAGES.items():
     BODY, OUT, CANON, title, desc, ld = P['BODY'], P['OUT'], P['CANON'], P['title'], P['desc'], P['ld']
     json.loads(ld)
-    extra = extra_base + (open(ROOT + 'src/commercial-extra.css', encoding='utf-8').read() if key == 'commercial' else '')
+    extra = extra_base + (open(ROOT + 'src/commercial-extra.css', encoding='utf-8').read() if key in ('commercial', 'ventilation') else '')
     body = open(ROOT + 'src/' + BODY, encoding='utf-8').read()
     css2 = re.sub(r'url\(\{\{IMG_[A-Z]+\}\}\)', 'none', css)
     assert len(title) <= 60 and len(desc) <= 160, (key, len(title), len(desc))

@@ -84,3 +84,5 @@
   .poste-corps{padding:1.5rem}
   .cand{padding:1.6rem}
 }
+
+a[href^="tel:"]{white-space:nowrap}

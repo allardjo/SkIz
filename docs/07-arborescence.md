@@ -249,3 +249,17 @@ Fichier : `maquettes/commercial.html` (sources : `src/gen_commercial.py`, `src/c
 4. Les trois sous-pages (réfrigération, ventilation, ferblanterie) restent à construire, sur le modèle de la page de service. Ventilation commerciale : 2 943 impressions sur 16 mois, la plus prometteuse.
 5. Photo du héros : image de la bibliothèque du site (intérieur industriel), licence à confirmer.
 6. Le formulaire envoie à l'équipe commerciale (adresse à préciser), avec suivi `form_submit` distinct de la soumission résidentielle (`data-form="commercial"`).
+
+## Sous-page Ventilation commerciale (maquette)
+
+Fichier : `maquettes/ventilation-commerciale-joliette.html` (sources : `src/gen_ventilation.py`, `src/ventilation.body.html`, assemblé par `build_contact.py`). URL cible : `/commercial/ventilation-commerciale-joliette/`. Titre « Ventilation commerciale à Joliette | Bédard » (43 caractères), description de 151 caractères, JSON-LD WebPage + Service + FAQPage (7 questions) + fil d'Ariane (Accueil > Commercial > Ventilation).
+
+**Pourquoi cette page** : dans Search Console, « ventilation commerciale joliette » compte 2 943 impressions en position moyenne 6,9, avec 0 clic (16 mois). Aucune page dédiée n'y répond aujourd'hui : c'est la page générique `/services/` qui ressort. D'autres requêtes de ventilation ont beaucoup d'impressions (« ferblantier ventilation brossard » 3 089, « échangeur d'air québec » 1 949) mais portent sur des villes hors secteur : on ne les vise pas.
+
+Contenu : héros avec formulaire de soumission, 4 points forts, 6 services (conception et dessins, ferblanterie sur mesure, installation, échangeurs d'air, nettoyage des systèmes, entretien et dépannage), types de bâtiments, déroulement en 4 étapes, facteurs du prix (aucun prix publié, projets sur mesure), pourquoi Bédard (Ventilation Fabro 2012, Solution Ventech 2010), réalisations, FAQ, liens liés.
+
+Attention à la concurrence entre pages : au lancement, `/services/` doit pointer vers cette page (lien contextuel « ventilation commerciale ») et ne pas viser la même requête. Le hub `/commercial/` envoie aussi vers elle.
+
+À fournir ou valider : exemples de bâtiments pour chaque type (marqués « à valider »), 3 à 6 projets de référence, délais typiques d'un projet, licences RBQ et CCQ, photo du héros (la photo du hub, licence à confirmer).
+
+Correction transversale : les numéros de téléphone ne se coupent plus en deux lignes (`a[href^="tel:"]{white-space:nowrap}`), sur toutes les pages construites avec `build_contact.py` et `build_carrieres.py`.
