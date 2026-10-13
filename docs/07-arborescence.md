@@ -178,12 +178,14 @@ Encore ouvert :
 
 - Climatiseur mural, 1 pièce, 1 appareil : **3 500 $ à 5 300 $ avant taxes, installation comprise**. Publié dans la boîte « En bref », la ligne « Une pièce » du tableau, la FAQ et le balisage FAQPage de l'article.
 - Les anciens prix de 2022 (2 500 $ à 4 200 $, moyenne 3 500 $) sont retirés.
-- Encore à obtenir : prix « deux zones » et « multizone » (lignes du tableau), SEER typique, nom du conseiller. La mention « mis à jour en octobre 2026 » est inscrite.
+- Encore à obtenir : prix « multizone » (ligne du tableau; prévoir par exemple le prix pour 2 unités et pour chaque unité supplémentaire), SEER typique, nom du conseiller. La mention « mis à jour en octobre 2026 » est inscrite.
 - Remarque : la fourchette est large (écart de 1 800 $). L'article explique déjà les facteurs (puissance, bruit, efficacité, options). Reformuler pour 2 zones et multizone dès que les ventes répondent.
 
 ## Vocabulaire : « simple zone » plutôt que « une pièce » (13 octobre 2026)
 
 Une unité murale simple zone peut couvrir un plein pied complet avec plusieurs pièces. Le vocabulaire est donc par zone, pas par pièce :
-- Article « prix » : « climatiseur mural simple zone (une unité intérieure) » dans « En bref », la FAQ et le balisage; tableau en trois lignes « Simple zone », « Deux zones », « Multizone ».
+- Article « prix » : « climatiseur mural simple zone (une unité intérieure) » dans « En bref », la FAQ et le balisage; tableau en deux lignes : « Simple zone » et « Multizone » (1 unité extérieure, 2 unités intérieures ou plus). Pas de ligne « Deux zones » : un système à deux unités intérieures est déjà un multizone.
 - Page pilier : puce « Une unité simple zone peut couvrir un plein pied complet, selon l'aménagement », tableau comparatif (« une zone ou un étage complet ») et réponse de la FAQ « Peut-on climatiser plusieurs pièces avec un seul climatiseur mural? » réécrite (« Oui, dans bien des cas… »).
 - À faire valider par un conseiller : la limite de couverture d'une unité simple zone (superficie, circulation de l'air, chambres fermées) avant publication de la FAQ.
+
+Correction (13 octobre 2026) : le client précise qu'il n'y a que des systèmes simple zone et multizone. La ligne « Deux zones » est retirée de l'article, la page pilier parle de « système multizone ».
