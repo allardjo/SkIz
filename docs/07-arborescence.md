@@ -74,3 +74,16 @@ Pages par ville (Repentigny, etc.) : seulement quand la liste des secteurs desse
 
 ## Observation à noter
 Un nouvel article, « Échangeur d'air au Québec : utilisation et entretien », a été publié le 2026-10-12 (absent des données Search Console). Quelqu'un publie donc du contenu en ce moment. À savoir qui, pour coordonner avec la refonte.
+
+## Page de service modèle : `maquettes/service-installation-thermopompe.html`
+Gabarit des pages de services locales (même design que l'accueil, adapté aux grands écrans, mobile validé). Sources : `maquettes/src/` et `maquettes/build_service.py`.
+
+Contenu et SEO :
+- Adresse cible : `/services/installation-thermopompe-joliette/` ; titre de 47 caractères, description de 149 caractères, un seul H1 (« Installation de thermopompe à Joliette »), canonical, fil d'Ariane.
+- Données structurées : `Service` (rattaché à l'entreprise locale), `BreadcrumbList`, `FAQPage` (4 réponses validées).
+- Structure : héros avec formulaire de soumission, bande de points forts, comparatif murale / centrale, déroulement en 4 étapes, facteurs de prix (sans chiffres inventés), bloc subventions, avis, FAQ, liens vers les services voisins, appel final.
+- Liens internes prévus : catégories thermopompes murales / centrales, guide « Remplacer une thermopompe : à quel prix? », réparation, entretien, chauffage auxiliaire, climatiseur mural.
+- Typographie française (espaces insécables, téléphones sur une ligne) appliquée aux deux maquettes (`maquettes/typo.py`).
+
+À confirmer avant publication (marqué dans la page) : fourchettes de prix, programmes d'aide, durée d'installation, note et nombre d'avis.
+Chaque autre page de service reprend ce gabarit : réparation, entretien et nettoyage, chauffage auxiliaire, ventilation commerciale, réfrigération commerciale, ferblanterie.

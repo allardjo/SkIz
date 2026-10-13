@@ -1,4 +1,6 @@
 import base64,re,sys
+sys.path.insert(0,'/home/user/SkIz/maquettes')
+from typo import typo, add_css
 B='/home/user/SkIz/assets/brand/svg/'; I='/home/user/SkIz/maquettes/img/'
 def svg(n): return 'data:image/svg+xml;base64,'+base64.b64encode(open(B+n,'rb').read()).decode()
 def jpg(n): return 'data:image/jpeg;base64,'+base64.b64encode(open(I+n+'.jpg','rb').read()).decode()
@@ -15,6 +17,7 @@ t=(t.replace('{{SYMBOLE_BEIGE}}',svg('symbole-beige.svg'))
     .replace('{{LOGO_HORIZ_MARINE}}',svg('logo-enonce-horizontal-marine.svg'))
     .replace('{{LOGO_ENONCE_BEIGE}}',svg('logo-enonce-horizontal-beige.svg'))
     .replace('{{ETOILES}}',star*5).replace('{{ETOILE1}}',star))
+t=typo(add_css(t))
 left=re.findall(r'\{\{[A-Z_]+\}\}',t)
 print('placeholders restants:',left)
 open(sys.argv[2],'w',encoding='utf-8').write(t); print(len(t)//1024,'Ko ->',sys.argv[2])

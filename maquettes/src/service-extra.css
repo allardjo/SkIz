@@ -1,0 +1,82 @@
+/* ===== page de service ===== */
+.hero-service{padding:clamp(9rem,17vh,12.5rem) 0 clamp(5.5rem,10vh,8rem)}
+.hero-service .bg{position:absolute;inset:0;background:var(--img-thermo) 70% 50%/cover no-repeat;opacity:.42;mix-blend-mode:luminosity}
+.hero-service::before{background:linear-gradient(95deg,rgba(0,40,62,.99) 0%,rgba(0,54,80,.96) 48%,rgba(0,54,80,.62) 100%),url({{SYMBOLE_BEIGE}}) no-repeat -220px 110%/820px;opacity:1;left:0;bottom:0;width:auto;height:auto;inset:0}
+.hero-service .wrap{grid-template-columns:1.15fr .85fr;align-items:center}
+.fil{display:flex;gap:10px;align-items:center;font-size:.86rem;color:#b9d2da;margin-bottom:28px;flex-wrap:wrap}
+.fil a{text-decoration:none;color:#d6e6ea}.fil a:hover{color:#fff}.fil b{color:#fff;font-weight:600}.fil span{opacity:.5}
+.devis-carte{background:rgba(255,255,255,.97);color:var(--texte);border-radius:1.75rem;padding:2.2rem;box-shadow:0 40px 90px rgba(0,0,20,.5);position:relative;z-index:2}
+.devis-carte h2{font-size:1.65rem;font-stretch:92%;margin-bottom:.4rem}
+.devis-carte .sous{color:var(--doux);font-size:.95rem;margin-bottom:1.4rem}
+.devis-carte .btn{width:100%;margin-top:.5rem}
+.devis-carte .note{font-size:.84rem;color:var(--doux);text-align:center;margin-top:.9rem}
+.devis-carte .note a{color:var(--bleu);font-weight:700;text-decoration:none}
+.faits{position:relative;z-index:5;margin-top:-3.2rem}
+.faits .boite{background:#fff;border-radius:1.75rem;box-shadow:0 30px 80px rgba(0,40,60,.2);display:grid;grid-template-columns:repeat(4,1fr);padding:.5rem}
+.fait{display:grid;grid-template-columns:auto 1fr;column-gap:1rem;row-gap:.15rem;align-items:center;padding:1.6rem 1.8rem;position:relative}
+.fait+.fait::before{content:"";position:absolute;left:0;top:1.4rem;bottom:1.4rem;width:1px;background:#e2e8ea}
+.fait .ico{grid-row:span 2;width:2.6rem;height:2.6rem;padding:.6rem;border-radius:.9rem;background:var(--marine);color:var(--ciel)}
+.fait b{color:var(--marine);font-size:1.05rem;letter-spacing:-.01em}
+.fait span{color:var(--doux);font-size:.88rem;line-height:1.3}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem}
+.choix{border-radius:1.9rem;padding:2.8rem;background:#f3f8f9;border:1px solid #dbe6ea;display:flex;flex-direction:column;gap:1rem}
+.choix-fonce{background:var(--marine);border-color:var(--marine);color:#d7e6ea}
+.choix .etiq{align-self:flex-start;background:var(--ciel);color:var(--marine);font-size:.76rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.45rem 1rem;border-radius:999px}
+.choix-fonce .etiq{background:rgba(255,255,255,.14);color:#fff}
+.choix h3{font-size:clamp(1.7rem,2.6vw,2.2rem);font-stretch:88%}
+.choix-fonce h3{color:#fff}
+.choix ul{list-style:none;display:grid;gap:.7rem;margin:.4rem 0}
+.choix li{padding-left:2rem;position:relative}
+.choix li::before{content:"";position:absolute;left:0;top:.35rem;width:1.2rem;height:1.2rem;border-radius:50%;background:var(--cyan) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23003650' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>") center/70% no-repeat}
+.choix .pour{padding:1rem 1.2rem;border-radius:1rem;background:rgba(0,54,80,.07);font-size:.95rem}
+.choix-fonce .pour{background:rgba(255,255,255,.1)}
+.choix-fonce .pour b{color:#fff}
+.choix .lien{margin-top:auto;padding-top:.6rem}
+.choix-fonce .lien{color:var(--ciel)}
+.prix{display:grid;grid-template-columns:1.2fr .8fr;gap:5rem;align-items:start}
+.prix .intro{color:var(--doux);font-size:1.12rem;margin:1.2rem 0 2rem;max-width:34em}
+.facteurs{list-style:none;display:grid;gap:0}
+.facteurs li{display:grid;grid-template-columns:1fr 1.3fr;gap:1.5rem;padding:1.4rem 0;border-top:1px solid #d6dfe2}
+.facteurs li:last-child{border-bottom:1px solid #d6dfe2}
+.facteurs b{color:var(--marine);font-size:1.12rem}
+.facteurs span{color:var(--doux)}
+.placeholder{margin-top:1.5rem;font-size:.9rem;color:var(--doux);font-style:italic}
+.carte-sombre{background:var(--marine);color:#cfe0e5;border-radius:1.9rem;padding:2.8rem;position:sticky;top:8rem;overflow:hidden;display:flex;flex-direction:column;gap:1.2rem}
+.carte-sombre::after{content:"";position:absolute;right:-2rem;bottom:-3rem;width:15rem;height:19rem;background:url({{SYMBOLE_BEIGE}}) no-repeat center/contain;opacity:.07}
+.carte-sombre h3{color:#fff;font-size:1.9rem;font-stretch:88%}
+.carte-sombre .btn{align-self:flex-start;position:relative;z-index:1}
+.lien-clair{color:var(--ciel);position:relative;z-index:1}
+.programmes{border:2px dashed #b9c7cc;border-radius:1.9rem;padding:2.8rem 3.2rem;background:#fafcfc}
+.programmes h2{font-size:clamp(1.7rem,3vw,2.4rem);margin-bottom:.8rem}
+.programmes p{color:var(--doux);max-width:46em}
+.avis3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.carte-avis-fonce{background:var(--marine)!important;border-color:var(--marine)!important}
+.carte-avis-fonce blockquote{color:#fff!important}.carte-avis-fonce cite,.carte-avis-fonce cite span{color:#b9d2da!important}
+.carte-avis-fonce .av{background:var(--cyan)!important}
+.faq-zone{display:grid;grid-template-columns:.75fr 1.25fr;gap:5rem;align-items:start}
+.lies{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem}
+.lie{position:relative;background:#fff;border-radius:1.5rem;padding:1.9rem;text-decoration:none;display:flex;flex-direction:column;gap:.5rem;min-height:11rem;transition:transform .3s,box-shadow .3s}
+.lie:hover{transform:translateY(-5px);box-shadow:0 22px 48px rgba(0,50,70,.14)}
+.lie b{color:var(--marine);font-size:1.25rem;letter-spacing:-.015em}
+.lie span{color:var(--doux);font-size:.95rem;flex:1}
+.lie i{align-self:flex-end;width:2.7rem;height:2.7rem;border-radius:50%;display:grid;place-items:center;background:var(--beige);color:var(--marine);transition:transform .3s}
+.lie:hover i{transform:rotate(-45deg)}
+@media (max-width:1100px){
+  .hero-service .wrap{grid-template-columns:1fr}
+  .faits .boite{grid-template-columns:1fr 1fr}
+  .fait:nth-child(3)::before{display:none}
+  .duo,.prix,.faq-zone{grid-template-columns:1fr;gap:2.4rem}
+  .avis3{grid-template-columns:1fr}
+  .lies{grid-template-columns:1fr 1fr}
+  .carte-sombre{position:static}
+}
+@media (max-width:720px){
+  .faits{margin-top:-2rem}
+  .faits .boite{grid-template-columns:1fr}
+  .fait+.fait::before{display:none}
+  .choix{padding:1.8rem}
+  .facteurs li{grid-template-columns:1fr;gap:.4rem}
+  .programmes{padding:1.8rem}
+  .lies{grid-template-columns:1fr}
+  .carte-sombre{padding:1.8rem}
+}
