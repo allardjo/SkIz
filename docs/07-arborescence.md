@@ -213,3 +213,5 @@ Jonathan Allard est copropriétaire de l'entreprise, pas « conseiller » : titr
 ## Puissance en pieds carrés (13 octobre 2026)
 
 Le client propose de remplacer « zone moyenne » par des pieds carrés approximatifs. Le texte dit maintenant : « Un format de 12 000 BTU, très courant, convient généralement à un espace d'environ 400 à 600 pieds carrés [approximation à valider] ». L'estimation de départ (règle générale de l'industrie, non vérifiée par Bédard) est à confirmer par le client. Idée : petit tableau BTU / superficie approximative (9 000, 12 000, 18 000, 24 000 BTU) avec les chiffres de l'équipe des ventes, qui répond directement à la recherche « quelle puissance BTU choisir ».
+
+Validé par le client (copropriétaire) : un format de 12 000 BTU convient jusqu'à environ 1 000 pi², selon les circonstances et les autres données. Texte publié : « peut convenir jusqu'à environ 1 000 pieds carrés ». L'estimation de 400 à 600 pi² est abandonnée. Le tableau BTU / superficie reste à faire avec les chiffres du client pour 9 000, 18 000 et 24 000 BTU.
