@@ -196,3 +196,12 @@ Correction (13 octobre 2026) : le client précise qu'il n'y a que des systèmes 
 - Conseiller : Jonathan Allard, conseiller. Bloc auteur de l'article (« Guide rédigé par l'équipe Bédard et validé par Jonathan Allard, conseiller ») et balisage Article (author Person, jobTitle « Conseiller »). Titre exact à confirmer s'il diffère de « Conseiller ».
 - FAQ « secteurs » de l'article et de la page pilier : liste des municipalités (MRC de Joliette + secteurs voisins) inscrite.
 - Restent à confirmer : prix multizone, format 12 000 BTU « très courant pour une zone moyenne », vérification de la liste de la MRC sur le site de la MRC.
+
+## Efficacité : SEER, HSPF et COP (13 octobre 2026)
+
+Le conseiller précise qu'au Québec le HSPF (performance en chauffage) et le COP (coefficient de performance) comptent davantage que le SEER seul, car ils indiquent la performance en chauffage. L'article « prix » :
+- section 4 devient « L'efficacité énergétique : SEER, HSPF et COP », avec les trois définitions et un conseil (demander le COP à basse température, un climatiseur seul n'a pas de HSPF ni de COP de chauffage);
+- la liste « bonne soumission » demande les cotes SEER et HSPF et le COP à basse température;
+- nouvelle question FAQ « C'est quoi le SEER, le HSPF et le COP? » (visible + balisage FAQPage, 5 questions).
+
+À compléter par Jonathan Allard : plage de HSPF et de COP (à 8 °C et à basse température) des modèles vendus. Aucun chiffre de HSPF ou de COP n'est inventé dans la maquette. Idée : ajouter une ligne « Efficacité » (SEER / HSPF + COP) au tableau comparatif de la page pilier une fois les chiffres connus.
