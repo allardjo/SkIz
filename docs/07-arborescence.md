@@ -225,3 +225,7 @@ Le client indique que certains modèles ont un COP qui atteint tout près de 5. 
 Le copropriétaire corrige les données d'efficacité : HSPF2 jusqu'à 15,6 et SEER2 jusqu'à 35. L'article publie « jusqu'à 15,6 en HSPF2 » et « jusqu'à 35 en SEER2 » (remplace « SEER de 17 à 28 »), et le vocabulaire passe à SEER2 et HSPF2 (titre de section, liste, FAQ visible et balisage FAQPage, liste de contrôle de la soumission). Une phrase explique que le « 2 » indique la norme d'essai actuelle et que les nouvelles cotes ne se comparent pas directement aux anciennes.
 
 Le COP de « près de 5 » est retiré en attendant confirmation (l'encadré « À compléter » le dit). À obtenir : COP à basse température (par exemple à -15 °C). Si le COP de près de 5 est confirmé avec sa température de mesure, on le remet.
+
+## COP confirmé : 4,95 à 47 °F (13 octobre 2026)
+
+COP de 4,95 à 47 °F (8,3 °C) pour certains modèles, confirmé par le copropriétaire. Publié avec sa température de mesure : « certains modèles atteignent un COP de 4,95 à 8,3 °C (47 °F) ». À garder : la fiche technique du fabricant qui appuie ce chiffre (publicité non trompeuse). Reste à obtenir le COP à basse température (par exemple à -15 °C), l'encadré « À compléter » le demande toujours.
