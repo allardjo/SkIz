@@ -324,3 +324,13 @@ Maillage : chaque page renvoie aux trois autres services, à l'installation de t
 ## Correction : options du chauffage auxiliaire (13 octobre 2026)
 
 Le copropriétaire relève une erreur de logique : pour compléter une thermopompe, on n'installe pas une thermopompe murale. La section « Les options » de `/services/chauffage-auxiliaire-joliette/` présentait « Thermopompe murale : conserver votre chauffage actuel ». Reformulée en **deux types de chauffage auxiliaire** : (1) **fournaise électrique** (jumelée à une thermopompe centrale, système bi-énergie) et (2) **chauffage existant gardé en appoint** (types de chauffage à valider). La FAQ « bi-énergie ou appoint existant » ne mentionne plus de thermopompe murale. À faire valider par le conseiller : types de chauffage existants compatibles (plinthes électriques, etc.) et la compatibilité avec une maison sans conduits.
+
+## Site de test hors ligne (13 octobre 2026)
+
+`maquettes/build_offline.py` construit un dossier et un zip (`dist/site-bedard-offline.zip`, 2,4 Mo) qu'on ouvre sans Internet : double-clic sur `index.html`.
+- 31 pages : 14 maquettées (accueil, installation de thermopompe, pilier, guide de prix, réparation, entretien, chauffage auxiliaire, commercial, ventilation, réfrigération, ferblanterie, carrières, contact, soumission), 4 hubs simples (Résidentiel, Services, Guides de prix, Blogue), 12 pages « à venir » (avis, boutique, pages produits, deux guides, politique de confidentialité, conditions d'utilisation) et un plan du site.
+- Les liens `#` des maquettes sont remplacés par de vrais liens (règles de correspondance par texte du lien). Le menu principal de l'accueil ouvre les pages.
+- Images extraites en fichiers (`img/`), police Mona Sans (licence OFL) incluse (`fonts/`). Ballinger non incluse. La carte Google de la page Contact demande Internet. Les formulaires sont des démonstrations.
+- Test automatisé sur le zip décompressé : 1 000 liens internes valides (fichiers et ancres), les 31 pages atteignables depuis l'accueil, police chargée, aucune image cassée, aucune erreur JavaScript.
+
+Bug trouvé et corrigé grâce à ce test : en ajoutant la section SEER2 / HSPF2 / COP de l'article « prix », un remplacement trop large avait supprimé les sections « Les options », « La saison d'achat », le bloc d'appel à l'action et **le tableau des prix par situation** (simple zone 3 500 $ à 5 300 $, multizone). Tout est restauré depuis l'historique git; l'article a maintenant les 6 facteurs, le tableau et la section efficacité.

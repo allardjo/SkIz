@@ -1,0 +1,24 @@
+SITE BÉDARD - MAQUETTE HORS LIGNE
+=================================
+
+COMMENT L'OUVRIR (Mac)
+1. Double-cliquez sur le fichier .zip pour le décompresser.
+2. Ouvrez le dossier « site-bedard-offline ».
+3. Double-cliquez sur « index.html » : la page d'accueil s'ouvre dans votre navigateur (Safari, Chrome ou Firefox).
+4. Naviguez normalement. Tous les menus et les boutons mènent à une page. Un petit bouton « Plan du site (test) » en bas à gauche de chaque page liste toutes les pages.
+
+IMPORTANT : gardez les fichiers et les dossiers ensemble (« img » et « fonts » sont nécessaires). Ne déplacez pas un fichier .html seul.
+
+CE QUI EST DANS LE DOSSIER
+- 14 pages entièrement maquettées : accueil, installation de thermopompe, page pilier climatiseur mural et thermopompe, guide de prix du climatiseur mural, réparation, entretien et nettoyage, chauffage auxiliaire, commercial (hub), ventilation, réfrigération, ferblanterie, carrières, contact, soumission.
+- 4 pages hub simples (Résidentiel, Services, Guides de prix, Blogue) qui renvoient vers les pages maquettées.
+- 12 pages « à venir » (avis, boutique, pages produits, guides à rafraîchir, politique de confidentialité, conditions d'utilisation) : un gabarit vide avec des liens vers les pages maquettées.
+- Le plan du site (plan-du-site.html).
+
+À SAVOIR
+- Les formulaires sont une démonstration : ils ne s'envoient pas. Les formulaires de soumission (3 étapes) et de candidature montrent le fonctionnement et les messages d'erreur.
+- La carte Google de la page Contact demande une connexion Internet. Tout le reste fonctionne hors ligne.
+- La police Mona Sans (libre de droits) est incluse. La police Ballinger (licence Signal Type Foundry) n'est pas incluse : tant qu'elle n'est pas installée, les titres s'affichent avec Mona Sans.
+- Les textes marqués entre crochets, par exemple [à valider], sont des points à confirmer avant la publication. Les photos viennent de la bibliothèque de votre site actuel (licences à confirmer).
+- Les pages ne sont pas indexables (balise « noindex » sur les pages générées) : c'est une maquette de test, pas le site publié.
+- Pour tester l'affichage mobile : dans Safari, menu Développement > Mode de conception adaptative, ou dans Chrome, F12 puis l'icône d'appareil mobile.

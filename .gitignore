@@ -6,3 +6,6 @@
 *.eot
 maquettes/fonts/
 fonts/
+
+# livrables générés (zip du site hors ligne)
+dist/
