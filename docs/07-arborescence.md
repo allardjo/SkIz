@@ -87,3 +87,18 @@ Contenu et SEO :
 
 À confirmer avant publication (marqué dans la page) : fourchettes de prix, programmes d'aide, durée d'installation, note et nombre d'avis.
 Chaque autre page de service reprend ce gabarit : réparation, entretien et nettoyage, chauffage auxiliaire, ventilation commerciale, réfrigération commerciale, ferblanterie.
+
+## Page pilier : `maquettes/pilier-climatiseur-mural-thermopompe.html`
+Refonte de la page qui a 10 liens externes et 64 000 impressions, **à la même adresse** : `/climatiseur-mural-air-climatise-thermopompe-joliette/` (appelée « À propos » dans le menu actuel). Sources : `maquettes/src/pilier-climatiseur-thermopompe.body.html`, `maquettes/build_pilier.py`.
+
+Ce que la page actuelle disait (et que la refonte conserve) : titre générique « Votre entreprise de chauffage, ventilation et climatisation », H1 « L'entreprise de chauffage, ventilation et climatisation par excellence », 886 mots, et surtout l'histoire de l'entreprise. La refonte garde les mots-clés (chauffage, ventilation, climatisation, climatiseur mural, thermopompe, air climatisé) et reprend l'histoire sous forme de frise.
+
+Nouveau positionnement SEO :
+- Titre : « Climatiseur mural et thermopompe à Joliette | Bédard » (52 caractères). H1 : « Climatiseur mural et thermopompe à Joliette ».
+- Requêtes visées : climatiseur mural Joliette, air climatisé Joliette, thermopompe Joliette, installation de climatiseur Joliette.
+- Structure : héros avec formulaire, faits (depuis 1983, 65+ professionnels, urgence 24 h, 4,9/5), climatiseur mural contre thermopompe (cartes et tableau comparatif), installation à Joliette, gamme de produits (liens vers les 4 catégories), histoire de l'entreprise, prix, avis, FAQ (6 questions), services liés.
+- Données structurées : `Service`, `BreadcrumbList`, `FAQPage` (4 réponses validées).
+
+Faits tirés de la page actuelle (à confirmer, parce que le site actuel peut être dépassé) : 1983 concessionnaire exclusif Carrier pour Lanaudière ; 2005 recommandée par CAA habitation (cote de satisfaction supérieure à 95 %) ; 2006 acquisition de Service de chauffage Harnois ; 2009 concessionnaire agréé Mitsubishi ; 2010-2011 Solution Ventech (nettoyage de ventilation, unités murales, échangeurs d'air, conduits de sécheuse) ; 2012 déménagement au 304, boulevard de l'Industrie et acquisition de Ventilation Fabro (ventilation commerciale et institutionnelle).
+Contradiction à régler : la page actuelle parle de « 35 ans d'expérience », l'accueil de « plus de 40 ans », et la frise part de 1983 (43 ans en 2026). Choisir un seul énoncé, vérifiable, partout.
+Attention au référencement : changer le titre et le H1 d'une page qui se classe peut bouger ses positions. La page conserve son adresse, ses mots-clés et son contenu historique ; on surveille ses positions pendant 90 jours après le lancement.
