@@ -173,3 +173,10 @@ Encore ouvert :
 3. Page « politique de confidentialité » à rédiger et publier (nom du responsable de la protection des renseignements personnels requis par la Loi 25).
 4. Chiffres « 4,9 sur 5 » et « plus de 180 avis » à comparer avec la fiche Google.
 5. Techniques : noms de champs CF7, tracking GTM, enregistrement de la demande partielle à l'étape 2.
+
+## Prix 2026 reçus des ventes (13 octobre 2026)
+
+- Climatiseur mural, 1 pièce, 1 appareil : **3 500 $ à 5 300 $ avant taxes, installation comprise**. Publié dans la boîte « En bref », la ligne « Une pièce » du tableau, la FAQ et le balisage FAQPage de l'article.
+- Les anciens prix de 2022 (2 500 $ à 4 200 $, moyenne 3 500 $) sont retirés.
+- Encore à obtenir : prix « deux zones » et « multizone » (lignes du tableau), SEER typique, nom du conseiller. La mention « mis à jour en octobre 2026 » est inscrite.
+- Remarque : la fourchette est large (écart de 1 800 $). L'article explique déjà les facteurs (puissance, bruit, efficacité, options). Reformuler pour 2 zones et multizone dès que les ventes répondent.
