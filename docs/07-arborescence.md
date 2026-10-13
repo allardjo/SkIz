@@ -205,3 +205,7 @@ Le conseiller précise qu'au Québec le HSPF (performance en chauffage) et le CO
 - nouvelle question FAQ « C'est quoi le SEER, le HSPF et le COP? » (visible + balisage FAQPage, 5 questions).
 
 À compléter par Jonathan Allard : plage de HSPF et de COP (à 8 °C et à basse température) des modèles vendus. Aucun chiffre de HSPF ou de COP n'est inventé dans la maquette. Idée : ajouter une ligne « Efficacité » (SEER / HSPF + COP) au tableau comparatif de la page pilier une fois les chiffres connus.
+
+## Titre de l'auteur : copropriétaire (13 octobre 2026)
+
+Jonathan Allard est copropriétaire de l'entreprise, pas « conseiller » : titre corrigé dans le bloc auteur, sous le titre de l'article et dans le balisage Article (`jobTitle` « Copropriétaire »). Un guide validé par un propriétaire renforce les signaux d'expérience et de confiance (E-E-A-T), sans être un facteur de classement direct. À ajouter : lien LinkedIn personnel (`sameAs` de la Person) dès que le client le fournit.
