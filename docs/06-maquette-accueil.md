@@ -20,6 +20,9 @@ Retour du client sur la v1 : « site trop générique, on dirait une petite entr
 11. Étapes, zone desservie, FAQ (données structurées `FAQPage`), appel final, pied de page.
 Mobile : une colonne, barre fixe « Appeler / Soumission ».
 
+### Grands écrans (correctif du 2026-10-13)
+Retour du client (Mac, grand écran) : la mise en page était plafonnée à environ 1 240 px et flottait au centre. Correctif : conteneur fluide (largeur de l'écran moins des marges de 4 % à 5,5 rem, plafond à 120 rem), toutes les mesures converties de px en rem, et taille de base qui grandit de 16 px (écran de 1 440 px) à 24 px (écran de 2 560 px). La hauteur du hero s'adapte à la hauteur de la fenêtre pour que la barre de soumission reste visible. Testé à 1 440, 1 728 et 2 560 px de largeur.
+
 ### Marque
 Marine, beige, rouille (boutons d'action uniquement), cyan sur fond foncé seulement, dégradé de marque en pied de page, symbole en filigrane, Mona Sans avec axe de largeur pour les titres (en attendant la licence web de Ballinger).
 
