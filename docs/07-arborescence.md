@@ -279,3 +279,15 @@ Photo du héros : image « refrigeration-commerciale-opt.jpg » de la bibliothè
 ## Correctif visuel : chiffres des étapes (13 octobre 2026)
 
 Les gros chiffres en contour (01 à 04 des déroulements, 01 à 06 des cartes commerciales, chiffres de l'accueil) montraient des traits parasites à l'intérieur du « 4 » : la police variable Mona Sans a des tracés qui se chevauchent, et un contour (`-webkit-text-stroke`) les dessine tous. Remplacé par des chiffres pleins en teinte pâle, sans contour. Toutes les pages ont été reconstruites. Quand Ballinger (police statique) sera installée, on pourra reconsidérer un contour, à tester sur chaque chiffre.
+
+## Sous-page Ferblanterie (maquette)
+
+Fichier : `maquettes/ferblanterie-joliette.html` (sources : `src/gen_ferblanterie.py`, `src/ferblanterie.body.html`, `src/ferblanterie-extra.css`, assemblé par `build_contact.py`). URL cible : `/commercial/ferblanterie/`. Titre « Ferblantier en ventilation à Joliette | Bédard » (45 caractères), description de 142 caractères, JSON-LD WebPage + Service + FAQPage (7 questions, mentions « à valider » retirées du balisage) + fil d'Ariane.
+
+**Demande de recherche : faible.** Une seule requête de ferblanterie dans 16 mois de Search Console : « ferblantier ventilation brossard » (3 089 impressions, position 53), hors secteur et sans clic. « Ferblantier Joliette » n'apparaît pas. Cette page sert donc surtout de **page de soutien** : elle complète le hub commercial et la ventilation, rassure les entrepreneurs et les concepteurs, et alimente le **recrutement** (bloc « Vous êtes ferblantier(ère)? » avec salaire CCQ commercial, véhicule de service, travail à l'année, chantiers locaux, repris de ta page Carrières). Aucune promesse de classement.
+
+Contenu : héros avec formulaire, 4 points forts, 3 services (conduits sur mesure, installation sur chantier, modification et remplacement), pièces et conduits (illustration de ton site), réalisation (photo de chantier de ton site), déroulement en 4 étapes (plans et relevés, dessins d'atelier, fabrication, installation), recrutement, FAQ, liens liés.
+
+Photos : « Ferblanterie-min » (conduits galvanisés installés dans un bâtiment) en héros et en réalisation; « ferblanterie-opt-realopt » (illustration de sections de conduits) dans « Pièces et conduits ». Licences et nom du projet à confirmer.
+
+**À valider (important)** : la **fabrication en atelier**. Ton site dit « ferblantier spécialisé en ventilation… design, conception et installation » et ta page Carrières parle de ferblantiers, mais rien n'affirme que Bédard fabrique ses conduits dans son propre atelier. Les mentions « fabriquent », « fabrication sur mesure » et « atelier » (page ferblanterie, page ventilation, hub commercial) sont des suppositions marquées « à valider » sur cette page : à confirmer ou à retirer. Valider aussi la liste des pièces, les types de projets et le projet de la photo.
