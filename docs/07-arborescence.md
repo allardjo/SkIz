@@ -208,4 +208,4 @@ Le conseiller précise qu'au Québec le HSPF (performance en chauffage) et le CO
 
 ## Titre de l'auteur : copropriétaire (13 octobre 2026)
 
-Jonathan Allard est copropriétaire de l'entreprise, pas « conseiller » : titre corrigé dans le bloc auteur, sous le titre de l'article et dans le balisage Article (`jobTitle` « Copropriétaire »). Un guide validé par un propriétaire renforce les signaux d'expérience et de confiance (E-E-A-T), sans être un facteur de classement direct. À ajouter : lien LinkedIn personnel (`sameAs` de la Person) dès que le client le fournit.
+Jonathan Allard est copropriétaire de l'entreprise, pas « conseiller » : titre corrigé dans le bloc auteur, sous le titre de l'article et dans le balisage Article (`jobTitle` « Copropriétaire »). Un guide validé par un propriétaire renforce les signaux d'expérience et de confiance (E-E-A-T), sans être un facteur de classement direct. Lien LinkedIn personnel (https://ca.linkedin.com/in/joallard) ajouté dans `sameAs` de la Person.
