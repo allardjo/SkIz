@@ -39,6 +39,14 @@ PAGES = {
      {"@type":"Service","@id":"https://cbedard.com/commercial/ventilation-commerciale-joliette/#service","name":"Ventilation commerciale","serviceType":"Conception, fabrication, installation et nettoyage de systèmes de ventilation","provider":{"@id":"https://cbedard.com/#entreprise"},"areaServed":{"@type":"AdministrativeArea","name":"Lanaudière"}},
      {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://cbedard.com/"},{"@type":"ListItem","position":2,"name":"Commercial","item":"https://cbedard.com/commercial/"},{"@type":"ListItem","position":3,"name":"Ventilation commerciale"}]},
      {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":x["q"],"acceptedAnswer":{"@type":"Answer","text":x["a"]}} for x in json.load(open('/home/user/SkIz/maquettes/src/ventilation.faq.json',encoding='utf-8'))]}]}, ensure_ascii=False)),
+ 'refrigeration': dict(BODY='refrigeration.body.html', OUT='refrigeration-commerciale-joliette.html', CANON='https://cbedard.com/commercial/refrigeration-commerciale/',
+   title='Réfrigération commerciale à Joliette | Bédard',
+   desc="Frigoristes à Joliette : installation, entretien préventif et dépannage 24 h de systèmes de réfrigération commerciale. Soumission détaillée.",
+   ld=json.dumps({"@context":"https://schema.org","@graph":[
+     {"@type":"WebPage","@id":"https://cbedard.com/commercial/refrigeration-commerciale/#page","url":"https://cbedard.com/commercial/refrigeration-commerciale/","name":"Réfrigération commerciale à Joliette","about":{"@id":"https://cbedard.com/#entreprise"}},
+     {"@type":"Service","@id":"https://cbedard.com/commercial/refrigeration-commerciale/#service","name":"Réfrigération commerciale","serviceType":"Installation, entretien et dépannage de systèmes de réfrigération commerciale","provider":{"@id":"https://cbedard.com/#entreprise"},"areaServed":{"@type":"AdministrativeArea","name":"Lanaudière"}},
+     {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://cbedard.com/"},{"@type":"ListItem","position":2,"name":"Commercial","item":"https://cbedard.com/commercial/"},{"@type":"ListItem","position":3,"name":"Réfrigération commerciale"}]},
+     {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":x["q"],"acceptedAnswer":{"@type":"Answer","text":x["a"]}} for x in json.load(open('/home/user/SkIz/maquettes/src/refrigeration.faq.json',encoding='utf-8'))]}]}, ensure_ascii=False)),
  'soumission': dict(BODY='soumission.body.html', OUT='soumission.html', CANON='https://cbedard.com/soumission/',
    title='Soumission gratuite chauffage et climatisation | Bédard',
    desc="Demandez une soumission gratuite en 2 minutes : thermopompe, climatisation, ventilation, géothermie ou projet commercial à Joliette et Lanaudière.",
@@ -47,7 +55,7 @@ PAGES = {
 for key, P in PAGES.items():
     BODY, OUT, CANON, title, desc, ld = P['BODY'], P['OUT'], P['CANON'], P['title'], P['desc'], P['ld']
     json.loads(ld)
-    extra = extra_base + (open(ROOT + 'src/commercial-extra.css', encoding='utf-8').read() if key in ('commercial', 'ventilation') else '')
+    extra = extra_base + (open(ROOT + 'src/commercial-extra.css', encoding='utf-8').read() if key in ('commercial', 'ventilation', 'refrigeration') else '') + (open(ROOT + 'src/refrigeration-extra.css', encoding='utf-8').read() if key == 'refrigeration' else '')
     body = open(ROOT + 'src/' + BODY, encoding='utf-8').read()
     css2 = re.sub(r'url\(\{\{IMG_[A-Z]+\}\}\)', 'none', css)
     assert len(title) <= 60 and len(desc) <= 160, (key, len(title), len(desc))
@@ -75,7 +83,7 @@ for key, P in PAGES.items():
 
     # images utilisées seulement
     used = sorted(set(re.findall(r'var\(--img-([a-z]+)\)', html)))
-    files = {'thermo': 'thermopompe', 'hero': 'hero', 'equipe': 'equipe', 'residentiel': 'residentiel', 'commercial': 'commercial', 'entretien': 'entretien', 'chauffage': 'chauffage', 'guide': 'guide-thermopompe'}
+    files = {'thermo': 'thermopompe', 'hero': 'hero', 'equipe': 'equipe', 'residentiel': 'residentiel', 'commercial': 'commercial', 'entretien': 'entretien', 'chauffage': 'chauffage', 'guide': 'guide-thermopompe', 'refrig': 'refrigeration'}
     decl = ''.join(f'--img-{k}:url({jpg(files[k])});' for k in used)
     html = html.replace(':root{', ':root{' + decl, 1)
 

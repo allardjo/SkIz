@@ -263,3 +263,15 @@ Attention à la concurrence entre pages : au lancement, `/services/` doit pointe
 À fournir ou valider : exemples de bâtiments pour chaque type (marqués « à valider »), 3 à 6 projets de référence, délais typiques d'un projet, licences RBQ et CCQ, photo du héros (la photo du hub, licence à confirmer).
 
 Correction transversale : les numéros de téléphone ne se coupent plus en deux lignes (`a[href^="tel:"]{white-space:nowrap}`), sur toutes les pages construites avec `build_contact.py` et `build_carrieres.py`.
+
+## Sous-page Réfrigération commerciale (maquette)
+
+Fichier : `maquettes/refrigeration-commerciale-joliette.html` (sources : `src/gen_refrigeration.py`, `src/refrigeration.body.html`, `src/refrigeration-extra.css`, assemblé par `build_contact.py`). URL cible : `/commercial/refrigeration-commerciale/`. Titre « Réfrigération commerciale à Joliette | Bédard » (45 caractères), description de 138 caractères, JSON-LD WebPage + Service + FAQPage (7 questions) + fil d'Ariane.
+
+**Données de recherche** : volume plus modeste que la ventilation (environ 1 500 impressions utiles en 16 mois) : « frigoriste joliette » 205 impressions (position 6,6), « réfrigération notre-dame-des-prairies » 214, « compagnie de réfrigération » 110 (position 7,3), « entreprise frigoriste » 169, « refrigeration climatisation » 198 (position 15), « climatisation commerciale » 146 (position 73), « bedard refrigeration » 97 (position 2,5). Les requêtes hors secteur (Brossard, Rimouski, Baie-Saint-Paul, Beloeil) ne sont pas visées. L'angle retenu : « Vos frigoristes à Joliette » et l'urgence 24 h, un vrai besoin quand de la marchandise est à risque.
+
+Contenu : héros avec formulaire, 4 points forts, 6 services (installation, service et dépannage 24 h, entretien préventif, climatisation commerciale, contrôle et régulation, équipe de frigoristes), bande urgence en 3 gestes (appel, diagnostic, réparation), types de clients, déroulement en 4 étapes, facteurs du prix (aucun chiffre), réalisations, FAQ, liens liés (dont Carrières : « Devenez frigoriste »).
+
+Photo du héros : image « refrigeration-commerciale-opt.jpg » de la bibliothèque médias de ton site (chambre froide avec évaporateur), assombrie pour garder le contraste. À confirmer : licence (photo d'archive ou photo de Bédard) et, idéalement, la remplacer par une photo d'un chantier réel.
+
+À fournir ou valider : liste des équipements qu'on installe et entretient (chambres froides, comptoirs, systèmes centralisés : l'encadré de la page le demande), exemples de clients par type, 3 à 6 projets de référence, licences et certificats de frigoriste, délai d'intervention en urgence (aucune promesse de délai écrite pour l'instant).
