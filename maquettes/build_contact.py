@@ -12,7 +12,7 @@ s0 = base.index('\n<style>') + 8  # le commentaire Ballinger contient aussi le m
 css = base[s0: base.index('</style>')]
 header = base[base.index('<header class="site"'): base.index('</header>') + 9]
 tail = base[base.index('<footer class="pied">'):]
-extra = open(ROOT + 'src/service-extra.css', encoding='utf-8').read() + open(ROOT + 'src/contact-extra.css', encoding='utf-8').read()
+extra_base = open(ROOT + 'src/service-extra.css', encoding='utf-8').read() + open(ROOT + 'src/contact-extra.css', encoding='utf-8').read()
 
 import json
 bc = lambda n, item: '{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://cbedard.com/"},{"@type":"ListItem","position":2,"name":"%s"}]}' % n
@@ -27,6 +27,10 @@ PAGES = {
    title='Nous joindre : chauffage et climatisation Joliette | Bédard',
    desc="Joignez Bédard à Joliette : 450-753-9426, courriel, adresse et heures. Service d'urgence 24 h pour chauffage, climatisation et réfrigération.",
    ld='{"@context":"https://schema.org","@graph":[{"@type":"ContactPage","@id":"https://cbedard.com/contact-climatisation-joliette/#page","url":"https://cbedard.com/contact-climatisation-joliette/","name":"Nous joindre","about":{"@id":"https://cbedard.com/#entreprise"}},' + LB + ',' + bc('Contact','') + ']}'),
+ 'commercial': dict(BODY='commercial.body.html', OUT='commercial.html', CANON='https://cbedard.com/commercial/',
+   title='Services commerciaux CVAC-R à Joliette | Bédard',
+   desc="Ventilation, réfrigération et ferblanterie pour commerces, industries et institutions à Joliette et Lanaudière. Conception, entretien, urgence 24 h.",
+   ld='{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://cbedard.com/commercial/#page","url":"https://cbedard.com/commercial/","name":"Services commerciaux","about":{"@id":"https://cbedard.com/#entreprise"}},{"@type":"Service","@id":"https://cbedard.com/commercial/#service","name":"Ventilation, réfrigération et ferblanterie commerciales","serviceType":"CVAC-R commercial, industriel et institutionnel","provider":{"@id":"https://cbedard.com/#entreprise"},"areaServed":{"@type":"AdministrativeArea","name":"Lanaudière"}},' + bc('Commercial','') + ',{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Pour quels types de bâtiments travaillez-vous?","acceptedAnswer":{"@type":"Answer","text":"Nous réalisons des projets résidentiels, commerciaux, industriels et institutionnels."}},{"@type":"Question","name":"Faites-vous la conception des systèmes de ventilation?","acceptedAnswer":{"@type":"Answer","text":"Oui. Nos professionnels réalisent le design, la conception et l\'installation de systèmes de ventilation personnalisés, y compris les dessins d\'intégration et les dessins d\'atelier."}},{"@type":"Question","name":"Offrez-vous un entretien périodique?","acceptedAnswer":{"@type":"Answer","text":"Oui, nous offrons un service d\'entretien périodique personnalisé pour vos équipements de ventilation, de réfrigération et de climatisation."}},{"@type":"Question","name":"Avez-vous un service d\'urgence?","acceptedAnswer":{"@type":"Answer","text":"Oui, un service d\'urgence est offert 24 heures sur 24."}}]}]}'),
  'soumission': dict(BODY='soumission.body.html', OUT='soumission.html', CANON='https://cbedard.com/soumission/',
    title='Soumission gratuite chauffage et climatisation | Bédard',
    desc="Demandez une soumission gratuite en 2 minutes : thermopompe, climatisation, ventilation, géothermie ou projet commercial à Joliette et Lanaudière.",
@@ -35,6 +39,7 @@ PAGES = {
 for key, P in PAGES.items():
     BODY, OUT, CANON, title, desc, ld = P['BODY'], P['OUT'], P['CANON'], P['title'], P['desc'], P['ld']
     json.loads(ld)
+    extra = extra_base + (open(ROOT + 'src/commercial-extra.css', encoding='utf-8').read() if key == 'commercial' else '')
     body = open(ROOT + 'src/' + BODY, encoding='utf-8').read()
     css2 = re.sub(r'url\(\{\{IMG_[A-Z]+\}\}\)', 'none', css)
     assert len(title) <= 60 and len(desc) <= 160, (key, len(title), len(desc))

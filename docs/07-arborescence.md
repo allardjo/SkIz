@@ -233,3 +233,19 @@ COP de 4,95 à 47 °F (8,3 °C) pour certains modèles, confirmé par le copropr
 ## COP à basse température : 2,38 à 17 °F (13 octobre 2026)
 
 COP de 2,38 à 17 °F (-8,3 °C) confirmé par le copropriétaire. Publié à côté du COP de 4,95 à 47 °F, avec la comparaison au chauffage électrique ordinaire (COP de 1). L'encadré « À compléter » est retiré. Le conseil de l'article cite maintenant les deux points de mesure (47 °F et 17 °F). Optionnel : COP à -15 °C (5 °F), utile pour les grands froids de janvier. L'article n'attend plus que le prix multizone.
+
+## Hub Commercial (maquette)
+
+Fichier : `maquettes/commercial.html` (sources : `src/gen_commercial.py`, `src/commercial.body.html`, `src/commercial-extra.css`, assemblé par `build_contact.py`). URL cible : `/commercial/` (nouvelle page, hub parent de `/commercial/refrigeration-commerciale/`, `/commercial/ventilation-commerciale-joliette/` et `/commercial/ferblanterie/`).
+
+- Titre « Services commerciaux CVAC-R à Joliette | Bédard » (47 caractères), description de 154 caractères. JSON-LD : WebPage + Service (zone Lanaudière) + FAQPage (4 questions) + fil d'Ariane.
+- Structure : héros avec formulaire de soumission commerciale (nom et entreprise, téléphone, type de projet), 4 points forts, 3 métiers (réfrigération, ventilation, ferblanterie) qui renvoient aux sous-pages, publics visés, déroulement en 4 étapes (relevés et conception, dessins et coordination, installation, mise en service et entretien), bande entretien et urgence 24 h, section réalisations, FAQ de 6 questions, liens vers les autres services, appel final.
+- Contenu repris de ton site et de la page Carrières : conception et installation de ventilation personnalisée, réfrigération commerciale, ferblanterie spécialisée en ventilation, dessins d'intégration et d'atelier, collaboration avec les chargés de projet, travaux surtout dans Lanaudière, Ventilation Fabro (2012), entretien périodique, urgence 24 h.
+
+À fournir ou valider :
+1. Projets de référence (3 à 6) avec photos, type de bâtiment, ville, travaux, et l'autorisation des clients.
+2. Licences et certifications à afficher (RBQ, CCQ), numéros de licence.
+3. La phrase « entrepreneurs et gestionnaires » comme public visé.
+4. Les trois sous-pages (réfrigération, ventilation, ferblanterie) restent à construire, sur le modèle de la page de service. Ventilation commerciale : 2 943 impressions sur 16 mois, la plus prometteuse.
+5. Photo du héros : image de la bibliothèque du site (intérieur industriel), licence à confirmer.
+6. Le formulaire envoie à l'équipe commerciale (adresse à préciser), avec suivi `form_submit` distinct de la soumission résidentielle (`data-form="commercial"`).
