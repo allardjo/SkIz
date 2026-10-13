@@ -334,3 +334,18 @@ Le copropriétaire relève une erreur de logique : pour compléter une thermopom
 - Test automatisé sur le zip décompressé : 1 000 liens internes valides (fichiers et ancres), les 31 pages atteignables depuis l'accueil, police chargée, aucune image cassée, aucune erreur JavaScript.
 
 Bug trouvé et corrigé grâce à ce test : en ajoutant la section SEER2 / HSPF2 / COP de l'article « prix », un remplacement trop large avait supprimé les sections « Les options », « La saison d'achat », le bloc d'appel à l'action et **le tableau des prix par situation** (simple zone 3 500 $ à 5 300 $, multizone). Tout est restauré depuis l'historique git; l'article a maintenant les 6 facteurs, le tableau et la section efficacité.
+
+## Version sobre (v3) : accueil et page de service pilote (13 octobre 2026)
+
+**Retour du copropriétaire :** le site est très chargé, difficile à naviguer, et donne l'impression d'une entreprise de taille moyenne plutôt que d'un leader. Décisions : version sobre (5 à 6 blocs par page), pas de vraies photos pour l'instant, points « [à valider] » gardés dans les pages.
+
+**Mesure de départ (v2) :** 10 à 11 sections par page, 740 à 1 635 mots, 17 à 23 cartes et vignettes, 5 à 6 boutons d'action, 3 à 7 « [à valider] », même gabarit répété partout, 4 cartes « À consulter aussi » au bas de chaque page, 12 pages « à venir » vides dans le test hors ligne.
+
+**Ce qui a changé** (`maquettes/make_v3_template.py` fabrique `source-accueil-v3.template.html`; tous les générateurs utilisent maintenant ce gabarit) :
+- **En-tête** : plus de bandeau du haut (adresse, heures, sans frais déplacés au pied de page et à la page Contact). Une seule barre : logo, menu à trois déroulants (Résidentiel, Commercial, Services) + Guides de prix et Carrières, numéro d'urgence 24 h bien visible, bouton de soumission. Menu mobile en accordéon.
+- **Pied de page** : de 19 à 14 liens, sans paragraphe de description.
+- **Accueil** : 12 blocs deviennent 6 : hero (titre, une phrase, un bouton, le téléphone, trois chiffres) + barre de soumission rapide; deux grands panneaux Résidentiel et Commercial; services en liste de 5 lignes; une seule citation client avec la note 4,9 sur 5; bandeau Carrières; appel final. Retirés de l'accueil : étapes, FAQ, guides en cartes, « pourquoi nous », zone desservie et la FAQ du balisage. Hauteur : ~4 800 px au lieu d'environ 9 000.
+- **Page de service pilote (installation de thermopompe)** : hero + 5 blocs + appel final (murale ou centrale, déroulement, prix avec carte de soumission, une citation, FAQ de 5 questions). Retirés : bandeau de 4 faits, pastille, signes, trois cartes d'avis, encadré « programmes » (fondu dans l'intro du prix), 4 cartes « À consulter aussi » (remplacées par trois liens texte). Hauteur : ~5 700 px au lieu d'environ 8 400.
+- Règles de style : un titre fort par bloc, plus d'espace vertical, pas d'étiquettes ni de badges répétés, un seul bouton principal par écran.
+
+**À décider après évaluation :** si la direction convient, appliquer le modèle sobre aux autres pages (pilier, services résidentiels, commercial et ses 3 sous-pages, carrières, contact, soumission, article). Les photos de chantiers, d'équipe et de camions sont le plus gros levier pour avoir l'air d'un leader : des emplacements sont prévus (panneaux de l'accueil, hero).

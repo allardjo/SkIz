@@ -7,7 +7,7 @@ B = '/home/user/SkIz/assets/brand/svg/'
 def svg(n): return 'data:image/svg+xml;base64,' + base64.b64encode(open(B + n, 'rb').read()).decode()
 def jpg(n): return 'data:image/jpeg;base64,' + base64.b64encode(open(ROOT + 'img/' + n + '.jpg', 'rb').read()).decode()
 
-base = open(ROOT + 'source-accueil-v2.template.html', encoding='utf-8').read()
+base = open(ROOT + 'source-accueil-v3.template.html', encoding='utf-8').read()
 s0 = base.index('\n<style>') + 8  # le commentaire Ballinger contient aussi le mot <style>
 css = base[s0: base.index('</style>')]
 header = base[base.index('<header class="site"'): base.index('</header>') + 9]

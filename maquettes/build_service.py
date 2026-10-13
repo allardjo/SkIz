@@ -7,13 +7,13 @@ B = '/home/user/SkIz/assets/brand/svg/'
 def svg(n): return 'data:image/svg+xml;base64,' + base64.b64encode(open(B + n, 'rb').read()).decode()
 def jpg(n): return 'data:image/jpeg;base64,' + base64.b64encode(open(ROOT + 'img/' + n + '.jpg', 'rb').read()).decode()
 
-base = open(ROOT + 'source-accueil-v2.template.html', encoding='utf-8').read()
+base = open(ROOT + 'source-accueil-v3.template.html', encoding='utf-8').read()
 s0 = base.index('\n<style>') + 8  # le commentaire Ballinger contient aussi le mot <style>
 css = base[s0: base.index('</style>')]
 header = base[base.index('<header class="site"'): base.index('</header>') + 9]
 tail = base[base.index('<footer class="pied">'):]
 extra = open(ROOT + 'src/service-extra.css', encoding='utf-8').read()
-body = open(ROOT + 'src/service-installation-thermopompe.body.html', encoding='utf-8').read()
+body = open(ROOT + 'src/service-installation-v3.body.html', encoding='utf-8').read()
 
 css = re.sub(r'url\(\{\{IMG_[A-Z]+\}\}\)', 'none', css)  # images de l'accueil, inutiles ici
 title = 'Installation de thermopompe à Joliette | Bédard'
@@ -26,8 +26,8 @@ ld = '''{"@context":"https://schema.org","@graph":[
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Quelle est la différence entre une thermopompe murale et centrale?","acceptedAnswer":{"@type":"Answer","text":"La thermopompe murale chauffe et climatise une zone sans conduits. La thermopompe centrale se raccorde aux conduits de la maison pour desservir tout le bâtiment."}},
 {"@type":"Question","name":"Une thermopompe peut-elle remplacer ma fournaise?","acceptedAnswer":{"@type":"Answer","text":"Selon l'appareil et la maison, une thermopompe peut assurer une grande partie du chauffage. Au Québec, on la jumelle souvent à un chauffage d'appoint pour les grands froids (système bi-énergie). Nous évaluons votre situation avant de recommander."}},
-{"@type":"Question","name":"Faites-vous l'entretien après l'installation?","acceptedAnswer":{"@type":"Answer","text":"Oui, nous offrons un service d'entretien périodique personnalisé."}},
-{"@type":"Question","name":"Offrez-vous un service d'urgence?","acceptedAnswer":{"@type":"Answer","text":"Oui, un service d'urgence est offert 24 heures sur 24. Appelez le 450-753-9426."}}]}
+{"@type":"Question","name":"Combien de temps prend l'installation?","acceptedAnswer":{"@type":"Answer","text":"Cela dépend du type d'appareil et de votre maison. Nous précisons l'échéancier dans la soumission, et nous respectons les dates convenues."}},
+{"@type":"Question","name":"Faites-vous l'entretien après l'installation?","acceptedAnswer":{"@type":"Answer","text":"Oui, nous offrons un service d'entretien périodique personnalisé."}}]}
 ]}'''
 
 head = f'''<!doctype html>

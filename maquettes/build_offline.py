@@ -16,7 +16,8 @@ ZIP = OUT + '.zip'
 
 # ---------- pages existantes ----------
 SRC = {
- 'index.html': ('accueil-v2.html', 'Accueil'),
+ 'index.html': ('accueil-v3.html', 'Accueil (version sobre)'),
+ 'ancienne-accueil.html': ('accueil-v2.html', 'Ancienne accueil (comparaison)'),
  'thermopompe-installation.html': ('service-installation-thermopompe.html', 'Installation de thermopompe'),
  'climatiseur-mural-thermopompe.html': ('pilier-climatiseur-mural-thermopompe.html', 'Climatiseur mural et thermopompe (page pilier)'),
  'prix-climatiseur-mural.html': ('article-prix-climatiseur-mural.html', 'Guide : prix d\'un climatiseur mural'),
@@ -76,7 +77,7 @@ STUBS = {
 }
 
 # ---------- gabarit commun ----------
-base = open(ROOT + 'source-accueil-v2.template.html', encoding='utf-8').read()
+base = open(ROOT + 'source-accueil-v3.template.html', encoding='utf-8').read()
 s0 = base.index('\n<style>') + 8
 CSS = re.sub(r'url\(\{\{IMG_[A-Z]+\}\}\)', 'none', base[s0: base.index('</style>')])
 HEADER = base[base.index('<header class="site"'): base.index('</header>') + 9]
@@ -170,8 +171,10 @@ def norm(t):
 CONTACT = 'contact-climatisation-joliette.html'
 RULES = [
  (r'^$', 'index.html'), (r'^accueil', 'index.html'),
+ (r'voir tout le residentiel', 'residentiel.html'), (r'voir tout le commercial', 'commercial.html'), (r'voir tous les services', 'services.html'),
+ (r'^urgence', 'reparation-thermopompe-climatiseur-joliette.html'),
  (r'politique de confidentialite', 'politique-de-confidentialite.html'),
- (r'^(avis|lire tous les avis)', 'avis.html'), (r'boutique', 'boutique.html'), (r'^blogue', 'blogue.html'),
+ (r'^(avis|lire tous les avis|lire les avis)', 'avis.html'), (r'boutique', 'boutique.html'), (r'^blogue', 'blogue.html'),
  (r'^ferblantier\(ere\)', 'carrieres.html#ferblantier'), (r'voir le poste de ferblantier', 'carrieres.html#ferblantier'),
  (r'^frigoriste', 'carrieres.html#frigoriste'), (r'^magasinier', 'carrieres.html#magasinier'),
  (r'^dessinateur|voir les postes|^carrieres', 'carrieres.html'),
