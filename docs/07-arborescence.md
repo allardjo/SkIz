@@ -219,3 +219,9 @@ Validé par le client (copropriétaire) : un format de 12 000 BTU convient jusqu
 ## COP de près de 5 (13 octobre 2026)
 
 Le client indique que certains modèles ont un COP qui atteint tout près de 5. Ajouté à la section efficacité : « certains modèles atteignent un COP de près de 5 [température de mesure à préciser] ». À préciser avant publication : la température à laquelle ce COP est mesuré (en général à une température extérieure douce, autour de 8 °C; le COP baisse par grand froid), et le modèle exact. Une allégation chiffrée de performance doit pouvoir être appuyée par la fiche technique du fabricant (publicité non trompeuse). Garder aussi le COP à basse température : c'est celui qui compte en hiver.
+
+## Correction : cotes SEER2 et HSPF2 (13 octobre 2026)
+
+Le copropriétaire corrige les données d'efficacité : HSPF2 jusqu'à 15,6 et SEER2 jusqu'à 35. L'article publie « jusqu'à 15,6 en HSPF2 » et « jusqu'à 35 en SEER2 » (remplace « SEER de 17 à 28 »), et le vocabulaire passe à SEER2 et HSPF2 (titre de section, liste, FAQ visible et balisage FAQPage, liste de contrôle de la soumission). Une phrase explique que le « 2 » indique la norme d'essai actuelle et que les nouvelles cotes ne se comparent pas directement aux anciennes.
+
+Le COP de « près de 5 » est retiré en attendant confirmation (l'encadré « À compléter » le dit). À obtenir : COP à basse température (par exemple à -15 °C). Si le COP de près de 5 est confirmé avec sa température de mesure, on le remet.
