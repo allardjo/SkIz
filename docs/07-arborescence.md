@@ -275,3 +275,7 @@ Contenu : héros avec formulaire, 4 points forts, 6 services (installation, serv
 Photo du héros : image « refrigeration-commerciale-opt.jpg » de la bibliothèque médias de ton site (chambre froide avec évaporateur), assombrie pour garder le contraste. À confirmer : licence (photo d'archive ou photo de Bédard) et, idéalement, la remplacer par une photo d'un chantier réel.
 
 À fournir ou valider : liste des équipements qu'on installe et entretient (chambres froides, comptoirs, systèmes centralisés : l'encadré de la page le demande), exemples de clients par type, 3 à 6 projets de référence, licences et certificats de frigoriste, délai d'intervention en urgence (aucune promesse de délai écrite pour l'instant).
+
+## Correctif visuel : chiffres des étapes (13 octobre 2026)
+
+Les gros chiffres en contour (01 à 04 des déroulements, 01 à 06 des cartes commerciales, chiffres de l'accueil) montraient des traits parasites à l'intérieur du « 4 » : la police variable Mona Sans a des tracés qui se chevauchent, et un contour (`-webkit-text-stroke`) les dessine tous. Remplacé par des chiffres pleins en teinte pâle, sans contour. Toutes les pages ont été reconstruites. Quand Ballinger (police statique) sera installée, on pourra reconsidérer un contour, à tester sur chaque chiffre.
