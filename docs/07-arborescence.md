@@ -229,3 +229,7 @@ Le COP de « près de 5 » est retiré en attendant confirmation (l'encadré « 
 ## COP confirmé : 4,95 à 47 °F (13 octobre 2026)
 
 COP de 4,95 à 47 °F (8,3 °C) pour certains modèles, confirmé par le copropriétaire. Publié avec sa température de mesure : « certains modèles atteignent un COP de 4,95 à 8,3 °C (47 °F) ». À garder : la fiche technique du fabricant qui appuie ce chiffre (publicité non trompeuse). Reste à obtenir le COP à basse température (par exemple à -15 °C), l'encadré « À compléter » le demande toujours.
+
+## COP à basse température : 2,38 à 17 °F (13 octobre 2026)
+
+COP de 2,38 à 17 °F (-8,3 °C) confirmé par le copropriétaire. Publié à côté du COP de 4,95 à 47 °F, avec la comparaison au chauffage électrique ordinaire (COP de 1). L'encadré « À compléter » est retiré. Le conseil de l'article cite maintenant les deux points de mesure (47 °F et 17 °F). Optionnel : COP à -15 °C (5 °F), utile pour les grands froids de janvier. L'article n'attend plus que le prix multizone.
