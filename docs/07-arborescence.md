@@ -299,3 +299,24 @@ Le copropriétaire précise : Bédard ne fabrique pas de conduits dans ses ateli
 - Page ventilation et hub commercial : carte « Ferblanterie » (installation sur chantier, pièces sur mesure au besoin), étape « Installation », FAQ reformulée, « Conception, ferblanterie, installation et entretien » à la place de « fabrication ».
 - Accueil : « ferblanterie sur mesure » devient « ferblanterie ».
 Les mots « atelier » qui restent désignent les **dessins d'atelier** (shop drawings), pas un atelier de fabrication.
+
+## Pages de service résidentielles (maquettes)
+
+Générées par `maquettes/src/gen_services.py` (blocs communs) et `gen_services_pages.py` (contenu des trois pages), avec `src/services-extra.css`, assemblées par `build_contact.py`. Même structure que la page d'installation de thermopompe (héros avec formulaire, points forts, contenu, déroulement, prix, avis, FAQ, liens, appel final).
+
+| Page | URL cible | Requêtes visées (16 mois, Search Console) |
+|---|---|---|
+| `reparation-thermopompe-climatiseur-joliette.html` | `/services/reparation-thermopompe-climatiseur-joliette/` | « réparation thermopompe joliette » 7 491 impressions (position 7,8, 1 clic), « réparation air climatisé joliette » 1 276 (6,9), « réparation climatiseur joliette » 1 166 (8,8) |
+| `entretien-nettoyage-thermopompe-climatiseur-joliette.html` | `/services/entretien-nettoyage-thermopompe-climatiseur-joliette/` | « nettoyage climatiseur joliette » 2 733 (position 13,9), « nettoyage thermopompe joliette » 2 688 (16,5) |
+| `chauffage-auxiliaire-joliette.html` | `/services/chauffage-auxiliaire-joliette/` | « chauffage auxiliaire joliette » 2 970 (position 11) |
+
+Les trois affichent actuellement la page générique `/services/` (ou aucune page) : le potentiel de clics est élevé, la position moyenne est déjà proche de la première page. Aucune promesse de classement.
+
+Contenu :
+- **Réparation** : 6 symptômes courants (ne chauffe pas, ne refroidit pas, fuite, givre, bruit, démarrages aléatoires), bande urgence 24 h en 3 gestes, « réparer ou remplacer? », déroulement, facteurs du prix (aucun chiffre), FAQ de 8 questions (secteurs inclus).
+- **Entretien et nettoyage** : bénéfices de l'entretien, thermopompe murale ou climatiseur, entretien périodique planifié, déroulement, facteurs du prix, FAQ (nettoyage des échangeurs d'air et conduits, filtres, urgence).
+- **Chauffage auxiliaire** : « pourquoi un appoint » avec les deux COP du copropriétaire (4,95 à 8,3 °C et 2,38 à -8,3 °C), deux options (thermopompe + fournaise bi-énergie; thermopompe murale + chauffage existant), ce que nous évaluons, déroulement, FAQ.
+
+À valider avant publication : marques réparées, frais de diagnostic et de déplacement, fréquence d'entretien recommandée, liste détaillée du nettoyage, forfaits et tarifs, disponibilité des filtres en boutique, rapport d'intervention, description des options bi-énergie (avec le conseiller), fourchettes de prix du chauffage auxiliaire, subventions, mention « garantie du fabricant » (entretien exigé), liens vers les pages produit (fournaises électriques) et vers le guide de remplacement.
+
+Maillage : chaque page renvoie aux trois autres services, à l'installation de thermopompe et au formulaire. Au lancement, `/services/` devra pointer vers ces trois pages (liens contextuels) sans viser les mêmes requêtes.

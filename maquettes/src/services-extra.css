@@ -1,0 +1,30 @@
+/* ===== pages de service résidentielles (réparation, entretien, chauffage auxiliaire) ===== */
+.hero-entretien .bg{background:var(--img-entretien) 60% 50%/cover no-repeat}
+.hero-chauff .bg{background:var(--img-chauffage) 60% 50%/cover no-repeat}
+.hero-repar .bg{background:var(--img-thermo) 70% 50%/cover no-repeat}
+.symptomes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.symptome{background:#fff;border:1px solid #dbe6ea;border-radius:1.5rem;padding:1.9rem}
+.symptome .ico-g{display:inline-grid;place-items:center;width:3rem;height:3rem;padding:.7rem;border-radius:1rem;background:var(--marine);color:var(--ciel);margin-bottom:1rem}
+.symptome b{display:block;color:var(--marine);font-size:1.2rem;margin-bottom:.4rem;letter-spacing:-.015em}
+.symptome span{color:var(--doux);font-size:.97rem;display:block}
+.cop{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.cop-carte{border-radius:1.9rem;padding:2.4rem;background:#f3f8f9;border:1px solid #dbe6ea}
+.cop-carte .temp{font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--bleu)}
+.cop-carte .gros{font-family:var(--font-titre);font-size:clamp(3.6rem,7vw,5.6rem);font-weight:800;line-height:1;color:var(--marine);letter-spacing:-.04em;font-stretch:84%;margin:.5rem 0 .6rem}
+.cop-carte p{color:var(--doux)}
+.cop-froid{background:var(--marine);border-color:var(--marine)}
+.cop-froid .temp{color:var(--cyan)}.cop-froid .gros{color:#fff}.cop-froid p{color:#c4dae0}
+.publics{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.public{background:#fff;border-radius:1.5rem;padding:1.9rem;border:1px solid #dbe6ea}
+.public b{display:block;color:var(--marine);font-size:1.25rem;margin-bottom:.4rem;letter-spacing:-.015em}
+.public span{color:var(--doux);font-size:.97rem;display:block}
+.etapes-4{grid-template-columns:repeat(4,1fr)}
+.bande-urgence{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center}
+.bande-urgence p{color:#c4dae0;font-size:1.1rem;max-width:34em;margin:1.1rem 0 1.8rem}
+.liste-sombre{list-style:none;display:grid;gap:.9rem}
+.liste-sombre li{padding:1.1rem 1.3rem 1.1rem 3.4rem;position:relative;border-radius:1.2rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#e3eef1}
+.liste-sombre li b{color:#fff}
+.liste-sombre li::before{content:"";position:absolute;left:1.2rem;top:1.25rem;width:1.3rem;height:1.3rem;border-radius:50%;background:var(--cyan) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23003650' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>") center/70% no-repeat}
+@media (max-width:1100px){.symptomes,.publics{grid-template-columns:1fr 1fr}.cop{grid-template-columns:1fr}.etapes-4{grid-template-columns:1fr 1fr}.bande-urgence{grid-template-columns:1fr;gap:2rem}}
+@media (max-width:720px){.symptomes,.publics,.etapes-4{grid-template-columns:1fr}}
+a[href^="tel:"]{white-space:nowrap}

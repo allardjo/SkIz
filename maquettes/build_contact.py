@@ -55,6 +55,29 @@ PAGES = {
      {"@type":"Service","@id":"https://cbedard.com/commercial/ferblanterie/#service","name":"Ferblanterie en ventilation","serviceType":"Installation de conduits et de pièces de ferblanterie, pièces sur mesure au besoin","provider":{"@id":"https://cbedard.com/#entreprise"},"areaServed":{"@type":"AdministrativeArea","name":"Lanaudière"}},
      {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://cbedard.com/"},{"@type":"ListItem","position":2,"name":"Commercial","item":"https://cbedard.com/commercial/"},{"@type":"ListItem","position":3,"name":"Ferblanterie"}]},
      {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":x["q"],"acceptedAnswer":{"@type":"Answer","text":x["a"]}} for x in json.load(open('/home/user/SkIz/maquettes/src/ferblanterie.faq.json',encoding='utf-8'))]}]}, ensure_ascii=False)),
+ 'reparation': dict(BODY='reparation.body.html', OUT='reparation-thermopompe-climatiseur-joliette.html', CANON='https://cbedard.com/services/reparation-thermopompe-climatiseur-joliette/',
+   title='Réparation de thermopompe à Joliette | Bédard',
+   desc='Réparation de thermopompe et de climatiseur à Joliette : diagnostic précis, soumission claire avant les travaux, urgence 24 h. Appelez-nous.',
+   ld=json.dumps({"@context":"https://schema.org","@graph":[
+     {"@type":"Service","@id":"https://cbedard.com/services/reparation-thermopompe-climatiseur-joliette/#service","name":'Réparation de thermopompe et de climatiseur à Joliette',"serviceType":'Réparation et dépannage de thermopompe et de climatiseur',"provider":{"@id":"https://cbedard.com/#entreprise"},"areaServed":{"@type":"AdministrativeArea","name":"Lanaudière"}},
+     {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://cbedard.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://cbedard.com/services/"},{"@type":"ListItem","position":3,"name":'Réparation de thermopompe et de climatiseur à Joliette'}]},
+     {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":x["q"],"acceptedAnswer":{"@type":"Answer","text":x["a"]}} for x in json.load(open('/home/user/SkIz/maquettes/src/reparation.faq.json',encoding='utf-8'))]}]}, ensure_ascii=False)),
+
+ 'entretien': dict(BODY='entretien.body.html', OUT='entretien-nettoyage-thermopompe-climatiseur-joliette.html', CANON='https://cbedard.com/services/entretien-nettoyage-thermopompe-climatiseur-joliette/',
+   title='Nettoyage de thermopompe à Joliette | Bédard',
+   desc='Nettoyage de thermopompe et entretien de climatiseur à Joliette : service périodique et personnalisé par des techniciens qualifiés. Soumission rapide.',
+   ld=json.dumps({"@context":"https://schema.org","@graph":[
+     {"@type":"Service","@id":"https://cbedard.com/services/entretien-nettoyage-thermopompe-climatiseur-joliette/#service","name":'Nettoyage et entretien de thermopompe et de climatiseur à Joliette',"serviceType":'Nettoyage et entretien de thermopompe et de climatiseur',"provider":{"@id":"https://cbedard.com/#entreprise"},"areaServed":{"@type":"AdministrativeArea","name":"Lanaudière"}},
+     {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://cbedard.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://cbedard.com/services/"},{"@type":"ListItem","position":3,"name":'Nettoyage et entretien de thermopompe et de climatiseur à Joliette'}]},
+     {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":x["q"],"acceptedAnswer":{"@type":"Answer","text":x["a"]}} for x in json.load(open('/home/user/SkIz/maquettes/src/entretien.faq.json',encoding='utf-8'))]}]}, ensure_ascii=False)),
+
+ 'chauffage': dict(BODY='chauffage.body.html', OUT='chauffage-auxiliaire-joliette.html', CANON='https://cbedard.com/services/chauffage-auxiliaire-joliette/',
+   title='Chauffage auxiliaire à Joliette | Bédard',
+   desc='Chauffage auxiliaire à Joliette : complétez votre thermopompe par grand froid. Évaluation de votre maison et soumission détaillée. Appelez Bédard.',
+   ld=json.dumps({"@context":"https://schema.org","@graph":[
+     {"@type":"Service","@id":"https://cbedard.com/services/chauffage-auxiliaire-joliette/#service","name":'Chauffage auxiliaire à Joliette',"serviceType":"Chauffage auxiliaire et chauffage d'appoint","provider":{"@id":"https://cbedard.com/#entreprise"},"areaServed":{"@type":"AdministrativeArea","name":"Lanaudière"}},
+     {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://cbedard.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://cbedard.com/services/"},{"@type":"ListItem","position":3,"name":'Chauffage auxiliaire à Joliette'}]},
+     {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":x["q"],"acceptedAnswer":{"@type":"Answer","text":x["a"]}} for x in json.load(open('/home/user/SkIz/maquettes/src/chauffage.faq.json',encoding='utf-8'))]}]}, ensure_ascii=False)),
  'soumission': dict(BODY='soumission.body.html', OUT='soumission.html', CANON='https://cbedard.com/soumission/',
    title='Soumission gratuite chauffage et climatisation | Bédard',
    desc="Demandez une soumission gratuite en 2 minutes : thermopompe, climatisation, ventilation, géothermie ou projet commercial à Joliette et Lanaudière.",
@@ -63,7 +86,7 @@ PAGES = {
 for key, P in PAGES.items():
     BODY, OUT, CANON, title, desc, ld = P['BODY'], P['OUT'], P['CANON'], P['title'], P['desc'], P['ld']
     json.loads(ld)
-    extra = extra_base + (open(ROOT + 'src/commercial-extra.css', encoding='utf-8').read() if key in ('commercial', 'ventilation', 'refrigeration', 'ferblanterie') else '') + (open(ROOT + 'src/refrigeration-extra.css', encoding='utf-8').read() if key == 'refrigeration' else '') + (open(ROOT + 'src/ferblanterie-extra.css', encoding='utf-8').read() if key == 'ferblanterie' else '')
+    extra = extra_base + (open(ROOT + 'src/commercial-extra.css', encoding='utf-8').read() if key in ('commercial', 'ventilation', 'refrigeration', 'ferblanterie') else '') + (open(ROOT + 'src/refrigeration-extra.css', encoding='utf-8').read() if key == 'refrigeration' else '') + (open(ROOT + 'src/ferblanterie-extra.css', encoding='utf-8').read() if key == 'ferblanterie' else '') + (open(ROOT + 'src/services-extra.css', encoding='utf-8').read() if key in ('reparation', 'entretien', 'chauffage') else '')
     body = open(ROOT + 'src/' + BODY, encoding='utf-8').read()
     css2 = re.sub(r'url\(\{\{IMG_[A-Z]+\}\}\)', 'none', css)
     assert len(title) <= 60 and len(desc) <= 160, (key, len(title), len(desc))
