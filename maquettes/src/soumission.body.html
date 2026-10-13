@@ -1,0 +1,124 @@
+<main>
+<!-- ================= HERO SOUMISSION ================= -->
+<div class="hero hero-service hero-court hero-soum">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div>
+      <nav class="fil" aria-label="Fil d'Ariane"><a href="#">Accueil</a><span>›</span><b>Soumission</b></nav>
+      <div class="pastille reveal"><b><svg class="ico" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></b>Gratuit · Sans engagement</div>
+      <h1 class="reveal d1">Votre soumission gratuite, <em>en 2 minutes</em></h1>
+      <p class="lead reveal d2"><b>Dites-nous ce qu'il vous faut.</b> Un spécialiste Bédard vous rappelle pour évaluer votre projet et vous remettre une soumission détaillée. Chauffage, climatisation, ventilation, géothermie, commercial.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= FORMULAIRE EN 3 ÉTAPES ================= -->
+<section style="padding-top:clamp(3rem,6vw,5rem)"><div class="wrap soum-lay">
+  <form class="soum-form reveal" id="soum" action="#" onsubmit="return false" data-form="soumission" novalidate>
+    <div class="progres" aria-hidden="true">
+      <div class="actif" data-p="1">1. Projet<small>Quoi et où</small></div>
+      <div data-p="2">2. Coordonnées<small>Pour vous rappeler</small></div>
+      <div data-p="3">3. Détails<small>Facultatif</small></div>
+    </div>
+
+    <div class="etape-f actif" data-e="1">
+      <h2>Quel est votre projet?</h2>
+      <p class="sous">Choisissez le produit qui vous intéresse.</p>
+      <p class="q">Pour quel produit aimeriez-vous de l'information?*</p>
+      <div class="choix-rapide "><div class="cr"><input type="radio" id="produit-0" name="produit" value="Système mural (thermopompe et climatiseur)"><label for="produit-0">Système mural (thermopompe et climatiseur)</label></div><div class="cr"><input type="radio" id="produit-1" name="produit" value="Système de ventilation centralisé"><label for="produit-1">Système de ventilation centralisé</label></div><div class="cr"><input type="radio" id="produit-2" name="produit" value="Échangeur d'air"><label for="produit-2">Échangeur d'air</label></div><div class="cr"><input type="radio" id="produit-3" name="produit" value="Fournaise électrique"><label for="produit-3">Fournaise électrique</label></div><div class="cr"><input type="radio" id="produit-4" name="produit" value="Fournaise au bois"><label for="produit-4">Fournaise au bois</label></div><div class="cr"><input type="radio" id="produit-5" name="produit" value="Géothermie"><label for="produit-5">Géothermie</label></div><div class="cr"><input type="radio" id="produit-6" name="produit" value="Plancher radiant"><label for="produit-6">Plancher radiant</label></div><div class="cr"><input type="radio" id="produit-7" name="produit" value="Commercial"><label for="produit-7">Commercial</label></div></div>
+      <div class="grille2">
+        <div class="champ"><label for="s-ville">Ville du projet*</label><input id="s-ville" name="ville" autocomplete="address-level2" placeholder="Joliette"></div>
+        <div class="champ"><label>Êtes-vous client chez nous?</label>
+          <div class="choix-rapide" style="margin:0;grid-template-columns:1fr 1fr;gap:.5rem"><div class="cr"><input type="radio" id="client-0" name="client" value="Nouveau client"><label for="client-0">Nouveau</label></div><div class="cr"><input type="radio" id="client-1" name="client" value="Client existant"><label for="client-1">Existant</label></div></div></div>
+      </div>
+      <p class="erreur" id="err1" role="alert" style="color:var(--rouille);font-weight:600;display:none;margin-top:1rem">Choisissez un produit et indiquez la ville du projet.</p>
+      <div class="soum-nav"><span></span><button class="btn btn-r" type="button" data-next="2">Continuer <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+    </div>
+
+    <div class="etape-f" data-e="2">
+      <h2>Comment vous joindre?</h2>
+      <p class="sous">Un spécialiste vous rappelle pour évaluer votre projet.</p>
+      <div class="grille2">
+        <div class="champ plein"><label for="s-nom">Prénom et nom*</label><input id="s-nom" name="nom" autocomplete="name" placeholder="Votre nom"></div>
+        <div class="champ"><label for="s-tel">Téléphone*</label><input id="s-tel" name="tel" type="tel" autocomplete="tel" placeholder="450 000-0000"></div>
+        <div class="champ"><label for="s-mail">Courriel*</label><input id="s-mail" name="courriel" type="email" autocomplete="email" placeholder="vous@exemple.com"></div>
+      </div>
+      <p class="erreur" id="err2" role="alert" style="color:var(--rouille);font-weight:600;display:none">Entrez votre nom, un téléphone et un courriel valides.</p>
+      <div class="soum-nav"><button class="btn-retour" type="button" data-next="1">← Retour</button><button class="btn btn-r" type="button" data-next="3">Continuer <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+      <p class="legal">Vous pouvez aussi <a href="#" data-envoyer style="color:var(--bleu);font-weight:700">envoyer votre demande maintenant</a>, sans ajouter de détails.</p>
+    </div>
+
+    <div class="etape-f" data-e="3">
+      <h2>Précisez votre projet</h2>
+      <p class="sous">Facultatif, mais ça nous aide à vous donner un prix plus juste.</p>
+      <p class="q">Construction existante ou nouvelle construction?</p>
+      <div class="choix-rapide "><div class="cr"><input type="radio" id="construction-0" name="construction" value="Construction existante"><label for="construction-0">Construction existante</label></div><div class="cr"><input type="radio" id="construction-1" name="construction" value="Nouvelle construction"><label for="construction-1">Nouvelle construction</label></div></div>
+      <p class="q">Remplacement ou nouvelle installation?</p>
+      <div class="choix-rapide "><div class="cr"><input type="radio" id="remplacement-0" name="remplacement" value="Remplacement d'un équipement"><label for="remplacement-0">Remplacement d'un équipement</label></div><div class="cr"><input type="radio" id="remplacement-1" name="remplacement" value="Nouvelle installation"><label for="remplacement-1">Nouvelle installation</label></div></div>
+      <div class="grille2">
+        <div class="champ plein"><label for="s-entendu">Où avez-vous entendu parler de nous?</label><select id="s-entendu" name="entendu"><option value="">Choisir</option><option>Déjà client</option><option>Référence d'un proche</option><option>Référence d'un employé</option><option>Moteur de recherche</option><option>Facebook</option><option>Camion sur la route</option><option>Salon habitation</option><option>CAA Habitation</option><option>Pages Jaunes</option></select></div>
+        <div class="champ plein"><label for="s-com">Commentaires</label><textarea id="s-com" name="commentaires" placeholder="Superficie, équipement actuel, échéancier…"></textarea></div>
+        <div class="champ plein"><label for="s-file">Photos ou plans (facultatif)</label><div class="fichier"><input id="s-file" name="fichier" type="file" accept=".jpg,.jpeg,.png,.gif,.tiff,.bmp,.pdf" multiple></div></div>
+      </div>
+      <div class="soum-nav"><button class="btn-retour" type="button" data-next="2">← Retour</button><button class="btn btn-r" type="submit">Envoyer ma demande <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+      <p class="legal">Photos (JPG, PNG, PDF…) acceptées. Vos renseignements servent seulement à traiter votre demande. <em>[Mention Loi 25 à valider]</em></p>
+    </div>
+
+    <div class="merci" id="merci" role="status">
+      <div class="rond"><svg class="ico" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <h2>Merci, votre demande est envoyée!</h2>
+      <p class="sous" style="max-width:30em;margin:.6rem auto 1.6rem">Un spécialiste Bédard vous rappelle sous peu. Une urgence? Appelez-nous tout de suite.</p>
+      <a class="btn btn-m" href="tel:+14507539426" data-track="call_tracking">450-753-9426</a>
+    </div>
+  </form>
+
+  <aside class="aide-soum">
+    <div class="aide-carte reveal d1">
+      <h3>Et après votre demande?</h3>
+      <ol class="suite">
+        <li><b>On vous rappelle</b>Un spécialiste valide votre besoin. <em>[Délai à confirmer]</em></li>
+        <li><b>Évaluation</b>À votre domicile ou à nos bureaux, sans frais.</li>
+        <li><b>Soumission détaillée</b>Vous savez exactement ce qui est inclus.</li>
+      </ol>
+    </div>
+    <div class="aide-tel reveal d2">
+      <small>Vous préférez parler à quelqu'un?</small>
+      <a class="gros" href="tel:+14507539426" data-track="call_tracking">450-753-9426</a>
+      <p>Lundi au vendredi, 8 h à 17 h. Service d'urgence 24 h.</p>
+    </div>
+  </aside>
+</div></section>
+
+<!-- ================= PREUVES ================= -->
+<section class="fond-ciel"><div class="wrap">
+  <div class="tete">
+    <div><span class="eyebrow">Pourquoi Bédard</span><h2 class="reveal">Une équipe qui livre</h2></div>
+    <p class="reveal d1">4,9 sur 5, selon plus de 180 avis clients. <em style="opacity:.7">[à valider sur la fiche Google]</em></p>
+  </div>
+  <div class="avis3">
+    <figure class="carte-avis carte-avis-fonce reveal"><div class="etoiles">{{ETOILES}}</div><blockquote>« Une entreprise qui a à cœur sa clientèle. Tout a été effectué dans les règles de l'art. »</blockquote><cite><span class="av">ML</span><div>Mat L.<span>Client, Google</span></div></cite></figure>
+    <figure class="carte-avis reveal d1"><div class="etoiles">{{ETOILES}}</div><blockquote>« Service très courtois et efficace. À partir du premier appel pour soumission jusqu'à la fin de l'installation. »</blockquote><cite><span class="av">ML</span><div>Martin Loyer<span>Client, Google</span></div></cite></figure>
+    <figure class="carte-avis reveal d2"><div class="etoiles">{{ETOILES}}</div><blockquote>« Travail très propre. Respect des dates d'échéance. Personnel très courtois et professionnel. »</blockquote><cite><span class="av">KG</span><div>K. Gianna<span>Cliente, Google</span></div></cite></figure>
+  </div>
+</div></section>
+
+<script>
+(function(){
+  var f=document.getElementById('soum');if(!f)return;
+  var etapes=f.querySelectorAll('.etape-f'),prog=f.querySelectorAll('.progres div');
+  function va(n){etapes.forEach(function(e){e.classList.toggle('actif',e.dataset.e==n)});prog.forEach(function(p){var k=+p.dataset.p;p.classList.toggle('actif',k==n);p.classList.toggle('fait-p',k<n)});f.scrollIntoView({behavior:'smooth',block:'start'})}
+  function ok1(){return f.querySelector('[name=produit]:checked')&&f.ville.value.trim()}
+  function ok2(){return f.nom.value.trim()&&f.tel.value.replace(/\D/g,'').length>=10&&/.+@.+\..+/.test(f.courriel.value)}
+  function envoi(){if(!ok1()){va(1);document.getElementById('err1').style.display='block';return}if(!ok2()){va(2);document.getElementById('err2').style.display='block';return}
+    window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_submit',form_name:'soumission'});
+    etapes.forEach(function(e){e.classList.remove('actif')});f.querySelector('.progres').style.display='none';document.getElementById('merci').classList.add('actif')}
+  f.addEventListener('click',function(ev){var b=ev.target.closest('[data-next]');if(b){var n=+b.dataset.next;
+    if(n==2&&!ok1()){document.getElementById('err1').style.display='block';return}
+    if(n==3&&!ok2()){document.getElementById('err2').style.display='block';return}
+    va(n)}
+    if(ev.target.closest('[data-envoyer]')){ev.preventDefault();envoi()}});
+  f.addEventListener('submit',envoi);
+})();
+</script>
+<!-- ================= APPEL FINAL ================= -->
+</main>

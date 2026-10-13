@@ -136,3 +136,22 @@ Fichier : `maquettes/carrieres.html` (source : `maquettes/src/carrieres.body.htm
 5. Mention de protection des renseignements (Loi 25) du formulaire.
 6. Le formulaire doit envoyer à info@cbedard.com ou à une adresse RH, avec suivi GTM (événement `form_submit`, distinct des soumissions clients).
 7. Image du héros : photo de la bibliothèque du site, licence à confirmer; idéalement remplacer par une vraie photo d'équipe.
+
+## Pages Contact et Soumission (maquettes)
+
+Fichiers : `maquettes/contact-climatisation-joliette.html` et `maquettes/soumission.html` (sources : `src/contact.body.html`, `src/soumission.body.html`, `src/contact-extra.css`, générées par `src/gen_contact.py`, assemblées par `build_contact.py`). URL conservées : `/contact-climatisation-joliette/` et `/soumission/`.
+
+**Contact** : 4 cartes (téléphone, urgence 24 h, sans frais, courriel), mini-formulaire, adresse, heures, itinéraire, carte Google, réseaux, lien vers l'avis Google, texte local réécrit (« plus de 40 ans » à la place de « plus de 30 ans » sur le site actuel) et liste de municipalités. JSON-LD : ContactPage + LocalBusiness/HVACBusiness (adresse, heures, deux numéros) + fil d'Ariane.
+
+**Soumission** : formulaire en 3 étapes qui reprend tous les champs du formulaire actuel (client existant ou non, ville, produit, construction, remplacement, provenance, commentaires, photos) :
+1. Projet : produit (cartes cliquables) et ville.
+2. Coordonnées : nom, téléphone, courriel. Lien « envoyer maintenant » pour ne pas perdre un prospect pressé.
+3. Détails facultatifs : construction, remplacement, provenance, commentaires, photos ou plans.
+Les champs obligatoires passent de 6 (formulaire actuel) à 5, et seuls produit, ville, nom, téléphone et courriel bloquent l'envoi. Message de remerciement avec poussée `form_submit` dans le dataLayer (démo).
+
+À faire à l'implémentation :
+1. Remplacer le formulaire par un Contact Form 7 (ou Elementor) équivalent en gardant les noms de champs actuels (`your-produit`, `your-ville`, etc.) pour ne pas casser les automatisations en aval (monday.com, courriels).
+2. Conserver les événements GTM `form_submit` et `call_tracking` et la conversion Google Ads : les liens `tel:` portent `data-track="call_tracking"` dans la maquette comme repère.
+3. Enregistrer aussi la demande partielle à l'étape 2 (nom + téléphone) pour ne pas perdre les abandons : à valider avec l'équipe des ventes.
+4. Valider : municipalités desservies, délai de rappel, mention Loi 25, URL Facebook et LinkedIn, lien direct d'avis Google, textes d'avis (reprise de la page de service).
+5. Carte Google : prévoir un chargement après consentement (Loi 25).
