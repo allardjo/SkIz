@@ -209,3 +209,7 @@ Le conseiller précise qu'au Québec le HSPF (performance en chauffage) et le CO
 ## Titre de l'auteur : copropriétaire (13 octobre 2026)
 
 Jonathan Allard est copropriétaire de l'entreprise, pas « conseiller » : titre corrigé dans le bloc auteur, sous le titre de l'article et dans le balisage Article (`jobTitle` « Copropriétaire »). Un guide validé par un propriétaire renforce les signaux d'expérience et de confiance (E-E-A-T), sans être un facteur de classement direct. Lien LinkedIn personnel (https://ca.linkedin.com/in/joallard) ajouté dans `sameAs` de la Person.
+
+## Puissance en pieds carrés (13 octobre 2026)
+
+Le client propose de remplacer « zone moyenne » par des pieds carrés approximatifs. Le texte dit maintenant : « Un format de 12 000 BTU, très courant, convient généralement à un espace d'environ 400 à 600 pieds carrés [approximation à valider] ». L'estimation de départ (règle générale de l'industrie, non vérifiée par Bédard) est à confirmer par le client. Idée : petit tableau BTU / superficie approximative (9 000, 12 000, 18 000, 24 000 BTU) avec les chiffres de l'équipe des ventes, qui répond directement à la recherche « quelle puissance BTU choisir ».
