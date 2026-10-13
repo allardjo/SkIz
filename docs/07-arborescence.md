@@ -102,3 +102,19 @@ Nouveau positionnement SEO :
 Faits tirés de la page actuelle (à confirmer, parce que le site actuel peut être dépassé) : 1983 concessionnaire exclusif Carrier pour Lanaudière ; 2005 recommandée par CAA habitation (cote de satisfaction supérieure à 95 %) ; 2006 acquisition de Service de chauffage Harnois ; 2009 concessionnaire agréé Mitsubishi ; 2010-2011 Solution Ventech (nettoyage de ventilation, unités murales, échangeurs d'air, conduits de sécheuse) ; 2012 déménagement au 304, boulevard de l'Industrie et acquisition de Ventilation Fabro (ventilation commerciale et institutionnelle).
 Contradiction à régler : la page actuelle parle de « 35 ans d'expérience », l'accueil de « plus de 40 ans », et la frise part de 1983 (43 ans en 2026). Choisir un seul énoncé, vérifiable, partout.
 Attention au référencement : changer le titre et le H1 d'une page qui se classe peut bouger ses positions. La page conserve son adresse, ses mots-clés et son contenu historique ; on surveille ses positions pendant 90 jours après le lancement.
+
+## Article phare : `maquettes/article-prix-climatiseur-mural.html`
+Refonte de « Air climatisé mural : à quel prix s'attendre? » (`/air-climatise-mural-a-quel-prix-sattendre/`, 1 340 clics, 28 % du trafic, 144 731 impressions, position moyenne 10,2), **même adresse**. Sources : `maquettes/src/article-prix-climatiseur-mural.body.html`, `maquettes/build_article.py`.
+
+Ce que l'article actuel contient et que la refonte garde : les facteurs du prix (installation, puissance en BTU de 9 000 à 36 000, niveau sonore, efficacité SEER et Energy Star, options, saison d'achat) et les prix de 2022 (moyenne de 3 500 $ avant taxes, installation incluse ; de 2 500 $ à 4 200 $). Il se classe déjà entre les positions 4 et 5 sur « air climatisé mural prix », « prix air climatisé mural » et « climatiseur mural prix avec installation » : on conserve ces mots-clés dans le titre, le H1 et les sous-titres.
+
+Ce qui s'ajoute : réponse courte en haut de page (« En bref »), tableau par situation (une pièce, deux zones, multizone), comparatif climatiseur mural et thermopompe murale, liste de ce que doit contenir une bonne soumission, section « installation à Joliette », FAQ de 6 questions, sommaire fixe, formulaire de soumission dans la colonne latérale, appels à l'action au milieu et à la fin, bloc auteur, liens vers la page pilier et les services. Environ 1 500 mots contre 1 035. Données structurées : `Article` (publié le 2022-05-31), `BreadcrumbList`, `FAQPage`.
+
+Requêtes ciblées (Search Console) : air climatisé mural prix (6 547 impressions), climatiseur mural prix (3 530), climatiseur mural prix avec installation (3 341), installation climatiseur joliette (2 436), installation climatiseur mural (1 986), prix air climatisé mural (1 677), prix climatiseur mural (1 489), air climatisé mural 12 000 BTU prix (environ 1 600), combien coûte un climatiseur mural (761).
+
+**À fournir avant publication (bloquant)** :
+1. Les prix 2026 par situation (une pièce, deux zones, multizone, et 12 000 BTU). Les chiffres de 2022 sont affichés tels quels et marqués [à mettre à jour]. Un guide de prix avec des prix périmés nuit à la confiance et au référencement.
+2. La cote SEER typique des modèles vendus aujourd'hui.
+3. Le nom et le titre du conseiller qui valide l'article (signature, crédibilité).
+4. La date de mise à jour à afficher (la date de publication d'origine, 2022-05-31, est conservée dans les données structurées).
+Risque : l'article génère 28 % des clics. Publier la version rafraîchie à la même adresse, avec le même sujet, et surveiller la page 90 jours.

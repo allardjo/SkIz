@@ -446,6 +446,53 @@ footer.pied .legal{margin-top:3.75rem;padding-top:1.625rem;border-top:1px solid 
 .note-frise{margin-top:2.4rem;font-size:.88rem;color:#8fb0bb}
 @media (max-width:1100px){.texte-deux{grid-template-columns:1fr;gap:1.6rem}.frise{grid-template-columns:1fr 1fr}}
 @media (max-width:720px){.frise{grid-template-columns:1fr}.compar th,.compar td{padding:.9rem 1rem;font-size:.92rem}}
+
+/* ===== article de blogue ===== */
+.hero-art{padding:clamp(8.5rem,16vh,11rem) 0 clamp(4.5rem,9vh,6.5rem)}
+.hero-art .bg{display:none}
+.hero-art .wrap{grid-template-columns:1fr;max-width:80rem}
+.hero-art h1{font-size:clamp(2.6rem,5vw,4.4rem);max-width:15em}
+.hero-art .lead{max-width:40em}
+.meta-art{display:flex;gap:1.2rem 2rem;flex-wrap:wrap;margin-top:2.2rem;color:#c3d8de;font-size:.92rem}
+.meta-art span{display:inline-flex;gap:.55rem;align-items:center}
+.meta-art .ico{width:1.1rem;height:1.1rem;color:var(--cyan)}
+.art-section{padding:5rem 0 6rem}
+.art-layout{display:grid;grid-template-columns:minmax(0,1fr) 23rem;gap:5rem;align-items:start}
+.prose{max-width:50rem}
+.prose p{font-size:1.1rem;line-height:1.78;color:#2b414d;margin-bottom:1.35rem}
+.prose a{color:var(--bleu);font-weight:600;text-underline-offset:.2em}
+.prose h2{font-size:clamp(1.9rem,2.8vw,2.6rem);margin:3.6rem 0 1.2rem;scroll-margin-top:7rem}
+.prose h3{font-size:1.4rem;margin:2.2rem 0 .7rem;color:var(--marine);scroll-margin-top:7rem}
+.prose .avert,.avert{font-size:.9rem!important;color:var(--doux);font-style:italic;background:#fbf6ea;border-left:3px solid #e0a32a;padding:.6rem 1rem;border-radius:.4rem;margin:.2rem 0 1.4rem}
+.reponse{background:linear-gradient(180deg,#eef8fa,#e4f2f6);border:1px solid #cde5ec;border-left:.4rem solid var(--cyan);border-radius:1.4rem;padding:2rem 2.2rem;margin-bottom:2.4rem}
+.reponse h2{font-size:clamp(1.6rem,2.4vw,2.1rem)!important;margin:.3rem 0 1rem!important}
+.reponse p{margin-bottom:1rem}
+.reponse b{color:var(--marine)}
+.conseil{background:var(--marine);color:#d3e4e9;border-radius:1.2rem;padding:1.6rem 1.9rem;margin:1.4rem 0 1.8rem;font-size:1.04rem;line-height:1.7}
+.conseil b{color:var(--cyan)}
+.appel-art{display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap;background:var(--beige);border-radius:1.8rem;padding:2.2rem 2.6rem;margin:3.2rem 0}
+.appel-art h3{margin:0 0 .4rem;font-size:1.6rem;font-stretch:88%}
+.appel-art p{margin:0;color:var(--doux)}
+.appel-art .boutons{display:flex;gap:.8rem;flex-wrap:wrap}
+.appel-art .btn-l{border-color:var(--marine);color:var(--marine);backdrop-filter:none;background:transparent}
+.appel-art .btn-l:hover{background:rgba(0,54,80,.08)}
+.prose .compar{margin:1.6rem 0 2rem}
+.prose .liste-check{margin:1.2rem 0 1.8rem}
+.faq-art{margin-top:3rem}
+.faq-art h2{margin-top:0}
+.auteur{display:flex;gap:1.4rem;align-items:flex-start;margin-top:3.4rem;padding:1.8rem 2rem;border:1px solid #dbe6ea;border-radius:1.4rem;background:#f6fafb}
+.auteur .av-grand{flex:none;width:3.6rem;height:3.6rem;border-radius:50%;background:var(--marine);color:var(--cyan);display:grid;place-items:center;font-weight:800;font-size:1.5rem;font-family:var(--font-titre)}
+.auteur b{color:var(--marine);font-size:1.1rem}
+.auteur p{margin:.3rem 0 0;font-size:.97rem}
+.cote{position:sticky;top:7.5rem;display:grid;gap:1.4rem}
+.toc{background:#f3f8f9;border:1px solid #dbe6ea;border-radius:1.5rem;padding:1.6rem 1.8rem;display:grid;gap:.15rem}
+.toc b{color:var(--marine);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.7rem}
+.toc a{text-decoration:none;color:var(--doux);font-weight:500;padding:.5rem 0 .5rem 1rem;border-left:2px solid #d3dfe3;transition:color .2s,border-color .2s}
+.toc a:hover{color:var(--bleu);border-color:var(--cyan)}
+.devis-carte.mini{padding:1.9rem;box-shadow:0 24px 60px rgba(0,40,60,.18);border:1px solid #dbe6ea}
+.devis-carte.mini h2{font-size:1.4rem}
+@media (max-width:1100px){.art-layout{grid-template-columns:1fr;gap:3rem}.cote{position:static;order:-1}.toc{display:none}.prose{max-width:none}}
+@media (max-width:720px){.art-section{padding:3rem 0 4rem}.reponse{padding:1.4rem}.appel-art{padding:1.6rem}.auteur{flex-direction:column}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -487,7 +534,7 @@ footer.pied .legal{margin-top:3.75rem;padding-top:1.625rem;border-top:1px solid 
   <div class="wrap">
     <div>
       <nav class="fil" aria-label="Fil d'Ariane"><a href="#">Accueil</a><span>›</span><b>Climatiseur mural et thermopompe</b></nav>
-      <div class="pastille reveal"><b><svg class="ico" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></b>Joliette et Lanaudière · depuis 1983</div>
+      <div class="pastille reveal"><b><svg class="ico" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></b>Joliette et Lanaudière · plus de 40 ans d'expertise</div>
       <h1 class="reveal d1">Climatiseur mural et thermopompe à <em>Joliette</em></h1>
       <p class="lead reveal d2"><b>Le chef de file régional en climatisation, chauffage et ventilation.</b> Nous conseillons, installons et entretenons le climatiseur mural ou la thermopompe qui convient à votre maison ou à votre commerce, avec une équipe de plus de 65 professionnels.</p>
       <div class="cta reveal d3">
@@ -516,7 +563,7 @@ footer.pied .legal{margin-top:3.75rem;padding-top:1.625rem;border-top:1px solid 
 <!-- ================= FAITS ================= -->
 <div class="faits"><div class="wrap">
   <div class="boite reveal">
-    <div class="fait"><svg class="ico" viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13"/></svg><b>Depuis 1983</b><span>Plus de 40 ans en climatisation et chauffage</span></div>
+    <div class="fait"><svg class="ico" viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13"/></svg><b>40+ ans</b><span>d'expertise en climatisation et chauffage</span></div>
     <div class="fait"><svg class="ico" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><b>65+ professionnels</b><span>Conseillers, installateurs et techniciens</span></div>
     <div class="fait"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><b>Urgence 24 h</b><span>Une équipe disponible en cas de panne</span></div>
     <div class="fait"><svg class="ico" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><b>4,9 sur 5</b><span>Plus de 180 avis clients</span></div>
@@ -600,7 +647,7 @@ footer.pied .legal{margin-top:3.75rem;padding-top:1.625rem;border-top:1px solid 
 <section class="sombre"><div class="wrap">
   <div class="tete">
     <div><span class="eyebrow" style="color:var(--cyan)">Notre histoire</span><h2 class="reveal">Une entreprise de chauffage, ventilation et climatisation bâtie pour durer</h2></div>
-    <p class="reveal d1" style="color:#b9d2da">Depuis 1983, nous grandissons avec la région. Aujourd'hui, Bédard est la référence en climatisation, chauffage et ventilation dans Lanaudière.</p>
+    <p class="reveal d1" style="color:#b9d2da">Depuis plus de 40 ans, nous grandissons avec la région. Aujourd'hui, Bédard est la référence en climatisation, chauffage et ventilation dans Lanaudière.</p>
   </div>
   <div class="frise">
     <div class="jalon reveal"><span class="an">1983</span><h3>Concessionnaire exclusif</h3><p>L'entreprise devient l'unique concessionnaire des produits Carrier pour la région de Lanaudière.</p></div>
@@ -612,7 +659,7 @@ footer.pied .legal{margin-top:3.75rem;padding-top:1.625rem;border-top:1px solid 
     <div class="jalon reveal d2"><span class="an">2012</span><h3>Ventilation Fabro</h3><p>Acquisition de Ventilation Fabro, spécialiste de la ventilation commerciale et institutionnelle.</p></div>
     <div class="jalon jalon-final reveal d3"><span class="an">Aujourd'hui</span><h3>65+ professionnels</h3><p>Une équipe complète, de la vente à l'entretien, pour la maison, le commerce et l'institution.</p></div>
   </div>
-  <p class="note-frise reveal">Repères repris du site actuel. <em>[Partenariats Carrier, Mitsubishi et CAA, et nombre d'années : à confirmer avant publication ; le site actuel parle aussi de « 35 ans d'expérience », à harmoniser avec « depuis 1983 ».]</em></p>
+  <p class="note-frise reveal">Repères repris du site actuel. <em>[Partenariats Carrier, Mitsubishi et CAA : à confirmer avant publication. Énoncé retenu partout : « plus de 40 ans ». Le site actuel dit « 35 ans » : à corriger.]</em></p>
 </div></section>
 
 <!-- ================= PRIX ================= -->
