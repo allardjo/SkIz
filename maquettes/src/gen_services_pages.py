@@ -96,7 +96,7 @@ P3=dict(key='chauffage',hclass='hero-chauff',fil='Chauffage auxiliaire',pastille
  faq=[("Qu'est-ce qu'un chauffage auxiliaire?","C'est un système de chauffage qui prend le relais de la thermopompe quand les températures chutent et que son rendement baisse."),
   ("Une thermopompe peut-elle chauffer seule au Québec?","Selon le modèle et la maison, elle peut assurer une grande partie du chauffage : certains modèles conservent un COP de 2,38 à -8,3 °C. Pour les très grands froids, un chauffage d'appoint assure le confort. Nous évaluons votre situation avant de recommander."),
   ("Ai-je besoin d'un chauffage auxiliaire?","Cela dépend de votre maison, de son isolation, de la thermopompe choisie et du confort souhaité. Nous évaluons avant de recommander."),
-  ("Quelle est la différence entre un système bi-énergie et un appoint existant?","Un système bi-énergie jumelle la thermopompe à une fournaise qui prend le relais. Avec une thermopompe murale, votre chauffage actuel peut simplement servir d'appoint. <em>[À valider avec le conseiller]</em>"),
+  ("Quelle est la différence entre un système bi-énergie et un appoint existant?","Un système bi-énergie jumelle la thermopompe à une fournaise qui prend le relais par grand froid. Dans une maison déjà équipée d'un chauffage, celui-ci peut simplement servir d'appoint. <em>[À valider avec le conseiller]</em>"),
   ("Offrez-vous des fournaises électriques?","Oui, nous vendons et installons des fournaises électriques. <em>[Lien vers la page des fournaises à ajouter]</em>"),
   ("Existe-t-il des subventions?","Des programmes d'aide peuvent exister. Nous vous indiquons ceux qui s'appliquent à votre projet. <em>[À valider avant publication]</em>"),
   ("Quels secteurs desservez-vous?",SECTEURS)],
@@ -112,9 +112,9 @@ cop=f'''<section><div class="wrap">{tete('Pourquoi un appoint',"Pourquoi un chau
 </div></section>
 '''
 mid3=(cop
- + duo('Les options','Deux façons de compléter votre thermopompe',"La bonne solution dépend de votre maison et de votre chauffage actuel.",
-   dict(etiq='Thermopompe et fournaise',h3='Un système bi-énergie',p='La thermopompe chauffe la plupart du temps; la fournaise prend le relais quand il fait très froid.',ul=['Confort constant toute la saison',"Chauffage d'appoint intégré",'Solution pour les maisons avec conduits'],pour_t='Idéal pour :',pour="une maison déjà munie de conduits. <em>[à valider]</em>"),
-   dict(etiq='Thermopompe murale',h3='Conserver votre chauffage actuel',p="Une thermopompe murale réduit l'utilisation de votre chauffage existant, qui reste en appoint.",ul=['Aucun conduit nécessaire',"Votre chauffage actuel devient l'appoint",'Installation propre'],pour_t='Idéal pour :',pour="une maison sans conduits ou un agrandissement. <em>[à valider]</em>"))
+ + duo('Les options',"Deux types de chauffage auxiliaire","Le chauffage auxiliaire prend le relais de votre thermopompe par grand froid. La bonne solution dépend de votre maison et de votre chauffage actuel.",
+   dict(etiq='Fournaise électrique',h3='Une fournaise qui prend le relais',p="Jumelée à une thermopompe centrale, la fournaise électrique prend le relais quand il fait très froid : c'est le système bi-énergie.",ul=['Confort constant toute la saison',"Appoint intégré au système central",'Fournaises électriques offertes chez Bédard'],pour_t='Idéal pour :',pour="une maison munie de conduits. <em>[à valider]</em>"),
+   dict(etiq='Chauffage existant',h3='Garder votre chauffage actuel en appoint',p="Votre chauffage actuel reste en place et prend le relais de la thermopompe quand le froid s'intensifie. <em>[types de chauffage à valider]</em>",ul=['Aucun nouvel équipement de chauffage à acheter','Moins de travail à l\'installation',"Le chauffage actuel sert d'appoint"],pour_t='Idéal pour :',pour="une maison déjà équipée d'un chauffage fonctionnel. <em>[à valider]</em>"))
  + urgence(P3)
  + etapes('Déroulement','Comment se déroule votre projet',[('Évaluation','Nous évaluons votre maison et votre chauffage actuel.'),('Recommandation','Nous vous proposons la bonne combinaison.'),('Installation','Une équipe qualifiée installe le système.'),('Mise en service','Nous vérifions le fonctionnement et vous expliquons les réglages.')])
  + prix(P3))

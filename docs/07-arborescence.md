@@ -320,3 +320,7 @@ Contenu :
 À valider avant publication : marques réparées, frais de diagnostic et de déplacement, fréquence d'entretien recommandée, liste détaillée du nettoyage, forfaits et tarifs, disponibilité des filtres en boutique, rapport d'intervention, description des options bi-énergie (avec le conseiller), fourchettes de prix du chauffage auxiliaire, subventions, mention « garantie du fabricant » (entretien exigé), liens vers les pages produit (fournaises électriques) et vers le guide de remplacement.
 
 Maillage : chaque page renvoie aux trois autres services, à l'installation de thermopompe et au formulaire. Au lancement, `/services/` devra pointer vers ces trois pages (liens contextuels) sans viser les mêmes requêtes.
+
+## Correction : options du chauffage auxiliaire (13 octobre 2026)
+
+Le copropriétaire relève une erreur de logique : pour compléter une thermopompe, on n'installe pas une thermopompe murale. La section « Les options » de `/services/chauffage-auxiliaire-joliette/` présentait « Thermopompe murale : conserver votre chauffage actuel ». Reformulée en **deux types de chauffage auxiliaire** : (1) **fournaise électrique** (jumelée à une thermopompe centrale, système bi-énergie) et (2) **chauffage existant gardé en appoint** (types de chauffage à valider). La FAQ « bi-énergie ou appoint existant » ne mentionne plus de thermopompe murale. À faire valider par le conseiller : types de chauffage existants compatibles (plinthes électriques, etc.) et la compatibilité avec une maison sans conduits.
