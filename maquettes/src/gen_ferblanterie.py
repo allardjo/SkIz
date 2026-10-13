@@ -20,13 +20,13 @@ def carte(n,i,t,p,ul,fonce=False):
 def carte(n,i,t,p,ul,fonce=False):
     return f'<div class="metier{" metier-fonce" if fonce else ""} reveal d{n%3}"><span class="num">0{n+1}</span><span class="ico-g">{ic(i)}</span><h3>{t}</h3><p>{p}</p><ul>'+''.join(f'<li>{x}</li>' for x in ul)+'</ul></div>'
 cartes=''.join([
- carte(0,'layers','Conduits sur mesure','Des ferblantiers spécialisés en ventilation fabriquent les conduits et les pièces adaptés à votre bâtiment. <em>[fabrication en atelier à valider]</em>',['Sections droites et transitions','Raccords et accessoires','Selon les dessins d\'atelier']),
+ carte(0,'layers','Pièces sur mesure','Pour un besoin spécifique, nous nous déplaçons chez vous, prenons les mesures et faisons fabriquer les pièces adaptées à votre bâtiment.',['Relevés sur place','Pièces fabriquées selon vos mesures','Installation par nos ferblantiers']),
  carte(1,'tool','Installation sur chantier','Une équipe qualifiée installe vos conduits et vos pièces de ferblanterie, selon l\'échéancier convenu.',['Commercial et institutionnel','Industriel et résidentiel','Coordination avec les autres métiers'],True),
  carte(2,'refresh','Modification et remplacement','Ajout, réparation ou remplacement de conduits dans un réseau de ventilation existant.',['Modification de réseaux','Réparation de conduits','Remplacement de pièces']),
 ])
 faq=[
- ("Qu'est-ce qu'un ferblantier en ventilation?","Le ferblantier en ventilation fabrique et installe les conduits et les pièces de tôle qui distribuent l'air dans un bâtiment. Il travaille à partir des dessins d'atelier et en coordination avec les autres métiers du chantier."),
- ("Fabriquez-vous les conduits sur mesure?","Oui, nos ferblantiers spécialisés en ventilation fabriquent et installent des conduits adaptés à votre bâtiment. [À valider : fabrication en atelier]"),
+ ("Qu'est-ce qu'un ferblantier en ventilation?","Le ferblantier en ventilation installe et ajuste les conduits et les pièces de tôle qui distribuent l'air dans un bâtiment. Il travaille à partir des dessins d'atelier et en coordination avec les autres métiers du chantier."),
+ ("Pouvez-vous fournir des pièces sur mesure?","Oui. Pour un besoin spécifique, nous nous déplaçons sur place, prenons les mesures et faisons fabriquer les pièces sur mesure nécessaires, puis nos ferblantiers les installent."),
  ("Faites-vous seulement la ferblanterie, ou aussi la ventilation complète?","Les deux. Vous pouvez nous confier uniquement la ferblanterie, ou l'ensemble du projet : conception, ferblanterie, installation et entretien du système de ventilation."),
  ("Travaillez-vous avec des entrepreneurs et des concepteurs?","Oui. Nous collaborons avec les chargés de projet et préparons des dessins d'intégration et des dessins d'atelier pour coordonner le chantier."),
  ("Dans quels secteurs travaillez-vous?","Nos travaux se font en grande majorité dans Lanaudière et ses environs. Contactez-nous pour un projet situé ailleurs."),
@@ -46,7 +46,7 @@ body=f'''<main>
       <nav class="fil" aria-label="Fil d'Ariane"><a href="#">Accueil</a><span>›</span><a href="#">Commercial</a><span>›</span><b>Ferblanterie</b></nav>
       <div class="pastille reveal"><b>{CHECK}</b>Ferblantiers · Joliette et Lanaudière</div>
       <h1 class="reveal d1">Ferblantier en ventilation à <em>Joliette</em></h1>
-      <p class="lead reveal d2"><b>Des experts qualifiés et diplômés en ventilation.</b> Conduits et pièces de ferblanterie sur mesure, installation sur chantier et modification de réseaux pour vos projets commerciaux, industriels, institutionnels et résidentiels.</p>
+      <p class="lead reveal d2"><b>Des experts qualifiés et diplômés en ventilation.</b> Installation de conduits et de pièces de ferblanterie, adaptation sur chantier et pièces sur mesure pour les besoins spécifiques, avec modification de réseaux pour vos projets commerciaux, industriels, institutionnels et résidentiels.</p>
       <div class="cta reveal d3">
         <a class="btn btn-b" href="#soumission">Demander une soumission {ARROW}</a>
         <a class="btn btn-l" href="tel:+14507539426" data-track="call_tracking">{ic('clock')}<span>Parler à un spécialiste : {TEL}</span></a>
@@ -58,7 +58,7 @@ body=f'''<main>
       <div class="champ"><label for="f-nom">Nom et entreprise</label><input id="f-nom" autocomplete="organization" placeholder="Votre nom, votre entreprise"></div>
       <div class="champ"><label for="f-tel">Téléphone</label><input id="f-tel" type="tel" autocomplete="tel" placeholder="450 000-0000"></div>
       <div class="champ"><label for="f-type">Type de projet</label>
-        <select id="f-type"><option>Conduits sur mesure</option><option>Installation sur chantier</option><option>Modification d'un réseau existant</option><option>Projet complet de ventilation</option><option>Autre</option></select></div>
+        <select id="f-type"><option>Pièces sur mesure</option><option>Installation sur chantier</option><option>Modification d'un réseau existant</option><option>Projet complet de ventilation</option><option>Autre</option></select></div>
       <button class="btn btn-r" type="submit">Être rappelé {ARROW}</button>
       <p class="note">Une question? <a href="tel:+14507539426" data-track="call_tracking">Appelez le {TEL}</a></p>
     </form>
@@ -68,7 +68,7 @@ body=f'''<main>
 <!-- ================= POINTS FORTS ================= -->
 <div class="faits"><div class="wrap">
   <div class="boite reveal">
-    <div class="fait">{ic('layers')}<b>Sur mesure</b><span>Conduits adaptés à votre bâtiment</span></div>
+    <div class="fait">{ic('layers')}<b>Pièces sur mesure</b><span>Pour vos besoins spécifiques</span></div>
     <div class="fait">{ic('users')}<b>Qualifiés et diplômés</b><span>Experts en ventilation</span></div>
     <div class="fait">{ic('wind')}<b>Un seul interlocuteur</b><span>Conception, ferblanterie, installation</span></div>
     <div class="fait">{ic('cal')}<b>40+ ans</b><span>D'expérience dans Lanaudière</span></div>
@@ -90,12 +90,12 @@ body=f'''<main>
   <div>
     <span class="eyebrow">Pièces et conduits</span>
     <h2 class="reveal">Des pièces adaptées à chaque réseau</h2>
-    <p class="reveal d1" style="color:var(--doux);font-size:1.12rem;margin:1.2rem 0 1.6rem;max-width:34em">Chaque bâtiment a son parcours d'air. Nos ferblantiers préparent les sections droites, les transitions et les raccords nécessaires pour que le réseau s'installe proprement. <em>[liste des pièces à valider]</em></p>
+    <p class="reveal d1" style="color:var(--doux);font-size:1.12rem;margin:1.2rem 0 1.6rem;max-width:34em">Chaque bâtiment a son parcours d'air. Nos ferblantiers installent et ajustent les sections droites, les transitions et les raccords. Pour un besoin particulier, nous faisons fabriquer la pièce sur mesure. <em>[liste des pièces à valider]</em></p>
     <ul class="liste-check reveal d2">
       <li>Sections droites de conduits</li>
       <li>Transitions et changements de dimension</li>
       <li>Raccords et brides d'assemblage</li>
-      <li>Pièces spéciales selon les dessins d'atelier</li>
+      <li>Pièces spéciales fabriquées sur mesure, au besoin</li>
     </ul>
   </div>
 </div></section>
@@ -105,7 +105,7 @@ body=f'''<main>
   <div>
     <span class="eyebrow">Réalisation</span>
     <h2 class="reveal">Des conduits installés avec précision</h2>
-    <p class="reveal d1" style="color:var(--doux);font-size:1.12rem;margin:1.2rem 0 1.6rem;max-width:34em">Conduits galvanisés installés dans un bâtiment : le résultat du travail de nos ferblantiers, de la fabrication à la pose. <em>[À compléter : nom ou type du projet, ville, travaux réalisés]</em></p>
+    <p class="reveal d1" style="color:var(--doux);font-size:1.12rem;margin:1.2rem 0 1.6rem;max-width:34em">Conduits galvanisés installés dans un bâtiment : le résultat du travail de nos ferblantiers, de la prise de mesures à la pose. <em>[À compléter : nom ou type du projet, ville, travaux réalisés]</em></p>
     <a class="btn btn-m reveal d2" href="#soumission">Discuter de votre projet {ARROW}</a>
   </div>
   <div class="photo-fer reveal"></div>
@@ -117,7 +117,7 @@ body=f'''<main>
   <div class="etapes etapes-4">
     <div class="etape reveal"><div class="n">01</div><h3>Plans et relevés</h3><p>Nous analysons les plans et prenons les relevés nécessaires sur le chantier.</p></div>
     <div class="etape reveal d1"><div class="n">02</div><h3>Dessins d'atelier</h3><p>Nous préparons les dessins d'atelier, en collaboration avec les chargés de projet.</p></div>
-    <div class="etape reveal d2"><div class="n">03</div><h3>Fabrication</h3><p>Les conduits et les pièces sont préparés selon les dessins. <em>[atelier à valider]</em></p></div>
+    <div class="etape reveal d2"><div class="n">03</div><h3>Pièces sur mesure</h3><p>Au besoin, nous faisons fabriquer les pièces spécifiques selon les mesures et les dessins.</p></div>
     <div class="etape reveal d3"><div class="n">04</div><h3>Installation</h3><p>Une équipe qualifiée installe le tout, selon l'échéancier convenu.</p></div>
   </div>
 </div></section>

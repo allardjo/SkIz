@@ -18,7 +18,7 @@ def carte(n,i,t,p,ul,fonce=False):
     return f'<div class="metier{" metier-fonce" if fonce else ""} reveal d{n%3}"><span class="num">0{n+1}</span><span class="ico-g">{ic(i)}</span><h3>{t}</h3><p>{p}</p><ul>'+''.join(f'<li>{x}</li>' for x in ul)+'</ul></div>'
 cartes=''.join([
  carte(0,'pen','Conception et dessins','Dessins d\'intégration et analyse des dessins d\'atelier, en collaboration avec les chargés de projet.',['Relevés sur le chantier','Dessins d\'intégration','Documents de chantier']),
- carte(1,'layers','Ferblanterie sur mesure','Des ferblantiers spécialisés en ventilation fabriquent les conduits et les pièces adaptés à votre bâtiment.',['Fabrication sur mesure','Installation sur chantier','Conduits et accessoires'],True),
+ carte(1,'layers','Ferblanterie','Des ferblantiers spécialisés en ventilation installent et ajustent les conduits sur votre chantier. Pour un besoin spécifique, nous faisons fabriquer des pièces sur mesure.',['Installation sur chantier','Pièces sur mesure, au besoin','Conduits et accessoires'],True),
  carte(2,'wind','Installation de systèmes','Design, conception et installation de systèmes de ventilation personnalisés pour votre bâtiment.',['Commercial, industriel, institutionnel','Mise en service','Respect de l\'échéancier']),
  carte(3,'refresh','Échangeurs d\'air','Choix, installation et entretien d\'échangeurs d\'air pour renouveler l\'air du bâtiment.',['Installation et remplacement','Entretien et filtres','Nettoyage des unités']),
  carte(4,'drop','Nettoyage des systèmes','Nettoyage des systèmes de ventilation, des unités, des échangeurs d\'air et des conduits.',['Systèmes de ventilation','Unités murales','Conduits'],True),
@@ -29,7 +29,7 @@ fl=''.join(f'<li><b>{a}</b><span>{b}</span></li>' for a,b in facteurs)
 faq=[
  ("Qu'est-ce que la ventilation commerciale?","La ventilation commerciale regroupe les systèmes qui renouvellent l'air d'un bâtiment, évacuent l'humidité, les odeurs et les polluants, et distribuent l'air là où il faut. Elle s'adapte à l'usage du bâtiment : commerce, industrie ou institution."),
  ("Faites-vous la conception et l'installation?","Oui. Nos professionnels réalisent le design, la conception et l'installation de systèmes de ventilation personnalisés, y compris les dessins d'intégration et les dessins d'atelier."),
- ("Fabriquez-vous les conduits sur mesure?","Oui. Nos ferblantiers, spécialisés en ventilation, fabriquent et installent les conduits et les pièces adaptés à votre bâtiment."),
+ ("Pouvez-vous fournir des pièces sur mesure?","Oui. Nos ferblantiers installent et ajustent les conduits sur le chantier. Pour un besoin spécifique, nous nous déplaçons, prenons les mesures et faisons fabriquer les pièces sur mesure."),
  ("Offrez-vous le nettoyage et l'entretien des systèmes?","Oui. Nous nettoyons les systèmes de ventilation, les unités, les échangeurs d'air et les conduits, et nous offrons un entretien périodique personnalisé."),
  ("Combien coûte un projet de ventilation commerciale?","Chaque bâtiment est différent : le prix dépend de la taille, de l'usage, des équipements et de l'accès au chantier. Nous évaluons votre projet, puis nous vous remettons une soumission détaillée."),
  ("Quels secteurs desservez-vous?","Nos travaux se font en grande majorité dans Lanaudière et ses environs. Contactez-nous pour un projet situé ailleurs."),
@@ -48,7 +48,7 @@ body=f'''<main>
       <nav class="fil" aria-label="Fil d'Ariane"><a href="#">Accueil</a><span>›</span><a href="#">Commercial</a><span>›</span><b>Ventilation commerciale</b></nav>
       <div class="pastille reveal"><b>{CHECK}</b>Joliette et Lanaudière</div>
       <h1 class="reveal d1">Ventilation commerciale à <em>Joliette</em></h1>
-      <p class="lead reveal d2"><b>De la conception à l'entretien, une seule équipe.</b> Conception, ferblanterie sur mesure, installation et nettoyage de systèmes de ventilation pour les commerces, les industries et les institutions de Lanaudière.</p>
+      <p class="lead reveal d2"><b>De la conception à l'entretien, une seule équipe.</b> Conception, ferblanterie, installation et nettoyage de systèmes de ventilation pour les commerces, les industries et les institutions de Lanaudière.</p>
       <div class="cta reveal d3">
         <a class="btn btn-b" href="#soumission">Demander une soumission {ARROW}</a>
         <a class="btn btn-l" href="tel:+14507539426" data-track="call_tracking">{ic('clock')}<span>Urgence 24 h : {TEL}</span></a>
@@ -60,7 +60,7 @@ body=f'''<main>
       <div class="champ"><label for="v-nom">Nom et entreprise</label><input id="v-nom" autocomplete="organization" placeholder="Votre nom, votre entreprise"></div>
       <div class="champ"><label for="v-tel">Téléphone</label><input id="v-tel" type="tel" autocomplete="tel" placeholder="450 000-0000"></div>
       <div class="champ"><label for="v-type">Type de projet</label>
-        <select id="v-type"><option>Nouvelle installation</option><option>Remplacement ou modification</option><option>Conception et dessins</option><option>Ferblanterie sur mesure</option><option>Nettoyage ou entretien</option><option>Dépannage / urgence</option></select></div>
+        <select id="v-type"><option>Nouvelle installation</option><option>Remplacement ou modification</option><option>Conception et dessins</option><option>Ferblanterie et pièces sur mesure</option><option>Nettoyage ou entretien</option><option>Dépannage / urgence</option></select></div>
       <button class="btn btn-r" type="submit">Être rappelé {ARROW}</button>
       <p class="note">Urgence? <a href="tel:+14507539426" data-track="call_tracking">Appelez le {TEL}</a></p>
     </form>
@@ -71,7 +71,7 @@ body=f'''<main>
 <div class="faits"><div class="wrap">
   <div class="boite reveal">
     <div class="fait">{ic('pen')}<b>Conception interne</b><span>Dessins d'intégration et d'atelier</span></div>
-    <div class="fait">{ic('layers')}<b>Ferblanterie sur mesure</b><span>Conduits fabriqués pour votre bâtiment</span></div>
+    <div class="fait">{ic('layers')}<b>Ferblanterie</b><span>Pièces sur mesure, au besoin</span></div>
     <div class="fait">{ic('users')}<b>65+ professionnels</b><span>Une équipe de plus de 40 ans d'expérience</span></div>
     <div class="fait">{ic('clock')}<b>Urgence 24 h</b><span>Entretien périodique personnalisé</span></div>
   </div>
@@ -105,7 +105,7 @@ body=f'''<main>
   <div class="etapes etapes-4">
     <div class="etape reveal"><div class="n">01</div><h3>Visite et relevés</h3><p>Nous visitons le bâtiment et prenons les relevés nécessaires sur le chantier.</p></div>
     <div class="etape reveal d1"><div class="n">02</div><h3>Conception et dessins</h3><p>Dessins d'intégration et dessins d'atelier, en collaboration avec les chargés de projet.</p></div>
-    <div class="etape reveal d2"><div class="n">03</div><h3>Fabrication et installation</h3><p>Nos ferblantiers fabriquent les conduits sur mesure et l'équipe installe le système.</p></div>
+    <div class="etape reveal d2"><div class="n">03</div><h3>Installation</h3><p>Nos ferblantiers et notre équipe installent le système, avec des pièces sur mesure au besoin.</p></div>
     <div class="etape reveal d3"><div class="n">04</div><h3>Mise en service et entretien</h3><p>Nous vérifions le fonctionnement, puis proposons un entretien périodique personnalisé.</p></div>
   </div>
 </div></section>
@@ -135,7 +135,7 @@ body=f'''<main>
     <a class="btn btn-b reveal d2" href="#soumission">Parler à un spécialiste {ARROW}</a>
   </div>
   <ul class="liste-sombre">
-    <li class="reveal"><b>Un seul interlocuteur</b><br>Conception, fabrication, installation et entretien.</li>
+    <li class="reveal"><b>Un seul interlocuteur</b><br>Conception, ferblanterie, installation et entretien.</li>
     <li class="reveal d1"><b>Ferblantiers spécialisés</b><br>Des conduits adaptés à votre bâtiment.</li>
     <li class="reveal d2"><b>Une équipe de plus de 65 professionnels</b><br>Disponible aussi en urgence, 24 h sur 24.</li>
   </ul>

@@ -291,3 +291,11 @@ Contenu : héros avec formulaire, 4 points forts, 3 services (conduits sur mesur
 Photos : « Ferblanterie-min » (conduits galvanisés installés dans un bâtiment) en héros et en réalisation; « ferblanterie-opt-realopt » (illustration de sections de conduits) dans « Pièces et conduits ». Licences et nom du projet à confirmer.
 
 **À valider (important)** : la **fabrication en atelier**. Ton site dit « ferblantier spécialisé en ventilation… design, conception et installation » et ta page Carrières parle de ferblantiers, mais rien n'affirme que Bédard fabrique ses conduits dans son propre atelier. Les mentions « fabriquent », « fabrication sur mesure » et « atelier » (page ferblanterie, page ventilation, hub commercial) sont des suppositions marquées « à valider » sur cette page : à confirmer ou à retirer. Valider aussi la liste des pièces, les types de projets et le projet de la photo.
+
+## Ferblanterie : pas de fabrication en atelier (13 octobre 2026)
+
+Le copropriétaire précise : Bédard ne fabrique pas de conduits dans ses ateliers. L'entreprise peut toutefois se déplacer chez le client et faire fabriquer des pièces sur mesure lorsque des besoins spécifiques le demandent. Toutes les mentions de fabrication interne sont retirées :
+- Page ferblanterie : service « Conduits sur mesure » devient « Pièces sur mesure » (relevés sur place, pièces fabriquées selon les mesures, installation par nos ferblantiers); étape « Fabrication » devient « Pièces sur mesure »; question FAQ « Fabriquez-vous… » devient « Pouvez-vous fournir des pièces sur mesure? » (réponse : on se déplace, on prend les mesures, on fait fabriquer, nos ferblantiers installent); « le ferblantier installe et ajuste » à la place de « fabrique et installe »; description et balisage Service corrigés.
+- Page ventilation et hub commercial : carte « Ferblanterie » (installation sur chantier, pièces sur mesure au besoin), étape « Installation », FAQ reformulée, « Conception, ferblanterie, installation et entretien » à la place de « fabrication ».
+- Accueil : « ferblanterie sur mesure » devient « ferblanterie ».
+Les mots « atelier » qui restent désignent les **dessins d'atelier** (shop drawings), pas un atelier de fabrication.

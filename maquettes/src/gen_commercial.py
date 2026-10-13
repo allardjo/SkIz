@@ -33,7 +33,7 @@ body=f'''<main>
       <div class="champ"><label for="cm-nom">Nom et entreprise</label><input id="cm-nom" autocomplete="organization" placeholder="Votre nom, votre entreprise"></div>
       <div class="champ"><label for="cm-tel">Téléphone</label><input id="cm-tel" type="tel" autocomplete="tel" placeholder="450 000-0000"></div>
       <div class="champ"><label for="cm-type">Type de projet</label>
-        <select id="cm-type"><option>Réfrigération commerciale</option><option>Ventilation</option><option>Ferblanterie sur mesure</option><option>Entretien périodique</option><option>Dépannage / urgence</option><option>Je ne sais pas encore</option></select></div>
+        <select id="cm-type"><option>Réfrigération commerciale</option><option>Ventilation</option><option>Ferblanterie et pièces sur mesure</option><option>Entretien périodique</option><option>Dépannage / urgence</option><option>Je ne sais pas encore</option></select></div>
       <button class="btn btn-r" type="submit">Être rappelé {ARROW}</button>
       <p class="note">Urgence? <a href="tel:+14507539426" data-track="call_tracking">Appelez le {TEL}</a></p>
     </form>
@@ -68,9 +68,9 @@ body=f'''<main>
       <ul><li>Conception et dessins d'atelier</li><li>Installation et mise en service</li><li>Nettoyage et entretien des systèmes</li></ul>
       <span class="go">Découvrir la ventilation {ARROW}</span></a>
     <a class="metier reveal d2" href="#"><span class="num">03</span><span class="ico-g">{ic('layers')}</span>
-      <h3>Ferblanterie sur mesure</h3>
-      <p>Des ferblantiers spécialisés en ventilation fabriquent et installent les conduits et les pièces adaptés à votre bâtiment.</p>
-      <ul><li>Fabrication sur mesure</li><li>Installation sur chantier</li><li>Résidentiel, commercial, industriel et institutionnel</li></ul>
+      <h3>Ferblanterie</h3>
+      <p>Des ferblantiers spécialisés en ventilation installent et ajustent les conduits. Pour un besoin spécifique, nous faisons fabriquer des pièces sur mesure.</p>
+      <ul><li>Installation sur chantier</li><li>Pièces sur mesure, au besoin</li><li>Résidentiel, commercial, industriel et institutionnel</li></ul>
       <span class="go">Découvrir la ferblanterie {ARROW}</span></a>
   </div>
 </div></section>
@@ -94,7 +94,7 @@ body=f'''<main>
   <div class="etapes etapes-4">
     <div class="etape reveal"><div class="n">01</div><h3>Relevés et conception</h3><p>Nous visitons le chantier, prenons les relevés et préparons les dessins d'intégration.</p></div>
     <div class="etape reveal d1"><div class="n">02</div><h3>Dessins et coordination</h3><p>Dessins d'atelier et documents de chantier, en collaboration avec les chargés de projet.</p></div>
-    <div class="etape reveal d2"><div class="n">03</div><h3>Installation</h3><p>Une équipe qualifiée fabrique et installe, selon l'échéancier convenu.</p></div>
+    <div class="etape reveal d2"><div class="n">03</div><h3>Installation</h3><p>Une équipe qualifiée installe, avec des pièces sur mesure au besoin, selon l'échéancier convenu.</p></div>
     <div class="etape reveal d3"><div class="n">04</div><h3>Mise en service et entretien</h3><p>Nous vérifions le fonctionnement, puis proposons un entretien périodique personnalisé.</p></div>
   </div>
 </div></section>
