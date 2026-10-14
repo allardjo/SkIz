@@ -22,11 +22,11 @@ GROUPES=[
  ('Secteur Montcalm (au sud-ouest de Joliette)',['Saint-Jacques','Saint-Liguori','Saint-Esprit',"Saint-Roch-de-l'Achigan"]),
 ]
 zones=[z for _,l in GROUPES for z in l]
-import json as _j,os as _o
-_osm=set(_j.load(open(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)),'..','data','osm-municipalites.json'),encoding='utf-8')))
-assert _osm==set(zones),('carte et liste désynchronisées',_osm^set(zones))
-CARTE=open(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)),'carte-secteurs.html'),encoding='utf-8').read()
-zh=''.join(f'<h3 class="zone-titre">{t}</h3><div class="zones">'+''.join(f'<span>{z}</span>' for z in l)+'</div>' for t,l in GROUPES)
+PRINCIPALES=['Joliette','Notre-Dame-des-Prairies','Saint-Charles-Borromée','Saint-Félix-de-Valois','Saint-Jean-de-Matha','Rawdon','Saint-Michel-des-Saints','Lavaltrie','Lanoraie','Berthierville','Louiseville','Repentigny','Mascouche','Terrebonne','Montréal-Est']
+assert set(PRINCIPALES)<=set(zones)
+zh=('<div class="zones">'+''.join(f'<span>{z}</span>' for z in PRINCIPALES)+'</div>'
+ +f'<details class="zones-tout"><summary>Voir les {len(zones)} municipalités desservies</summary>'
+ +''.join(f'<h3 class="zone-titre">{t}</h3><div class="zones">'+''.join(f'<span>{z}</span>' for z in l)+'</div>' for t,l in GROUPES)+'</details>')
 
 contact=f'''<main>
 <!-- ================= HERO CONTACT ================= -->
@@ -92,21 +92,10 @@ contact=f'''<main>
 </div></section>
 
 <!-- ================= TEXTE LOCAL ================= -->
-<section class="fond-beige"><div class="wrap seo-bloc avec-carte">
-  <div class="col-carte">
+<section class="fond-beige"><div class="wrap seo-bloc">
+  <div>
     <span class="eyebrow">Notre secteur</span>
     <h2 class="reveal">Chauffage et climatisation à Joliette et dans Lanaudière</h2>
-    <figure class="carte-secteurs reveal d1">
-      {CARTE}
-      <figcaption>
-        <ul class="legende">
-          <li><i class="sw sw-on"></i>Municipalités desservies</li>
-          <li><i class="sw sw-off"></i>Hors de notre secteur habituel</li>
-          <li><i class="sw sw-bur"></i>Notre bureau, à Joliette</li>
-        </ul>
-        <small class="credit-carte">Carte schématique. Données de frontières : © contributeurs OpenStreetMap.</small>
-      </figcaption>
-    </figure>
   </div>
   <div>
     <p class="reveal">Depuis plus de 40 ans, Bédard conseille, installe et entretient des systèmes de chauffage, de ventilation, de climatisation et de réfrigération pour les résidences, les commerces et les institutions de la région.</p>

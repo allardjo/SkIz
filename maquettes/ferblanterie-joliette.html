@@ -652,29 +652,12 @@ a[href^="tel:"].cc{white-space:normal}
 .cartes-contact>*{min-width:0}
 .cc b{overflow-wrap:anywhere}
 
-/* Carte des secteurs */
-.seo-bloc.avec-carte{grid-template-columns:1.05fr .95fr;gap:3.5rem}
-.seo-bloc.avec-carte{align-items:stretch}
-.col-carte .carte-secteurs{position:sticky;top:7rem}
-.carte-secteurs{margin:2rem 0 0;background:#fff;border:1px solid #dbe6ea;border-radius:1.6rem;overflow:hidden;box-shadow:0 18px 44px rgba(0,50,70,.08)}
-.carte-svg{display:block;width:100%;height:auto}
-.carte-svg .eau{fill:#e3f0f5}
-.carte-svg .fond path{fill:#f3f0e9;stroke:#fff;stroke-width:2}
-.carte-svg .couvert path{fill:var(--bleu);stroke:#fff;stroke-width:1.4;transition:fill .25s}
-.carte-svg .couvert path:hover{fill:var(--cyan)}
-.carte-svg .lb{font:700 27px var(--font);fill:var(--marine);paint-order:stroke;stroke:#fff;stroke-width:7px;stroke-linejoin:round;pointer-events:none}
-.carte-svg .lb-j{font:800 38px var(--font);fill:var(--marine);paint-order:stroke;stroke:#fff;stroke-width:9px;stroke-linejoin:round;pointer-events:none}
-.carte-svg .lb-c{font:600 23px var(--font);fill:#9fb0b7;pointer-events:none}
-.carte-svg .pt{fill:#fff;stroke:var(--marine);stroke-width:3}
-.carte-svg .pt-j{fill:var(--rouille);stroke:#fff;stroke-width:4}
-.carte-secteurs figcaption{padding:1.1rem 1.4rem 1.2rem;border-top:1px solid #e4edf0}
-.legende{list-style:none;margin:0 0 .6rem;padding:0;display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;font-size:.92rem;font-weight:600;color:var(--marine)}
-.legende li{display:flex;align-items:center;gap:.55rem}
-.sw{display:inline-block;width:1.15rem;height:1.15rem;border-radius:.3rem}
-.sw-on{background:var(--bleu)}.sw-off{background:#f3f0e9;border:1px solid #d9d4c7}.sw-bur{background:var(--rouille);border-radius:50%}
-.credit-carte{color:var(--doux);font-size:.78rem}
-@media (max-width:1100px){.seo-bloc.avec-carte{grid-template-columns:1fr}.col-carte .carte-secteurs{position:static}}
-@media (max-width:700px){.carte-svg .lb{font-size:42px;stroke-width:10px}.carte-svg .lb-j{font-size:58px;stroke-width:13px}.carte-svg .lb-sec,.carte-svg .lb-c{display:none}.carte-svg .pt{r:9}.carte-svg .pt-j{r:13}}
+details.zones-tout{margin-top:1.6rem;border:0;padding:0}
+.zones-tout summary{display:inline-flex;gap:.7rem;font-size:1rem;color:var(--bleu);padding:.7rem 1.3rem .7rem 1.5rem;border:2px solid var(--bleu);border-radius:999px;transition:background .25s,color .25s}
+.zones-tout summary::after{content:"+";width:auto;height:auto;border-radius:0;background:none;font-size:1.4rem;font-weight:600;line-height:1;color:inherit}
+.zones-tout[open] summary::after{content:"–";background:none;color:inherit}
+.zones-tout summary:hover{background:var(--bleu);color:#fff}
+.zones-tout .zone-titre:first-of-type{margin-top:1.6rem}
 /* ===== hub Commercial ===== */
 .hero-comm .bg{background:var(--img-commercial) 60% 40%/cover no-repeat;opacity:.5;mix-blend-mode:luminosity}
 .hero-comm .wrap{grid-template-columns:1.2fr .8fr}

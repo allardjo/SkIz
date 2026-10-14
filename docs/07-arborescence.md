@@ -423,3 +423,9 @@ Demande : ajouter toutes les municipalités entre Joliette et Saint-Michel-des-S
 - Pour ajouter une municipalité : l'ajouter dans `GROUPES` (gen_contact.py) ET récupérer son polygone (même méthode que `data/osm-municipalites.json`).
 - Carte entièrement hors-ligne (aucun appel externe, aucune tuile); étiquettes secondaires masquées sur mobile.
 - Les frontières proviennent d'OSM (simplifiées); elles sont indicatives, pas une référence officielle.
+
+## Secteurs desservis : carte retirée, liste courte + repliable
+
+- Carte SVG retirée (jugée inutile). Fichiers `gen_carte.py`, `carte-secteurs.html` et `data/osm-*.json` supprimés (récupérables dans l'historique git, commit dbf849c).
+- Page Contact : 15 villes clés visibles (Joliette, Notre-Dame-des-Prairies, Saint-Charles-Borromée, Saint-Félix-de-Valois, Saint-Jean-de-Matha, Rawdon, Saint-Michel-des-Saints, Lavaltrie, Lanoraie, Berthierville, Louiseville, Repentigny, Mascouche, Terrebonne, Montréal-Est), choisies d'après la demande réelle (Search Console) et les corridors. Bouton « Voir les 44 municipalités desservies » déplie la liste complète par groupes (`<details>`, tout reste dans le HTML).
+- Analyse Search Console (392 k impressions) : hors Joliette, on affiche déjà pour « thermopompe/air climatisé » + Mascouche (~3 000 impr.), Lanoraie (~1 700), Lavaltrie (~1 600), Terrebonne (~1 600), Notre-Dame-des-Prairies (~670), Saint-Félix-de-Valois (~650), Saint-Sulpice (~360), Repentigny (~270) — mais 0 clic. Conclusion : une liste de villes ne suffit pas à capter ces requêtes; il faudra, après le lancement, des pages locales dédiées pour les 3-4 meilleures (Mascouche, Lavaltrie/Lanoraie, Terrebonne, Notre-Dame-des-Prairies) + fiche Google Business Profile avec zone de service.
