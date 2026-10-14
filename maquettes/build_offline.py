@@ -16,8 +16,7 @@ ZIP = OUT + '.zip'
 
 # ---------- pages existantes ----------
 SRC = {
- 'index.html': ('accueil-v3.html', 'Accueil (version sobre)'),
- 'ancienne-accueil.html': ('accueil-v2.html', 'Ancienne accueil (comparaison)'),
+ 'index.html': ('accueil-v21.html', 'Accueil'),
  'thermopompe-installation.html': ('service-installation-thermopompe.html', 'Installation de thermopompe'),
  'climatiseur-mural-thermopompe.html': ('pilier-climatiseur-mural-thermopompe.html', 'Climatiseur mural et thermopompe (page pilier)'),
  'prix-climatiseur-mural.html': ('article-prix-climatiseur-mural.html', 'Article : prix d\'un climatiseur mural'),
@@ -71,7 +70,7 @@ STUBS = {
 }
 
 # ---------- gabarit commun ----------
-base = open(ROOT + 'source-accueil-v3.template.html', encoding='utf-8').read()
+base = open(ROOT + 'source-accueil-v21.template.html', encoding='utf-8').read()
 s0 = base.index('\n<style>') + 8
 CSS = re.sub(r'url\(\{\{IMG_[A-Z]+\}\}\)', 'none', base[s0: base.index('</style>')])
 HEADER = base[base.index('<header class="site"'): base.index('</header>') + 9]

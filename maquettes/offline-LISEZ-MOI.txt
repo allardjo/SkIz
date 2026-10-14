@@ -9,14 +9,12 @@ COMMENT L'OUVRIR (Mac)
 
 IMPORTANT : gardez les fichiers et les dossiers ensemble (« img » et « fonts » sont nécessaires). Ne déplacez pas un fichier .html seul.
 
-VERSION SOBRE (À ÉVALUER)
-- L'accueil (index.html) et la page « Installation de thermopompe » sont refaites en version sobre : 6 blocs au lieu de 12 sur l'accueil, 5 blocs au lieu de 10 sur la page de service, moins de cartes, un seul message par bloc.
-- Le nouveau menu (déroulants Résidentiel, Commercial, Services) et le nouveau pied de page sont sur toutes les pages.
-- Les autres pages gardent pour l'instant leur contenu d'avant : elles seront refaites sur le modèle sobre si cette direction vous convient.
-- « ancienne-accueil.html » est l'ancienne accueil, pour comparer.
+DESIGN
+- Version 1 (design complet) avec un bandeau de menu agrandi : logo plus gros, titres de section plus gros, menu mobile fonctionnel.
+- « Blogue » remplace « Guides de prix »; « chauffage d'appoint » n'est plus présenté comme un service.
 
 CE QUI EST DANS LE DOSSIER
-- 15 pages entièrement maquettées (dont l'ancienne accueil) : accueil, installation de thermopompe, page pilier climatiseur mural et thermopompe, guide de prix du climatiseur mural, réparation, entretien et nettoyage, chauffage auxiliaire, commercial (hub), ventilation, réfrigération, ferblanterie, carrières, contact, soumission.
+- 14 pages entièrement maquettées : accueil, installation de thermopompe, page pilier climatiseur mural et thermopompe, guide de prix du climatiseur mural, réparation, entretien et nettoyage, chauffage auxiliaire, commercial (hub), ventilation, réfrigération, ferblanterie, carrières, contact, soumission.
 - 3 pages hub simples (Résidentiel, Services, Blogue) qui renvoient vers les pages maquettées.
 - 12 pages « à venir » (avis, boutique, pages produits, guides à rafraîchir, politique de confidentialité, conditions d'utilisation) : un gabarit vide avec des liens vers les pages maquettées.
 - Le plan du site (plan-du-site.html).

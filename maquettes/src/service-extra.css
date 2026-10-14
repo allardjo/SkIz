@@ -1,5 +1,5 @@
 /* ===== page de service ===== */
-.hero-service{padding:clamp(9rem,17vh,12.5rem) 0 clamp(5.5rem,10vh,8rem)}
+.hero-service{padding:clamp(11rem,18vh,13.5rem) 0 clamp(5.5rem,10vh,8rem)}
 .hero-service .bg{position:absolute;inset:0;background:var(--img-thermo) 70% 50%/cover no-repeat;opacity:.42;mix-blend-mode:luminosity}
 .hero-service::before{background:linear-gradient(95deg,rgba(0,40,62,.99) 0%,rgba(0,54,80,.96) 48%,rgba(0,54,80,.62) 100%),url({{SYMBOLE_BEIGE}}) no-repeat -220px 110%/820px;opacity:1;left:0;bottom:0;width:auto;height:auto;inset:0}
 .hero-service .wrap{grid-template-columns:1.15fr .85fr;align-items:center}
@@ -109,7 +109,7 @@
 @media (max-width:720px){.frise{grid-template-columns:1fr}.compar th,.compar td{padding:.9rem 1rem;font-size:.92rem}}
 
 /* ===== article de blogue ===== */
-.hero-art{padding:clamp(8.5rem,16vh,11rem) 0 clamp(4.5rem,9vh,6.5rem)}
+.hero-art{padding:clamp(10.5rem,17vh,12.5rem) 0 clamp(4.5rem,9vh,6.5rem)}
 .hero-art .bg{display:none}
 .hero-art .wrap{grid-template-columns:1fr;max-width:80rem}
 .hero-art h1{font-size:clamp(2.6rem,5vw,4.4rem);max-width:15em}

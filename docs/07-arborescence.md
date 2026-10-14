@@ -360,3 +360,13 @@ Retours sur la première version sobre : certaines choses bien (les deux panneau
 - **Panneaux Résidentiel / Commercial** : conservés tels quels.
 - **« Guides de prix » rétabli en « Blogue »** : le blogue contient aussi des articles informatifs, pas seulement des prix. Menu, pied de page, hubs et site hors ligne mis à jour. La page-hub « Guides » est supprimée; l'article sur le prix du climatiseur mural reste un guide de prix dans le blogue.
 - **« Chauffage auxiliaire » n'est plus présenté comme un service** : ce n'est pas un service distinct, c'est un complément à la thermopompe. Retiré des tuiles de services, de la liste Services et des cartes « à consulter aussi » des pages de service. Il reste une page (la demande de recherche existe : « chauffage auxiliaire joliette », 2 970 impressions) classée sous **Résidentiel** (fil d'Ariane, balisage, URL cible `/residentiel/chauffage-auxiliaire-joliette/`) et appelée « Chauffage d'appoint » dans les menus.
+
+## Retour à la « version 1 » avec un bandeau de menu agrandi (14 octobre 2026)
+
+Après évaluation, le copropriétaire préfère la version 1 (design complet d'avant la version sobre) et demande un bandeau de menu plus gros : logo plus gros, titres de section plus gros.
+- **Gabarit v2.1** (`maquettes/make_v21_template.py` fabrique `source-accueil-v21.template.html` à partir du gabarit v2 intact) : toutes les pages et le site hors ligne l'utilisent. Les gabarits v2 et v3 (version sobre) restent dans le dépôt, sans être utilisés.
+- **Bandeau agrandi** : barre de 7 rem au lieu de 5,75 rem (5,9 rem défilée); logo de 62 px de haut à 1440 px de large (46 px avant), 94 px sur écran de 2560 px; titres du menu à 1,1 rem et en semi-gras (0,98 rem avant); numéro de téléphone et bouton de soumission plus gros. Marges latérales du bandeau resserrées pour que le tout tienne.
+- **Test de largeur** : aucune sortie de cadre ni chevauchement à 1180, 1280, 1366, 1440, 1536, 1728, 1920 et 2560 px (page d'accueil et page de service). En dessous de 1100 px, menu burger.
+- **Menu mobile** : le bouton burger de la version 1 ne faisait rien; il ouvre maintenant un menu complet (7 entrées + bouton de soumission).
+- **Corrections conservées** : « Blogue » remplace « Guides de prix » (menu, titre de la section de l'accueil, pied de page); « chauffage d'appoint » remplace « chauffage auxiliaire » dans les textes de l'accueil; la carte « Chauffage auxiliaire » est retirée des « autres services » de la page d'installation; la page chauffage reste classée sous Résidentiel.
+- **Entrées de menu** : Résidentiel, Commercial, Services, Blogue, Avis, Carrières (6, comme avant). Les menus déroulants de la version sobre ne sont pas repris.

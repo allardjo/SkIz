@@ -1,5 +1,5 @@
 /* ===== pages Contact et Soumission ===== */
-.hero-court{padding:clamp(8.5rem,15vh,11rem) 0 clamp(5rem,9vh,7rem)}
+.hero-court{padding:clamp(10.5rem,16vh,12.5rem) 0 clamp(5rem,9vh,7rem)}
 .hero-court .wrap{grid-template-columns:1fr}
 .hero-court h1{max-width:13em}
 .hero-soum h1{max-width:17em}

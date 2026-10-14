@@ -1,0 +1,67 @@
+"""Fabrique source-accueil-v21.template.html : l'ancien design (v2) intact + bandeau de menu agrandi,
+« Blogue » à la place de « Guides de prix », « chauffage d'appoint » et menu mobile fonctionnel."""
+t = open('source-accueil-v2.template.html', encoding='utf-8').read()
+def rep(a, b, count=1):
+    global t
+    assert a in t, a[:70]
+    t = t.replace(a, b, count)
+
+# --- vocabulaire
+rep('<a href="#guides">Guides</a>', '<a href="#guides">Blogue</a>')
+rep('<span class="eyebrow">Guides de prix</span><h2 class="reveal">Combien ça coûte? Les réponses, avant même de nous appeler</h2>',
+    '<span class="eyebrow">Blogue</span><h2 class="reveal">Des conseils clairs pour décider, avant même de nous appeler</h2>')
+rep('<p class="reveal d1">Des guides clairs et à jour, rédigés par notre équipe.</p>', '<p class="reveal d1">Des articles et des guides à jour, rédigés par notre équipe.</p>')
+rep('<li><a href="#">Guides de prix</a></li>', '<li><a href="#">Blogue</a></li>')
+rep('chauffage auxiliaire', "chauffage d'appoint")
+
+# --- menu mobile fonctionnel (le burger de v2 ne faisait rien)
+MOB = ('<div class="m-mobile" id="menu-mobile">'
+  '<a class="m-simple" href="#univers">Résidentiel</a><a class="m-simple" href="#univers">Commercial</a><a class="m-simple" href="#services">Services</a>'
+  '<a class="m-simple" href="#guides">Blogue</a><a class="m-simple" href="#avis">Avis</a><a class="m-simple" href="#carrieres">Carrières</a><a class="m-simple" href="#">Contact</a>'
+  '<a class="btn btn-r" href="#soumission">Demander une soumission</a></div>')
+rep('</header>', MOB + '\n</header>')
+rep('<span class="burger" aria-label="Menu"><svg class="ico" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span>',
+    '<button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu-mobile"><svg class="ico ouvre" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="ico ferme" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>')
+rep("var h=document.getElementById('entete');", "var h=document.getElementById('entete');var bg=h.querySelector('.burger');if(bg)bg.addEventListener('click',function(){var o=h.classList.toggle('open');bg.setAttribute('aria-expanded',o)});")
+
+CSS = r'''
+/* ===== v2.1 : bandeau de menu agrandi ===== */
+.urgence{font-size:.9rem}
+header.site .barre{height:7rem;gap:1.2rem;width:calc(100% - 2*clamp(1rem,2.2vw,3.2rem))}
+header.site.solid .barre{height:5.9rem}
+.barre .logo{height:3.9rem;width:15.8rem}
+.barre .logo img{height:3.9rem}
+header.site.solid .barre .logo{height:3.4rem;width:13.8rem}
+header.site.solid .barre .logo img{height:3.4rem}
+nav.principal{gap:0;font-size:1.1rem;font-weight:600}
+nav.principal a{padding:.8rem .85rem}
+.tel{font-size:1.08rem}
+.actions{gap:1rem}
+.actions .btn{padding:.95rem 1.45rem;font-size:1rem}
+.hero{padding-top:clamp(11rem,18vh,13.5rem)}
+footer.pied .logo{height:4.4rem}
+.burger{border:0;cursor:pointer}
+.burger .ferme{display:none}
+header.site.open .burger .ouvre{display:none}header.site.open .burger .ferme{display:block}
+.m-mobile{display:none}
+@media (max-width:1400px){.barre .logo{height:3.5rem;width:14.2rem}.barre .logo img{height:3.5rem}nav.principal{font-size:1.04rem}nav.principal a{padding:.7rem .62rem}.tel{font-size:1.02rem}.actions{gap:.8rem}.actions .btn{padding:.85rem 1.2rem;font-size:.95rem}header.site .barre{gap:.8rem}}
+@media (max-width:1240px){nav.principal{font-size:1rem}nav.principal a{padding:.65rem .5rem}.barre .logo{height:3.2rem;width:13rem}.barre .logo img{height:3.2rem}.tel span{display:none}.actions .btn{padding:.8rem 1.05rem;font-size:.92rem}}
+@media (max-width:1100px){
+  header.site .barre{height:5.4rem}header.site.solid .barre{height:4.9rem}
+  .barre .logo{height:3.4rem;width:13.8rem}.barre .logo img{height:3.4rem}header.site.solid .barre .logo{height:3.2rem;width:13rem}header.site.solid .barre .logo img{height:3.2rem}
+  header.site .m-mobile{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;box-shadow:0 1.6rem 2.6rem rgba(0,30,50,.18);padding:1rem var(--gut) 1.6rem;max-height:calc(100vh - 5.4rem);overflow:auto}
+  header.site.open .m-mobile{display:block}
+  .m-mobile .m-simple{display:block;padding:1rem 0;border-bottom:1px solid #e1e8ea;font-weight:700;color:var(--marine);text-decoration:none;font-size:1.1rem}
+  .m-mobile .btn{margin-top:1.2rem;width:100%}
+  header.site.open{background:#fff}header.site.open .urgence{max-height:0;opacity:0}
+  header.site.open .logo .on-light{opacity:1}header.site.open .logo .on-dark{opacity:0}
+  header.site.open .burger{background:#eef3f4;color:var(--marine)}
+  .actions .tel,.actions>.btn{display:none}
+}
+'''
+i = t.index('</style>')
+t = t[:i] + CSS + t[i:]
+# le numéro de téléphone reste visible (icône + numéro); classe pour le masquer à l'étroit
+rep('<a class="tel" href="tel:+14507539426">', '<a class="tel" href="tel:+14507539426">')
+open('source-accueil-v21.template.html', 'w', encoding='utf-8').write(t)
+print(len(t) // 1024, 'Ko')
