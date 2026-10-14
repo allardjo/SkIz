@@ -45,7 +45,7 @@ Trois noms pour une même adresse : Google rapproche les citations par nom + adr
 | Propriétaires et gestionnaires | Au moins 2 personnes de l'entreprise, plus un accès pour l'agence seulement si nécessaire; retirer les accès de l'ancienne agence | |
 | Doublons et fiches fermées | Rechercher « Bédard Joliette », « Claude Bédard », « Climatisation C. Bédard » : fusionner ou faire supprimer tout doublon | |
 
-## 3. Proposition de description (à valider, 700 caractères environ)
+## 3. Proposition de description (à valider, 489 caractères sur 750 permis)
 
 « Bédard, c'est plus de 40 ans d'expertise en chauffage, climatisation, ventilation et réfrigération à Joliette et dans Lanaudière. Notre équipe de plus de 65 professionnels installe, répare et entretient thermopompes, climatiseurs muraux, fournaises et systèmes de ventilation, pour les maisons comme pour les commerces et les institutions. Soumission gratuite. Service d'urgence 24 h sur 24, 7 jours sur 7. Anciennement Entreprise de Réfrigération & Climatisation Claude Bédard (1995) inc. »
 
