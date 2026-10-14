@@ -404,3 +404,13 @@ Réalisé : l'accueil dit « Nous desservons Joliette et Lanaudière. Toute la M
 ## Bandeau du haut : urgence 24 h et heures du bureau (14 octobre 2026)
 
 Le bandeau disait « Service d'urgence 24 h · Lundi au vendredi, 8 h à 17 h », ce qui laissait croire que l'urgence 24 h n'était offerte que pendant ces heures. Séparé : « Service d'urgence 24 h sur 24, 7 jours sur 7 » (à gauche) et « Bureau ouvert du lundi au vendredi, 8 h à 17 h » (au centre, avec une icône d'horloge). L'adresse, retirée du bandeau, reste dans le bloc « Où nous trouver », la page Contact et le pied de page. Dans la carte du bureau de l'accueil, la ligne « Fin de semaine : sur rendez-vous · Urgence 24 h » est remplacée par deux lignes distinctes : « Fin de semaine : sur rendez-vous avec un représentant » et « Urgence : 24 h sur 24, 7 jours sur 7, 450-753-9426 ».
+
+## Secteurs desservis élargis (page Contact)
+
+Demande : ajouter toutes les municipalités entre Joliette et Saint-Michel-des-Saints, Louiseville, Montréal-Est et Terrebonne.
+
+- La liste de la page Contact passe de 16 à 34 municipalités, regroupées en 5 blocs : Joliette et la MRC de Joliette / Vers Saint-Michel-des-Saints / Vers Louiseville / Vers Montréal-Est / Vers Terrebonne (source : `src/gen_contact.py`, `GROUPES`).
+- Accueil inchangé : phrase courte + lien vers Contact (décision SEO déjà prise).
+- Note sous la liste : « Votre municipalité n'est pas dans la liste? Appelez-nous pour confirmer le service dans votre secteur. »
+- **À valider par l'équipe** : la liste est établie selon les axes routiers (131/347, 158/138, A31/A40/343) — jugement à confirmer; les municipalités d'une seule MRC officielle ne sont pas toutes incluses (ex. Saint-Damien, Saint-Côme, Sainte-Béatrix, Saint-Alphonse-Rodriguez, Sainte-Marcelline-de-Kildare en Matawinie; Saint-Esprit, Saint-Jacques, Saint-Liguori en Montcalm).
+- Correctif au passage : débordement horizontal mobile (390 px) sur Contact, causé par `white-space:nowrap` appliqué aux cartes `a[href^="tel:"]`.

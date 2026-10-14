@@ -642,9 +642,15 @@ a.cc:hover{transform:translateY(-5px);box-shadow:0 22px 48px rgba(0,50,70,.14)}
   .progres small{display:none}
 }
 
+.zone-titre{margin:1.8rem 0 0;font-size:.95rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--bleu)}
+.zone-titre+.zones{margin-top:.7rem}
 .note-zone{margin-top:1.2rem;color:var(--doux);font-size:.95rem}
 
 a[href^="tel:"]{white-space:nowrap}
+
+a[href^="tel:"].cc{white-space:normal}
+.cartes-contact>*{min-width:0}
+.cc b{overflow-wrap:anywhere}
 /* ===== pages de service résidentielles (réparation, entretien, chauffage auxiliaire) ===== */
 .hero-entretien .bg{background:var(--img-entretien) 60% 50%/cover no-repeat}
 .hero-chauff .bg{background:var(--img-chauffage) 60% 50%/cover no-repeat}

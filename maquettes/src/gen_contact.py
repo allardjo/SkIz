@@ -13,8 +13,15 @@ I={
 def ic(n): return f'<svg class="ico" viewBox="0 0 24 24">{I[n]}</svg>'
 TEL='<a href="tel:+14507539426" data-track="call_tracking">450-753-9426</a>'
 
-zones=['Joliette','Notre-Dame-des-Prairies','Saint-Charles-Borromée','Crabtree','Saint-Paul','Saint-Thomas','Notre-Dame-de-Lourdes','Saint-Ambroise-de-Kildare','Sainte-Mélanie','Saint-Pierre','Lavaltrie','Berthierville','Saint-Félix-de-Valois','Saint-Jean-de-Matha','Rawdon','Repentigny']
-zh=''.join(f'<span>{z}</span>' for z in zones)
+GROUPES=[
+ ('Joliette et la MRC de Joliette',['Joliette','Notre-Dame-des-Prairies','Saint-Charles-Borromée','Crabtree','Saint-Paul','Saint-Thomas','Notre-Dame-de-Lourdes','Saint-Ambroise-de-Kildare','Sainte-Mélanie','Saint-Pierre']),
+ ('Vers Saint-Michel-des-Saints',['Saint-Félix-de-Valois','Saint-Jean-de-Matha','Rawdon',"Sainte-Émélie-de-l'Énergie",'Notre-Dame-de-la-Merci','Saint-Zénon','Saint-Michel-des-Saints']),
+ ('Vers Louiseville',['Lavaltrie','Lanoraie','Berthierville','Sainte-Geneviève-de-Berthier','Sainte-Élisabeth','Saint-Cuthbert','Saint-Barthélemy','Louiseville']),
+ ('Vers Montréal-Est',["L'Assomption",'Saint-Sulpice','Repentigny','Charlemagne','Montréal-Est']),
+ ('Vers Terrebonne',["L'Épiphanie","Saint-Roch-de-l'Achigan",'Mascouche','Terrebonne']),
+]
+zones=[z for _,l in GROUPES for z in l]
+zh=''.join(f'<h3 class="zone-titre">{t}</h3><div class="zones">'+''.join(f'<span>{z}</span>' for z in l)+'</div>' for t,l in GROUPES)
 
 contact=f'''<main>
 <!-- ================= HERO CONTACT ================= -->
@@ -88,8 +95,8 @@ contact=f'''<main>
   <div>
     <p class="reveal">Depuis plus de 40 ans, Bédard conseille, installe et entretient des systèmes de chauffage, de ventilation, de climatisation et de réfrigération pour les résidences, les commerces et les institutions de la région.</p>
     <p class="reveal d1">Nos spécialistes vous guident dans le choix du bon appareil et vous informent des programmes gouvernementaux qui peuvent s'appliquer à votre projet : climatisation, chauffage, ventilation, géothermie ou plancher chauffant. L'estimation à votre domicile ou à nos bureaux est gratuite.</p>
-    <div class="zones reveal d2">{zh}</div>
-    <p class="note-zone reveal">Toutes les municipalités de la MRC de Joliette, et plusieurs secteurs voisins de Lanaudière.</p>
+    <div class="reveal d2">{zh}</div>
+    <p class="note-zone reveal">Toutes les municipalités de la MRC de Joliette, et celles situées sur les routes entre Joliette et Saint-Michel-des-Saints, Louiseville, Montréal-Est et Terrebonne. Votre municipalité n'est pas dans la liste? Appelez-nous pour confirmer le service dans votre secteur.</p>
   </div>
 </div></section>
 
