@@ -435,3 +435,13 @@ Demande : ajouter toutes les municipalités entre Joliette et Saint-Michel-des-S
 - Le bandeau (urgence 24 h / heures du bureau / sans frais) est retiré de toutes les pages (`make_v21_template.py`). L'en-tête garde le logo, le menu, le 450-753-9426 et « Demander une soumission ».
 - Impact SEO : nul. Un bandeau n'a pas de valeur en soi; ce qui compte, c'est la présence du nom, de l'adresse, du téléphone et des heures (NAP) dans du texte indexable et dans les données structurées. Ils restent dans le pied de page de toutes les pages, la page Contact (cartes et fiche du bureau), le JSON-LD LocalBusiness (heures, téléphones, 24 h/24 pour l'urgence) et, au lancement, la fiche Google Business Profile.
 - L'urgence 24 h reste visible : puce du hero d'accueil, pastille du hero Contact, appel final, barre « Appeler » mobile.
+
+## Photos : WebP, balises <img> avec alt, priorité du hero
+
+Constat d'un audit externe : photos insérées en décor de fond (pas d'alt, absentes de Google Images, découvertes tard par le navigateur) et lourdes (jusqu'à 380 Ko). Correctif appliqué aux maquettes et au site de test :
+
+- **WebP** : `maquettes/make_webp.py` convertit `img/*.jpg` (sources conservées) en `img/*.webp`, redimensionnées (hero 1 600 px, équipe 1 400 px, autres ≤ 1 100 px). Poids total des 11 photos : ~1,9 Mo → ~0,9 Mo. Hero : 147 → 80 Ko; ferblanterie : 379 → 106 Ko; thermopompe : 318 → 166 Ko; commercial : 245 → 107 Ko.
+- **Balises `<img>`** (alt, `width`/`height` pour éviter le saut de mise en page, `decoding="async"`) pour toutes les photos de contenu : hero d'accueil (`fetchpriority="high"`, sans lazy), tuiles univers/services, cartes du blogue, photo d'équipe, photos de la page Ferblanterie. Les autres sont en `loading="lazy"`. Générées par `maquettes/imgdata.py` (marqueurs `{{PHOTO:clé}}` et `{{PHOTO:clé:eager}}`, descriptions dans `ALT`).
+- **Décor pur** (hero des sous-pages à 30-50 % d'opacité avec fondu, bande Carrières) : reste en fond CSS. Dans le site de test, la photo du haut de chaque page est préchargée (`<link rel="preload" as="image" fetchpriority="high">`).
+- Textes `alt` actuels = descriptions des photos temporaires; à réécrire quand les vraies photos de Bédard remplaceront les photos d'archive (idéalement avec la ville ou le type de projet, sans bourrage de mots-clés).
+- Pour WordPress : même règle (images de contenu en `<img>` avec alt + dimensions, WebP/AVIF, `srcset`, hero en priorité haute, reste en lazy), noms de fichiers descriptifs (`thermopompe-murale-joliette.webp`).

@@ -78,7 +78,7 @@ TAIL = base[base.index('<footer class="pied">'):]
 EXTRA = open(ROOT + 'src/service-extra.css', encoding='utf-8').read() + open(ROOT + 'src/contact-extra.css', encoding='utf-8').read()
 B = '/home/user/SkIz/assets/brand/svg/'
 def svg(n): return 'data:image/svg+xml;base64,' + base64.b64encode(open(B + n, 'rb').read()).decode()
-def jpg(n): return 'data:image/jpeg;base64,' + base64.b64encode(open(ROOT + 'img/' + n + '.jpg', 'rb').read()).decode()
+def jpg(n): return 'data:image/webp;base64,' + base64.b64encode(open(ROOT + 'img/' + n + '.webp', 'rb').read()).decode()
 IMGS = {'thermo': 'thermopompe', 'hero': 'hero', 'equipe': 'equipe', 'residentiel': 'residentiel', 'commercial': 'commercial', 'entretien': 'entretien', 'chauffage': 'chauffage', 'guide': 'guide-thermopompe'}
 ARROW = '<svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
 CHECK = '<svg class="ico" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>'
@@ -250,12 +250,21 @@ if os.path.exists(OUT): shutil.rmtree(OUT)
 os.makedirs(OUT + '/img'); os.makedirs(OUT + '/fonts')
 def save_asset(kind, data):
     h = hashlib.sha1(data).hexdigest()[:10]
-    fn = f'img/{kind}-{h}.{"jpg" if kind=="photo" else "svg"}'
+    fn = f'img/{kind}-{h}.{"webp" if kind=="photo" else "svg"}'
     if not os.path.exists(OUT + '/' + fn): open(OUT + '/' + fn, 'wb').write(data)
     return fn
 def externalize(html):
-    html = re.sub(r'url\(data:image/jpeg;base64,([A-Za-z0-9+/=]+)\)', lambda m: f'url({save_asset("photo", base64.b64decode(m.group(1)))})', html)
+    html = re.sub(r'data:image/webp;base64,([A-Za-z0-9+/=]+)', lambda m: save_asset('photo', base64.b64decode(m.group(1))), html)
     html = re.sub(r'data:image/svg\+xml;base64,([A-Za-z0-9+/=]+)', lambda m: save_asset('logo', base64.b64decode(m.group(1))), html)
+    # photo du haut de page en arrière-plan CSS : préchargée en priorité (sinon le navigateur ne la découvre qu'après le CSS)
+    hc = re.search(r'<div class="(hero[^"]*)"', html)
+    if hc:
+        cls = set(hc.group(1).split()); var = None
+        for sel, body in re.findall(r'([^{}]*)\{([^{}]*var\(--img-[a-z]+\)[^{}]*)\}', html):   # le dernier gabarit qui s'applique l'emporte
+            cm = re.fullmatch(r'\s*\.(hero[a-z-]*) \.bg\s*', sel.strip().split('\n')[-1])
+            if cm and cm.group(1) in cls: var = re.search(r'var\(--img-([a-z]+)\)', body).group(1)
+        u = re.search(r'--img-' + var + r':url\((img/[^)]+)\)', html) if var else None
+        if u: html = html.replace('<style>', f'<link rel="preload" as="image" href="{u.group(1)}" fetchpriority="high">\n<style>', 1)
     return html
 # police Mona Sans (OFL), téléchargée une seule fois
 css = urllib.request.urlopen(urllib.request.Request('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wdth,wght@0,75..125,200..900&display=swap', headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15'})).read().decode()

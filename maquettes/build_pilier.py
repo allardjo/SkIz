@@ -5,7 +5,7 @@ from typo import typo, add_css
 ROOT = '/home/user/SkIz/maquettes/'
 B = '/home/user/SkIz/assets/brand/svg/'
 def svg(n): return 'data:image/svg+xml;base64,' + base64.b64encode(open(B + n, 'rb').read()).decode()
-def jpg(n): return 'data:image/jpeg;base64,' + base64.b64encode(open(ROOT + 'img/' + n + '.jpg', 'rb').read()).decode()
+def jpg(n): return 'data:image/webp;base64,' + base64.b64encode(open(ROOT + 'img/' + n + '.webp', 'rb').read()).decode()
 
 base = open(ROOT + 'source-accueil-v21.template.html', encoding='utf-8').read()
 s0 = base.index('\n<style>') + 8  # le commentaire Ballinger contient aussi le mot <style>

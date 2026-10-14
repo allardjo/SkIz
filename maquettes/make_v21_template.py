@@ -117,5 +117,22 @@ _a = t.index('  <div class="urgence"><div class="wrap">'); _b = t.index('</div><
 t = t[:_a] + t[_b:]
 assert 'class="urgence"' not in t
 
+# --- photos de contenu : vraies balises <img> (alt, dimensions, priorité), au lieu d'images de fond
+rep("background:var(--img-hero) 12% 42%/cover no-repeat;", "")
+rep('<div class="photo-hero" role="img" aria-label="Une cliente détendue sur son canapé"></div>', '<div class="photo-hero">{{PHOTO:hero:eager}}</div>')
+import re as _re
+t, _n = _re.subn(r'<div class="photo" style="background-image:url\(\{\{IMG_([A-Z]+)\}\}\)"></div>', lambda m: '<div class="photo">{{PHOTO:%s}}</div>' % {'RESIDENTIEL':'residentiel','COMMERCIAL':'commercial','THERMO':'thermo','ENTRETIEN':'entretien','CHAUFFAGE':'chauffage'}[m.group(1)], t); assert _n == 5, _n
+t, _n = _re.subn(r'<div class="img" style="background-image:url\(\{\{IMG_([A-Z]+)\}\}\)">', lambda m: '<div class="img">{{PHOTO:%s}}' % {'RESIDENTIEL':'residentiel','GUIDE':'guide','CHAUFFAGE':'chauffage'}[m.group(1)], t); assert _n == 3, _n
+rep("background:url({{IMG_EQUIPE}}) 40% center/cover}", "}")
+rep('<div class="cadre"></div>', '<div class="cadre">{{PHOTO:equipe}}</div>')
+CSS_IMG = """
+/* photos de contenu */
+.photo-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:12% 42%}
+.u-carte .photo img,.t-photo .photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.guide .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pourquoi .visuel .cadre img{width:100%;height:100%;object-fit:cover;object-position:40% center;display:block}
+"""
+_i = t.index('</style>'); t = t[:_i] + CSS_IMG + t[_i:]
+
 open('source-accueil-v21.template.html', 'w', encoding='utf-8').write(t)
 print(len(t) // 1024, 'Ko')

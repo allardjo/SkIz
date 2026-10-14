@@ -86,7 +86,7 @@ body=f'''<main>
 
 <!-- ================= PIÈCES ================= -->
 <section class="fond-beige"><div class="wrap duo-fer">
-  <div class="illu-fer reveal"></div>
+  <div class="illu-fer reveal">{{{{PHOTO:conduits}}}}</div>
   <div>
     <span class="eyebrow">Pièces et conduits</span>
     <h2 class="reveal">Des pièces adaptées à chaque réseau</h2>
@@ -108,7 +108,7 @@ body=f'''<main>
     <p class="reveal d1" style="color:var(--doux);font-size:1.12rem;margin:1.2rem 0 1.6rem;max-width:34em">Conduits galvanisés installés dans un bâtiment : le résultat du travail de nos ferblantiers, de la prise de mesures à la pose. <em>[À compléter : nom ou type du projet, ville, travaux réalisés]</em></p>
     <a class="btn btn-m reveal d2" href="#soumission">Discuter de votre projet {ARROW}</a>
   </div>
-  <div class="photo-fer reveal"></div>
+  <div class="photo-fer reveal">{{{{PHOTO:fer}}}}</div>
 </div></section>
 
 <!-- ================= DÉROULEMENT ================= -->

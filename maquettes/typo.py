@@ -1,6 +1,7 @@
 """Typographie française : espaces insécables avant : ; ? ! et dans les guillemets, numéros de téléphone insécables.
 S'applique seulement au texte visible (pas aux balises, scripts ni feuilles de style)."""
 import re
+import imgdata
 _SPLIT = re.compile(r'(<script.*?</script>|<style.*?</style>|<!--.*?-->|<[^>]+>)', re.S)
 _PHONE = re.compile(r'(?<![\d-])(1-\d{3}-\d{3}-\d{4}|\d{3}-\d{3}-\d{4})(?![\d-])')
 
@@ -15,4 +16,4 @@ def typo(html):
     return ''.join(p if (i % 2) else _txt(p) for i, p in enumerate(parts))
 
 def add_css(html):
-    return html.replace('\n<style>', '\n<style>.nw{white-space:nowrap}', 1)
+    return imgdata.fill(html.replace('\n<style>', '\n<style>.nw{white-space:nowrap}', 1))

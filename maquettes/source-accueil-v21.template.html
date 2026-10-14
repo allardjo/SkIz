@@ -87,7 +87,7 @@ header.site.solid .tel{color:var(--marine)}header.site.solid .tel .ico{color:var
 .hero::after{content:"";position:absolute;right:-18.75rem;top:-18.75rem;width:56.25rem;height:56.25rem;border-radius:50%;background:radial-gradient(circle,rgba(40,176,216,.28),rgba(40,176,216,0) 65%)}
 .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:4.375rem;align-items:center}
 .droite{position:relative;height:clamp(28rem,60vh,44rem)}
-.photo-hero{position:absolute;inset:0;border-radius:2.5rem 2.5rem 2.5rem 10rem;background:var(--img-hero) 12% 42%/cover no-repeat;box-shadow:0 3.125rem 6.25rem rgba(0,0,20,.55);overflow:hidden}
+.photo-hero{position:absolute;inset:0;border-radius:2.5rem 2.5rem 2.5rem 10rem;box-shadow:0 3.125rem 6.25rem rgba(0,0,20,.55);overflow:hidden}
 .photo-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,54,80,0) 50%,rgba(0,54,80,.55))}
 .chip{position:absolute;display:inline-flex;gap:0.625rem;align-items:center;padding:0.8125rem 1.25rem;border-radius:62.4375rem;background:rgba(255,255,255,.96);color:var(--marine);font-weight:700;font-size:.92rem;box-shadow:0 1rem 2.5rem rgba(0,0,20,.35);z-index:3}
 .chip small{display:block;font-weight:500;color:var(--doux);font-size:.76rem}
@@ -178,7 +178,7 @@ section{padding:7.5rem 0}
 .sombre h2{color:#fff}
 .pourquoi{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:5.625rem;align-items:center}
 .pourquoi .visuel{position:relative}
-.pourquoi .visuel .cadre{border-radius:1.875rem;overflow:hidden;aspect-ratio:4/5;background:url({{IMG_EQUIPE}}) 40% center/cover}
+.pourquoi .visuel .cadre{border-radius:1.875rem;overflow:hidden;aspect-ratio:4/5;}
 .pourquoi .visuel .flottant{position:absolute;right:-1.875rem;bottom:2.75rem;background:#fff;color:var(--marine);border-radius:1.375rem;padding:1.375rem 1.625rem;box-shadow:0 1.625rem 3.75rem rgba(0,0,20,.4);display:flex;gap:1rem;align-items:center}
 .flottant .gros{font-size:3rem;font-weight:800;line-height:1;letter-spacing:-.04em;font-stretch:84%}
 .flottant .pt{font-size:.9rem;line-height:1.3;color:var(--doux)}
@@ -383,6 +383,12 @@ header.site.solid .burger{background:rgba(255,255,255,.14);color:#fff}
 .sect-plus{color:var(--doux);margin:1.2rem 0 0;max-width:34em;font-size:1rem}
 .eyebrow-bureau{margin-top:2.8rem}
 .carte-adresse .lien{display:inline-flex;margin-top:1.4rem;color:var(--bleu);font-weight:700}
+
+/* photos de contenu */
+.photo-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:12% 42%}
+.u-carte .photo img,.t-photo .photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.guide .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pourquoi .visuel .cadre img{width:100%;height:100%;object-fit:cover;object-position:40% center;display:block}
 </style>
 
 <script type="application/ld+json">
@@ -430,7 +436,7 @@ header.site.solid .burger{background:rgba(255,255,255,.14);color:#fff}
       </div>
     </div>
     <div class="droite reveal d2">
-      <div class="photo-hero" role="img" aria-label="Une cliente détendue sur son canapé"></div>
+      <div class="photo-hero">{{PHOTO:hero:eager}}</div>
       <span class="chip chip-b">{{ETOILE1}}<span>4,9 sur 5<small>180+ avis clients</small></span></span>
       <span class="chip chip-a"><i></i><span>Service d'urgence 24 h<small>450-753-9426</small></span></span>
     </div>
@@ -465,13 +471,13 @@ header.site.solid .burger{background:rgba(255,255,255,.14);color:#fff}
     <p class="reveal d1">Des solutions complètes, conçues, installées et entretenues par la même équipe.</p>
   </div>
   <div class="univers">
-    <a class="u-carte reveal" href="#"><div class="photo" style="background-image:url({{IMG_RESIDENTIEL}})"></div>
+    <a class="u-carte reveal" href="#"><div class="photo">{{PHOTO:residentiel}}</div>
       <span class="etiq">Résidentiel</span>
       <h3>Votre maison, tout confort, toute l'année</h3>
       <p>Thermopompes, climatisation murale, chauffage et ventilation : le bon système, installé proprement et entretenu dans le temps.</p>
       <ul><li>Thermopompe</li><li>Climatiseur mural</li><li>Chauffage</li><li>Ventilation</li><li>Géothermie</li></ul>
       <span class="go"><i><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>Découvrir le résidentiel</span></a>
-    <a class="u-carte reveal d1" href="#"><div class="photo" style="background-image:url({{IMG_COMMERCIAL}})"></div>
+    <a class="u-carte reveal d1" href="#"><div class="photo">{{PHOTO:commercial}}</div>
       <span class="etiq">Commercial</span>
       <h3>Votre bâtiment, conçu et entretenu pour durer</h3>
       <p>Réfrigération commerciale, ventilation, ferblanterie et entretien périodique pour les commerces et les bâtiments.</p>
@@ -487,7 +493,7 @@ header.site.solid .burger{background:rgba(255,255,255,.14);color:#fff}
     <p class="reveal d1">Chaque service a sa page dédiée : déroulement, prix, questions fréquentes.</p>
   </div>
   <div class="bento">
-    <a class="tuile t-photo s7 l2 reveal" href="#"><div class="photo" style="background-image:url({{IMG_THERMO}})"></div>
+    <a class="tuile t-photo s7 l2 reveal" href="#"><div class="photo">{{PHOTO:thermo}}</div>
       <span class="badge24" style="background:rgba(255,255,255,.18)">Le plus demandé</span>
       <h3 style="font-size:2.4rem">Thermopompe</h3><p>Murale ou centrale : installation, remplacement et conversion de votre système actuel. Moins de consommation, plus de confort, été comme hiver.</p>
       <div class="bas"><span>Voir le service</span><span class="fl-c"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
@@ -495,9 +501,9 @@ header.site.solid .burger{background:rgba(255,255,255,.14);color:#fff}
       <div class="bas"><span>Voir le service</span><span class="fl-c"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
     <a class="tuile t-rouille s5 reveal d2" href="tel:+14507539426"><span class="badge24"><svg class="ico" style="width:14px;height:14px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Urgence 24 h</span><h3>Réparation et dépannage</h3><p>Une panne? Appelez-nous, jour et nuit.</p>
       <div class="bas"><span>450-753-9426</span><span class="fl-c"><svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span></div></a>
-    <a class="tuile t-photo s4 reveal" href="#"><div class="photo" style="background-image:url({{IMG_ENTRETIEN}})"></div><h3>Entretien et nettoyage</h3><p>Un entretien périodique personnalisé pour des appareils performants plus longtemps.</p>
+    <a class="tuile t-photo s4 reveal" href="#"><div class="photo">{{PHOTO:entretien}}</div><h3>Entretien et nettoyage</h3><p>Un entretien périodique personnalisé pour des appareils performants plus longtemps.</p>
       <div class="bas"><span>Voir le service</span><span class="fl-c"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
-    <a class="tuile t-photo s4 reveal d1" href="#"><div class="photo" style="background-image:url({{IMG_CHAUFFAGE}})"></div><h3>Chauffage</h3><p>Fournaises électriques, chauffage d'appoint et systèmes bi-énergie.</p>
+    <a class="tuile t-photo s4 reveal d1" href="#"><div class="photo">{{PHOTO:chauffage}}</div><h3>Chauffage</h3><p>Fournaises électriques, chauffage d'appoint et systèmes bi-énergie.</p>
       <div class="bas"><span>Voir le service</span><span class="fl-c"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
     <a class="tuile t-ciel t-clair s4 reveal d2" href="#"><h3>Ventilation et qualité de l'air</h3><p>Échangeurs d'air, purificateurs, humidificateurs et déshumidificateurs.</p>
       <div class="bas"><span>Voir le service</span><span class="fl-c"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
@@ -511,7 +517,7 @@ header.site.solid .burger{background:rgba(255,255,255,.14);color:#fff}
 <!-- ================= POURQUOI ================= -->
 <section class="sombre"><div class="wrap pourquoi">
   <div class="visuel reveal">
-    <div class="cadre"></div>
+    <div class="cadre">{{PHOTO:equipe}}</div>
     <div class="flottant"><span class="gros">65+</span><span class="pt"><b>professionnels</b>frigoristes, ferblantiers, dessinateurs et équipes d'installation <em style="opacity:.6">[à valider]</em></span></div>
   </div>
   <div>
@@ -548,9 +554,9 @@ header.site.solid .burger{background:rgba(255,255,255,.14);color:#fff}
     <p class="reveal d1">Des articles et des guides à jour, rédigés par notre équipe.</p>
   </div>
   <div class="guides">
-    <a class="guide reveal" href="#"><div class="img" style="background-image:url({{IMG_RESIDENTIEL}})"><span class="tag">Climatisation</span></div><div class="txt"><h3>Climatiseur mural : à quel prix s'attendre?</h3><p>Ce qui fait varier le prix d'un climatiseur mural installé : puissance, nombre de zones, installation.</p><span class="lien">Lire le guide <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
-    <a class="guide reveal d1" href="#"><div class="img" style="background-image:url({{IMG_GUIDE}})"><span class="tag">Thermopompe</span></div><div class="txt"><h3>Remplacer une thermopompe : à quel prix?</h3><p>Coûts, signes qu'il est temps de remplacer et options de remplacement.</p><span class="lien">Lire le guide <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
-    <a class="guide reveal d2" href="#"><div class="img" style="background-image:url({{IMG_CHAUFFAGE}})"><span class="tag">Qualité de l'air</span></div><div class="txt"><h3>Quel est le meilleur humidificateur pour la maison?</h3><p>Central ou portatif : comment choisir selon votre maison.</p><span class="lien">Lire le guide <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+    <a class="guide reveal" href="#"><div class="img">{{PHOTO:residentiel}}<span class="tag">Climatisation</span></div><div class="txt"><h3>Climatiseur mural : à quel prix s'attendre?</h3><p>Ce qui fait varier le prix d'un climatiseur mural installé : puissance, nombre de zones, installation.</p><span class="lien">Lire le guide <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+    <a class="guide reveal d1" href="#"><div class="img">{{PHOTO:guide}}<span class="tag">Thermopompe</span></div><div class="txt"><h3>Remplacer une thermopompe : à quel prix?</h3><p>Coûts, signes qu'il est temps de remplacer et options de remplacement.</p><span class="lien">Lire le guide <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+    <a class="guide reveal d2" href="#"><div class="img">{{PHOTO:chauffage}}<span class="tag">Qualité de l'air</span></div><div class="txt"><h3>Quel est le meilleur humidificateur pour la maison?</h3><p>Central ou portatif : comment choisir selon votre maison.</p><span class="lien">Lire le guide <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
   </div>
 </div></section>
 
