@@ -33,3 +33,12 @@ Le site, Google et les annuaires connaissent l'entreprise comme « Entreprise De
 - Mettre à jour la fiche Google Business Profile, Facebook, LinkedIn et les annuaires avec le même nom, la même adresse et le même numéro (cohérence NAP).
 - Garder « Réfrigération & Climatisation » dans les titres de pages et les textes, parce que les gens cherchent ces mots, pas la signature.
 - Mettre à jour le logo dans l'image de partage (og:image) et le favicon.
+
+## Décision de nommage (recommandation, à confirmer avec le comptable ou l'avocat)
+
+- **Nom public partout (Google, site, réseaux sociaux, annuaires, publicité, camions, soumissions) : « Bédard Performance thermique »**, écrit toujours de la même façon (sans tiret) pour garder le NAP cohérent.
+- **Nom légal seulement là où l'identité juridique est requise** : ligne dans le pied de page et sur la page Contact (« Bédard Performance thermique est une marque de [nom légal exact du REQ] »), `legalName` dans les données structurées, contrats, factures, licence RBQ.
+- **« Climatisation C. Bédard »** : ancien nom d'usage (visible chez Carrier). Pas de nom public; conservé comme `alternateName` et dans « anciennement » pendant 12 à 24 mois.
+- **Données structurées** : `name` = « Bédard Performance thermique », `legalName` = nom légal copié exactement du Registraire des entreprises, `alternateName` = « Bédard », « Climatisation C. Bédard ».
+- **Conditions** : déclarer le nom d'usage au Registraire des entreprises du Québec; vérifier l'obligation d'afficher le numéro de licence RBQ dans la publicité; changer d'abord enseigne, camions, factures, signature de courriel et site; puis le nom de la fiche Google (qui doit correspondre au nom réel affiché); puis les annuaires (Carrier, CAA-Québec, Pages Jaunes).
+- Ne jamais ajouter de mots-clés dans le nom de la fiche Google (risque de suspension); les mots « climatisation », « chauffage » vont dans les catégories, services, titres de pages et description.
