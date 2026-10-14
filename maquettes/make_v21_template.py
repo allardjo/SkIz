@@ -134,5 +134,22 @@ CSS_IMG = """
 """
 _i = t.index('</style>'); t = t[:_i] + CSS_IMG + t[_i:]
 
+# --- thermopompe murale : le mot « climatiseur mural » reste là où les gens le cherchent (article prix, page pilier);
+#     ailleurs on parle de ce qu'on installe vraiment : la thermopompe murale
+rep('<option>Une thermopompe</option><option>Un climatiseur mural</option>', '<option>Une thermopompe murale</option><option>Une thermopompe centrale</option>')
+rep('Thermopompes, climatisation murale, chauffage et ventilation :', 'Thermopompes murales et centrales, chauffage et ventilation :')
+rep('<li>Thermopompe</li><li>Climatiseur mural</li><li>Chauffage</li>', '<li>Thermopompe murale</li><li>Thermopompe centrale</li><li>Chauffage</li>')
+rep('<h3 style="font-size:2.4rem">Thermopompe</h3><p>Murale ou centrale : installation, remplacement et conversion de votre système actuel. Moins de consommation, plus de confort, été comme hiver.</p>',
+    '<h3 style="font-size:2.4rem">Thermopompe murale</h3><p>Aussi appelée climatiseur mural : elle chauffe et climatise sans conduits. Installation, remplacement et conversion de votre système actuel, été comme hiver.</p>')
+rep('<h3>Climatiseur mural</h3><p>Vente et installation propre, dans les délais convenus. Le confort de chaque pièce, à votre rythme.</p>',
+    '<h3>Thermopompe centrale</h3><p>Pour une maison avec conduits : installation, remplacement et conversion d\'un système existant, avec une soumission détaillée.</p>')
+rep('<li><a href="#">Thermopompe</a></li><li><a href="#">Climatiseur mural</a></li>', '<li><a href="#">Thermopompe</a></li><li><a href="#">Thermopompe murale</a></li>')
+rep('<summary>Combien coûte un climatiseur mural installé?</summary>', '<summary>Combien coûte une thermopompe murale (climatiseur mural) installée?</summary>')
+# géothermie et planchers radiants : deux services différents, deux tuiles
+BAS = '\n      <div class="bas"><span>Voir le service</span><span class="fl-c"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>'
+rep('<a class="tuile t-beige t-clair s6 reveal" href="#"><h3>Géothermie et planchers radiants</h3><p>Conception et installation de systèmes géothermiques et radiants, pour un confort silencieux et durable.</p>',
+    '<a class="tuile t-beige t-clair s4 reveal" href="#"><h3>Géothermie</h3><p>Conception et installation de systèmes géothermiques : chauffer et climatiser avec l\'énergie du sol, pour un confort silencieux et durable.</p>' + BAS + '\n    <a class="tuile t-ciel t-clair s4 reveal d1" href="#"><h3>Planchers radiants</h3><p>Une chaleur douce et uniforme par le plancher, sans bruit ni courant d\'air.</p>')
+rep('<a class="tuile t-marine s6 reveal d1" href="#"><h3>Commercial', '<a class="tuile t-marine s4 reveal d2" href="#"><h3>Commercial')
+
 open('source-accueil-v21.template.html', 'w', encoding='utf-8').write(t)
 print(len(t) // 1024, 'Ko')

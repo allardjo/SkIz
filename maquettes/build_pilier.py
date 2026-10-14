@@ -16,15 +16,15 @@ extra = open(ROOT + 'src/service-extra.css', encoding='utf-8').read()
 body = open(ROOT + 'src/pilier-climatiseur-thermopompe.body.html', encoding='utf-8').read()
 
 css = re.sub(r'url\(\{\{IMG_[A-Z]+\}\}\)', 'none', css)  # images de l'accueil, inutiles ici
-title = 'Climatiseur mural et thermopompe à Joliette | Bédard'
-desc = "Climatiseur mural, thermopompe et climatisation à Joliette et Lanaudière : conseil, installation propre et entretien par plus de 65 professionnels."
+title = 'Climatiseur mural et thermopompe murale à Joliette | Bédard'
+desc = "Climatiseur mural et thermopompe murale à Joliette et Lanaudière : conseil, installation propre et entretien par plus de 65 professionnels."
 assert len(title) <= 60 and len(desc) <= 160, (len(title), len(desc))
 
 ld = '''{"@context":"https://schema.org","@graph":[
 {"@type":"Service","@id":"https://cbedard.com/climatiseur-mural-air-climatise-thermopompe-joliette/#service","name":"Climatiseur mural et thermopompe à Joliette","serviceType":"Vente, installation et entretien de climatiseurs muraux et de thermopompes","provider":{"@type":["HVACBusiness","LocalBusiness"],"@id":"https://cbedard.com/#entreprise","name":"Bédard — Performance thermique","legalName":"Entreprise De Réfrigération & Climatisation Claude Bédard (1995) Inc.","telephone":"+1-450-753-9426","address":{"@type":"PostalAddress","streetAddress":"304, boulevard de l'Industrie","addressLocality":"Joliette","addressRegion":"QC","postalCode":"J6E 8V2","addressCountry":"CA"}},"areaServed":["Joliette","Lanaudière"],"url":"https://cbedard.com/climatiseur-mural-air-climatise-thermopompe-joliette/"},
 {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://cbedard.com/"},{"@type":"ListItem","position":2,"name":"Climatiseur mural et thermopompe"}]},
 {"@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Quelle est la différence entre un climatiseur mural et une thermopompe murale?","acceptedAnswer":{"@type":"Answer","text":"Le climatiseur mural rafraîchit. La thermopompe murale climatise aussi, et peut en plus chauffer, ce qui permet d'utiliser un seul appareil toute l'année. Dans les deux cas, aucun conduit n'est nécessaire."}},
+{"@type":"Question","name":"Quelle est la différence entre un climatiseur mural et une thermopompe murale?","acceptedAnswer":{"@type":"Answer","text":"Dans la pratique, aucune : on dit « climatiseur mural » par habitude, mais pratiquement tous les appareils muraux que nous installons sont des thermopompes murales, qui climatisent l'été et chauffent le reste de l'année. Seul un appareil de refroidissement seulement ne chauffe pas. Dans tous les cas, aucun conduit n'est nécessaire."}},
 {"@type":"Question","name":"Peut-on climatiser plusieurs pièces avec un seul climatiseur mural?","acceptedAnswer":{"@type":"Answer","text":"Oui, dans bien des cas. Une unité simple zone peut couvrir un plein pied complet avec plusieurs pièces, selon l'aménagement, l'isolation et la circulation de l'air. Pour des espaces plus éloignés ou fermés, on ajoute des unités (système multizone). Nous évaluons votre maison avant de recommander."}},
 {"@type":"Question","name":"Faites-vous l'entretien et le nettoyage des climatiseurs muraux?","acceptedAnswer":{"@type":"Answer","text":"Oui, nous offrons un service d'entretien périodique personnalisé."}},
 {"@type":"Question","name":"Offrez-vous un service d'urgence?","acceptedAnswer":{"@type":"Answer","text":"Oui, un service d'urgence est offert 24 heures sur 24. Appelez le 450-753-9426."}}]}

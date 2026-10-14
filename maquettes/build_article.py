@@ -16,8 +16,8 @@ extra = open(ROOT + 'src/service-extra.css', encoding='utf-8').read()
 body = open(ROOT + 'src/article-prix-climatiseur-mural.body.html', encoding='utf-8').read()
 
 css = re.sub(r'url\(\{\{IMG_[A-Z]+\}\}\)', 'none', css)  # images de l'accueil, inutiles ici
-title = 'Prix d\'un climatiseur mural installé : guide | Bédard'
-desc = "Combien coûte un climatiseur mural installé? Facteurs du prix, puissance (BTU), efficacité et conseils pour bien comparer vos soumissions."
+title = 'Prix d\'un climatiseur mural ou thermopompe murale | Bédard'
+desc = "Combien coûte un climatiseur mural (thermopompe murale) installé? Facteurs du prix, puissance, efficacité et conseils pour comparer vos soumissions."
 assert len(title) <= 60 and len(desc) <= 160, (len(title), len(desc))
 
 ld = '''{"@context":"https://schema.org","@graph":[
@@ -27,7 +27,7 @@ ld = '''{"@context":"https://schema.org","@graph":[
 {"@type":"Question","name":"Combien coûte un climatiseur mural installé?","acceptedAnswer":{"@type":"Answer","text":"Pour un climatiseur mural simple zone (une unité intérieure), comptez entre 3 500 $ et 5 300 $ avant taxes, installation comprise. Le prix dépend de la puissance, du nombre d'unités, de la complexité de l'installation et du modèle. Nous établissons une soumission détaillée après avoir évalué votre projet."}},
 {"@type":"Question","name":"C'est quoi le SEER2, le HSPF2 et le COP?","acceptedAnswer":{"@type":"Answer","text":"Le SEER2 mesure la performance en climatisation. Le HSPF2 mesure la performance en chauffage sur une saison, et le COP indique combien de chaleur l'appareil produit pour chaque unité d'électricité consommée. Au Québec, le HSPF2 et le COP à basse température sont particulièrement importants si vous comptez chauffer avec votre appareil."}},
 {"@type":"Question","name":"Quelle puissance (BTU) choisir pour ma pièce?","acceptedAnswer":{"@type":"Answer","text":"Cela dépend de la superficie, de l'isolation et de l'ensoleillement. Un appareil trop puissant déshumidifie mal : nous dimensionnons l'appareil selon votre situation."}},
-{"@type":"Question","name":"Un climatiseur mural chauffe-t-il?","acceptedAnswer":{"@type":"Answer","text":"Un climatiseur seul rafraîchit. Une thermopompe murale climatise aussi, et peut chauffer. Plusieurs modèles actuels sont des thermopompes."}},
+{"@type":"Question","name":"Un climatiseur mural chauffe-t-il?","acceptedAnswer":{"@type":"Answer","text":"Cela dépend de l'appareil. Un climatiseur seul rafraîchit seulement, mais pratiquement tous les appareils muraux que nous installons sont des thermopompes murales, qui chauffent aussi."}},
 {"@type":"Question","name":"Faut-il entretenir un climatiseur mural?","acceptedAnswer":{"@type":"Answer","text":"Oui. Un entretien périodique garde l'appareil performant plus longtemps. Nous offrons un service d'entretien périodique personnalisé."}}]}
 ]}'''
 

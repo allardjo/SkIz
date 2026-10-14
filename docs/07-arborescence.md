@@ -445,3 +445,16 @@ Constat d'un audit externe : photos insérées en décor de fond (pas d'alt, abs
 - **Décor pur** (hero des sous-pages à 30-50 % d'opacité avec fondu, bande Carrières) : reste en fond CSS. Dans le site de test, la photo du haut de chaque page est préchargée (`<link rel="preload" as="image" fetchpriority="high">`).
 - Textes `alt` actuels = descriptions des photos temporaires; à réécrire quand les vraies photos de Bédard remplaceront les photos d'archive (idéalement avec la ville ou le type de projet, sans bourrage de mots-clés).
 - Pour WordPress : même règle (images de contenu en `<img>` avec alt + dimensions, WebP/AVIF, `srcset`, hero en priorité haute, reste en lazy), noms de fichiers descriptifs (`thermopompe-murale-joliette.webp`).
+
+## Vocabulaire « thermopompe murale » vs « climatiseur mural » + tuiles séparées
+
+**Données Search Console (392 k impressions, 1 945 clics)** : les requêtes « climatiseur / air climatisé / climatisation murale » = ~79 800 impressions (20 %) et 732 clics (38 % des clics du site); les positions 3 à 6 sur les requêtes « prix » viennent de l'article. « Thermopompe murale » = ~9 600 impressions et 8 clics (positions 10 à 80, surtout des villes éloignées) : le public cherche encore « climatiseur mural », mais « thermopompe murale prix » monte (~900 impressions, positions 12 à 21).
+
+**Règle appliquée (plan hybride)**
+- « Climatiseur mural » reste là où les gens le cherchent : URL, titre, H1 de l'article prix et de la page pilier (URL inchangées, important pour la migration).
+- On y ajoute « thermopompe murale » (titres, H1 du pilier, sous-titres, FAQ, données structurées) pour commencer à se positionner dessus, et on explique la vérité : pratiquement tous les appareils muraux installés sont des thermopompes; un climatiseur à refroidissement seulement existe mais est rare.
+- Ailleurs (accueil, formulaire, tuiles, pied de page, cartes « pages liées ») : « Thermopompe murale » et « Thermopompe centrale ». La tuile « Climatiseur mural » devient « Thermopompe centrale »; la grande tuile devient « Thermopompe murale — aussi appelée climatiseur mural ».
+- Pilier : la section « mural ou thermopompe » compare maintenant thermopompe murale vs centrale; le tableau compare « climatiseur seul » vs « thermopompe murale ».
+- Les avis clients cités (« deux climatiseurs muraux ») restent tels quels : ce sont des citations réelles.
+
+**Géothermie et planchers radiants** : deux tuiles séparées sur l'accueil (deux services distincts), deux pages produit distinctes (URL actuelles /produits/geothermie/ et /produits/planchers-radiants/, à garder; planchers radiants : 21 000 impressions).
