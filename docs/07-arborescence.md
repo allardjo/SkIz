@@ -370,3 +370,16 @@ Après évaluation, le copropriétaire préfère la version 1 (design complet d'
 - **Menu mobile** : le bouton burger de la version 1 ne faisait rien; il ouvre maintenant un menu complet (7 entrées + bouton de soumission).
 - **Corrections conservées** : « Blogue » remplace « Guides de prix » (menu, titre de la section de l'accueil, pied de page); « chauffage d'appoint » remplace « chauffage auxiliaire » dans les textes de l'accueil; la carte « Chauffage auxiliaire » est retirée des « autres services » de la page d'installation; la page chauffage reste classée sous Résidentiel.
 - **Entrées de menu** : Résidentiel, Commercial, Services, Blogue, Avis, Carrières (6, comme avant). Les menus déroulants de la version sobre ne sont pas repris.
+
+## Bandeau de menu : fini le « saut » au défilement (14 octobre 2026)
+
+Retour du copropriétaire : la bande bleue (haut de page) et la bande blanche (page défilée) s'affichaient différemment, ce qui « bogue pour l'œil » au passage de l'une à l'autre.
+
+**Causes mesurées** : au défilement, le logo rapetissait (62 px à 54 px de haut), le menu se décalait d'environ 20 px vers la gauche, la barre perdait de la hauteur, le bandeau du haut (urgence, adresse, sans frais) disparaissait d'un coup et le fond passait de bleu à blanc avec le texte du menu de blanc à bleu.
+
+**Correction** :
+- Même hauteur de barre (6,5 rem), même logo, mêmes positions et mêmes tailles dans les deux états, à toutes les largeurs testées (1180, 1280, 1440, 1920, 2560 px) : x, largeur et hauteur du logo, du menu et du bouton identiques à 0, 20, 46, 70, 90, 200 et 600 px de défilement.
+- **Même apparence tout le temps** : le bandeau reste bleu marine (comme le hero) avec texte blanc, logo beige et bouton rouille. Il devient seulement opaque et reçoit une ombre quand on défile (progressif sur 90 px), au lieu de basculer au blanc.
+- Le bandeau du haut glisse vers le haut en suivant le défilement (46 px), au lieu de disparaître d'un coup.
+
+Alternative écartée : un bandeau blanc défilé exige de changer de logo, de couleur de texte et de fond, donc le même saut visuel; sur le hero sombre, un bandeau blanc en haut de page est impossible sans logo foncé.
