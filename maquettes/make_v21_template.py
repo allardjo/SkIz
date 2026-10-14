@@ -69,6 +69,41 @@ t = t[:i] + CSS + t[i:]
 # le numéro de téléphone reste visible (icône + numéro); classe pour le masquer à l'étroit
 rep('<a class="tel" href="tel:+14507539426">', '<a class="tel" href="tel:+14507539426">')
 
+# --- Carrières : le poste de dessinateur est comblé, celui de magasinier est ouvert
+rep('Frigoristes, ferblantiers, dessinateurs : des métiers qualifiés', 'Frigoristes, ferblantiers, magasiniers : des métiers qualifiés')
+rep('<span>Dessinateur(trice) en ventilation<small>Lanaudière</small></span>', '<span>Magasinier(ère)<small>Joliette</small></span>')
+
+# --- Secteurs desservis et bureau : deux blocs distincts, bien étiquetés
+_a = t.index('<div id="contact">'); _b = t.index('  <div>\n    <span class="eyebrow">Questions fréquentes</span>')
+_mrc = ['Joliette','Notre-Dame-des-Prairies','Saint-Charles-Borromée','Crabtree','Saint-Paul','Saint-Thomas','Notre-Dame-de-Lourdes','Saint-Ambroise-de-Kildare','Sainte-Mélanie','Saint-Pierre']
+_chips = ''.join('<span>%s</span>' % m for m in _mrc)
+_new = ('<div id="contact">\n'
+ '    <span class="eyebrow">Secteurs desservis</span>\n'
+ '    <h2 class="reveal">Nous desservons Joliette et Lanaudière</h2>\n'
+ '    <div class="puces">' + _chips + '</div>\n'
+ '    <p class="sect-plus reveal">Toute la MRC de Joliette, et plusieurs secteurs voisins : Lavaltrie, Berthierville, Saint-Félix-de-Valois, Saint-Jean-de-Matha, Rawdon et Repentigny.</p>\n'
+ '    <span class="eyebrow eyebrow-bureau">Où nous trouver</span>\n'
+ '    <div class="carte-adresse reveal">\n'
+ '      <h3>Notre bureau à Joliette</h3>\n'
+ '      <dl>\n'
+ '        <dt>Adresse</dt><dd>304, boulevard de l\'Industrie<br>Joliette (Québec) J6E 8V2</dd>\n'
+ '        <dt>Téléphone</dt><dd><a href="tel:+14507539426">450-753-9426</a></dd>\n'
+ '        <dt>Sans frais</dt><dd><a href="tel:+18009530153">1-800-953-0153</a></dd>\n'
+ '        <dt>Heures</dt><dd>Lundi au vendredi, 8 h à 17 h<br>(fermé de 12 h à 13 h)</dd>\n'
+ '        <dt>Fin de semaine</dt><dd>Sur rendez-vous · Urgence 24 h</dd>\n'
+ '      </dl>\n'
+ '      <a class="lien" href="https://www.google.com/maps/dir/?api=1&destination=304+boulevard+de+l%27Industrie+Joliette+QC" target="_blank" rel="noopener">Obtenir l\'itinéraire <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>\n'
+ '    </div>\n'
+ '  </div>\n')
+t = t[:_a] + _new + t[_b:]
+CSS_ZONE = """
+/* secteurs desservis / bureau */
+.sect-plus{color:var(--doux);margin:1.2rem 0 0;max-width:34em;font-size:1rem}
+.eyebrow-bureau{margin-top:2.8rem}
+.carte-adresse .lien{display:inline-flex;margin-top:1.4rem;color:var(--bleu);font-weight:700}
+"""
+_i = t.index('</style>'); t = t[:_i] + CSS_ZONE + t[_i:]
+
 # --- défilement continu
 rep("function onScroll(){h.classList.toggle('solid',window.scrollY>40)}",
     "var urg=h.querySelector('.urgence');function onScroll(){var y=window.scrollY,uh=urg?urg.offsetHeight:0;h.classList.toggle('solid',y>40);h.style.setProperty('--p',Math.max(0,Math.min(1,y/90)).toFixed(3));h.style.setProperty('--s',Math.max(0,Math.min(y,uh)))}")

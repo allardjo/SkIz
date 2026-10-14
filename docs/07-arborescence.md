@@ -383,3 +383,8 @@ Retour du copropriétaire : la bande bleue (haut de page) et la bande blanche (p
 - Le bandeau du haut glisse vers le haut en suivant le défilement (46 px), au lieu de disparaître d'un coup.
 
 Alternative écartée : un bandeau blanc défilé exige de changer de logo, de couleur de texte et de fond, donc le même saut visuel; sur le hero sombre, un bandeau blanc en haut de page est impossible sans logo foncé.
+
+## Accueil : postes ouverts et section « secteurs / bureau » (14 octobre 2026)
+
+- **Postes ouverts de l'accueil** : la section Carrières listait encore Frigoriste, Ferblantier(ère) et Dessinateur(trice), alors que le dessinateur est comblé et que le magasinier est ouvert. Corrigé : Frigoriste (Lanaudière), Ferblantier(ère) (Lanaudière), **Magasinier(ère) (Joliette)**, avec le texte « Frigoristes, ferblantiers, magasiniers ». Les liens mènent aux postes de la page Carrières. Plus aucune mention du poste de dessinateur comme poste ouvert sur le site.
+- **« Où nous trouver » : deux informations différentes mélangées.** Le titre « Joliette et Lanaudière » et les pastilles parlaient des secteurs desservis, la carte en dessous de l'adresse physique du bureau. Séparées en deux blocs étiquetés : **« Secteurs desservis »** (titre « Nous desservons Joliette et Lanaudière », pastilles des 10 municipalités de la MRC de Joliette, phrase sur les secteurs voisins : Lavaltrie, Berthierville, Saint-Félix-de-Valois, Saint-Jean-de-Matha, Rawdon, Repentigny; la pastille « Autres secteurs : à confirmer » est retirée) puis **« Où nous trouver »** (carte « Notre bureau à Joliette » : adresse, téléphones, heures, fin de semaine, lien d'itinéraire). Même logique que la page Contact.
