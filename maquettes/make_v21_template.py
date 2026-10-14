@@ -80,8 +80,7 @@ _chips = ''.join('<span>%s</span>' % m for m in _mrc)
 _new = ('<div id="contact">\n'
  '    <span class="eyebrow">Secteurs desservis</span>\n'
  '    <h2 class="reveal">Nous desservons Joliette et Lanaudière</h2>\n'
- '    <div class="puces">' + _chips + '</div>\n'
- '    <p class="sect-plus reveal">Toute la MRC de Joliette, et plusieurs secteurs voisins : Lavaltrie, Berthierville, Saint-Félix-de-Valois, Saint-Jean-de-Matha, Rawdon et Repentigny.</p>\n'
+ '    <p class="sect-plus reveal">Toute la MRC de Joliette et plusieurs secteurs voisins de Lanaudière. <a class="lien" href="#">Voir la liste complète des secteurs desservis</a></p>\n'
  '    <span class="eyebrow eyebrow-bureau">Où nous trouver</span>\n'
  '    <div class="carte-adresse reveal">\n'
  '      <h3>Notre bureau à Joliette</h3>\n'
@@ -90,7 +89,8 @@ _new = ('<div id="contact">\n'
  '        <dt>Téléphone</dt><dd><a href="tel:+14507539426">450-753-9426</a></dd>\n'
  '        <dt>Sans frais</dt><dd><a href="tel:+18009530153">1-800-953-0153</a></dd>\n'
  '        <dt>Heures</dt><dd>Lundi au vendredi, 8 h à 17 h<br>(fermé de 12 h à 13 h)</dd>\n'
- '        <dt>Fin de semaine</dt><dd>Sur rendez-vous · Urgence 24 h</dd>\n'
+ '        <dt>Fin de semaine</dt><dd>Sur rendez-vous avec un représentant</dd>\n'
+ '        <dt>Urgence</dt><dd>24 h sur 24, 7 jours sur 7<br><a href="tel:+14507539426">450-753-9426</a></dd>\n'
  '      </dl>\n'
  '      <a class="lien" href="https://www.google.com/maps/dir/?api=1&destination=304+boulevard+de+l%27Industrie+Joliette+QC" target="_blank" rel="noopener">Obtenir l\'itinéraire <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>\n'
  '    </div>\n'
@@ -103,6 +103,11 @@ CSS_ZONE = """
 .carte-adresse .lien{display:inline-flex;margin-top:1.4rem;color:var(--bleu);font-weight:700}
 """
 _i = t.index('</style>'); t = t[:_i] + CSS_ZONE + t[_i:]
+
+# --- bandeau du haut : l'urgence 24 h et les heures du bureau ne doivent pas se confondre
+rep('<span class="pt"><i></i>Service d\'urgence 24 h<span class="hrs"> · Lundi au vendredi, 8 h à 17 h</span></span>', '<span class="pt"><i></i>Service d\'urgence 24 h sur 24, 7 jours sur 7</span>')
+_a = t.index('<span class="adr">'); _b = t.index('</span>', _a) + 7
+t = t[:_a] + '<span class="adr"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Bureau ouvert du lundi au vendredi, 8 h à 17 h</span>' + t[_b:]
 
 # --- défilement continu
 rep("function onScroll(){h.classList.toggle('solid',window.scrollY>40)}",

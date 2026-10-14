@@ -388,3 +388,19 @@ Alternative écartée : un bandeau blanc défilé exige de changer de logo, de c
 
 - **Postes ouverts de l'accueil** : la section Carrières listait encore Frigoriste, Ferblantier(ère) et Dessinateur(trice), alors que le dessinateur est comblé et que le magasinier est ouvert. Corrigé : Frigoriste (Lanaudière), Ferblantier(ère) (Lanaudière), **Magasinier(ère) (Joliette)**, avec le texte « Frigoristes, ferblantiers, magasiniers ». Les liens mènent aux postes de la page Carrières. Plus aucune mention du poste de dessinateur comme poste ouvert sur le site.
 - **« Où nous trouver » : deux informations différentes mélangées.** Le titre « Joliette et Lanaudière » et les pastilles parlaient des secteurs desservis, la carte en dessous de l'adresse physique du bureau. Séparées en deux blocs étiquetés : **« Secteurs desservis »** (titre « Nous desservons Joliette et Lanaudière », pastilles des 10 municipalités de la MRC de Joliette, phrase sur les secteurs voisins : Lavaltrie, Berthierville, Saint-Félix-de-Valois, Saint-Jean-de-Matha, Rawdon, Repentigny; la pastille « Autres secteurs : à confirmer » est retirée) puis **« Où nous trouver »** (carte « Notre bureau à Joliette » : adresse, téléphones, heures, fin de semaine, lien d'itinéraire). Même logique que la page Contact.
+
+## Secteurs desservis : SEO et emplacement (14 octobre 2026)
+
+**Question du client** : est-ce utile, au SEO, de mentionner tous les endroits desservis sur l'accueil? **Décision : non, la liste complète va sur la page Contact; l'accueil garde une phrase courte.**
+
+Raisons (à confirmer par les résultats après le lancement) :
+- Données Search Console (16 mois, 392 043 impressions au total) : les requêtes avec « Joliette » représentent environ 58 000 impressions et 135 clics; toutes les autres villes de la zone confirmée ensemble (Notre-Dame-des-Prairies 2 582, Lavaltrie 1 644, Saint-Félix-de-Valois 655, Repentigny 272, Saint-Charles-Borromée 166, Saint-Paul 87, Berthierville 72) font environ 5 500 impressions et 0 clic, soit environ 9 % de Joliette.
+- Une liste de noms de villes sur l'accueil ne suffit pas à se classer pour « réparation thermopompe Lavaltrie » : il faudrait une page dédiée avec un contenu réellement propre à la ville. Une liste trop longue risque de passer pour du bourrage de mots-clés.
+- Le classement local dépend surtout de la fiche Google (proximité, catégories, avis, zone de service) et du balisage `areaServed`, déjà dans le code de la page.
+
+Réalisé : l'accueil dit « Nous desservons Joliette et Lanaudière. Toute la MRC de Joliette et plusieurs secteurs voisins de Lanaudière. » avec un lien « Voir la liste complète des secteurs desservis » vers la page Contact, qui garde les 16 municipalités. Le bloc « Où nous trouver » (carte du bureau) reste distinct.
+À faire au lancement : régler les zones de service de la fiche Google. Pages par ville (Notre-Dame-des-Prairies, Lavaltrie) : à reconsidérer après 90 jours si le trafic le justifie, avec du contenu local réel.
+
+## Bandeau du haut : urgence 24 h et heures du bureau (14 octobre 2026)
+
+Le bandeau disait « Service d'urgence 24 h · Lundi au vendredi, 8 h à 17 h », ce qui laissait croire que l'urgence 24 h n'était offerte que pendant ces heures. Séparé : « Service d'urgence 24 h sur 24, 7 jours sur 7 » (à gauche) et « Bureau ouvert du lundi au vendredi, 8 h à 17 h » (au centre, avec une icône d'horloge). L'adresse, retirée du bandeau, reste dans le bloc « Où nous trouver », la page Contact et le pied de page. Dans la carte du bureau de l'accueil, la ligne « Fin de semaine : sur rendez-vous · Urgence 24 h » est remplacée par deux lignes distinctes : « Fin de semaine : sur rendez-vous avec un représentant » et « Urgence : 24 h sur 24, 7 jours sur 7, 450-753-9426 ».

@@ -171,6 +171,7 @@ RULES = [
  (r'^ferblantier\(ere\)', 'carrieres.html#ferblantier'), (r'voir le poste de ferblantier', 'carrieres.html#ferblantier'),
  (r'^frigoriste', 'carrieres.html#frigoriste'), (r'^magasinier', 'carrieres.html#magasinier'),
  (r'^dessinateur|voir les postes|^carrieres', 'carrieres.html'),
+ (r'liste complete des secteurs', CONTACT),
  (r'^contact', CONTACT), (r'^guides', 'blogue.html'),
  (r'remplacer (sa|une) thermopompe|guide : remplacer', 'guide-remplacer-thermopompe.html'),
  (r'humidificateur', 'guide-humidificateur.html'),
