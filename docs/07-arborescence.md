@@ -414,3 +414,12 @@ Demande : ajouter toutes les municipalités entre Joliette et Saint-Michel-des-S
 - Note sous la liste : « Votre municipalité n'est pas dans la liste? Appelez-nous pour confirmer le service dans votre secteur. »
 - **À valider par l'équipe** : la liste est établie selon les axes routiers (131/347, 158/138, A31/A40/343) — jugement à confirmer; les municipalités d'une seule MRC officielle ne sont pas toutes incluses (ex. Saint-Damien, Saint-Côme, Sainte-Béatrix, Saint-Alphonse-Rodriguez, Sainte-Marcelline-de-Kildare en Matawinie; Saint-Esprit, Saint-Jacques, Saint-Liguori en Montcalm).
 - Correctif au passage : débordement horizontal mobile (390 px) sur Contact, causé par `white-space:nowrap` appliqué aux cartes `a[href^="tel:"]`.
+
+## Secteurs desservis : 44 municipalités + carte
+
+- Ajout des municipalités qui avaient été laissées de côté : Matawinie (Saint-Damien, Saint-Côme, Sainte-Béatrix, Saint-Alphonse-Rodriguez, Sainte-Marcelline-de-Kildare), Montcalm (Saint-Esprit, Saint-Jacques, Saint-Liguori; Saint-Roch-de-l'Achigan déplacée dans ce groupe) et Maskinongé / Yamachiche (groupe « Vers Louiseville et Yamachiche »). Total : 44 municipalités en 6 groupes.
+- Nouvelle carte SVG des secteurs desservis sur la page Contact (colonne gauche, sticky sur bureau) : municipalités desservies en bleu foncé, reste du territoire en teinte pâle, bureau de Joliette en point rouille, légende et mention « © contributeurs OpenStreetMap » (licence ODbL, mention obligatoire).
+- Données : frontières OSM via Nominatim, enregistrées dans `maquettes/data/osm-municipalites.json` (44 municipalités) et `maquettes/data/osm-mrc.json` (fonds MRC). Génération : `src/gen_carte.py` → `src/carte-secteurs.html`, injectée par `src/gen_contact.py`. Garde-fou : `gen_contact.py` refuse de générer si la liste de municipalités et les polygones de la carte ne correspondent pas exactement.
+- Pour ajouter une municipalité : l'ajouter dans `GROUPES` (gen_contact.py) ET récupérer son polygone (même méthode que `data/osm-municipalites.json`).
+- Carte entièrement hors-ligne (aucun appel externe, aucune tuile); étiquettes secondaires masquées sur mobile.
+- Les frontières proviennent d'OSM (simplifiées); elles sont indicatives, pas une référence officielle.

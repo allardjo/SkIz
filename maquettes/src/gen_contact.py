@@ -15,12 +15,17 @@ TEL='<a href="tel:+14507539426" data-track="call_tracking">450-753-9426</a>'
 
 GROUPES=[
  ('Joliette et la MRC de Joliette',['Joliette','Notre-Dame-des-Prairies','Saint-Charles-Borromée','Crabtree','Saint-Paul','Saint-Thomas','Notre-Dame-de-Lourdes','Saint-Ambroise-de-Kildare','Sainte-Mélanie','Saint-Pierre']),
- ('Vers Saint-Michel-des-Saints',['Saint-Félix-de-Valois','Saint-Jean-de-Matha','Rawdon',"Sainte-Émélie-de-l'Énergie",'Notre-Dame-de-la-Merci','Saint-Zénon','Saint-Michel-des-Saints']),
- ('Vers Louiseville',['Lavaltrie','Lanoraie','Berthierville','Sainte-Geneviève-de-Berthier','Sainte-Élisabeth','Saint-Cuthbert','Saint-Barthélemy','Louiseville']),
+ ('Vers Saint-Michel-des-Saints (Matawinie)',['Saint-Félix-de-Valois','Saint-Jean-de-Matha','Rawdon','Sainte-Marcelline-de-Kildare','Sainte-Béatrix','Saint-Alphonse-Rodriguez',"Sainte-Émélie-de-l'Énergie",'Saint-Damien','Saint-Côme','Notre-Dame-de-la-Merci','Saint-Zénon','Saint-Michel-des-Saints']),
+ ('Vers Louiseville et Yamachiche (D\'Autray et Maskinongé)',['Lavaltrie','Lanoraie','Berthierville','Sainte-Geneviève-de-Berthier','Sainte-Élisabeth','Saint-Cuthbert','Saint-Barthélemy','Louiseville','Maskinongé','Yamachiche']),
  ('Vers Montréal-Est',["L'Assomption",'Saint-Sulpice','Repentigny','Charlemagne','Montréal-Est']),
- ('Vers Terrebonne',["L'Épiphanie","Saint-Roch-de-l'Achigan",'Mascouche','Terrebonne']),
+ ('Vers Terrebonne',["L'Épiphanie",'Mascouche','Terrebonne']),
+ ('Secteur Montcalm (au sud-ouest de Joliette)',['Saint-Jacques','Saint-Liguori','Saint-Esprit',"Saint-Roch-de-l'Achigan"]),
 ]
 zones=[z for _,l in GROUPES for z in l]
+import json as _j,os as _o
+_osm=set(_j.load(open(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)),'..','data','osm-municipalites.json'),encoding='utf-8')))
+assert _osm==set(zones),('carte et liste désynchronisées',_osm^set(zones))
+CARTE=open(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)),'carte-secteurs.html'),encoding='utf-8').read()
 zh=''.join(f'<h3 class="zone-titre">{t}</h3><div class="zones">'+''.join(f'<span>{z}</span>' for z in l)+'</div>' for t,l in GROUPES)
 
 contact=f'''<main>
@@ -87,10 +92,21 @@ contact=f'''<main>
 </div></section>
 
 <!-- ================= TEXTE LOCAL ================= -->
-<section class="fond-beige"><div class="wrap seo-bloc">
-  <div>
+<section class="fond-beige"><div class="wrap seo-bloc avec-carte">
+  <div class="col-carte">
     <span class="eyebrow">Notre secteur</span>
     <h2 class="reveal">Chauffage et climatisation à Joliette et dans Lanaudière</h2>
+    <figure class="carte-secteurs reveal d1">
+      {CARTE}
+      <figcaption>
+        <ul class="legende">
+          <li><i class="sw sw-on"></i>Municipalités desservies</li>
+          <li><i class="sw sw-off"></i>Hors de notre secteur habituel</li>
+          <li><i class="sw sw-bur"></i>Notre bureau, à Joliette</li>
+        </ul>
+        <small class="credit-carte">Carte schématique. Données de frontières : © contributeurs OpenStreetMap.</small>
+      </figcaption>
+    </figure>
   </div>
   <div>
     <p class="reveal">Depuis plus de 40 ans, Bédard conseille, installe et entretient des systèmes de chauffage, de ventilation, de climatisation et de réfrigération pour les résidences, les commerces et les institutions de la région.</p>
