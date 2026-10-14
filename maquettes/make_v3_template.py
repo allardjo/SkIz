@@ -1,6 +1,8 @@
 """Fabrique source-accueil-v3.template.html (version sobre) à partir du gabarit v2 :
 nouvel en-tête (menus déroulants), nouveau pied de page, nouvelle accueil à 6 blocs, CSS de calme."""
-import re
+import re, sys
+sys.path.insert(0, 'src')
+from v3_blocks import avis_block
 t = open('source-accueil-v2.template.html', encoding='utf-8').read()
 
 ARR = '<svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
@@ -8,18 +10,18 @@ TELSVG = '<svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.
 CHEV = '<svg class="ico chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>'
 
 MENUS = [
- ('Résidentiel', 'Voir tout le résidentiel', ['Installation de thermopompe', 'Climatiseur mural et thermopompe', 'Chauffage auxiliaire', 'Climatiseurs centraux', 'Fournaises électriques', "Qualité de l'air", 'Géothermie et planchers radiants']),
+ ('Résidentiel', 'Voir tout le résidentiel', ['Installation de thermopompe', 'Climatiseur mural et thermopompe', "Chauffage d'appoint", 'Climatiseurs centraux', 'Fournaises électriques', "Qualité de l'air", 'Géothermie et planchers radiants']),
  ('Commercial', 'Voir tout le commercial', ['Ventilation commerciale', 'Réfrigération commerciale', 'Ferblanterie']),
  ('Services', 'Voir tous les services', ['Réparation et dépannage', 'Entretien et nettoyage', 'Urgence 24 h']),
 ]
 nav = ''
 for top, allt, items in MENUS:
     nav += f'<div class="m-item"><a class="m-top" href="#">{top}{CHEV}</a><div class="m-drop">' + ''.join(f'<a href="#">{i}</a>' for i in items) + f'<a class="m-all" href="#">{allt} {ARR}</a></div></div>'
-nav += '<a class="m-top" href="#">Guides de prix</a><a class="m-top" href="#">Carrières</a>'
+nav += '<a class="m-top" href="#">Blogue</a><a class="m-top" href="#">Carrières</a>'
 mob = ''
 for top, allt, items in MENUS:
     mob += f'<details><summary>{top}</summary>' + ''.join(f'<a href="#">{i}</a>' for i in items) + f'<a href="#">{allt}</a></details>'
-mob += '<a class="m-simple" href="#">Guides de prix</a><a class="m-simple" href="#">Carrières</a><a class="m-simple" href="#">Contact</a>'
+mob += '<a class="m-simple" href="#">Blogue</a><a class="m-simple" href="#">Carrières</a><a class="m-simple" href="#">Contact</a>'
 
 HEADER = f'''<header class="site" id="entete">
   <div class="wrap barre">
@@ -44,11 +46,6 @@ MAIN = f'''<main>
       <a class="btn btn-b" href="#soumission">Demander une soumission {ARR}</a>
       <a class="lien-tel" href="tel:+14507539426">{TELSVG}Urgence 24 h : 450-753-9426</a>
     </div>
-    <div class="stats3 reveal d3">
-      <div><b><span data-count="65">65</span>+</b><span>professionnels</span></div>
-      <div><b><span data-count="40">40</span>+</b><span>ans d'expertise</span></div>
-      <div><b><span data-count="4.9" data-dec="1">4,9</span>/5</b><span>180+ avis clients</span></div>
-    </div>
   </div>
 </div>
 
@@ -63,6 +60,14 @@ MAIN = f'''<main>
   </form>
 </div></div>
 
+
+<!-- ================= CHIFFRES ================= -->
+<section class="chiffres3"><div class="wrap">
+  <div class="c3 reveal"><b><span data-count="65">65</span><i>+</i></b><span>professionnels<br>à votre service</span></div>
+  <div class="c3 reveal d1"><b><span data-count="40">40</span><i>+</i></b><span>ans d'expertise<br>en confort thermique</span></div>
+  <div class="c3 reveal d2"><b><span data-count="24">24</span><i>h</i></b><span>service d'urgence<br>jour et nuit</span></div>
+</div></section>
+
 <!-- ================= 2. DEUX UNIVERS ================= -->
 <section id="univers" class="sec3"><div class="wrap">
   <h2 class="titre3 reveal">Pour la maison ou pour le bâtiment</h2>
@@ -73,23 +78,18 @@ MAIN = f'''<main>
 </div></section>
 
 <!-- ================= 3. SERVICES ================= -->
-<section id="services" class="sec3 sec3-ciel"><div class="wrap duo3">
-  <div><h2 class="titre3 reveal">Nos services</h2><p class="intro3 reveal d1">De l'installation à l'entretien, un seul interlocuteur. Service d'urgence 24 h.</p></div>
-  <div class="rangs">
-    <a class="rang reveal" href="#"><b>Installation de thermopompe</b><span>Murale ou centrale, avec soumission détaillée.</span><i>{ARR}</i></a>
-    <a class="rang reveal d1" href="#"><b>Réparation et dépannage</b><span>Thermopompe, climatiseur. Urgence 24 h.</span><i>{ARR}</i></a>
-    <a class="rang reveal d2" href="#"><b>Entretien et nettoyage</b><span>Un entretien périodique personnalisé.</span><i>{ARR}</i></a>
-    <a class="rang reveal d3" href="#"><b>Chauffage auxiliaire</b><span>Compléter votre thermopompe par grand froid.</span><i>{ARR}</i></a>
-    <a class="rang reveal d3" href="#"><b>Guides de prix</b><span>Combien coûte un climatiseur mural installé?</span><i>{ARR}</i></a>
+<section id="services" class="svc3"><div class="wrap">
+  <div class="svc3-tete reveal"><h2>Nos services</h2><span>Un seul interlocuteur, de l'installation à l'entretien.</span></div>
+  <div class="svc3-grille">
+    <a class="svc reveal" href="#"><span class="ico-g"><svg class="ico" viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></span><b>Installation</b><small>Thermopompe, climatisation</small>{ARR}</a>
+    <a class="svc reveal d1" href="#"><span class="ico-g"><svg class="ico" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span><b>Réparation</b><small>Dépannage, urgence 24 h</small>{ARR}</a>
+    <a class="svc reveal d2" href="#"><span class="ico-g"><svg class="ico" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></span><b>Entretien</b><small>Nettoyage, programme périodique</small>{ARR}</a>
+    <a class="svc reveal d3" href="tel:+14507539426"><span class="ico-g"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><b>Urgence 24 h</b><small>450-753-9426</small>{ARR}</a>
   </div>
 </div></section>
 
-<!-- ================= 4. PREUVE ================= -->
-<section class="preuve3"><div class="wrap">
-  <div class="note3 reveal"><b>4,9<small>/5</small></b><span>180+ avis clients <em>[à valider sur la fiche Google]</em></span></div>
-  <blockquote class="reveal d1">« Une entreprise qui a à cœur sa clientèle. Tout a été effectué dans les règles de l'art. Si quelqu'un me pose la question où acheter une thermopompe… c'est vous que je recommanderai. »</blockquote>
-  <div class="reveal d2 cite3"><span class="av">ML</span>Mat L., client <a class="lien lien-clair" href="#">Lire les avis clients {ARR}</a></div>
-</div></section>
+<!-- ================= 4. AVIS ================= -->
+{{AVIS}}
 
 <!-- ================= 5. CARRIÈRES ================= -->
 <section class="carr3"><div class="wrap">
@@ -109,13 +109,14 @@ MAIN = f'''<main>
 FOOTER = f'''<footer class="pied"><div class="wrap">
   <div class="grille grille3">
     <div><img class="logo" src="{{{{LOGO_ENONCE_BEIGE}}}}" alt="Bédard, performance thermique"><p>304, boulevard de l'Industrie<br>Joliette (Québec) J6E 8V2</p><p><a href="tel:+14507539426">450-753-9426</a><br><a href="mailto:info@cbedard.com">info@cbedard.com</a></p></div>
-    <div><h4>Résidentiel</h4><ul><li><a href="#">Installation de thermopompe</a></li><li><a href="#">Climatiseur mural</a></li><li><a href="#">Chauffage auxiliaire</a></li><li><a href="#">Réparation et dépannage</a></li><li><a href="#">Entretien et nettoyage</a></li></ul></div>
+    <div><h4>Résidentiel</h4><ul><li><a href="#">Installation de thermopompe</a></li><li><a href="#">Climatiseur mural</a></li><li><a href="#">Chauffage d'appoint</a></li><li><a href="#">Réparation et dépannage</a></li><li><a href="#">Entretien et nettoyage</a></li></ul></div>
     <div><h4>Commercial</h4><ul><li><a href="#">Ventilation commerciale</a></li><li><a href="#">Réfrigération commerciale</a></li><li><a href="#">Ferblanterie</a></li></ul></div>
-    <div><h4>Entreprise</h4><ul><li><a href="#">Guides de prix</a></li><li><a href="#">Avis clients</a></li><li><a href="#">Carrières</a></li><li><a href="#">Contact</a></li></ul></div>
+    <div><h4>Entreprise</h4><ul><li><a href="#">Blogue</a></li><li><a href="#">Avis clients</a></li><li><a href="#">Carrières</a></li><li><a href="#">Contact</a></li></ul></div>
   </div>
   <div class="legal"><span>© 2026 Entreprise De Réfrigération &amp; Climatisation Claude Bédard (1995) Inc. Tous droits réservés.</span><span>Confidentialité · Conditions d'utilisation</span></div>
 </div></footer>'''
 
+MAIN = MAIN.replace('{AVIS}', avis_block())
 # --- remplacements ---
 a, b = t.index('<header class="site"'), t.index('</header>') + 9
 t = t[:a] + HEADER + t[b:]
@@ -208,6 +209,7 @@ header.site.open .burger .ouvre{display:none}header.site.open .burger .ferme{dis
 /* pied de page sobre */
 footer.pied .grille3{grid-template-columns:1.3fr 1fr 1fr 1fr}
 footer.pied p{margin-bottom:1rem;line-height:1.6}
+'''+open('src/v31.css',encoding='utf-8').read()+r'''
 @media (max-width:1100px){
   .deux3,.duo3{grid-template-columns:1fr}
   header.site .m-mobile{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;box-shadow:0 1.6rem 2.6rem rgba(0,30,50,.18);padding:1rem var(--gut) 1.6rem;max-height:calc(100vh - 5.5rem);overflow:auto}
@@ -234,5 +236,7 @@ i = t.index('</style>')
 t = t[:i] + V3CSS + t[i:]
 # JS : menu mobile
 t = t.replace("var h=document.getElementById('entete');", "var h=document.getElementById('entete');var bg=h.querySelector('.burger');if(bg)bg.addEventListener('click',function(){var o=h.classList.toggle('open');bg.setAttribute('aria-expanded',o)});",1)
+t = t.replace('  // compteurs\n', open('src/v31.js', encoding='utf-8').read(), 1)
+t = t.replace('{threshold:.6});\n    cs.forEach', '{threshold:.35});\n    cs.forEach')
 open('source-accueil-v3.template.html', 'w', encoding='utf-8').write(t)
 print(len(t) // 1024, 'Ko')

@@ -71,12 +71,12 @@ PAGES = {
      {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://cbedard.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://cbedard.com/services/"},{"@type":"ListItem","position":3,"name":'Nettoyage et entretien de thermopompe et de climatiseur à Joliette'}]},
      {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":x["q"],"acceptedAnswer":{"@type":"Answer","text":x["a"]}} for x in json.load(open('/home/user/SkIz/maquettes/src/entretien.faq.json',encoding='utf-8'))]}]}, ensure_ascii=False)),
 
- 'chauffage': dict(BODY='chauffage.body.html', OUT='chauffage-auxiliaire-joliette.html', CANON='https://cbedard.com/services/chauffage-auxiliaire-joliette/',
+ 'chauffage': dict(BODY='chauffage.body.html', OUT='chauffage-auxiliaire-joliette.html', CANON='https://cbedard.com/residentiel/chauffage-auxiliaire-joliette/',
    title='Chauffage auxiliaire à Joliette | Bédard',
    desc='Chauffage auxiliaire à Joliette : complétez votre thermopompe par grand froid. Évaluation de votre maison et soumission détaillée. Appelez Bédard.',
    ld=json.dumps({"@context":"https://schema.org","@graph":[
-     {"@type":"Service","@id":"https://cbedard.com/services/chauffage-auxiliaire-joliette/#service","name":'Chauffage auxiliaire à Joliette',"serviceType":"Chauffage auxiliaire et chauffage d'appoint","provider":{"@id":"https://cbedard.com/#entreprise"},"areaServed":{"@type":"AdministrativeArea","name":"Lanaudière"}},
-     {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://cbedard.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://cbedard.com/services/"},{"@type":"ListItem","position":3,"name":'Chauffage auxiliaire à Joliette'}]},
+     {"@type":"Service","@id":"https://cbedard.com/residentiel/chauffage-auxiliaire-joliette/#service","name":'Chauffage auxiliaire à Joliette',"serviceType":"Chauffage auxiliaire et chauffage d'appoint","provider":{"@id":"https://cbedard.com/#entreprise"},"areaServed":{"@type":"AdministrativeArea","name":"Lanaudière"}},
+     {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://cbedard.com/"},{"@type":"ListItem","position":2,"name":"Résidentiel","item":"https://cbedard.com/residentiel/"},{"@type":"ListItem","position":3,"name":'Chauffage auxiliaire à Joliette'}]},
      {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":x["q"],"acceptedAnswer":{"@type":"Answer","text":x["a"]}} for x in json.load(open('/home/user/SkIz/maquettes/src/chauffage.faq.json',encoding='utf-8'))]}]}, ensure_ascii=False)),
  'soumission': dict(BODY='soumission.body.html', OUT='soumission.html', CANON='https://cbedard.com/soumission/',
    title='Soumission gratuite chauffage et climatisation | Bédard',

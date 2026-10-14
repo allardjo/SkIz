@@ -1,4 +1,7 @@
 """Corps de la page « Installation de thermopompe » en version sobre (hero + 5 blocs + appel final)."""
+import sys
+sys.path.insert(0, 'src')
+from v3_blocks import avis_block
 ARR = '<svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
 TELSVG = '<svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>'
 body = f'''<main>
@@ -80,19 +83,15 @@ body = f'''<main>
   </aside>
 </div></section>
 
-<!-- ================= 4. PREUVE ================= -->
-<section class="preuve3"><div class="wrap">
-  <div class="note3 reveal"><b>4,9<small>/5</small></b><span>180+ avis clients <em>[à valider sur la fiche Google]</em></span></div>
-  <blockquote class="reveal d1">« Service très courtois et efficace. À partir du premier appel pour soumission jusqu'à la fin de l'installation. Travail très propre, respect des dates d'échéance. »</blockquote>
-  <div class="reveal d2 cite3"><span class="av">ML</span>Martin Loyer, client<a class="lien lien-clair" href="#">Lire les avis clients {ARR}</a></div>
-</div></section>
+<!-- ================= 4. AVIS ================= -->
+{avis_block()}
 
 <!-- ================= 5. FAQ ================= -->
 <section class="sec3 fond-beige" id="faq"><div class="wrap faq-zone">
   <div>
     <h2 class="titre3 reveal" style="margin-bottom:1.2rem">Vos questions</h2>
     <p class="reveal d1" style="color:var(--doux);max-width:24em">Une autre question? Appelez-nous au <a href="tel:+14507539426" data-track="call_tracking" style="color:var(--bleu);font-weight:700;text-decoration:none">450-753-9426</a>.</p>
-    <p class="voir-aussi reveal d2">Voir aussi : <a href="#">Réparation et dépannage</a><a href="#">Entretien et nettoyage</a><a href="#">Chauffage auxiliaire</a></p>
+    <p class="voir-aussi reveal d2">Voir aussi : <a href="#">Réparation et dépannage</a><a href="#">Entretien et nettoyage</a><a href="#">Chauffage d'appoint</a></p>
   </div>
   <div>
     <details open><summary>Quelle est la différence entre une thermopompe murale et centrale?</summary><p>La thermopompe murale chauffe et climatise une zone sans conduits. La thermopompe centrale se raccorde aux conduits de la maison pour desservir tout le bâtiment.</p></details>

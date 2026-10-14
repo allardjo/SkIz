@@ -421,6 +421,75 @@ header.site.open .burger .ouvre{display:none}header.site.open .burger .ferme{dis
 /* pied de page sobre */
 footer.pied .grille3{grid-template-columns:1.3fr 1fr 1fr 1fr}
 footer.pied p{margin-bottom:1rem;line-height:1.6}
+
+/* ---- v3.1 : retours du copropriétaire ---- */
+/* logo plus grand */
+header.site .barre{height:6.4rem}
+header.site.solid .barre{height:5.4rem}
+.barre .logo{height:4.4rem;width:17.9rem}
+.barre .logo img{height:4.4rem}
+header.site.solid .barre .logo{height:3.7rem;width:15rem}
+header.site.solid .barre .logo img{height:3.7rem}
+footer.pied .logo{height:5rem}
+@media (max-width:1320px){nav.principal a{padding:.6rem .6rem;font-size:.94rem}.actions{gap:.8rem}.actions .btn{padding:.75rem 1.1rem;font-size:.9rem}.barre{gap:1rem}}
+@media (max-width:1100px){.barre .logo{height:3.4rem;width:13.8rem}.barre .logo img{height:3.4rem}header.site .barre{height:5.2rem}header.site.solid .barre{height:4.8rem}header.site.solid .barre .logo{height:3.2rem;width:13rem}header.site.solid .barre .logo img{height:3.2rem}}
+.hero3{padding-bottom:clamp(7rem,13vh,9.5rem)}
+/* bande de chiffres */
+.chiffres3{padding:clamp(4.5rem,8vw,7.5rem) 0 clamp(3rem,5vw,5rem);background:#fff}
+.chiffres3 .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.c3{padding:0 clamp(1rem,3vw,3rem);position:relative;text-align:center}
+.c3+.c3::before{content:"";position:absolute;left:0;top:12%;bottom:12%;width:1px;background:#d6e1e4}
+.c3 b{display:block;font-family:var(--font-titre);font-weight:800;font-stretch:80%;font-size:clamp(4.6rem,10.5vw,9.5rem);line-height:.95;letter-spacing:-.045em;color:var(--marine)}
+.c3 b i{font-style:normal;background:linear-gradient(100deg,#006492,#28b0d8);-webkit-background-clip:text;background-clip:text;color:transparent;margin-left:.04em}
+.c3>span{display:block;margin-top:1.1rem;color:var(--doux);font-size:clamp(1rem,1.3vw,1.2rem);line-height:1.35}
+/* services : rangée compacte */
+.svc3{padding:clamp(3.5rem,6vw,5.5rem) 0;background:#f3f8f9}
+.svc3-tete{display:flex;justify-content:space-between;align-items:baseline;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.8rem}
+.svc3-tete h2{font-size:clamp(1.8rem,2.8vw,2.4rem);letter-spacing:-.025em;font-stretch:88%}
+.svc3-tete span{color:var(--doux)}
+.svc3-grille{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.svc{position:relative;display:flex;flex-direction:column;gap:.15rem;background:#fff;border:1px solid #dbe6ea;border-radius:1.3rem;padding:1.3rem 1.3rem 1.2rem;text-decoration:none;transition:transform .25s,box-shadow .25s,border-color .25s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 1.2rem 2.4rem rgba(0,50,70,.12);border-color:#b9cfd6}
+.svc .ico-g{display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:.85rem;background:var(--marine);color:var(--ciel);margin-bottom:.7rem}
+.svc .ico-g .ico{width:1.3rem;height:1.3rem}
+.svc b{color:var(--marine);font-size:1.08rem;letter-spacing:-.01em}
+.svc small{color:var(--doux);font-size:.88rem;line-height:1.3;padding-right:1.6rem}
+.svc>.ico.fl{position:absolute;right:1.1rem;bottom:1.1rem;width:1.1rem;height:1.1rem;color:var(--bleu);transition:transform .25s}
+.svc:hover>.ico.fl{transform:translateX(.3rem)}
+/* avis : section marquante */
+.avis-wow{position:relative;overflow:hidden;color:#fff;padding:clamp(5rem,9vw,9rem) 0;background:radial-gradient(60% 90% at 12% 10%,rgba(40,176,216,.28),rgba(40,176,216,0) 60%),radial-gradient(50% 80% at 100% 100%,rgba(0,100,146,.55),rgba(0,100,146,0) 65%),#00253a}
+.avis-wow::before{content:"";position:absolute;right:-9rem;bottom:-12rem;width:44rem;height:52rem;background:url({{SYMBOLE_BEIGE}}) no-repeat center/contain;opacity:.05}
+.avis-grille{position:relative;display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2.5rem,6vw,6rem);align-items:center}
+.av-note{display:flex;align-items:flex-end;gap:.4rem;line-height:.82}
+.av-note .gros{font-family:var(--font-titre);font-weight:800;font-stretch:78%;font-size:clamp(7rem,15vw,13.5rem);letter-spacing:-.06em;background:linear-gradient(180deg,#fff 30%,#bbe4eb);-webkit-background-clip:text;background-clip:text;color:transparent}
+.av-note .sur{font-family:var(--font-titre);font-size:clamp(2rem,4vw,3.4rem);font-weight:700;color:#7fa9ba;padding-bottom:.55em}
+.av-etoiles{display:flex;gap:.45rem;margin:1.6rem 0 1.1rem}
+.av-etoiles svg{width:2.1rem;height:2.1rem;fill:#f0b429;filter:drop-shadow(0 .3rem .8rem rgba(240,180,41,.45));opacity:0;transform:scale(.4) rotate(-20deg);transition:opacity .5s,transform .6s cubic-bezier(.2,1.4,.4,1)}
+.av-etoiles.in svg{opacity:1;transform:none}
+.av-etoiles.in svg:nth-child(2){transition-delay:.1s}.av-etoiles.in svg:nth-child(3){transition-delay:.2s}.av-etoiles.in svg:nth-child(4){transition-delay:.3s}.av-etoiles.in svg:nth-child(5){transition-delay:.4s}
+.av-txt{color:#c3d6dc;font-size:1.15rem;margin-bottom:1.8rem}.av-txt b{color:#fff}
+.av-car{position:relative;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:2rem;padding:clamp(1.8rem,3.6vw,3.4rem);backdrop-filter:blur(.6rem);box-shadow:0 2.4rem 6rem rgba(0,0,20,.35)}
+.av-car .guil{position:absolute;top:-.4rem;left:1.6rem;font-family:var(--font-titre);font-size:8rem;line-height:1;color:var(--cyan);opacity:.55}
+.av-slides{position:relative;display:grid}
+.av-slide{grid-area:1/1;opacity:0;visibility:hidden;transform:translateY(.8rem);transition:opacity .25s,transform .25s,visibility 0s .25s}
+.av-slide.on{opacity:1;visibility:visible;transform:none;transition:opacity .55s .25s,transform .55s .25s,visibility 0s .25s}
+.av-slide blockquote{font-size:clamp(1.4rem,2.5vw,2.1rem);line-height:1.3;font-weight:500;letter-spacing:-.012em;color:#fff;padding-top:2.4rem}
+.av-slide figcaption{display:flex;align-items:center;gap:1rem;margin-top:2rem}
+.av-slide .av{width:3.2rem;height:3.2rem;border-radius:50%;background:var(--cyan);color:var(--marine);display:grid;place-items:center;font-weight:800}
+.av-slide figcaption b{display:block;color:#fff}.av-slide figcaption small{color:#a9c1c9}
+.av-nav{display:flex;justify-content:space-between;align-items:center;margin-top:2.2rem}
+.av-dots{display:flex;gap:.6rem}
+.av-dot{width:.7rem;height:.7rem;border-radius:999px;border:0;background:rgba(255,255,255,.3);cursor:pointer;padding:0;transition:width .3s,background .3s}
+.av-dot.on{width:2.4rem;background:var(--cyan)}
+.av-fleches{display:flex;gap:.6rem}
+.av-fleches button{width:3rem;height:3rem;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer;display:grid;place-items:center;transition:background .2s}
+.av-fleches button:hover{background:rgba(255,255,255,.14)}
+.av-prev .ico{transform:rotate(180deg)}
+.av-puces{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.4rem}
+.av-puces span{padding:.5rem 1rem;border-radius:999px;border:1px solid rgba(255,255,255,.2);color:#d3e3e8;font-size:.9rem}
+@media (max-width:1100px){.avis-grille{grid-template-columns:1fr}.svc3-grille{grid-template-columns:1fr 1fr}}
+@media (max-width:720px){.chiffres3 .wrap{grid-template-columns:1fr;gap:2.6rem}.c3+.c3::before{display:none}.svc3-grille{grid-template-columns:1fr 1fr}.av-car .guil{font-size:6rem}}
+
 @media (max-width:1100px){
   .deux3,.duo3{grid-template-columns:1fr}
   header.site .m-mobile{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;box-shadow:0 1.6rem 2.6rem rgba(0,30,50,.18);padding:1rem var(--gut) 1.6rem;max-height:calc(100vh - 5.5rem);overflow:auto}
@@ -455,14 +524,14 @@ footer.pied p{margin-bottom:1rem;line-height:1.6}
 <header class="site" id="entete">
   <div class="wrap barre">
     <a class="logo" href="#" aria-label="Bédard — Performance thermique"><img class="on-dark" src="{{LOGO_HORIZ_BEIGE}}" alt="Bédard, performance thermique"><img class="on-light" src="{{LOGO_HORIZ_MARINE}}" alt=""></a>
-    <nav class="principal" aria-label="Navigation principale"><div class="m-item"><a class="m-top" href="#">Résidentiel<svg class="ico chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a><div class="m-drop"><a href="#">Installation de thermopompe</a><a href="#">Climatiseur mural et thermopompe</a><a href="#">Chauffage auxiliaire</a><a href="#">Climatiseurs centraux</a><a href="#">Fournaises électriques</a><a href="#">Qualité de l'air</a><a href="#">Géothermie et planchers radiants</a><a class="m-all" href="#">Voir tout le résidentiel <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="m-item"><a class="m-top" href="#">Commercial<svg class="ico chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a><div class="m-drop"><a href="#">Ventilation commerciale</a><a href="#">Réfrigération commerciale</a><a href="#">Ferblanterie</a><a class="m-all" href="#">Voir tout le commercial <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="m-item"><a class="m-top" href="#">Services<svg class="ico chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a><div class="m-drop"><a href="#">Réparation et dépannage</a><a href="#">Entretien et nettoyage</a><a href="#">Urgence 24 h</a><a class="m-all" href="#">Voir tous les services <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><a class="m-top" href="#">Guides de prix</a><a class="m-top" href="#">Carrières</a></nav>
+    <nav class="principal" aria-label="Navigation principale"><div class="m-item"><a class="m-top" href="#">Résidentiel<svg class="ico chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a><div class="m-drop"><a href="#">Installation de thermopompe</a><a href="#">Climatiseur mural et thermopompe</a><a href="#">Chauffage d'appoint</a><a href="#">Climatiseurs centraux</a><a href="#">Fournaises électriques</a><a href="#">Qualité de l'air</a><a href="#">Géothermie et planchers radiants</a><a class="m-all" href="#">Voir tout le résidentiel <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="m-item"><a class="m-top" href="#">Commercial<svg class="ico chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a><div class="m-drop"><a href="#">Ventilation commerciale</a><a href="#">Réfrigération commerciale</a><a href="#">Ferblanterie</a><a class="m-all" href="#">Voir tout le commercial <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><div class="m-item"><a class="m-top" href="#">Services<svg class="ico chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a><div class="m-drop"><a href="#">Réparation et dépannage</a><a href="#">Entretien et nettoyage</a><a href="#">Urgence 24 h</a><a class="m-all" href="#">Voir tous les services <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div><a class="m-top" href="#">Blogue</a><a class="m-top" href="#">Carrières</a></nav>
     <div class="actions">
       <a class="tel" href="tel:+14507539426"><svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span><small>Urgence 24 h</small>450-753-9426</span></a>
       <a class="btn btn-r" href="#soumission">Demander une soumission</a>
       <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu-mobile"><svg class="ico ouvre" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="ico ferme" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     </div>
   </div>
-  <div class="m-mobile" id="menu-mobile"><details><summary>Résidentiel</summary><a href="#">Installation de thermopompe</a><a href="#">Climatiseur mural et thermopompe</a><a href="#">Chauffage auxiliaire</a><a href="#">Climatiseurs centraux</a><a href="#">Fournaises électriques</a><a href="#">Qualité de l'air</a><a href="#">Géothermie et planchers radiants</a><a href="#">Voir tout le résidentiel</a></details><details><summary>Commercial</summary><a href="#">Ventilation commerciale</a><a href="#">Réfrigération commerciale</a><a href="#">Ferblanterie</a><a href="#">Voir tout le commercial</a></details><details><summary>Services</summary><a href="#">Réparation et dépannage</a><a href="#">Entretien et nettoyage</a><a href="#">Urgence 24 h</a><a href="#">Voir tous les services</a></details><a class="m-simple" href="#">Guides de prix</a><a class="m-simple" href="#">Carrières</a><a class="m-simple" href="#">Contact</a><a class="btn btn-r" href="#soumission">Demander une soumission</a></div>
+  <div class="m-mobile" id="menu-mobile"><details><summary>Résidentiel</summary><a href="#">Installation de thermopompe</a><a href="#">Climatiseur mural et thermopompe</a><a href="#">Chauffage d'appoint</a><a href="#">Climatiseurs centraux</a><a href="#">Fournaises électriques</a><a href="#">Qualité de l'air</a><a href="#">Géothermie et planchers radiants</a><a href="#">Voir tout le résidentiel</a></details><details><summary>Commercial</summary><a href="#">Ventilation commerciale</a><a href="#">Réfrigération commerciale</a><a href="#">Ferblanterie</a><a href="#">Voir tout le commercial</a></details><details><summary>Services</summary><a href="#">Réparation et dépannage</a><a href="#">Entretien et nettoyage</a><a href="#">Urgence 24 h</a><a href="#">Voir tous les services</a></details><a class="m-simple" href="#">Blogue</a><a class="m-simple" href="#">Carrières</a><a class="m-simple" href="#">Contact</a><a class="btn btn-r" href="#soumission">Demander une soumission</a></div>
 </header>
 
 <main>
@@ -474,11 +543,6 @@ footer.pied p{margin-bottom:1rem;line-height:1.6}
     <div class="cta reveal d2">
       <a class="btn btn-b" href="#soumission">Demander une soumission <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="lien-tel" href="tel:+14507539426"><svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Urgence 24 h : 450-753-9426</a>
-    </div>
-    <div class="stats3 reveal d3">
-      <div><b><span data-count="65">65</span>+</b><span>professionnels</span></div>
-      <div><b><span data-count="40">40</span>+</b><span>ans d'expertise</span></div>
-      <div><b><span data-count="4.9" data-dec="1">4,9</span>/5</b><span>180+ avis clients</span></div>
     </div>
   </div>
 </div>
@@ -494,6 +558,14 @@ footer.pied p{margin-bottom:1rem;line-height:1.6}
   </form>
 </div></div>
 
+
+<!-- ================= CHIFFRES ================= -->
+<section class="chiffres3"><div class="wrap">
+  <div class="c3 reveal"><b><span data-count="65">65</span><i>+</i></b><span>professionnels<br>à votre service</span></div>
+  <div class="c3 reveal d1"><b><span data-count="40">40</span><i>+</i></b><span>ans d'expertise<br>en confort thermique</span></div>
+  <div class="c3 reveal d2"><b><span data-count="24">24</span><i>h</i></b><span>service d'urgence<br>jour et nuit</span></div>
+</div></section>
+
 <!-- ================= 2. DEUX UNIVERS ================= -->
 <section id="univers" class="sec3"><div class="wrap">
   <h2 class="titre3 reveal">Pour la maison ou pour le bâtiment</h2>
@@ -504,22 +576,32 @@ footer.pied p{margin-bottom:1rem;line-height:1.6}
 </div></section>
 
 <!-- ================= 3. SERVICES ================= -->
-<section id="services" class="sec3 sec3-ciel"><div class="wrap duo3">
-  <div><h2 class="titre3 reveal">Nos services</h2><p class="intro3 reveal d1">De l'installation à l'entretien, un seul interlocuteur. Service d'urgence 24 h.</p></div>
-  <div class="rangs">
-    <a class="rang reveal" href="#"><b>Installation de thermopompe</b><span>Murale ou centrale, avec soumission détaillée.</span><i><svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
-    <a class="rang reveal d1" href="#"><b>Réparation et dépannage</b><span>Thermopompe, climatiseur. Urgence 24 h.</span><i><svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
-    <a class="rang reveal d2" href="#"><b>Entretien et nettoyage</b><span>Un entretien périodique personnalisé.</span><i><svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
-    <a class="rang reveal d3" href="#"><b>Chauffage auxiliaire</b><span>Compléter votre thermopompe par grand froid.</span><i><svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
-    <a class="rang reveal d3" href="#"><b>Guides de prix</b><span>Combien coûte un climatiseur mural installé?</span><i><svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+<section id="services" class="svc3"><div class="wrap">
+  <div class="svc3-tete reveal"><h2>Nos services</h2><span>Un seul interlocuteur, de l'installation à l'entretien.</span></div>
+  <div class="svc3-grille">
+    <a class="svc reveal" href="#"><span class="ico-g"><svg class="ico" viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></span><b>Installation</b><small>Thermopompe, climatisation</small><svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="svc reveal d1" href="#"><span class="ico-g"><svg class="ico" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span><b>Réparation</b><small>Dépannage, urgence 24 h</small><svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="svc reveal d2" href="#"><span class="ico-g"><svg class="ico" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></span><b>Entretien</b><small>Nettoyage, programme périodique</small><svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="svc reveal d3" href="tel:+14507539426"><span class="ico-g"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><b>Urgence 24 h</b><small>450-753-9426</small><svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
 </div></section>
 
-<!-- ================= 4. PREUVE ================= -->
-<section class="preuve3"><div class="wrap">
-  <div class="note3 reveal"><b>4,9<small>/5</small></b><span>180+ avis clients <em>[à valider sur la fiche Google]</em></span></div>
-  <blockquote class="reveal d1">« Une entreprise qui a à cœur sa clientèle. Tout a été effectué dans les règles de l'art. Si quelqu'un me pose la question où acheter une thermopompe… c'est vous que je recommanderai. »</blockquote>
-  <div class="reveal d2 cite3"><span class="av">ML</span>Mat L., client <a class="lien lien-clair" href="#">Lire les avis clients <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<!-- ================= 4. AVIS ================= -->
+<section class="avis-wow" id="avis"><div class="wrap avis-grille">
+  <div class="av-gauche">
+    <div class="av-note reveal"><span class="gros"><span data-count="4.9" data-dec="1">4,9</span></span><span class="sur">/5</span></div>
+    <div class="av-etoiles reveal d1" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg></div>
+    <p class="av-txt reveal d2"><b>180+ avis clients</b> <em>[à valider sur la fiche Google]</em></p>
+    <a class="btn btn-b reveal d3" href="#">Lire les avis <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+  <div class="av-droite reveal d1">
+    <div class="av-car" data-car>
+      <span class="guil" aria-hidden="true">«</span>
+      <div class="av-slides"><figure class="av-slide on"><blockquote>Une entreprise qui a à cœur sa clientèle. Tout a été effectué dans les règles de l'art. Si quelqu'un me pose la question où acheter une thermopompe… c'est vous que je recommanderai.</blockquote><figcaption><span class="av">ML</span><div><b>Mat L.</b><small>Client, avis Google</small></div></figcaption></figure><figure class="av-slide"><blockquote>Service très courtois et efficace. À partir du premier appel pour soumission jusqu'à la fin de l'installation.</blockquote><figcaption><span class="av">ML</span><div><b>Martin Loyer</b><small>Client, avis Google</small></div></figcaption></figure><figure class="av-slide"><blockquote>J'ai fait installer deux climatiseurs muraux. Travail très propre. Respect des dates d'échéance. Personnel très courtois et professionnel. Excellente compagnie!</blockquote><figcaption><span class="av">KG</span><div><b>K. Gianna</b><small>Client, avis Google</small></div></figcaption></figure></div>
+      <div class="av-nav"><div class="av-dots"><button type="button" class="av-dot on" aria-label="Avis 1"></button><button type="button" class="av-dot" aria-label="Avis 2"></button><button type="button" class="av-dot" aria-label="Avis 3"></button></div><div class="av-fleches"><button type="button" class="av-prev" aria-label="Avis précédent"><svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><button type="button" class="av-next" aria-label="Avis suivant"><svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></div>
+    </div>
+    <div class="av-puces"><span>Travail propre</span><span>Échéances respectées</span><span>Service courtois</span></div>
+  </div>
 </div></section>
 
 <!-- ================= 5. CARRIÈRES ================= -->
@@ -540,9 +622,9 @@ footer.pied p{margin-bottom:1rem;line-height:1.6}
 <footer class="pied"><div class="wrap">
   <div class="grille grille3">
     <div><img class="logo" src="{{LOGO_ENONCE_BEIGE}}" alt="Bédard, performance thermique"><p>304, boulevard de l'Industrie<br>Joliette (Québec) J6E 8V2</p><p><a href="tel:+14507539426">450-753-9426</a><br><a href="mailto:info@cbedard.com">info@cbedard.com</a></p></div>
-    <div><h4>Résidentiel</h4><ul><li><a href="#">Installation de thermopompe</a></li><li><a href="#">Climatiseur mural</a></li><li><a href="#">Chauffage auxiliaire</a></li><li><a href="#">Réparation et dépannage</a></li><li><a href="#">Entretien et nettoyage</a></li></ul></div>
+    <div><h4>Résidentiel</h4><ul><li><a href="#">Installation de thermopompe</a></li><li><a href="#">Climatiseur mural</a></li><li><a href="#">Chauffage d'appoint</a></li><li><a href="#">Réparation et dépannage</a></li><li><a href="#">Entretien et nettoyage</a></li></ul></div>
     <div><h4>Commercial</h4><ul><li><a href="#">Ventilation commerciale</a></li><li><a href="#">Réfrigération commerciale</a></li><li><a href="#">Ferblanterie</a></li></ul></div>
-    <div><h4>Entreprise</h4><ul><li><a href="#">Guides de prix</a></li><li><a href="#">Avis clients</a></li><li><a href="#">Carrières</a></li><li><a href="#">Contact</a></li></ul></div>
+    <div><h4>Entreprise</h4><ul><li><a href="#">Blogue</a></li><li><a href="#">Avis clients</a></li><li><a href="#">Carrières</a></li><li><a href="#">Contact</a></li></ul></div>
   </div>
   <div class="legal"><span>© 2026 Entreprise De Réfrigération &amp; Climatisation Claude Bédard (1995) Inc. Tous droits réservés.</span><span>Confidentialité · Conditions d'utilisation</span></div>
 </div></footer>
@@ -559,6 +641,17 @@ footer.pied p{margin-bottom:1rem;line-height:1.6}
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
     els.forEach(function(el){io.observe(el)});
   }else{els.forEach(function(el){el.classList.add('in')})}
+  // carrousel d'avis + étoiles
+  var reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('[data-car]').forEach(function(c){
+    var sl=c.querySelectorAll('.av-slide'),dots=c.querySelectorAll('.av-dot'),i=0,timer;
+    function go(n){i=(n+sl.length)%sl.length;sl.forEach(function(s,k){s.classList.toggle('on',k===i)});dots.forEach(function(d,k){d.classList.toggle('on',k===i)})}
+    function play(){clearInterval(timer);if(!reduceMotion)timer=setInterval(function(){go(i+1)},7000)}
+    dots.forEach(function(d,k){d.addEventListener('click',function(){go(k);play()})});
+    c.querySelector('.av-next').addEventListener('click',function(){go(i+1);play()});
+    c.querySelector('.av-prev').addEventListener('click',function(){go(i-1);play()});
+    c.addEventListener('mouseenter',function(){clearInterval(timer)});c.addEventListener('mouseleave',play);play();
+  });
   // compteurs
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var cs=document.querySelectorAll('[data-count]');
@@ -567,7 +660,7 @@ footer.pied p{margin-bottom:1rem;line-height:1.6}
     var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io2.unobserve(e.target);
       var el=e.target,end=parseFloat(el.dataset.count),d=parseInt(el.dataset.dec||0,10),t0=null;
       function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1400,1),k=1-Math.pow(1-p,3);el.textContent=fmt(end*k,d);if(p<1)requestAnimationFrame(step);else el.textContent=fmt(end,d)}
-      requestAnimationFrame(step)})},{threshold:.6});
+      requestAnimationFrame(step)})},{threshold:.35});
     cs.forEach(function(c){io2.observe(c)});
   }
 })();

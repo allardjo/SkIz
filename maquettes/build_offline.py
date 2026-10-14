@@ -20,10 +20,10 @@ SRC = {
  'ancienne-accueil.html': ('accueil-v2.html', 'Ancienne accueil (comparaison)'),
  'thermopompe-installation.html': ('service-installation-thermopompe.html', 'Installation de thermopompe'),
  'climatiseur-mural-thermopompe.html': ('pilier-climatiseur-mural-thermopompe.html', 'Climatiseur mural et thermopompe (page pilier)'),
- 'prix-climatiseur-mural.html': ('article-prix-climatiseur-mural.html', 'Guide : prix d\'un climatiseur mural'),
+ 'prix-climatiseur-mural.html': ('article-prix-climatiseur-mural.html', 'Article : prix d\'un climatiseur mural'),
  'reparation-thermopompe-climatiseur-joliette.html': ('reparation-thermopompe-climatiseur-joliette.html', 'Réparation et dépannage'),
  'entretien-nettoyage-thermopompe-climatiseur-joliette.html': ('entretien-nettoyage-thermopompe-climatiseur-joliette.html', 'Entretien et nettoyage'),
- 'chauffage-auxiliaire-joliette.html': ('chauffage-auxiliaire-joliette.html', 'Chauffage auxiliaire'),
+ 'chauffage-auxiliaire-joliette.html': ('chauffage-auxiliaire-joliette.html', "Chauffage d'appoint"),
  'commercial.html': ('commercial.html', 'Commercial (hub)'),
  'ventilation-commerciale-joliette.html': ('ventilation-commerciale-joliette.html', 'Ventilation commerciale'),
  'refrigeration-commerciale-joliette.html': ('refrigeration-commerciale-joliette.html', 'Réfrigération commerciale'),
@@ -39,7 +39,7 @@ HUBS = {
     ('climatiseur-mural-thermopompe.html', 'Climatiseur mural et thermopompe', 'Comparer les deux et choisir.'),
     ('climatiseurs-centraux.html', 'Climatiseurs centraux', 'Climatiser toute la maison par les conduits.'),
     ('fournaises-electriques.html', 'Fournaises électriques', 'Vente et installation.'),
-    ('chauffage-auxiliaire-joliette.html', 'Chauffage auxiliaire', 'Compléter votre thermopompe par temps froid.'),
+    ('chauffage-auxiliaire-joliette.html', "Chauffage d'appoint", 'Compléter votre thermopompe par grand froid.'),
     ('qualite-de-l-air.html', "Qualité de l'air", "Échangeurs d'air, humidificateurs, purificateurs."),
     ('geothermie-planchers-radiants.html', 'Géothermie et planchers radiants', 'Conception et installation.'),
     ('services.html', 'Services', 'Réparation, entretien et nettoyage.')]),
@@ -47,19 +47,13 @@ HUBS = {
    [('reparation-thermopompe-climatiseur-joliette.html', 'Réparation et dépannage', 'Thermopompe, climatiseur. Urgence 24 h.'),
     ('entretien-nettoyage-thermopompe-climatiseur-joliette.html', 'Entretien et nettoyage', 'Un entretien périodique personnalisé.'),
     ('thermopompe-installation.html', 'Installation de thermopompe', 'Murale ou centrale.'),
-    ('chauffage-auxiliaire-joliette.html', 'Chauffage auxiliaire', 'Compléter votre thermopompe par temps froid.'),
     ('commercial.html', 'Services commerciaux', 'Ventilation, réfrigération et ferblanterie.'),
     ('residentiel.html', 'Résidentiel', 'Tout pour la maison.')]),
- 'guides.html': ('Guides de prix', 'Des guides clairs pour décider.', 'Les coûts, les facteurs et ce que doit contenir une bonne soumission.',
-   [('prix-climatiseur-mural.html', "Climatiseur mural : à quel prix s'attendre?", 'Facteurs du prix, SEER2, HSPF2 et COP.'),
-    ('guide-remplacer-thermopompe.html', 'Remplacer sa thermopompe : à quel prix?', 'Coûts, signes et options. (à venir)'),
-    ('guide-humidificateur.html', 'Quel est le meilleur humidificateur?', 'Central ou portatif : comment choisir. (à venir)'),
-    ('climatiseur-mural-thermopompe.html', 'Climatiseur mural et thermopompe', 'Comparer les deux et choisir.')]),
- 'blogue.html': ('Blogue', 'Conseils et guides de nos experts.', 'Articles pour comprendre, comparer et bien choisir.',
+ 'blogue.html': ('Blogue', 'Conseils et guides de nos experts.', 'Articles informatifs et guides de prix pour comprendre, comparer et bien choisir.',
    [('prix-climatiseur-mural.html', "Climatiseur mural : à quel prix s'attendre?", 'Article phare, mis à jour en 2026.'),
     ('guide-remplacer-thermopompe.html', 'Remplacer sa thermopompe : à quel prix?', '(à venir)'),
     ('guide-humidificateur.html', 'Quel est le meilleur humidificateur?', '(à venir)'),
-    ('guides.html', 'Tous les guides de prix', 'La liste complète.')]),
+    ('climatiseur-mural-thermopompe.html', 'Climatiseur mural et thermopompe', 'Comparer les deux et choisir.')]),
 }
 STUBS = {
  'avis.html': ('Avis clients', "Page des avis : à maquetter (4,9 sur 5, plus de 180 avis, à valider sur la fiche Google)."),
@@ -178,7 +172,7 @@ RULES = [
  (r'^ferblantier\(ere\)', 'carrieres.html#ferblantier'), (r'voir le poste de ferblantier', 'carrieres.html#ferblantier'),
  (r'^frigoriste', 'carrieres.html#frigoriste'), (r'^magasinier', 'carrieres.html#magasinier'),
  (r'^dessinateur|voir les postes|^carrieres', 'carrieres.html'),
- (r'^contact', CONTACT), (r'^guides', 'guides.html'),
+ (r'^contact', CONTACT), (r'^guides', 'blogue.html'),
  (r'remplacer (sa|une) thermopompe|guide : remplacer', 'guide-remplacer-thermopompe.html'),
  (r'humidificateur', 'guide-humidificateur.html'),
  (r"a quel prix s'attendre|lire le guide : climatiseur mural", 'prix-climatiseur-mural.html'),
@@ -200,9 +194,10 @@ RULES = [
  (r'^residentiel', 'residentiel.html'),
  (r'entretien et nettoyage', 'entretien-nettoyage-thermopompe-climatiseur-joliette.html'),
  (r'reparation et depannage', 'reparation-thermopompe-climatiseur-joliette.html'),
+ (r'^installation', 'thermopompe-installation.html'), (r'^reparation', 'reparation-thermopompe-climatiseur-joliette.html'), (r'^entretien', 'entretien-nettoyage-thermopompe-climatiseur-joliette.html'),
  (r'soumission|evaluation|parler a un specialiste|discuter de votre|demander', 'soumission.html'),
 ]
-HASH_FALLBACK = {'#soumission': 'soumission.html', '#services': 'services.html', '#guides': 'guides.html', '#avis': 'avis.html', '#carrieres': 'carrieres.html'}
+HASH_FALLBACK = {'#soumission': 'soumission.html', '#services': 'services.html', '#guides': 'blogue.html', '#avis': 'avis.html', '#carrieres': 'carrieres.html'}
 unmapped = []
 def rewrite(name, html):
     i = html.index('<body')
@@ -236,7 +231,7 @@ def rewrite(name, html):
         hdr = body[:k]
         def nav(m):
             h = m.group(2); t = norm(m.group(4))
-            tgt = {'#univers': 'commercial.html' if t.startswith('commercial') else 'residentiel.html', '#services': 'services.html', '#guides': 'guides.html', '#avis': 'avis.html', '#carrieres': 'carrieres.html'}.get(h)
+            tgt = {'#univers': 'commercial.html' if t.startswith('commercial') else 'residentiel.html', '#services': 'services.html', '#guides': 'blogue.html', '#avis': 'avis.html', '#carrieres': 'carrieres.html'}.get(h)
             return f'<a{m.group(1)}href="{tgt}"{m.group(3)}>{m.group(4)}</a>' if tgt else m.group(0)
         hdr = re.sub(r'<a\b([^>]*?)href="(#[a-z]+)"([^>]*)>(.*?)</a>', nav, hdr, flags=re.S)
         body = hdr + body[k:]

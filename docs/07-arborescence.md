@@ -349,3 +349,14 @@ Bug trouvé et corrigé grâce à ce test : en ajoutant la section SEER2 / HSPF2
 - Règles de style : un titre fort par bloc, plus d'espace vertical, pas d'étiquettes ni de badges répétés, un seul bouton principal par écran.
 
 **À décider après évaluation :** si la direction convient, appliquer le modèle sobre aux autres pages (pilier, services résidentiels, commercial et ses 3 sous-pages, carrières, contact, soumission, article). Les photos de chantiers, d'équipe et de camions sont le plus gros levier pour avoir l'air d'un leader : des emplacements sont prévus (panneaux de l'accueil, hero).
+
+## Version sobre v3.1 : retours du copropriétaire (14 octobre 2026)
+
+Retours sur la première version sobre : certaines choses bien (les deux panneaux Résidentiel et Commercial), d'autres ordinaires.
+- **Chiffres (65+, 40+)** : trop petits, à gauche, sans animation. Remplacés par une bande pleine largeur de trois très grands chiffres (65+ professionnels, 40+ ans d'expertise, 24 h service d'urgence) avec compteur animé qui monte à l'arrivée dans l'écran (vérifié : valeurs finales 65, 40 et 24).
+- **Avis** : refaits en section marquante : « 4,9 » géant à dégradé qui monte en compteur, cinq étoiles dorées qui apparaissent une à une, et un carrousel de trois citations réelles (Mat L., Martin Loyer, K. Gianna) avec flèches, points et défilement automatique toutes les 7 secondes (arrêt au survol). Trois puces tirées des avis : travail propre, échéances respectées, service courtois. Même bloc sur la page de service pilote.
+- **Logo** : de 46 px à 70 px de haut dans l'en-tête (60 px une fois la page défilée), et 80 px dans le pied de page.
+- **Nos services** : une rangée compacte de 4 tuiles (installation, réparation, entretien, urgence 24 h) au lieu d'un grand bloc de 5 lignes.
+- **Panneaux Résidentiel / Commercial** : conservés tels quels.
+- **« Guides de prix » rétabli en « Blogue »** : le blogue contient aussi des articles informatifs, pas seulement des prix. Menu, pied de page, hubs et site hors ligne mis à jour. La page-hub « Guides » est supprimée; l'article sur le prix du climatiseur mural reste un guide de prix dans le blogue.
+- **« Chauffage auxiliaire » n'est plus présenté comme un service** : ce n'est pas un service distinct, c'est un complément à la thermopompe. Retiré des tuiles de services, de la liste Services et des cartes « à consulter aussi » des pages de service. Il reste une page (la demande de recherche existe : « chauffage auxiliaire joliette », 2 970 impressions) classée sous **Résidentiel** (fil d'Ariane, balisage, URL cible `/residentiel/chauffage-auxiliaire-joliette/`) et appelée « Chauffage d'appoint » dans les menus.

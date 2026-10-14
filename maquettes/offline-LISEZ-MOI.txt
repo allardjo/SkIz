@@ -17,7 +17,7 @@ VERSION SOBRE (À ÉVALUER)
 
 CE QUI EST DANS LE DOSSIER
 - 15 pages entièrement maquettées (dont l'ancienne accueil) : accueil, installation de thermopompe, page pilier climatiseur mural et thermopompe, guide de prix du climatiseur mural, réparation, entretien et nettoyage, chauffage auxiliaire, commercial (hub), ventilation, réfrigération, ferblanterie, carrières, contact, soumission.
-- 4 pages hub simples (Résidentiel, Services, Guides de prix, Blogue) qui renvoient vers les pages maquettées.
+- 3 pages hub simples (Résidentiel, Services, Blogue) qui renvoient vers les pages maquettées.
 - 12 pages « à venir » (avis, boutique, pages produits, guides à rafraîchir, politique de confidentialité, conditions d'utilisation) : un gabarit vide avec des liens vers les pages maquettées.
 - Le plan du site (plan-du-site.html).
 

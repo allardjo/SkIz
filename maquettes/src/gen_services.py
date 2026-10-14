@@ -31,7 +31,7 @@ def hero(p):
   <div class="bg"></div>
   <div class="wrap">
     <div>
-      <nav class="fil" aria-label="Fil d'Ariane"><a href="#">Accueil</a><span>›</span><a href="#">Services</a><span>›</span><b>{p['fil']}</b></nav>
+      <nav class="fil" aria-label="Fil d'Ariane"><a href="#">Accueil</a><span>›</span><a href="#">{p.get('parent','Services')}</a><span>›</span><b>{p['fil']}</b></nav>
       <div class="pastille reveal"><b>{CHECK}</b>{p['pastille']}</div>
       <h1 class="reveal d1">{p['h1']}</h1>
       <p class="lead reveal d2">{p['lead']}</p>

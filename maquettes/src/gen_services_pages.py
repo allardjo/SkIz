@@ -29,7 +29,7 @@ P1=dict(key='reparation',hclass='hero-repar',fil='Réparation et dépannage',pas
   ("Combien coûte une réparation?","Le coût dépend de la panne, de la pièce à remplacer et de l'appareil. Nous vous donnons le prix avant d'intervenir."),
   ("Faites-vous aussi l'entretien?","Oui, nous offrons un service d'entretien et de nettoyage périodique personnalisé pour thermopompes et climatiseurs."),
   ("Quels secteurs desservez-vous?",SECTEURS)],
- liens=[('refresh','Entretien et nettoyage','Un entretien périodique personnalisé.'),('thermo','Installation de thermopompe','Murale ou centrale, avec soumission détaillée.'),('flame','Chauffage auxiliaire','Compléter votre thermopompe par temps froid.'),('wind','Climatiseur mural','Vente et installation propre.')],
+ liens=[('refresh','Entretien et nettoyage','Un entretien périodique personnalisé.'),('thermo','Installation de thermopompe','Murale ou centrale, avec soumission détaillée.'),('wind','Climatiseur mural','Vente et installation propre.')],
  final_h='Un appareil en panne? Appelez-nous.',final_p="Un technicien Bédard diagnostique, vous remet une soumission claire et répare. Urgence 24 h.")
 mid1=(symptomes('Symptômes courants',"Quel est le problème de votre appareil?","Voici les situations les plus fréquentes. Dans tous les cas, un technicien identifie la cause avant d'intervenir.",
  [('thermo','Ne chauffe pas assez','La thermopompe tourne, mais la maison reste froide.'),('snow','Ne refroidit pas',"Le climatiseur souffle de l'air tiède ou ne rafraîchit plus."),('drop',"Fuite d'eau","De l'eau coule de l'unité intérieure ou extérieure."),('alert','Givre ou glace',"Du givre se forme sur l'unité, surtout par temps froid."),('volume','Bruit inhabituel','Claquement, vibration ou sifflement anormal.'),('power','Démarrages aléatoires',"L'appareil s'allume ou s'éteint de lui-même, ou ne démarre plus.")])
@@ -65,7 +65,7 @@ P2=dict(key='entretien',hclass='hero-entretien',fil='Entretien et nettoyage',pas
   ("Où trouver des filtres?","Consultez notre boutique en ligne. <em>[À valider : filtres offerts]</em>"),
   ("Avez-vous un service d'urgence?",f"Oui, un service d'urgence est offert 24 heures sur 24. Appelez le {TEL}."),
   ("Quels secteurs desservez-vous?",SECTEURS)],
- liens=[('tool','Réparation et dépannage','Thermopompe, climatiseur. Urgence 24 h.'),('thermo','Installation de thermopompe','Murale ou centrale.'),('wind','Échangeurs d\'air','Choix, installation et entretien.'),('flame','Chauffage auxiliaire','Compléter votre thermopompe par temps froid.')],
+ liens=[('tool','Réparation et dépannage','Thermopompe, climatiseur. Urgence 24 h.'),('thermo','Installation de thermopompe','Murale ou centrale.'),('wind','Échangeurs d\'air','Choix, installation et entretien.')],
  final_h='Un appareil propre, un confort durable.',final_p="Planifiez votre entretien avec un technicien Bédard : thermopompe, climatiseur, échangeur d'air.")
 mid2=(symptomes('Pourquoi entretenir','Les bénéfices d\'un entretien régulier',"Un entretien périodique garde votre appareil performant et vous évite des surprises.",
  [('thermo','Une meilleure performance',"Un appareil propre chauffe et refroidit plus efficacement."),('refresh','Une durée de vie prolongée',"Un entretien régulier prolonge la longévité de l'appareil."),('wind','Moins de poussière','Filtres et unités propres : moins de poussière et de mauvaises odeurs dans la maison.'),('alert','Moins de pannes','Un entretien régulier aide à repérer les problèmes avant la panne.'),('drop','Un drainage qui fonctionne','Drainage et filtres vérifiés pour éviter fuites et humidité.'),('tool','Une garantie respectée',"Un entretien régulier peut être exigé par le fabricant. <em>[à valider]</em>")])
@@ -78,7 +78,7 @@ mid2=(symptomes('Pourquoi entretenir','Les bénéfices d\'un entretien régulier
 build(P2,mid2)
 
 # ===================== CHAUFFAGE AUXILIAIRE =====================
-P3=dict(key='chauffage',hclass='hero-chauff',fil='Chauffage auxiliaire',pastille='Thermopompe et grands froids · Joliette',
+P3=dict(key='chauffage',hclass='hero-chauff',parent='Résidentiel',fil="Chauffage d'appoint",pastille='Thermopompe et grands froids · Joliette',
  h1="Chauffage auxiliaire à <em>Joliette</em>",
  lead="<b>Gardez la maison confortable, même par grand froid.</b> Un chauffage auxiliaire prend le relais de votre thermopompe quand les températures chutent. Nous évaluons votre maison et recommandons la bonne combinaison.",
  cta="Demander une évaluation",signes=['Évaluation de votre maison','Combinaison adaptée','Soumission détaillée'],
