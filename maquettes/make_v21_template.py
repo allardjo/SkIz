@@ -112,5 +112,10 @@ t = t[:_a] + '<span class="adr"><svg class="ico" viewBox="0 0 24 24"><circle cx=
 # --- défilement continu
 rep("function onScroll(){h.classList.toggle('solid',window.scrollY>40)}",
     "var urg=h.querySelector('.urgence');function onScroll(){var y=window.scrollY,uh=urg?urg.offsetHeight:0;h.classList.toggle('solid',y>40);h.style.setProperty('--p',Math.max(0,Math.min(1,y/90)).toFixed(3));h.style.setProperty('--s',Math.max(0,Math.min(y,uh)))}")
+# --- bandeau du haut supprimé (urgence 24 h, heures, sans frais : déjà dans le pied de page, la page Contact et les données structurées)
+_a = t.index('  <div class="urgence"><div class="wrap">'); _b = t.index('</div></div>', _a) + len('</div></div>\n')
+t = t[:_a] + t[_b:]
+assert 'class="urgence"' not in t
+
 open('source-accueil-v21.template.html', 'w', encoding='utf-8').write(t)
 print(len(t) // 1024, 'Ko')
