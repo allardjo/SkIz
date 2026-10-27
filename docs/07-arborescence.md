@@ -458,3 +458,12 @@ Constat d'un audit externe : photos insérées en décor de fond (pas d'alt, abs
 - Les avis clients cités (« deux climatiseurs muraux ») restent tels quels : ce sont des citations réelles.
 
 **Géothermie et planchers radiants** : deux tuiles séparées sur l'accueil (deux services distincts), deux pages produit distinctes (URL actuelles /produits/geothermie/ et /produits/planchers-radiants/, à garder; planchers radiants : 21 000 impressions).
+
+## Page Avis (`/avis/`)
+
+- **URL conservée** (`/avis/`) : 123 clics et 10 988 impressions, position moyenne 11,3 (une des pages clés à protéger à la migration).
+- **Maquette** : `maquettes/avis.html` (corps `src/avis.body.html`, styles `src/avis-extra.css`, assemblage `build_avis.py`). Sections : hero avec carte de note (4,9 sur 5; 188 avis : 176 Google, 12 Facebook, à valider), mur d'avis, « Ce que nos clients retiennent » (trois thèmes tirés des trois vrais avis disponibles), « Laisser un avis » (3 étapes + code QR à générer), FAQ (4 questions), liens vers les services, appel final.
+- **Seulement 3 vrais avis dans le dépôt** (Mat L., Martin Loyer, K. Gianna) : aucun avis inventé. Trois cartes en pointillés « à importer » marquent les emplacements à remplir à partir de la fiche Google (idéalement : un résidentiel, un commercial, un dépannage d'urgence, un qui mentionne la ville).
+- **Données structurées** : `CollectionPage`, `BreadcrumbList`, `FAQPage`. **Pas de `AggregateRating` ni de `Review` sur l'entreprise** : Google n'accorde pas d'étoiles dans les résultats aux avis que l'entreprise affiche sur son propre site (« self-serving reviews ») et ce balisage peut être ignoré. Cela corrige la remarque du diagnostic (« pas d'avis structurés ») : le gain vient des avis visibles sur la page et de la fiche Google, pas d'un balisage sur le site.
+- **À la mise en ligne** : module d'avis relié à Google et Facebook (mise à jour automatique), dates au format français (« 17 septembre 2026 », pas 9/17/2026), liens réels (fiche Google, lien d'avis `writereview?placeid=`), code QR, politique de réponse aux avis à confirmer.
+- Le site de test relie le menu « Avis » et les liens « Lire tous les avis » à cette page.

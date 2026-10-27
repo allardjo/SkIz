@@ -28,6 +28,7 @@ SRC = {
  'refrigeration-commerciale-joliette.html': ('refrigeration-commerciale-joliette.html', 'Réfrigération commerciale'),
  'ferblanterie-joliette.html': ('ferblanterie-joliette.html', 'Ferblanterie'),
  'carrieres.html': ('carrieres.html', 'Carrières'),
+ 'avis.html': ('avis.html', 'Avis clients'),
  'contact-climatisation-joliette.html': ('contact-climatisation-joliette.html', 'Contact'),
  'soumission.html': ('soumission.html', 'Soumission'),
 }
@@ -56,7 +57,6 @@ HUBS = {
     ('climatiseur-mural-thermopompe.html', 'Climatiseur mural et thermopompe', 'Comparer les deux et choisir.')]),
 }
 STUBS = {
- 'avis.html': ('Avis clients', "Page des avis : à maquetter (4,9 sur 5, plus de 180 avis, à valider sur la fiche Google)."),
  'boutique.html': ('Boutique de filtres', 'Boutique WooCommerce existante (filtres, produits). Pas encore maquettée.'),
  'thermopompes-murales.html': ('Thermopompes murales', 'Page produit : chauffer et climatiser sans conduits.'),
  'thermopompes-centrales.html': ('Thermopompes centrales', 'Page produit : une solution pour tout le bâtiment.'),
