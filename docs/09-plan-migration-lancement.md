@@ -42,12 +42,30 @@ Autres décisions déjà prises : `/404-2/`, `/panier/`, `/commande/`, `/mon-com
 ### D. Risque de cannibalisation (à surveiller, ne pas régler avant le lancement)
 « Thermopompe murale / climatiseur mural » sera visée par 3 pages : la catégorie de produits (173 clics), la page pilier (106) et la page d'installation (nouvelle). Règle : chacune garde son rôle (catalogue, information et comparaison, service et soumission), avec des liens croisés. Décision à 90 jours selon les positions.
 
-## 3. Calendrier recommandé
+## 3. Calendrier (lancement visé : janvier 2027)
 
-- **Fenêtre de lancement : mi-novembre à mi-février.** La fiche Google culmine en juin et la climatisation en été : lancer avant mars laisse 90 jours de stabilisation avant la haute saison. Éviter mars à juillet.
-- Éviter les 20 décembre au 5 janvier (équipe absente, trafic atypique).
-- Jour de la semaine : mardi ou mercredi, début de matinée, pour avoir l'équipe disponible 48 h.
-- Fiche Google : catégorie principale, services et description **avant** le lancement; nom de la fiche **1 à 2 semaines après** (jamais le même jour, pour savoir ce qui bouge).
+**Décisions du 2026-10-27** : lancement visé en janvier 2027; **responsable du retour arrière : le propriétaire de l'entreprise** (à nommer aussi un suppléant joignable pendant les 7 premiers jours).
+
+**Date cible : mardi 12 janvier 2027**, début de matinée. Date de repli : mardi 19 janvier. Cette fenêtre laisse 90 jours de stabilisation avant la haute saison (mars à juillet) et évite les fêtes (20 décembre au 5 janvier).
+
+| Période | Étape | Responsable |
+|---|---|---|
+| 27 oct. à 13 nov. | Valider les textes « [à valider] »; fournir : vraies photos, avis réels de la fiche Google, licence web de la police Ballinger, accès à l'hébergement et au domaine, ventes de filtres (voir `10-fiches-filtres.md`) | Client |
+| 27 oct. à 13 nov. | Terminer les pages manquantes (produits aux URL actuelles, politique de confidentialité) | Agence |
+| 16 nov. à 4 déc. | Intégration WordPress en préproduction (gabarits, URL, redirections, données structurées) | Agence |
+| 16 nov. à 4 déc. | Fiche Google : catégorie principale, services, description (avant le lancement) | Client |
+| 7 à 18 déc. | Protocole de test complet (§5) et corrections; **11 déc. : exports de référence** (Search Console, GA4, positions, PageSpeed) | Agence |
+| 18 déc. | **Gel du développement** | Agence |
+| 21 déc. à 4 janv. | Pause. Seulement les validations finales de contenu | Client |
+| 5 à 8 janv. | Sauvegarde finale, répétition de la restauration, **décision go / no-go le vendredi 8 janvier** | Agence + responsable |
+| **12 janv.** | **Lancement** (§6) | Agence; responsable du retour arrière disponible toute la journée |
+| 19 janv. | Contrôle à 7 jours | Agence |
+| 19 à 26 janv. | Changement du nom de la fiche Google, si l'enseigne, les camions et les factures sont prêts (jamais le jour du lancement) | Client |
+| 11 fév. | Contrôle à 30 jours | Agence |
+| 13 mars | Contrôle à 60 jours | Agence |
+| 12 avril | Contrôle à 90 jours; décisions sur les filtres, la cannibalisation et les pages locales | Agence + client |
+
+**Risques de calendrier** : les éléments qui dépendent du client (photos, avis, licence de police, accès hébergement, nom d'usage) sont le chemin critique. Si un élément n'est pas livré le 4 décembre, on le remplace par une solution temporaire (photos d'archive, police de remplacement) plutôt que de reporter la date.
 
 ## 4. Avant le lancement (T-30 à T-1)
 
@@ -118,12 +136,12 @@ Les fluctuations de 2 à 4 semaines après une migration sont normales; un seuil
 
 **Déclencheurs** (un seul suffit) : formulaires ou appels non fonctionnels depuis plus de 4 heures; plus de 5 pages clés en erreur 404 ou 500; site entier en `noindex` après correction tentée; baisse de plus de 50 % des clics pendant 3 jours consécutifs sans cause identifiée.
 
-**Procédure** : décision du responsable désigné (client) sur avis de l'agence; restaurer la sauvegarde finale (fichiers et base de données); rétablir le DNS et les redirections de l'ancien site; vérifier les 10 pages clés; informer l'équipe; analyser la cause avant une nouvelle tentative. Durée visée : moins de 2 heures.
+**Procédure** : décision du responsable désigné (le propriétaire) sur avis de l'agence; restaurer la sauvegarde finale (fichiers et base de données); rétablir le DNS et les redirections de l'ancien site; vérifier les 10 pages clés; informer l'équipe; analyser la cause avant une nouvelle tentative. Durée visée : moins de 2 heures.
 
 ## 10. Décisions et informations à obtenir
 
-1. Date de lancement visée.
-2. Responsable (une personne) qui peut décider du retour arrière.
+1. ~~Date de lancement~~ : janvier 2027, cible le 12 janvier (décidé le 2026-10-27).
+2. ~~Responsable du retour arrière~~ : le propriétaire (décidé le 2026-10-27). Reste à nommer un suppléant.
 3. Hébergement : accès, procédure de sauvegarde et de restauration, DNS.
 4. Confirmer que les URL de la section A sont toutes conservées (surtout les catégories de produits).
 5. Les 39 fiches de filtres : garder tel quel ou regrouper (voir `03-migration-seo.md`).
