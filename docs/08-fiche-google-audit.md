@@ -11,9 +11,9 @@
 | CAA-Québec (entreprises recommandées) | Entreprise de Réfrigération & Climatisation Claude Bedard (1995) inc. (RBQ 2163-6048-78 selon la fiche), 304, boulevard de l'Industrie, Joliette |
 | Carrier (détaillant) | « Climatisation C.Bedard », même adresse |
 | Site actuel / futur site | Bédard, Performance thermique |
-| Fiche Google | à lire |
+| Fiche Google (d'après le lien de partage fourni) | « Réfrigération Claude Bédard 1995 Inc. » (identifiant d'entité Google `/g/1tdkrdrw`) : un quatrième nom, sans « Entreprise de » ni « & Climatisation » |
 
-Trois noms pour une même adresse : Google rapproche les citations par nom + adresse + téléphone. Plus les variantes sont nombreuses, plus le signal local se dilue.
+Quatre noms pour une même adresse : Google rapproche les citations par nom + adresse + téléphone. Plus les variantes sont nombreuses, plus le signal local se dilue.
 
 **Données de la fiche déjà en main (Search Console / tableau de bord, mai à octobre 2026)**
 - 2 109 interactions, 875 appels, 613 clics vers le site; environ 145 appels par mois, donc plus d'appels que de clics.
@@ -68,3 +68,10 @@ Trois noms pour une même adresse : Google rapproche les citations par nom + adr
 ## 6. Ce que j'ai besoin de toi pour finir l'audit
 
 Une de ces trois options : capture d'écran de la fiche (vue publique et tableau de bord), lien de la fiche Maps, ou export des informations. Je remplis alors la colonne « Constaté » et je te donne la liste des écarts classés par priorité.
+
+## 7. Complément : lien de partage de la fiche (2026-10-27)
+
+- Lien fourni : https://share.google/YKjmWuKXecckxKHwZ. Il mène à la fiche « Réfrigération Claude Bédard 1995 Inc. » (identifiant d'entité Google `/g/1tdkrdrw`). Seule la redirection a pu être lue; le contenu de la fiche (catégories, heures, services, avis) reste à vérifier avec une capture d'écran.
+- Le nom affiché sur Google est donc **différent** de la marque (« Bédard Performance thermique ») et du nom légal complet. À corriger après le lancement de l'enseigne (voir `docs/04-marque.md`).
+- Le lien de partage est utilisé provisoirement sur la page Avis pour « Voir tous les avis » et « Laisser un avis ». Pour le lien d'avis direct : fiche Google > « Obtenir plus d'avis » > copier le lien (forme `https://g.page/r/.../review`), puis générer le code QR.
+- Pour les données structurées, `sameAs` devra pointer vers la fiche (URL Google Maps de la fiche ou identifiant d'entité), Facebook et LinkedIn.
