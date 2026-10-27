@@ -155,3 +155,10 @@ Format : un service = un nom (court) + une description (300 caractères maximum)
 | Ferblanterie en ventilation | Installation de conduits et de pièces de ferblanterie; pièces sur mesure au besoin. |
 
 Règles : pas de prix ni de promotion, pas d'adresse web, pas de mots en majuscules. Ajouter aussi, dans **Produits**, les marques représentées (Carrier, Mitsubishi, etc.) seulement si elles sont confirmées.
+
+## 12. Catégories et services prédéfinis (capture du 2026-10-27)
+
+- **Catégorie principale** : « Entrepreneur en chauffage, ventilation et climatisation » (bonne catégorie d'entrepreneur; remplace « Fournisseur de systèmes de climatisation » vu plus tôt). **Supplémentaire** : « Entrepreneur spécialisé dans le chauffage ».
+- Services prédéfinis par Google pour cette catégorie (à cocher, car ils correspondent à sa propre taxonomie) : Entretien de systèmes de climatisation; Entretien de chauffages; Entretien des systèmes CVC; Installation de systèmes de climatisation; Installation de chauffages; Réparation de climatisations; Réparation de chauffages; Réparation de systèmes de CVC; Services de climatisation et de chauffage sans conduit (= thermopompes murales); Installation de thermostats (à cocher seulement si offert).
+- **À ajouter comme services personnalisés** (absents des choix prédéfinis, et surtout « thermopompe » qui est la plus forte demande) : Installation de thermopompe murale; Installation de thermopompe centrale; Réparation et dépannage d'urgence 24 h; Nettoyage de thermopompe et de climatiseur; Chauffage d'appoint; Fournaises électriques; Ventilation et qualité de l'air; Géothermie; Planchers radiants; Ventilation commerciale; Réfrigération commerciale; Ferblanterie en ventilation (descriptions au §11).
+- **Catégories supplémentaires à envisager** (selon disponibilité dans l'interface; jusqu'à 9) : entrepreneur en climatisation, entrepreneur en réfrigération, entrepreneur en ventilation.
