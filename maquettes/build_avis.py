@@ -17,7 +17,7 @@ body = open(ROOT + 'src/avis.body.html', encoding='utf-8').read()
 
 css = re.sub(r'url\(\{\{IMG_[A-Z]+\}\}\)', 'none', css)  # images de l'accueil, inutiles ici
 title = 'Avis clients : ce que disent nos clients | Bédard'
-desc = "4,9 sur 5 selon plus de 180 avis Google et Facebook. Lisez les témoignages de clients de Bédard à Joliette et en Lanaudière."
+desc = "4,7 sur 5 selon plus de 200 avis Google. Lisez les témoignages de clients de Bédard à Joliette et en Lanaudière."
 assert len(title) <= 60 and len(desc) <= 160, (len(title), len(desc))
 
 ld = '''{"@context":"https://schema.org","@graph":[

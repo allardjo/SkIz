@@ -76,3 +76,47 @@ Une de ces trois options : capture d'écran de la fiche (vue publique et tableau
 - Liens utilisés sur la page Avis : « Voir tous les avis sur Google » = lien de partage de la fiche; « Laisser un avis » et code QR = lien d'avis direct https://g.page/r/Ceb7Vf7wbTIAEBM/review (fourni le 2026-10-27). Le code QR (`maquettes/src/qr-avis.svg`) est généré pour ce lien; à imprimer sur les factures, cartes de visite et camions.
 - Où trouver ces liens : en étant connecté au compte propriétaire, rechercher le nom de l'entreprise sur Google ou ouvrir Google Maps > fiche > « Partager » > copier le lien (profil); « Demander des avis » ou « Obtenir plus d'avis » > copier le lien (avis).
 - Pour les données structurées, `sameAs` devra pointer vers la fiche (URL Google Maps de la fiche ou identifiant d'entité), Facebook et LinkedIn.
+
+## 8. Relevé de la fiche (captures du 2026-10-27)
+
+| Élément | Constaté | Verdict |
+|---|---|---|
+| Nom saisi dans le tableau de bord | Entreprise de Réfrigération & Climatisation Claude Bédard 1995 Inc. | = nom légal (à changer au lancement de l'enseigne) |
+| Nom affiché dans Google (recherche / Maps) | « Réfrigération Claude Bédard 1995 Inc. » (diminutif choisi par Google) | Écart : Google affiche autre chose que ce qui est saisi |
+| Note et avis | 4,7 sur 5, 202 avis Google | Le site disait 4,9 et « 180+ » (moyenne de l'ancien site, plus ancienne) : **corrigé partout** (« 4,7 sur 5, plus de 200 avis Google ») |
+| Catégorie principale | Fournisseur de systèmes de climatisation | Catégorie de vente; à remplacer par une catégorie d'entrepreneur (installation, réparation) |
+| Catégorie secondaire | Entrepreneur spécialisé dans le chauffage | OK; ajouter ventilation, réfrigération, thermopompe si l'interface les propose |
+| Adresse | 304 Bd de l'Industrie, Joliette, QC J6E 8V2 | Conforme au site |
+| Téléphone | (450) 753-9426 | Conforme au site |
+| Heures | Lundi à vendredi 8 h à 17 h; samedi et dimanche fermé | Conforme au site; urgence 24 h non indiquée (à ajouter en heures spéciales ou en attribut) |
+| Date d'ouverture | Mai 1983 | Confirme « plus de 40 ans » (43 ans) |
+| Description | « Entreprise de ventilation, chauffage et climatisation établie depuis plus de 40 ans… contrats de services… design de systèmes de ventilation… » | Correcte mais sans « thermopompe » (la demande la plus forte), sans villes desservies, sans urgence 24 h, et avec une coquille (« Oeuvrant »). Remplacer par la version du §3. |
+| Gestion | « Vous gérez ce profil » | OK |
+| Bouton Site Web | Présent | Ajouter les paramètres UTM |
+| Zone de service, services, produits, publications | Non visibles sur les captures | À vérifier dans le tableau de bord |
+
+## 9. Harmoniser les noms (plan)
+
+**Pourquoi Google affiche un diminutif.** Le nom public d'une fiche vient du graphe de connaissances de Google, pas seulement du champ « Nom de l'entreprise ». Quand le nom saisi, le site, les annuaires et le registre ne concordent pas (ici : nom légal long, « Claude Bedard (1995) inc. » chez CAA-Québec, « Climatisation C.Bedard » chez Carrier, « Bédard Performance thermique » sur le futur site), Google raccourcit ou choisit lui-même la variante. La seule solution durable : faire concorder toutes les sources.
+
+**Nom cible partout : « Bédard Performance thermique »** (nom public), nom légal seulement là où il est exigé.
+
+Ordre des opérations :
+1. Registraire des entreprises du Québec : déclarer le nom d'usage.
+2. Enseigne, camions, factures, soumissions, signature de courriel, site : changer d'abord (Google veut que le nom de la fiche corresponde au nom réel affiché).
+3. Site : `name` = Bédard Performance thermique, `legalName` = nom légal exact du REQ, `alternateName` = Bédard, Réfrigération Claude Bédard, `sameAs` = fiche Google, Facebook, LinkedIn; titre de la page d'accueil et du pied de page cohérents.
+4. Fiche Google : modifier « Nom de l'entreprise » pour « Bédard Performance thermique » (garder une photo de la nouvelle façade ou d'un camion sous la main si Google demande une vérification). Mettre « Anciennement Entreprise de Réfrigération & Climatisation Claude Bédard 1995 Inc. » dans la description pendant 12 à 24 mois.
+5. Mises à jour des autres plateformes, au même moment :
+
+| Plateforme | Nom à y mettre |
+|---|---|
+| Facebook (page climatisationbedard), LinkedIn, Instagram | Bédard Performance thermique |
+| Carrier (détaillant), autres marques (Mitsubishi, Harnois, Ventech, Fabro) | Bédard Performance thermique, site cbedard.com |
+| CAA-Québec (entreprises recommandées) | Bédard Performance thermique, avec le nom légal en complément |
+| Pages Jaunes, Yelp, Canada 411, Chambre de commerce, Apple Maps (Business Connect), Bing Places, Waze | Bédard Performance thermique |
+| RBQ, REQ, contrats, factures | Nom légal (ne change pas) + nom d'usage déclaré |
+
+6. Si le diminutif persiste après 4 à 6 semaines : demander la correction du nom à l'assistance du Profil d'entreprise Google (formulaire de modification du nom) en joignant la preuve (enseigne, REQ, site).
+7. Ne jamais ajouter de mots-clés dans le nom de la fiche (risque de suspension).
+
+**Catégories à demander.** Principale : une catégorie d'entrepreneur en climatisation (au lieu de « Fournisseur de systèmes de climatisation »); secondaires : chauffage (déjà là), ventilation, réfrigération commerciale, selon les libellés proposés par l'interface.

@@ -29,7 +29,7 @@ Marine, beige, rouille (boutons d'action uniquement), cyan sur fond foncé seule
 ### Origine des chiffres
 - 65+ professionnels et « chef de file régional » : déclarés par le client, à pouvoir justifier publiquement.
 - 40+ ans : tiré du site actuel.
-- 4,9/5 et 180+ avis : 188 avis affichés sur la page Avis du site (176 Google, 12 Facebook), moyenne calculée 4,93. À valider contre la fiche Google.
+- Note et avis : la fiche Google affiche 4,7 sur 5 et 202 avis (relevé du 2026-10-27). Le site et les maquettes utilisent maintenant « 4,7 sur 5 » et « plus de 200 avis Google » (l'ancien « 4,9 / 180+ » venait de la page Avis du site actuel : 176 Google + 12 Facebook, moyenne 4,93).
 - Postes : annonces réelles trouvées sur jobcqc.ca (frigoriste apprenti, ferblantier, dessinateur en ventilation).
 
 ### Images

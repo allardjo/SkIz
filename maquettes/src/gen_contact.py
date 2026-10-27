@@ -220,7 +220,7 @@ soum=f'''<main>
 <section class="fond-ciel"><div class="wrap">
   <div class="tete">
     <div><span class="eyebrow">Pourquoi Bédard</span><h2 class="reveal">Une équipe qui livre</h2></div>
-    <p class="reveal d1">4,9 sur 5, selon plus de 180 avis clients. <em style="opacity:.7">[à valider sur la fiche Google]</em></p>
+    <p class="reveal d1">4,7 sur 5, selon plus de 200 avis Google.</p>
   </div>
   <div class="avis3">
     <figure class="carte-avis carte-avis-fonce reveal"><div class="etoiles">{{{{ETOILES}}}}</div><blockquote>« Une entreprise qui a à cœur sa clientèle. Tout a été effectué dans les règles de l'art. »</blockquote><cite><span class="av">ML</span><div>Mat L.<span>Client, Google</span></div></cite></figure>

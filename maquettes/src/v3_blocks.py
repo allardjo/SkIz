@@ -11,9 +11,9 @@ def avis_block():
     dots = ''.join(f'<button type="button" class="av-dot{" on" if i == 0 else ""}" aria-label="Avis {i+1}"></button>' for i in range(len(REVIEWS)))
     return f'''<section class="avis-wow" id="avis"><div class="wrap avis-grille">
   <div class="av-gauche">
-    <div class="av-note reveal"><span class="gros"><span data-count="4.9" data-dec="1">4,9</span></span><span class="sur">/5</span></div>
+    <div class="av-note reveal"><span class="gros"><span data-count="4.7" data-dec="1">4,7</span></span><span class="sur">/5</span></div>
     <div class="av-etoiles reveal d1" aria-label="5 étoiles sur 5">{STAR * 5}</div>
-    <p class="av-txt reveal d2"><b>180+ avis clients</b> <em>[à valider sur la fiche Google]</em></p>
+    <p class="av-txt reveal d2"><b>200+ avis Google</b></p>
     <a class="btn btn-b reveal d3" href="#">Lire les avis {ARR}</a>
   </div>
   <div class="av-droite reveal d1">

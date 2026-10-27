@@ -151,5 +151,12 @@ rep('<a class="tuile t-beige t-clair s6 reveal" href="#"><h3>Géothermie et plan
     '<a class="tuile t-beige t-clair s4 reveal" href="#"><h3>Géothermie</h3><p>Conception et installation de systèmes géothermiques : chauffer et climatiser avec l\'énergie du sol, pour un confort silencieux et durable.</p>' + BAS + '\n    <a class="tuile t-ciel t-clair s4 reveal d1" href="#"><h3>Planchers radiants</h3><p>Une chaleur douce et uniforme par le plancher, sans bruit ni courant d\'air.</p>')
 rep('<a class="tuile t-marine s6 reveal d1" href="#"><h3>Commercial', '<a class="tuile t-marine s4 reveal d2" href="#"><h3>Commercial')
 
+# --- note et nombre d'avis : valeurs réelles de la fiche Google (4,7 sur 5, 202 avis Google, relevé du 2026-10-27)
+rep('<span>4,9 sur 5<small>180+ avis clients</small></span>', '<span>4,7 sur 5<small>200+ avis Google</small></span>')
+rep('<span data-count="4.9" data-dec="1">4,9</span><sup>/5</sup></div><p><b>180+ avis clients</b>Google et Facebook</p>', '<span data-count="4.7" data-dec="1">4,7</span><sup>/5</sup></div><p><b>200+ avis Google</b>Note moyenne des clients</p>')
+rep('<div class="grand">4,9<small>/5</small></div>', '<div class="grand">4,7<small>/5</small></div>')
+rep('aria-label="4,9 étoiles sur 5"', 'aria-label="4,7 étoiles sur 5"')
+rep('<p>Plus de 180 clients nous ont évalués sur Google et Facebook. <em style="opacity:.7">[chiffres à valider sur la fiche Google]</em></p>', '<p>Plus de 200 clients nous ont évalués sur Google.</p>')
+
 open('source-accueil-v21.template.html', 'w', encoding='utf-8').write(t)
 print(len(t) // 1024, 'Ko')

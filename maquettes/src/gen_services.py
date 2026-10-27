@@ -94,7 +94,7 @@ def prix(p):
 '''
 
 def avis():
-    return f'''<section><div class="wrap">{tete('Avis clients','Ils ont choisi Bédard','4,9 sur 5, selon plus de 180 avis clients. <em style="opacity:.7">[à valider sur la fiche Google]</em>')}
+    return f'''<section><div class="wrap">{tete('Avis clients','Ils ont choisi Bédard','4,7 sur 5, selon plus de 200 avis Google.')}
   <div class="avis3">
     <figure class="carte-avis carte-avis-fonce reveal"><div class="etoiles">{ETOILES}</div><blockquote>« Une entreprise qui a à cœur sa clientèle. Tout a été effectué dans les règles de l'art. »</blockquote><cite><span class="av">ML</span><div>Mat L.<span>Client, Google</span></div></cite></figure>
     <figure class="carte-avis reveal d1"><div class="etoiles">{ETOILES}</div><blockquote>« Service très courtois et efficace. À partir du premier appel pour soumission jusqu'à la fin de l'installation. »</blockquote><cite><span class="av">ML</span><div>Martin Loyer<span>Client, Google</span></div></cite></figure>
