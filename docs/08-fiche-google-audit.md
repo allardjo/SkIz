@@ -120,3 +120,15 @@ Ordre des opérations :
 7. Ne jamais ajouter de mots-clés dans le nom de la fiche (risque de suspension).
 
 **Catégories à demander.** Principale : une catégorie d'entrepreneur en climatisation (au lieu de « Fournisseur de systèmes de climatisation »); secondaires : chauffage (déjà là), ventilation, réfrigération commerciale, selon les libellés proposés par l'interface.
+
+## 10. Description de la fiche (750 caractères maximum)
+
+**Version A, à utiliser tout de suite** (645 caractères) :
+
+Depuis 1983, nous installons, réparons et entretenons des thermopompes, des climatiseurs et des systèmes de chauffage, de ventilation et de réfrigération à Joliette et dans Lanaudière. Une équipe de plus de 65 professionnels au service des maisons, des commerces, des industries et des institutions. Nos spécialistes vous conseillent, vous remettent une soumission détaillée gratuite et installent le bon appareil dans les règles de l'art. Service d'urgence 24 h sur 24, 7 jours sur 7. Nous desservons Joliette, Notre-Dame-des-Prairies, Saint-Charles-Borromée, Lavaltrie, Berthierville, Repentigny, Mascouche, Terrebonne, Rawdon et les environs.
+
+**Version B, à utiliser après le changement de nom** (603 caractères) :
+
+Anciennement Entreprise de Réfrigération & Climatisation Claude Bédard 1995 Inc. Depuis 1983, nous installons, réparons et entretenons des thermopompes, des climatiseurs et des systèmes de chauffage, de ventilation et de réfrigération à Joliette et dans Lanaudière. Plus de 65 professionnels au service des maisons, des commerces, des industries et des institutions. Soumission détaillée gratuite. Service d'urgence 24 h sur 24, 7 jours sur 7. Nous desservons Joliette, Notre-Dame-des-Prairies, Saint-Charles-Borromée, Lavaltrie, Berthierville, Repentigny, Mascouche, Terrebonne, Rawdon et les environs.
+
+Choix : « thermopompe » en premier (demande la plus forte), « depuis 1983 » (date d'ouverture de la fiche), villes à plus forte demande dans Search Console, urgence 24 h, aucune adresse web, aucun prix ni promotion (interdits dans la description Google). Valider : « plus de 65 professionnels », « soumission détaillée gratuite ».
