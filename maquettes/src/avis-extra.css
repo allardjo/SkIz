@@ -39,7 +39,10 @@
 .pas li::before{content:counter(p);width:2.6rem;height:2.6rem;border-radius:50%;background:var(--marine);color:#fff;display:grid;place-items:center;font-weight:800}
 .pas li b{color:var(--marine)}
 .qr-carte{background:#fff;border:1px solid #dbe6ea;border-radius:1.8rem;padding:2rem;text-align:center;box-shadow:0 24px 60px rgba(0,40,60,.1)}
-.qr{aspect-ratio:1;border:2px dashed #b9cdd3;border-radius:1.2rem;display:grid;place-items:center;color:var(--doux);font-size:.9rem;padding:1.5rem}
+.qr{display:block;aspect-ratio:1;border:1px solid #dbe6ea;border-radius:1.2rem;padding:1.4rem;background:#fff}
+.qr svg{display:block;width:100%;height:100%}
+.qr-carte small{display:block;margin-top:.5rem;color:var(--doux);font-size:.85rem}
+.qr-carte small a{color:var(--bleu);font-weight:600}
 .qr-carte p{margin-top:1rem;font-weight:700;color:var(--marine)}
 @media (max-width:1100px){
   .hero-avis .wrap,.laisser-lay{grid-template-columns:1fr}
@@ -52,3 +55,4 @@
   .note-carte{padding:1.6rem}
   .qr-carte{max-width:20rem}
 }
+.qr-carte{max-width:24rem;justify-self:center;width:100%}
