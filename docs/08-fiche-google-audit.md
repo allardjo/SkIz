@@ -132,3 +132,26 @@ Depuis 1983, nous installons, réparons et entretenons des thermopompes, des cli
 Anciennement Entreprise de Réfrigération & Climatisation Claude Bédard 1995 Inc. Depuis 1983, nous installons, réparons et entretenons des thermopompes, des climatiseurs et des systèmes de chauffage, de ventilation et de réfrigération à Joliette et dans Lanaudière. Plus de 65 professionnels au service des maisons, des commerces, des industries et des institutions. Soumission détaillée gratuite. Service d'urgence 24 h sur 24, 7 jours sur 7. Nous desservons Joliette, Notre-Dame-des-Prairies, Saint-Charles-Borromée, Lavaltrie, Berthierville, Repentigny, Mascouche, Terrebonne, Rawdon et les environs.
 
 Choix : « thermopompe » en premier (demande la plus forte), « depuis 1983 » (date d'ouverture de la fiche), villes à plus forte demande dans Search Console, urgence 24 h, aucune adresse web, aucun prix ni promotion (interdits dans la description Google). Valider : « plus de 65 professionnels », « soumission détaillée gratuite ».
+
+## 11. Services à ajouter sur la fiche
+
+**Où** : connecté au compte propriétaire, chercher « Bédard » (ou ouvrir le Profil d'entreprise) > **Modifier le profil** > section **Services** (parfois sous « Modifier les services »). Les captures du 2026-10-27 montraient l'écran « Informations sur l'entreprise » (À propos, Coordonnées, Lieu, Heures, Plus), qui ne contient pas les services : ils sont dans l'écran de modification du profil, à côté. La **zone de service** se règle dans l'onglet **Lieu** (ou « Zones de service »). Les libellés varient un peu selon l'appareil; la section Services n'apparaît que si la catégorie principale la permet (autre raison de passer à une catégorie d'entrepreneur).
+
+Format : un service = un nom (court) + une description (300 caractères maximum).
+
+| Service | Description |
+|---|---|
+| Installation de thermopompe murale | Aussi appelée climatiseur mural. Simple zone ou multizone, avec soumission détaillée gratuite. |
+| Installation de thermopompe centrale | Remplacement et conversion d'un système de chauffage et de climatisation avec conduits. |
+| Réparation et dépannage de thermopompe et de climatiseur | Diagnostic précis et réparation. Service d'urgence 24 h sur 24, 7 jours sur 7. |
+| Entretien et nettoyage de thermopompe et de climatiseur | Entretien périodique personnalisé pour des appareils performants plus longtemps. |
+| Chauffage d'appoint | Compléter votre thermopompe par grand froid, avec une fournaise électrique ou un autre système. |
+| Fournaises électriques | Vente et installation de fournaises électriques. |
+| Ventilation et qualité de l'air | Échangeurs d'air, purificateurs, humidificateurs et déshumidificateurs. |
+| Géothermie | Conception et installation de systèmes géothermiques. |
+| Planchers radiants | Installation de planchers chauffants pour un confort silencieux. |
+| Ventilation commerciale | Conception, ferblanterie, installation et nettoyage de systèmes de ventilation. |
+| Réfrigération commerciale | Installation, entretien et dépannage de systèmes de réfrigération commerciale. |
+| Ferblanterie en ventilation | Installation de conduits et de pièces de ferblanterie; pièces sur mesure au besoin. |
+
+Règles : pas de prix ni de promotion, pas d'adresse web, pas de mots en majuscules. Ajouter aussi, dans **Produits**, les marques représentées (Carrier, Mitsubishi, etc.) seulement si elles sont confirmées.
