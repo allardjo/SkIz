@@ -35,15 +35,13 @@ SRC = {
 # ---------- pages générées ----------
 HUBS = {
  'residentiel.html': ('Résidentiel', "Votre maison, tout confort, toute l'année.", 'Chauffage, climatisation, qualité de l\'air et services pour votre maison.',
-   [('thermopompe-installation.html', 'Installation de thermopompe', 'Murale ou centrale, avec soumission détaillée.'),
-    ('climatiseur-mural-thermopompe.html', 'Climatiseur mural et thermopompe', 'Comparer les deux et choisir.'),
-    ('climatiseurs-centraux.html', 'Climatiseurs centraux', 'Climatiser toute la maison par les conduits.'),
-    ('fournaises-electriques.html', 'Fournaises électriques', 'Vente et installation.'),
-    ('chauffage-auxiliaire-joliette.html', "Chauffage d'appoint", 'Compléter votre thermopompe par grand froid.'),
+   [('climatiseur-mural-thermopompe.html', 'Thermopompe murale', 'Aussi appelée climatiseur mural : sans conduits, elle chauffe et climatise.'),
+    ('thermopompes-centrales.html', 'Thermopompe centrale', 'Pour une maison avec conduits. Remplace aussi un climatiseur central.'),
+    ('fournaises-electriques.html', 'Fournaises électriques', 'Votre système principal de chauffage : vente, remplacement et installation.'),
+    ('chauffage-auxiliaire-joliette.html', "Chauffage d'appoint", 'Le relais de votre thermopompe quand il fait très froid.'),
     ('qualite-de-l-air.html', "Qualité de l'air", "Échangeurs d'air, humidificateurs, purificateurs."),
-    ('geothermie.html', 'Géothermie', 'Chauffer et climatiser avec l\'énergie du sol.'),
-    ('planchers-radiants.html', 'Planchers radiants', 'Une chaleur douce et uniforme.'),
-    ('services.html', 'Services', 'Réparation, entretien et nettoyage.')]),
+    ('geothermie.html', 'Géothermie', "Chauffer et climatiser avec l'énergie du sol."),
+    ('planchers-radiants.html', 'Planchers radiants', 'Une chaleur douce et uniforme.')]),
  'services.html': ('Services', "Des services complets d'installation et d'entretien.", 'Réparation, entretien, installation et chauffage : pour la maison comme pour le commerce.',
    [('reparation-thermopompe-climatiseur-joliette.html', 'Réparation et dépannage', 'Thermopompe, climatiseur. Urgence 24 h.'),
     ('entretien-nettoyage-thermopompe-climatiseur-joliette.html', 'Entretien et nettoyage', 'Un entretien périodique personnalisé.'),
@@ -98,6 +96,8 @@ def shell(title, desc, body):
 <style>{CSS}
 {EXTRA}
 .hero-stub .bg{{display:none}}
+.groupe-titre{{margin:2.6rem 0 1.1rem;font-size:1.05rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--bleu)}}
+.groupe-titre:first-of-type{{margin-top:0}}
 </style>
 </head>
 <body>
@@ -134,9 +134,16 @@ FINAL = f'''<div class="final"><div class="wrap">
 </div></div>
 </main>
 '''
+HUB_GROUPES = {'residentiel.html': [('Climatiser et chauffer', 2), ('Chauffage', 2), ('Air et confort', 3)]}
+def grouped(name, items):
+    if name not in HUB_GROUPES: return cards(items)
+    out, i = '', 0
+    for titre, n in HUB_GROUPES[name]:
+        out += f'<h3 class="groupe-titre reveal">{titre}</h3>' + cards(items[i:i + n]); i += n
+    return out
 PAGES = {}   # nom -> html
 for name, (h1, lead, intro, items) in HUBS.items():
-    body = hero(h1, lead, 'Page hub (maquette)', h1) + f'<section><div class="wrap"><div class="tete"><div><span class="eyebrow">Explorer</span><h2 class="reveal">{h1}</h2></div><p class="reveal d1">{intro}</p></div>{cards(items)}</div></section>\n' + FINAL
+    body = hero(h1, lead, 'Page hub (maquette)', h1) + f'<section><div class="wrap"><div class="tete"><div><span class="eyebrow">Explorer</span><h2 class="reveal">{h1}</h2></div><p class="reveal d1">{intro}</p></div>{grouped(name, items)}</div></section>\n' + FINAL
     PAGES[name] = shell(h1, intro, body)
 RELATED = [('thermopompe-installation.html', 'Installation de thermopompe', 'Une page déjà maquettée.'), ('climatiseur-mural-thermopompe.html', 'Climatiseur mural et thermopompe', 'La page pilier.'), ('commercial.html', 'Services commerciaux', 'Ventilation, réfrigération, ferblanterie.'), ('plan-du-site.html', 'Plan du site', 'Toutes les pages de la maquette.')]
 for name, (h1, note) in STUBS.items():
