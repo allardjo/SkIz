@@ -157,7 +157,7 @@ section{padding:7.5rem 0}
 .tuile:hover .fl-c{transform:rotate(-45deg)}
 .t-photo{color:#fff;justify-content:flex-end}.t-photo .bas{margin-top:1.25rem}
 .t-photo .photo{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
-.t-photo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,30,50,.1) 20%,rgba(0,30,50,.92) 100%)}
+.t-photo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,30,50,.5) 0%,rgba(0,30,50,.93) 100%)}
 .t-photo:hover .photo{transform:scale(1.07)}
 .t-photo h3{color:#fff}.t-photo p{color:#d7e6ea}
 .t-marine{background:var(--marine);color:var(--beige)}.t-marine h3{color:#fff}.t-marine p{color:#b9d2da}
@@ -386,6 +386,11 @@ header.site.solid .burger{background:rgba(255,255,255,.14);color:#fff}
 .u-carte .photo img,.t-photo .photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 .guide .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .pourquoi .visuel .cadre img{width:100%;height:100%;object-fit:cover;object-position:40% center;display:block}
+
+.t-ill,.t-photo{justify-content:flex-end}
+.t-ill .bas,.t-photo .bas{margin-top:0}
+.illu-murale{align-self:flex-end;width:min(26rem,72%);height:auto;margin:0 0 auto;filter:drop-shadow(0 1.2rem 1.6rem rgba(0,10,25,.35))}
+@media (max-width:760px){.illu-murale{align-self:stretch;width:100%;margin-bottom:1.4rem}}
 
     /* ===== page de service ===== */
 .hero-service{padding:clamp(11rem,18vh,13.5rem) 0 clamp(5.5rem,10vh,8rem)}

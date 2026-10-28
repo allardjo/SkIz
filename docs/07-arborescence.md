@@ -467,3 +467,10 @@ Constat d'un audit externe : photos insérées en décor de fond (pas d'alt, abs
 - **Données structurées** : `CollectionPage`, `BreadcrumbList`, `FAQPage`. **Pas de `AggregateRating` ni de `Review` sur l'entreprise** : Google n'accorde pas d'étoiles dans les résultats aux avis que l'entreprise affiche sur son propre site (« self-serving reviews ») et ce balisage peut être ignoré. Cela corrige la remarque du diagnostic (« pas d'avis structurés ») : le gain vient des avis visibles sur la page et de la fiche Google, pas d'un balisage sur le site.
 - **À la mise en ligne** : module d'avis relié à Google et Facebook (mise à jour automatique), dates au format français (« 17 septembre 2026 », pas 9/17/2026), liens réels (fiche Google, lien d'avis `writereview?placeid=`), code QR, politique de réponse aux avis à confirmer.
 - Le site de test relie le menu « Avis » et les liens « Lire tous les avis » à cette page.
+
+## Tuile « Thermopompe murale » : plus de photo d'unité centrale
+
+- La photo de la grande tuile montrait une unité extérieure à gros boîtier (thermopompe centrale), pas une thermopompe murale. La tuile « Thermopompe murale » reçoit maintenant un dessin d'unité murale (vectoriel, sans photo); la photo passe à la tuile « Thermopompe centrale ».
+- Dégradé des tuiles photo plus foncé pour garder le texte lisible (Entretien, Chauffage, Thermopompe centrale).
+- Phrase « Chaque service a sa page dédiée : déroulement, prix, questions fréquentes » retirée (elle promettait un prix sur chaque page).
+- À remplacer par une vraie photo d'une unité murale intérieure installée chez un client de Bédard (demande envoyée avec la liste des photos à fournir). Sur les pages secondaires, la photo de l'unité extérieure sert encore de texture de fond à 42 % d'opacité (pages thermopompe et climatiseur) : à remplacer aussi.

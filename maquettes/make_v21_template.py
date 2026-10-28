@@ -158,5 +158,32 @@ rep('<div class="grand">4,9<small>/5</small></div>', '<div class="grand">4,7<sma
 rep('aria-label="4,9 étoiles sur 5"', 'aria-label="4,7 étoiles sur 5"')
 rep('<p>Plus de 180 clients nous ont évalués sur Google et Facebook. <em style="opacity:.7">[chiffres à valider sur la fiche Google]</em></p>', '<p>Plus de 200 clients nous ont évalués sur Google.</p>')
 
+# --- phrase retirée (section Services de l'accueil) : elle promettait un prix sur chaque page
+rep('\n    <p class="reveal d1">Chaque service a sa page dédiée : déroulement, prix, questions fréquentes.</p>', '')
+
+# --- la photo (unité extérieure à gros boîtier) illustre une thermopompe centrale, pas une murale :
+#     la grande tuile « Thermopompe murale » reçoit un dessin d'unité murale; la photo passe à la tuile « Thermopompe centrale »
+ILLU_MURALE = ('<svg class="illu-murale" viewBox="0 0 420 190" aria-hidden="true" focusable="false">'
+  '<rect x="18" y="14" width="384" height="112" rx="26" fill="#eef4f6"/>'
+  '<rect x="18" y="14" width="384" height="46" rx="26" fill="#fff"/>'
+  '<rect x="44" y="94" width="332" height="14" rx="7" fill="#c3d6dc"/>'
+  '<rect x="44" y="94" width="332" height="5" rx="2.5" fill="#a9c2ca"/>'
+  '<circle cx="368" cy="44" r="6" fill="#28b0d8"/>'
+  '<rect x="44" y="36" width="70" height="8" rx="4" fill="#d7e4e8"/>'
+  '<path d="M90 128c-8 18-8 32 0 50M170 130c-8 20-8 34 0 52M250 130c-8 20-8 34 0 52M330 128c-8 18-8 32 0 50" fill="none" stroke="#28b0d8" stroke-width="5" stroke-linecap="round" opacity=".55"/>'
+  '</svg>')
+rep('<a class="tuile t-photo s7 l2 reveal" href="#"><div class="photo">{{PHOTO:thermo}}</div>', '<a class="tuile t-marine t-ill s7 l2 reveal" href="#">' + ILLU_MURALE)
+rep('<a class="tuile t-marine s5 reveal d1" href="#"><h3>Thermopompe centrale</h3>', '<a class="tuile t-photo s5 reveal d1" href="#"><div class="photo">{{PHOTO:thermo}}</div><h3>Thermopompe centrale</h3>')
+CSS_ILLU = """
+.t-ill,.t-photo{justify-content:flex-end}
+.t-ill .bas,.t-photo .bas{margin-top:0}
+.illu-murale{align-self:flex-end;width:min(26rem,72%);height:auto;margin:0 0 auto;filter:drop-shadow(0 1.2rem 1.6rem rgba(0,10,25,.35))}
+@media (max-width:760px){.illu-murale{align-self:stretch;width:100%;margin-bottom:1.4rem}}
+"""
+_i = t.index('</style>'); t = t[:_i] + CSS_ILLU + t[_i:]
+
+# --- tuiles photo : dégradé plus foncé pour que le texte reste lisible sur la photo
+rep('background:linear-gradient(180deg,rgba(0,30,50,.1) 20%,rgba(0,30,50,.92) 100%)', 'background:linear-gradient(180deg,rgba(0,30,50,.5) 0%,rgba(0,30,50,.93) 100%)')
+
 open('source-accueil-v21.template.html', 'w', encoding='utf-8').write(t)
 print(len(t) // 1024, 'Ko')

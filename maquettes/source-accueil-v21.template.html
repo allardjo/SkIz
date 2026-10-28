@@ -160,7 +160,7 @@ section{padding:7.5rem 0}
 .tuile:hover .fl-c{transform:rotate(-45deg)}
 .t-photo{color:#fff;justify-content:flex-end}.t-photo .bas{margin-top:1.25rem}
 .t-photo .photo{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
-.t-photo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,30,50,.1) 20%,rgba(0,30,50,.92) 100%)}
+.t-photo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,30,50,.5) 0%,rgba(0,30,50,.93) 100%)}
 .t-photo:hover .photo{transform:scale(1.07)}
 .t-photo h3{color:#fff}.t-photo p{color:#d7e6ea}
 .t-marine{background:var(--marine);color:var(--beige)}.t-marine h3{color:#fff}.t-marine p{color:#b9d2da}
@@ -389,6 +389,11 @@ header.site.solid .burger{background:rgba(255,255,255,.14);color:#fff}
 .u-carte .photo img,.t-photo .photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 .guide .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .pourquoi .visuel .cadre img{width:100%;height:100%;object-fit:cover;object-position:40% center;display:block}
+
+.t-ill,.t-photo{justify-content:flex-end}
+.t-ill .bas,.t-photo .bas{margin-top:0}
+.illu-murale{align-self:flex-end;width:min(26rem,72%);height:auto;margin:0 0 auto;filter:drop-shadow(0 1.2rem 1.6rem rgba(0,10,25,.35))}
+@media (max-width:760px){.illu-murale{align-self:stretch;width:100%;margin-bottom:1.4rem}}
 </style>
 
 <script type="application/ld+json">
@@ -490,14 +495,13 @@ header.site.solid .burger{background:rgba(255,255,255,.14);color:#fff}
 <section id="services" style="padding-top:0"><div class="wrap">
   <div class="tete">
     <div><span class="eyebrow">Nos services à Joliette</span><h2 class="reveal">Tout ce qu'il faut pour un confort sans compromis</h2></div>
-    <p class="reveal d1">Chaque service a sa page dédiée : déroulement, prix, questions fréquentes.</p>
   </div>
   <div class="bento">
-    <a class="tuile t-photo s7 l2 reveal" href="#"><div class="photo">{{PHOTO:thermo}}</div>
+    <a class="tuile t-marine t-ill s7 l2 reveal" href="#"><svg class="illu-murale" viewBox="0 0 420 190" aria-hidden="true" focusable="false"><rect x="18" y="14" width="384" height="112" rx="26" fill="#eef4f6"/><rect x="18" y="14" width="384" height="46" rx="26" fill="#fff"/><rect x="44" y="94" width="332" height="14" rx="7" fill="#c3d6dc"/><rect x="44" y="94" width="332" height="5" rx="2.5" fill="#a9c2ca"/><circle cx="368" cy="44" r="6" fill="#28b0d8"/><rect x="44" y="36" width="70" height="8" rx="4" fill="#d7e4e8"/><path d="M90 128c-8 18-8 32 0 50M170 130c-8 20-8 34 0 52M250 130c-8 20-8 34 0 52M330 128c-8 18-8 32 0 50" fill="none" stroke="#28b0d8" stroke-width="5" stroke-linecap="round" opacity=".55"/></svg>
       <span class="badge24" style="background:rgba(255,255,255,.18)">Le plus demandé</span>
       <h3 style="font-size:2.4rem">Thermopompe murale</h3><p>Aussi appelée climatiseur mural : elle chauffe et climatise sans conduits. Installation, remplacement et conversion de votre système actuel, été comme hiver.</p>
       <div class="bas"><span>Voir le service</span><span class="fl-c"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
-    <a class="tuile t-marine s5 reveal d1" href="#"><h3>Thermopompe centrale</h3><p>Pour une maison avec conduits : installation, remplacement et conversion d'un système existant, avec une soumission détaillée.</p>
+    <a class="tuile t-photo s5 reveal d1" href="#"><div class="photo">{{PHOTO:thermo}}</div><h3>Thermopompe centrale</h3><p>Pour une maison avec conduits : installation, remplacement et conversion d'un système existant, avec une soumission détaillée.</p>
       <div class="bas"><span>Voir le service</span><span class="fl-c"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
     <a class="tuile t-rouille s5 reveal d2" href="tel:+14507539426"><span class="badge24"><svg class="ico" style="width:14px;height:14px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Urgence 24 h</span><h3>Réparation et dépannage</h3><p>Une panne? Appelez-nous, jour et nuit.</p>
       <div class="bas"><span>450-753-9426</span><span class="fl-c"><svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span></div></a>
