@@ -190,5 +190,9 @@ t = t.replace('65 professionnels', '65 employés')
 rep('<p><b>Professionnels</b>à votre service</p>', '<p><b>Employés</b>à votre service</p>')
 rep("<b>professionnels</b>frigoristes, ferblantiers, dessinateurs et équipes d'installation", "<b>employés</b>frigoristes, ferblantiers, dessinateurs, chargés de projets, installation, répartition et administration")
 
+# --- pied de page : services classés par besoin, avec le mot « thermopompe » (plus forte demande) dans le premier lien
+rep('<li><a href="#">Thermopompe</a></li><li><a href="#">Thermopompe murale</a></li><li><a href="#">Réparation et dépannage</a></li><li><a href="#">Entretien et nettoyage</a></li><li><a href="#">Ventilation</a></li><li><a href="#">Commercial</a></li>',
+    '<li><a href="#">Thermopompes et climatisation</a></li><li><a href="#">Chauffage</a></li><li><a href="#">Ventilation et qualité de l\'air</a></li><li><a href="#">Réparation et dépannage</a></li><li><a href="#">Entretien et nettoyage</a></li><li><a href="#">Commercial</a></li>')
+
 open('source-accueil-v21.template.html', 'w', encoding='utf-8').write(t)
 print(len(t) // 1024, 'Ko')

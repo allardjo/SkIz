@@ -75,3 +75,7 @@ Variante sans compte Cloud pour l'entreprise : l'agence utilise son propre proje
 **Module prêt à installer** : `wordpress/bedard-avis-google.php` (à copier dans `wp-content/mu-plugins/`). Il fait un seul appel à Google par jour (cache de 24 h), plafonne les appels à 10 par jour quoi qu'il arrive, garde la note et le nombre d'avis comme valeur de secours si Google ne répond pas, et ne produit aucun balisage d'avis. Réglages dans `wp-config.php` : `BEDARD_PLACES_API_KEY` et `BEDARD_PLACE_ID`. Codes courts : `[bedard_note]`, `[bedard_nb_avis]`, `[bedard_note_texte]`, `[bedard_avis limite="6"]`. Test automatisé hors WordPress : `php wordpress/test-bedard-avis.php` (14 vérifications, toutes réussies : cache, appel unique, échec de l'API, plafond quotidien, HTML retiré, aucun balisage).
 
 **Reste à confirmer** : l'identifiant de la fiche (Place ID); les conditions de Google sur la mise en cache de la note et des avis (cache court de 24 h, valeur de secours limitée à la note et au nombre d'avis); l'API retourne 5 avis au maximum, choisis par Google.
+
+## Place ID de la fiche (reçu le 2026-11-14)
+
+`ChIJtWx7Jd69yEwR5vtV_vBtMgA` (identifiant public, pas un secret). À mettre dans `wp-config.php` : `define('BEDARD_PLACE_ID', 'ChIJtWx7Jd69yEwR5vtV_vBtMgA');`. La clé d'API, elle, reste privée (`BEDARD_PLACES_API_KEY`).

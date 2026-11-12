@@ -192,6 +192,7 @@ RULES = [
  (r'^01 refrigeration|refrigeration commerciale', 'refrigeration-commerciale-joliette.html'),
  (r'^02 ventilation|ventilation commerciale', 'ventilation-commerciale-joliette.html'),
  (r'^03 ferblanterie|^ferblanterie', 'ferblanterie-joliette.html'),
+ (r'^thermopompes et climatisation', 'thermopompe-installation.html'),
  (r'^thermopompe murale|^thermopompes murales', 'climatiseur-mural-thermopompe.html'),
  (r'^thermopompe centrale|^thermopompes centrales', 'thermopompes-centrales.html'),
  (r"installation d'?(e|une) thermopompe|le plus demande|^thermopompe(?!s)", 'thermopompe-installation.html'),

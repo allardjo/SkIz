@@ -488,3 +488,8 @@ Problème relevé : « Installation de thermopompe », « Climatiseur mural et t
 ## « 65+ » = tous les employés
 
 Précision du client (2026-11-13) : les 65 personnes sont l'ensemble de l'entreprise (techniciens, adjointes administratives, comptabilité, paie, répartition, etc.), pas seulement des professionnels de métier. Tous les textes disent maintenant « 65+ employés » ou « plus de 65 employés » (accueil, pages de services, commercial, contact, carrières, descriptions de la fiche Google). La carte de l'accueil énumère : frigoristes, ferblantiers, dessinateurs, chargés de projets, installation, répartition et administration. Ne plus écrire « professionnels » ou « techniciens » à côté du chiffre 65.
+
+## Pied de page : colonne Services
+
+Ancienne liste (héritée du site de départ, sans logique d'ensemble) : Thermopompe, Thermopompe murale, Réparation et dépannage, Entretien et nettoyage, Ventilation, Commercial — deux liens se chevauchaient (thermopompe / thermopompe murale) et la liste mélangeait un produit, des types de service et des domaines.
+Nouvelle liste, classée par besoin : **Thermopompes et climatisation** (→ installation de thermopompe), **Chauffage** (→ chauffage d'appoint / fournaises), **Ventilation et qualité de l'air**, **Réparation et dépannage**, **Entretien et nettoyage**, **Commercial**. Le mot « thermopompe » reste dans le premier lien (« installation thermopompe joliette » : 14 379 impressions; « thermopompe joliette » : 7 441). Les liens du pied de page sont des liens internes sur toutes les pages : le texte du lien doit décrire la page visée.
