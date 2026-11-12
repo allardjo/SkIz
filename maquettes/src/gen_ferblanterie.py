@@ -21,7 +21,7 @@ def carte(n,i,t,p,ul,fonce=False):
     return f'<div class="metier{" metier-fonce" if fonce else ""} reveal d{n%3}"><span class="num">0{n+1}</span><span class="ico-g">{ic(i)}</span><h3>{t}</h3><p>{p}</p><ul>'+''.join(f'<li>{x}</li>' for x in ul)+'</ul></div>'
 cartes=''.join([
  carte(0,'layers','Pièces sur mesure','Pour un besoin spécifique, nous nous déplaçons chez vous, prenons les mesures et faisons fabriquer les pièces adaptées à votre bâtiment.',['Relevés sur place','Pièces fabriquées selon vos mesures','Installation par nos ferblantiers']),
- carte(1,'tool','Installation sur chantier','Une équipe qualifiée installe vos conduits et vos pièces de ferblanterie, selon l\'échéancier convenu.',['Commercial et institutionnel','Industriel et résidentiel','Coordination avec les autres métiers'],True),
+ carte(1,'tool','Installation en chantier','Une équipe qualifiée installe vos conduits et vos pièces de ferblanterie, selon l\'échéancier convenu.',['Commercial et institutionnel','Industriel et résidentiel','Coordination avec les autres métiers'],True),
  carte(2,'refresh','Modification et remplacement','Ajout, réparation ou remplacement de conduits dans un réseau de ventilation existant.',['Modification de réseaux','Réparation de conduits','Remplacement de pièces']),
 ])
 faq=[
@@ -58,7 +58,7 @@ body=f'''<main>
       <div class="champ"><label for="f-nom">Nom et entreprise</label><input id="f-nom" autocomplete="organization" placeholder="Votre nom, votre entreprise"></div>
       <div class="champ"><label for="f-tel">Téléphone</label><input id="f-tel" type="tel" autocomplete="tel" placeholder="450 000-0000"></div>
       <div class="champ"><label for="f-type">Type de projet</label>
-        <select id="f-type"><option>Pièces sur mesure</option><option>Installation sur chantier</option><option>Modification d'un réseau existant</option><option>Projet complet de ventilation</option><option>Autre</option></select></div>
+        <select id="f-type"><option>Pièces sur mesure</option><option>Installation en chantier</option><option>Modification d'un réseau existant</option><option>Projet complet de ventilation</option><option>Autre</option></select></div>
       <button class="btn btn-r" type="submit">Être rappelé {ARROW}</button>
       <p class="note">Une question? <a href="tel:+14507539426" data-track="call_tracking">Appelez le {TEL}</a></p>
     </form>

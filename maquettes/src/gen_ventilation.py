@@ -18,7 +18,7 @@ def carte(n,i,t,p,ul,fonce=False):
     return f'<div class="metier{" metier-fonce" if fonce else ""} reveal d{n%3}"><span class="num">0{n+1}</span><span class="ico-g">{ic(i)}</span><h3>{t}</h3><p>{p}</p><ul>'+''.join(f'<li>{x}</li>' for x in ul)+'</ul></div>'
 cartes=''.join([
  carte(0,'pen','Conception et dessins','Dessins d\'intégration et analyse des dessins d\'atelier, en collaboration avec les chargés de projet.',['Relevés sur le chantier','Dessins d\'intégration','Documents de chantier']),
- carte(1,'layers','Ferblanterie','Des ferblantiers spécialisés en ventilation installent et ajustent les conduits sur votre chantier. Pour un besoin spécifique, nous faisons fabriquer des pièces sur mesure.',['Installation sur chantier','Pièces sur mesure, au besoin','Conduits et accessoires'],True),
+ carte(1,'layers','Ferblanterie','Des ferblantiers spécialisés en ventilation installent et ajustent les conduits sur votre chantier. Pour un besoin spécifique, nous faisons fabriquer des pièces sur mesure.',['Installation en chantier','Pièces sur mesure, au besoin','Conduits et accessoires'],True),
  carte(2,'wind','Installation de systèmes','Design, conception et installation de systèmes de ventilation personnalisés pour votre bâtiment.',['Commercial, industriel, institutionnel','Mise en service','Respect de l\'échéancier']),
  carte(3,'refresh','Échangeurs d\'air','Choix, installation et entretien d\'échangeurs d\'air pour renouveler l\'air du bâtiment.',['Installation et remplacement','Entretien et filtres','Nettoyage des unités']),
  carte(4,'drop','Nettoyage des systèmes','Nettoyage des systèmes de ventilation, des unités, des échangeurs d\'air et des conduits.',['Systèmes de ventilation','Unités murales','Conduits'],True),
@@ -131,7 +131,7 @@ body=f'''<main>
   <div>
     <span class="eyebrow" style="color:var(--cyan)">Pourquoi Bédard</span>
     <h2 class="reveal">Une expertise en ventilation de longue date</h2>
-    <p class="reveal d1">Depuis plus de 40 ans à Joliette, et avec Ventilation Fabro (acquise en 2012) et Solution Ventech (2010), Bédard a bâti une équipe spécialisée en ventilation commerciale et institutionnelle, en nettoyage de systèmes et en ferblanterie.</p>
+    <p class="reveal d1">Depuis plus de 40 ans à Joliette, et avec Solution Ventech (acquise en 2010), Bédard a bâti une équipe spécialisée en ventilation commerciale et institutionnelle, en nettoyage de systèmes et en ferblanterie.</p>
     <a class="btn btn-b reveal d2" href="#soumission">Parler à un spécialiste {ARROW}</a>
   </div>
   <ul class="liste-sombre">

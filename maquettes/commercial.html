@@ -669,6 +669,11 @@ details.zones-tout{margin-top:1.6rem;border:0;padding:0}
 .zones-tout[open] summary::after{content:"–";background:none;color:inherit}
 .zones-tout summary:hover{background:var(--bleu);color:#fff}
 .zones-tout .zone-titre:first-of-type{margin-top:1.6rem}
+
+/* champs « choisir un fichier » : bouton complet et lisible */
+.fichier input[type=file]{height:auto;min-height:0;padding:0;border:0;border-radius:0;background:none;box-shadow:none;overflow:visible;cursor:pointer}
+.fichier input[type=file]::file-selector-button{font:700 .92rem var(--font);color:#fff;background:var(--marine);border:0;border-radius:999px;padding:.7rem 1.3rem;margin-right:1rem;cursor:pointer;transition:background .25s}
+.fichier input[type=file]::file-selector-button:hover{background:var(--bleu)}
 /* ===== hub Commercial ===== */
 .hero-comm .bg{background:var(--img-commercial) 60% 40%/cover no-repeat;opacity:.5;mix-blend-mode:luminosity}
 .hero-comm .wrap{grid-template-columns:1.2fr .8fr}
@@ -778,13 +783,13 @@ details.zones-tout{margin-top:1.6rem;border:0;padding:0}
       <span class="go">Découvrir la réfrigération <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     <a class="metier metier-fonce reveal d1" href="#"><span class="num">02</span><span class="ico-g"><svg class="ico" viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg></span>
       <h3>Ventilation commerciale et institutionnelle</h3>
-      <p>Design, conception et installation de systèmes de ventilation personnalisés, par des experts qualifiés. Ventilation Fabro, acquise en 2012, renforce notre expertise.</p>
+      <p>Design, conception et installation de systèmes de ventilation personnalisés, par des experts qualifiés.</p>
       <ul><li>Conception et dessins d'atelier</li><li>Installation et mise en service</li><li>Nettoyage et entretien des systèmes</li></ul>
       <span class="go">Découvrir la ventilation <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     <a class="metier reveal d2" href="#"><span class="num">03</span><span class="ico-g"><svg class="ico" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span>
       <h3>Ferblanterie</h3>
       <p>Des ferblantiers spécialisés en ventilation installent et ajustent les conduits. Pour un besoin spécifique, nous faisons fabriquer des pièces sur mesure.</p>
-      <ul><li>Installation sur chantier</li><li>Pièces sur mesure, au besoin</li><li>Résidentiel, commercial, industriel et institutionnel</li></ul>
+      <ul><li>Installation en chantier</li><li>Pièces sur mesure, au besoin</li><li>Résidentiel, commercial, industriel et institutionnel</li></ul>
       <span class="go">Découvrir la ferblanterie <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
   </div>
 </div></section>

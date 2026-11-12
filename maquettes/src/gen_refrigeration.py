@@ -18,7 +18,7 @@ TEL='450-753-9426'
 def carte(n,i,t,p,ul,fonce=False):
     return f'<div class="metier{" metier-fonce" if fonce else ""} reveal d{n%3}"><span class="num">0{n+1}</span><span class="ico-g">{ic(i)}</span><h3>{t}</h3><p>{p}</p><ul>'+''.join(f'<li>{x}</li>' for x in ul)+'</ul></div>'
 cartes=''.join([
- carte(0,'tool','Installation de systèmes','Installation de systèmes de réfrigération commerciale avec minutie, efficacité et professionnalisme.',['Évaluation de vos besoins','Installation sur chantier','Mise en service']),
+ carte(0,'tool','Installation de systèmes','Installation de systèmes de réfrigération commerciale avec minutie, efficacité et professionnalisme.',['Évaluation de vos besoins','Installation en chantier','Mise en service']),
  carte(1,'clock','Service et dépannage 24 h','Une panne de réfrigération menace votre marchandise : une équipe est disponible jour et nuit.',['Diagnostic et réparation','Urgence 24 h sur 24','Suivi après intervention'],True),
  carte(2,'refresh','Entretien préventif','Un entretien périodique personnalisé garde vos équipements performants et réduit les risques de panne.',['Inspection régulière','Programme sur mesure','Dossier de vos équipements']),
  carte(3,'snow','Climatisation commerciale','Nos techniciens interviennent aussi en climatisation pour les commerces, les industries et les institutions.',['Installation et remplacement','Entretien et service','Commercial et institutionnel']),

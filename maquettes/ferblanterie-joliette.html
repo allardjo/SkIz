@@ -669,6 +669,11 @@ details.zones-tout{margin-top:1.6rem;border:0;padding:0}
 .zones-tout[open] summary::after{content:"–";background:none;color:inherit}
 .zones-tout summary:hover{background:var(--bleu);color:#fff}
 .zones-tout .zone-titre:first-of-type{margin-top:1.6rem}
+
+/* champs « choisir un fichier » : bouton complet et lisible */
+.fichier input[type=file]{height:auto;min-height:0;padding:0;border:0;border-radius:0;background:none;box-shadow:none;overflow:visible;cursor:pointer}
+.fichier input[type=file]::file-selector-button{font:700 .92rem var(--font);color:#fff;background:var(--marine);border:0;border-radius:999px;padding:.7rem 1.3rem;margin-right:1rem;cursor:pointer;transition:background .25s}
+.fichier input[type=file]::file-selector-button:hover{background:var(--bleu)}
 /* ===== hub Commercial ===== */
 .hero-comm .bg{background:var(--img-commercial) 60% 40%/cover no-repeat;opacity:.5;mix-blend-mode:luminosity}
 .hero-comm .wrap{grid-template-columns:1.2fr .8fr}
@@ -754,7 +759,7 @@ details.zones-tout{margin-top:1.6rem;border:0;padding:0}
       <div class="champ"><label for="f-nom">Nom et entreprise</label><input id="f-nom" autocomplete="organization" placeholder="Votre nom, votre entreprise"></div>
       <div class="champ"><label for="f-tel">Téléphone</label><input id="f-tel" type="tel" autocomplete="tel" placeholder="450 000-0000"></div>
       <div class="champ"><label for="f-type">Type de projet</label>
-        <select id="f-type"><option>Pièces sur mesure</option><option>Installation sur chantier</option><option>Modification d'un réseau existant</option><option>Projet complet de ventilation</option><option>Autre</option></select></div>
+        <select id="f-type"><option>Pièces sur mesure</option><option>Installation en chantier</option><option>Modification d'un réseau existant</option><option>Projet complet de ventilation</option><option>Autre</option></select></div>
       <button class="btn btn-r" type="submit">Être rappelé <svg class="ico fl" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       <p class="note">Une question? <a href="tel:+14507539426" data-track="call_tracking">Appelez le <span class="nw">450-753-9426</span></a></p>
     </form>
@@ -777,7 +782,7 @@ details.zones-tout{margin-top:1.6rem;border:0;padding:0}
     <div><span class="eyebrow">Nos services</span><h2 class="reveal">De la tôle au système en marche</h2></div>
     <p class="reveal d1">Nous réalisons des projets dans le domaine résidentiel, commercial, industriel et institutionnel.</p>
   </div>
-  <div class="metiers"><div class="metier reveal d0"><span class="num">01</span><span class="ico-g"><svg class="ico" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span><h3>Pièces sur mesure</h3><p>Pour un besoin spécifique, nous nous déplaçons chez vous, prenons les mesures et faisons fabriquer les pièces adaptées à votre bâtiment.</p><ul><li>Relevés sur place</li><li>Pièces fabriquées selon vos mesures</li><li>Installation par nos ferblantiers</li></ul></div><div class="metier metier-fonce reveal d1"><span class="num">02</span><span class="ico-g"><svg class="ico" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span><h3>Installation sur chantier</h3><p>Une équipe qualifiée installe vos conduits et vos pièces de ferblanterie, selon l'échéancier convenu.</p><ul><li>Commercial et institutionnel</li><li>Industriel et résidentiel</li><li>Coordination avec les autres métiers</li></ul></div><div class="metier reveal d2"><span class="num">03</span><span class="ico-g"><svg class="ico" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></span><h3>Modification et remplacement</h3><p>Ajout, réparation ou remplacement de conduits dans un réseau de ventilation existant.</p><ul><li>Modification de réseaux</li><li>Réparation de conduits</li><li>Remplacement de pièces</li></ul></div></div>
+  <div class="metiers"><div class="metier reveal d0"><span class="num">01</span><span class="ico-g"><svg class="ico" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span><h3>Pièces sur mesure</h3><p>Pour un besoin spécifique, nous nous déplaçons chez vous, prenons les mesures et faisons fabriquer les pièces adaptées à votre bâtiment.</p><ul><li>Relevés sur place</li><li>Pièces fabriquées selon vos mesures</li><li>Installation par nos ferblantiers</li></ul></div><div class="metier metier-fonce reveal d1"><span class="num">02</span><span class="ico-g"><svg class="ico" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span><h3>Installation en chantier</h3><p>Une équipe qualifiée installe vos conduits et vos pièces de ferblanterie, selon l'échéancier convenu.</p><ul><li>Commercial et institutionnel</li><li>Industriel et résidentiel</li><li>Coordination avec les autres métiers</li></ul></div><div class="metier reveal d2"><span class="num">03</span><span class="ico-g"><svg class="ico" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></span><h3>Modification et remplacement</h3><p>Ajout, réparation ou remplacement de conduits dans un réseau de ventilation existant.</p><ul><li>Modification de réseaux</li><li>Réparation de conduits</li><li>Remplacement de pièces</li></ul></div></div>
 </div></section>
 
 <!-- ================= PIÈCES ================= -->

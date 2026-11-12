@@ -669,6 +669,11 @@ details.zones-tout{margin-top:1.6rem;border:0;padding:0}
 .zones-tout[open] summary::after{content:"–";background:none;color:inherit}
 .zones-tout summary:hover{background:var(--bleu);color:#fff}
 .zones-tout .zone-titre:first-of-type{margin-top:1.6rem}
+
+/* champs « choisir un fichier » : bouton complet et lisible */
+.fichier input[type=file]{height:auto;min-height:0;padding:0;border:0;border-radius:0;background:none;box-shadow:none;overflow:visible;cursor:pointer}
+.fichier input[type=file]::file-selector-button{font:700 .92rem var(--font);color:#fff;background:var(--marine);border:0;border-radius:999px;padding:.7rem 1.3rem;margin-right:1rem;cursor:pointer;transition:background .25s}
+.fichier input[type=file]::file-selector-button:hover{background:var(--bleu)}
 /* ===== pages de service résidentielles (réparation, entretien, chauffage auxiliaire) ===== */
 .hero-entretien .bg{background:var(--img-entretien) 60% 50%/cover no-repeat}
 .hero-chauff .bg{background:var(--img-chauffage) 60% 50%/cover no-repeat}

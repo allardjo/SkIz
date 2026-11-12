@@ -636,6 +636,11 @@ header.site.solid .burger{background:rgba(255,255,255,.14);color:#fff}
 }
 
 a[href^="tel:"]{white-space:nowrap}
+
+/* champs « choisir un fichier » : bouton complet et lisible */
+.fichier input[type=file]{height:auto;min-height:0;padding:0;border:0;border-radius:0;background:none;box-shadow:none;overflow:visible;cursor:pointer}
+.fichier input[type=file]::file-selector-button{font:700 .92rem var(--font);color:#fff;background:var(--marine);border:0;border-radius:999px;padding:.7rem 1.3rem;margin-right:1rem;cursor:pointer;transition:background .25s}
+.fichier input[type=file]::file-selector-button:hover{background:var(--bleu)}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[

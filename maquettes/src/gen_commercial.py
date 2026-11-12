@@ -64,13 +64,13 @@ body=f'''<main>
       <span class="go">Découvrir la réfrigération {ARROW}</span></a>
     <a class="metier metier-fonce reveal d1" href="#"><span class="num">02</span><span class="ico-g">{ic('wind')}</span>
       <h3>Ventilation commerciale et institutionnelle</h3>
-      <p>Design, conception et installation de systèmes de ventilation personnalisés, par des experts qualifiés. Ventilation Fabro, acquise en 2012, renforce notre expertise.</p>
+      <p>Design, conception et installation de systèmes de ventilation personnalisés, par des experts qualifiés.</p>
       <ul><li>Conception et dessins d'atelier</li><li>Installation et mise en service</li><li>Nettoyage et entretien des systèmes</li></ul>
       <span class="go">Découvrir la ventilation {ARROW}</span></a>
     <a class="metier reveal d2" href="#"><span class="num">03</span><span class="ico-g">{ic('layers')}</span>
       <h3>Ferblanterie</h3>
       <p>Des ferblantiers spécialisés en ventilation installent et ajustent les conduits. Pour un besoin spécifique, nous faisons fabriquer des pièces sur mesure.</p>
-      <ul><li>Installation sur chantier</li><li>Pièces sur mesure, au besoin</li><li>Résidentiel, commercial, industriel et institutionnel</li></ul>
+      <ul><li>Installation en chantier</li><li>Pièces sur mesure, au besoin</li><li>Résidentiel, commercial, industriel et institutionnel</li></ul>
       <span class="go">Découvrir la ferblanterie {ARROW}</span></a>
   </div>
 </div></section>
