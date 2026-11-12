@@ -32,3 +32,18 @@
 1. Qui est le propriétaire du compte Google de la fiche (pour le projet Google Cloud et l'accès au Profil d'entreprise)?
 2. Une carte de crédit pour la facturation de Google Cloud (coût prévu très faible).
 3. Choix : plugin tout fait (rapide) ou intégration sur mesure (recommandée).
+
+## Sans Google Cloud : solutions gratuites ou presque (ajout du 2026-11-14)
+
+Le propriétaire de la fiche a accès au tableau de bord, mais l'accès **automatique** aux avis par code passe toujours par un projet Google Cloud (Places API ou Business Profile API). Sans Cloud :
+
+| Solution | Coût | Mise à jour | Limites |
+|---|---|---|---|
+| **A. Valeurs centralisées, mises à jour à la main** : un champ « Note Google » et « Nombre d'avis » dans les réglages de WordPress, repris partout par des codes courts | Gratuit | Manuelle (5 minutes par mois, ou après un nouvel avis marquant) | Peut être en retard de quelques semaines; aucune dépendance externe, aucun consentement à ajouter |
+| **B. Carte Google intégrée** (« Partager > Intégrer une carte » depuis Google Maps, sans clé) sur la page Contact | Gratuit | Automatique : la fiche s'affiche avec la note et le nombre d'avis | Ce n'est pas notre design; charge des ressources de Google (couvrir dans le bandeau de consentement Loi 25) |
+| **C. Plugin avec version gratuite** (Trustindex, Elfsight, etc.) | Gratuit avec limites, payant pour la version complète | Automatique, avec une fréquence limitée dans la version gratuite | Nombre d'avis affichés, fréquence de mise à jour, mention du fournisseur et design limités selon l'offre du moment : vérifier les conditions avant de choisir; scripts de tiers (Loi 25) |
+| **D. Places API dans le quota gratuit de Google** | Gratuit en pratique (le volume prévu est très inférieur au quota gratuit mensuel; à confirmer sur la grille de Google) | Automatique, 1 à 2 fois par jour | Exige quand même un compte Google Cloud avec une carte de crédit enregistrée; on peut plafonner le quota quotidien (ex. 5 appels) pour qu'aucun frais ne soit possible |
+
+À éviter : extraire les avis de Google Maps par programme (« scraping »), contraire aux conditions de Google et fragile.
+
+**Recommandation sans Cloud** : A + B maintenant (gratuit, sans risque, prêt au lancement), mur d'avis avec des citations choisies (avec l'accord du client ou en citant brièvement avec le lien vers la fiche), et passage à D si l'automatisation devient souhaitable.
