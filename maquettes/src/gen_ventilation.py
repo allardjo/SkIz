@@ -72,7 +72,7 @@ body=f'''<main>
   <div class="boite reveal">
     <div class="fait">{ic('pen')}<b>Conception interne</b><span>Dessins d'intégration et d'atelier</span></div>
     <div class="fait">{ic('layers')}<b>Ferblanterie</b><span>Pièces sur mesure, au besoin</span></div>
-    <div class="fait">{ic('users')}<b>65+ professionnels</b><span>Une équipe de plus de 40 ans d'expérience</span></div>
+    <div class="fait">{ic('users')}<b>65+ employés</b><span>Une équipe de plus de 40 ans d'expérience</span></div>
     <div class="fait">{ic('clock')}<b>Urgence 24 h</b><span>Entretien périodique personnalisé</span></div>
   </div>
 </div></div>
@@ -137,7 +137,7 @@ body=f'''<main>
   <ul class="liste-sombre">
     <li class="reveal"><b>Un seul interlocuteur</b><br>Conception, ferblanterie, installation et entretien.</li>
     <li class="reveal d1"><b>Ferblantiers spécialisés</b><br>Des conduits adaptés à votre bâtiment.</li>
-    <li class="reveal d2"><b>Une équipe de plus de 65 professionnels</b><br>Disponible aussi en urgence, 24 h sur 24.</li>
+    <li class="reveal d2"><b>Une équipe de plus de 65 employés</b><br>Disponible aussi en urgence, 24 h sur 24.</li>
   </ul>
 </div></section>
 

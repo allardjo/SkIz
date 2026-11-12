@@ -154,7 +154,7 @@ body=f'''<main>
     <a class="lie reveal" href="#"><b>Services commerciaux</b><span>Tous nos services pour les bâtiments commerciaux.</span><i>{ic('layers')}</i></a>
     <a class="lie reveal d1" href="#"><b>Ventilation commerciale</b><span>Conception, ferblanterie et installation.</span><i>{ic('wind')}</i></a>
     <a class="lie reveal d2" href="#"><b>Réfrigération commerciale</b><span>Frigoristes, entretien et urgence 24 h.</span><i>{ic('snow')}</i></a>
-    <a class="lie reveal d3" href="#"><b>Carrières</b><span>Rejoignez une équipe de plus de 65 professionnels.</span><i>{ic('users')}</i></a>
+    <a class="lie reveal d3" href="#"><b>Carrières</b><span>Rejoignez une équipe de plus de 65 employés.</span><i>{ic('users')}</i></a>
   </div>
 </div></section>
 

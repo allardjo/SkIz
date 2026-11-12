@@ -185,8 +185,10 @@ _i = t.index('</style>'); t = t[:_i] + CSS_ILLU + t[_i:]
 # --- tuiles photo : dégradé plus foncé pour que le texte reste lisible sur la photo
 rep('background:linear-gradient(180deg,rgba(0,30,50,.1) 20%,rgba(0,30,50,.92) 100%)', 'background:linear-gradient(180deg,rgba(0,30,50,.5) 0%,rgba(0,30,50,.93) 100%)')
 
-# --- équipe : ajout des chargés de projets
-rep("frigoristes, ferblantiers, dessinateurs et équipes d'installation", "frigoristes, ferblantiers, dessinateurs, chargés de projets et équipes d'installation")
+# --- équipe : les 65+ sont tous les employés (techniciens, administration, comptabilité, paie, répartition…), pas seulement des professionnels de métier
+t = t.replace('65 professionnels', '65 employés')
+rep('<p><b>Professionnels</b>à votre service</p>', '<p><b>Employés</b>à votre service</p>')
+rep("<b>professionnels</b>frigoristes, ferblantiers, dessinateurs et équipes d'installation", "<b>employés</b>frigoristes, ferblantiers, dessinateurs, chargés de projets, installation, répartition et administration")
 
 open('source-accueil-v21.template.html', 'w', encoding='utf-8').write(t)
 print(len(t) // 1024, 'Ko')

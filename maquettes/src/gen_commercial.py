@@ -21,7 +21,7 @@ body=f'''<main>
       <nav class="fil" aria-label="Fil d'Ariane"><a href="#">Accueil</a><span>›</span><b>Commercial</b></nav>
       <div class="pastille reveal"><b>{CHECK}</b>Commercial · Industriel · Institutionnel</div>
       <h1 class="reveal d1">Ventilation, réfrigération et ferblanterie pour <em>votre bâtiment</em></h1>
-      <p class="lead reveal d2"><b>Une seule équipe, de la conception à l'entretien.</b> Plus de 40 ans d'expertise dans Lanaudière, une équipe de plus de 65 professionnels et un service d'urgence 24 h pour les commerces, les industries et les institutions.</p>
+      <p class="lead reveal d2"><b>Une seule équipe, de la conception à l'entretien.</b> Plus de 40 ans d'expertise dans Lanaudière, une équipe de plus de 65 employés et un service d'urgence 24 h pour les commerces, les industries et les institutions.</p>
       <div class="cta reveal d3">
         <a class="btn btn-b" href="#soumission">Demander une soumission {ARROW}</a>
         <a class="btn btn-l" href="tel:+14507539426" data-track="call_tracking">{ic('clock')}<span>Urgence 24 h : {TEL}</span></a>
@@ -43,7 +43,7 @@ body=f'''<main>
 <!-- ================= POINTS FORTS ================= -->
 <div class="faits"><div class="wrap">
   <div class="boite reveal">
-    <div class="fait">{ic('users')}<b>65+ professionnels</b><span>Conception, installation, service</span></div>
+    <div class="fait">{ic('users')}<b>65+ employés</b><span>Conception, installation, service</span></div>
     <div class="fait">{ic('cal')}<b>40+ ans</b><span>D'expérience dans Lanaudière</span></div>
     <div class="fait">{ic('clock')}<b>Urgence 24 h</b><span>Une équipe disponible jour et nuit</span></div>
     <div class="fait">{ic('tool')}<b>Entretien périodique</b><span>Personnalisé, pour votre bâtiment</span></div>
@@ -147,7 +147,7 @@ body=f'''<main>
     <a class="lie reveal" href="#"><b>Résidentiel</b><span>Thermopompes, climatisation, chauffage et qualité de l'air.</span><i>{ic('wind').replace('class="ico"','class="ico"')}</i></a>
     <a class="lie reveal d1" href="#"><b>Réparation et dépannage</b><span>Urgence 24 h pour tous vos systèmes.</span><i>{ic('tool')}</i></a>
     <a class="lie reveal d2" href="#"><b>Entretien et nettoyage</b><span>Un entretien périodique personnalisé.</span><i>{ic('cal')}</i></a>
-    <a class="lie reveal d3" href="#"><b>Carrières</b><span>Rejoignez une équipe de plus de 65 professionnels.</span><i>{ic('users')}</i></a>
+    <a class="lie reveal d3" href="#"><b>Carrières</b><span>Rejoignez une équipe de plus de 65 employés.</span><i>{ic('users')}</i></a>
   </div>
 </div></section>
 

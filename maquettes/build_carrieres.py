@@ -17,7 +17,7 @@ body = open(ROOT + 'src/carrieres.body.html', encoding='utf-8').read()
 
 css = re.sub(r'url\(\{\{IMG_[A-Z]+\}\}\)', 'none', css)  # images de l'accueil, inutiles ici
 title = 'Emplois en CVAC à Joliette et Lanaudière | Carrières Bédard'
-desc = "Ferblantier, frigoriste, magasinier : rejoignez une équipe de plus de 65 professionnels à Joliette. Postes ouverts."
+desc = "Ferblantier, frigoriste, magasinier : rejoignez une équipe de plus de 65 employés à Joliette. Postes ouverts."
 assert len(title) <= 60 and len(desc) <= 160, (len(title), len(desc))
 
 ld = '''{"@context":"https://schema.org","@graph":[

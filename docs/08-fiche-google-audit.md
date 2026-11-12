@@ -47,9 +47,9 @@ Quatre noms pour une même adresse : Google rapproche les citations par nom + ad
 
 ## 3. Proposition de description (à valider, 489 caractères sur 750 permis)
 
-« Bédard, c'est plus de 40 ans d'expertise en chauffage, climatisation, ventilation et réfrigération à Joliette et dans Lanaudière. Notre équipe de plus de 65 professionnels installe, répare et entretient thermopompes, climatiseurs muraux, fournaises et systèmes de ventilation, pour les maisons comme pour les commerces et les institutions. Soumission gratuite. Service d'urgence 24 h sur 24, 7 jours sur 7. Anciennement Entreprise de Réfrigération & Climatisation Claude Bédard (1995) inc. »
+« Bédard, c'est plus de 40 ans d'expertise en chauffage, climatisation, ventilation et réfrigération à Joliette et dans Lanaudière. Notre équipe de plus de 65 employés installe, répare et entretient thermopompes, climatiseurs muraux, fournaises et systèmes de ventilation, pour les maisons comme pour les commerces et les institutions. Soumission gratuite. Service d'urgence 24 h sur 24, 7 jours sur 7. Anciennement Entreprise de Réfrigération & Climatisation Claude Bédard (1995) inc. »
 
-À valider : « 40 ans », « 65 professionnels », mention de l'ancien nom (utile pour relier les citations existantes). Le numéro RBQ peut être ajouté seulement s'il est confirmé.
+À valider : « 40 ans », « 65 employés », mention de l'ancien nom (utile pour relier les citations existantes). Le numéro RBQ peut être ajouté seulement s'il est confirmé.
 
 ## 4. Actions de cohérence hors Google (à faire au lancement)
 
@@ -125,13 +125,13 @@ Ordre des opérations :
 
 **Version A, à utiliser tout de suite** (645 caractères) :
 
-Depuis 1983, nous installons, réparons et entretenons des thermopompes, des climatiseurs et des systèmes de chauffage, de ventilation et de réfrigération à Joliette et dans Lanaudière. Une équipe de plus de 65 professionnels au service des maisons, des commerces, des industries et des institutions. Nos spécialistes vous conseillent, vous remettent une soumission détaillée gratuite et installent le bon appareil dans les règles de l'art. Service d'urgence 24 h sur 24, 7 jours sur 7. Nous desservons Joliette, Notre-Dame-des-Prairies, Saint-Charles-Borromée, Lavaltrie, Berthierville, Repentigny, Mascouche, Terrebonne, Rawdon et les environs.
+Depuis 1983, nous installons, réparons et entretenons des thermopompes, des climatiseurs et des systèmes de chauffage, de ventilation et de réfrigération à Joliette et dans Lanaudière. Une équipe de plus de 65 employés au service des maisons, des commerces, des industries et des institutions. Nos spécialistes vous conseillent, vous remettent une soumission détaillée gratuite et installent le bon appareil dans les règles de l'art. Service d'urgence 24 h sur 24, 7 jours sur 7. Nous desservons Joliette, Notre-Dame-des-Prairies, Saint-Charles-Borromée, Lavaltrie, Berthierville, Repentigny, Mascouche, Terrebonne, Rawdon et les environs.
 
 **Version B, à utiliser après le changement de nom** (603 caractères) :
 
-Anciennement Entreprise de Réfrigération & Climatisation Claude Bédard 1995 Inc. Depuis 1983, nous installons, réparons et entretenons des thermopompes, des climatiseurs et des systèmes de chauffage, de ventilation et de réfrigération à Joliette et dans Lanaudière. Plus de 65 professionnels au service des maisons, des commerces, des industries et des institutions. Soumission détaillée gratuite. Service d'urgence 24 h sur 24, 7 jours sur 7. Nous desservons Joliette, Notre-Dame-des-Prairies, Saint-Charles-Borromée, Lavaltrie, Berthierville, Repentigny, Mascouche, Terrebonne, Rawdon et les environs.
+Anciennement Entreprise de Réfrigération & Climatisation Claude Bédard 1995 Inc. Depuis 1983, nous installons, réparons et entretenons des thermopompes, des climatiseurs et des systèmes de chauffage, de ventilation et de réfrigération à Joliette et dans Lanaudière. Plus de 65 employés au service des maisons, des commerces, des industries et des institutions. Soumission détaillée gratuite. Service d'urgence 24 h sur 24, 7 jours sur 7. Nous desservons Joliette, Notre-Dame-des-Prairies, Saint-Charles-Borromée, Lavaltrie, Berthierville, Repentigny, Mascouche, Terrebonne, Rawdon et les environs.
 
-Choix : « thermopompe » en premier (demande la plus forte), « depuis 1983 » (date d'ouverture de la fiche), villes à plus forte demande dans Search Console, urgence 24 h, aucune adresse web, aucun prix ni promotion (interdits dans la description Google). Valider : « plus de 65 professionnels », « soumission détaillée gratuite ».
+Choix : « thermopompe » en premier (demande la plus forte), « depuis 1983 » (date d'ouverture de la fiche), villes à plus forte demande dans Search Console, urgence 24 h, aucune adresse web, aucun prix ni promotion (interdits dans la description Google). Valider : « plus de 65 employés », « soumission détaillée gratuite ».
 
 ## 11. Services à ajouter sur la fiche
 

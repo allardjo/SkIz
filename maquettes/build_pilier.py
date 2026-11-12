@@ -17,7 +17,7 @@ body = open(ROOT + 'src/pilier-climatiseur-thermopompe.body.html', encoding='utf
 
 css = re.sub(r'url\(\{\{IMG_[A-Z]+\}\}\)', 'none', css)  # images de l'accueil, inutiles ici
 title = 'Climatiseur mural et thermopompe murale à Joliette | Bédard'
-desc = "Climatiseur mural et thermopompe murale à Joliette et Lanaudière : conseil, installation propre et entretien par plus de 65 professionnels."
+desc = "Climatiseur mural et thermopompe murale à Joliette et Lanaudière : conseil, installation propre et entretien par plus de 65 employés."
 assert len(title) <= 60 and len(desc) <= 160, (len(title), len(desc))
 
 ld = '''{"@context":"https://schema.org","@graph":[

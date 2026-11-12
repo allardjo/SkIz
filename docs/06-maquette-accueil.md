@@ -10,13 +10,13 @@ Retour du client sur la v1 : « site trop générique, on dirait une petite entr
 1. En-tête fixe transparent puis blanc au défilement, barre d'urgence 24 h, téléphone cliquable, bouton de soumission.
 2. Hero : H1 SEO « Chauffage, climatisation et ventilation à Joliette », photo avec pastilles (urgence 24 h, note 4,9/5).
 3. Barre de soumission rapide (3 champs) qui chevauche le hero.
-4. Bande de chiffres animée : 65+ professionnels, 40+ ans, 4,9/5 (180+ avis), 24 h.
+4. Bande de chiffres animée : 65+ employés, 40+ ans, 4,9/5 (180+ avis), 24 h.
 5. Deux univers : résidentiel et commercial.
 6. Services en grille asymétrique (8 tuiles, dont l'urgence 24 h en rouille).
 7. « Pourquoi Bédard » : la taille d'une grande entreprise, le soin d'une équipe locale.
 8. Avis : note globale et trois avis réels du site.
 9. Guides de prix (les trois articles qui génèrent 44 % des clics).
-10. Carrières : « Rejoignez une équipe de plus de 65 professionnels » (postes réels vus sur jobcqc.ca).
+10. Carrières : « Rejoignez une équipe de plus de 65 employés » (postes réels vus sur jobcqc.ca).
 11. Étapes, zone desservie, FAQ (données structurées `FAQPage`), appel final, pied de page.
 Mobile : une colonne, barre fixe « Appeler / Soumission ».
 
@@ -27,7 +27,7 @@ Retour du client (Mac, grand écran) : la mise en page était plafonnée à envi
 Marine, beige, rouille (boutons d'action uniquement), cyan sur fond foncé seulement, dégradé de marque en pied de page, symbole en filigrane, Mona Sans avec axe de largeur pour les titres (en attendant la licence web de Ballinger).
 
 ### Origine des chiffres
-- 65+ professionnels et « chef de file régional » : déclarés par le client, à pouvoir justifier publiquement.
+- 65+ employés et « chef de file régional » : déclarés par le client, à pouvoir justifier publiquement.
 - 40+ ans : tiré du site actuel.
 - Note et avis : la fiche Google affiche 4,7 sur 5 et 202 avis (relevé du 2026-10-27). Le site et les maquettes utilisent maintenant « 4,7 sur 5 » et « plus de 200 avis Google » (l'ancien « 4,9 / 180+ » venait de la page Avis du site actuel : 176 Google + 12 Facebook, moyenne 4,93).
 - Postes : annonces réelles trouvées sur jobcqc.ca (frigoriste apprenti, ferblantier, dessinateur en ventilation).

@@ -37,7 +37,7 @@ contact=f'''<main>
       <nav class="fil" aria-label="Fil d'Ariane"><a href="#">Accueil</a><span>›</span><b>Contact</b></nav>
       <div class="pastille reveal"><b>{CHECK}</b>Réponse rapide · Urgence 24 h</div>
       <h1 class="reveal d1">Parlons de votre <em>projet</em></h1>
-      <p class="lead reveal d2"><b>Une équipe de plus de 65 professionnels à Joliette.</b> Appelez-nous, écrivez-nous ou passez nous voir : un spécialiste vous répond pour le chauffage, la climatisation, la ventilation et la réfrigération.</p>
+      <p class="lead reveal d2"><b>Une équipe de plus de 65 employés à Joliette.</b> Appelez-nous, écrivez-nous ou passez nous voir : un spécialiste vous répond pour le chauffage, la climatisation, la ventilation et la réfrigération.</p>
     </div>
   </div>
 </div>

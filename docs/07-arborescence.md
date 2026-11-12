@@ -96,7 +96,7 @@ Ce que la page actuelle disait (et que la refonte conserve) : titre générique 
 Nouveau positionnement SEO :
 - Titre : « Climatiseur mural et thermopompe à Joliette | Bédard » (52 caractères). H1 : « Climatiseur mural et thermopompe à Joliette ».
 - Requêtes visées : climatiseur mural Joliette, air climatisé Joliette, thermopompe Joliette, installation de climatiseur Joliette.
-- Structure : héros avec formulaire, faits (depuis 1983, 65+ professionnels, urgence 24 h, 4,9/5), climatiseur mural contre thermopompe (cartes et tableau comparatif), installation à Joliette, gamme de produits (liens vers les 4 catégories), histoire de l'entreprise, prix, avis, FAQ (6 questions), services liés.
+- Structure : héros avec formulaire, faits (depuis 1983, 65+ employés, urgence 24 h, 4,9/5), climatiseur mural contre thermopompe (cartes et tableau comparatif), installation à Joliette, gamme de produits (liens vers les 4 catégories), histoire de l'entreprise, prix, avis, FAQ (6 questions), services liés.
 - Données structurées : `Service`, `BreadcrumbList`, `FAQPage` (4 réponses validées).
 
 Faits tirés de la page actuelle (à confirmer, parce que le site actuel peut être dépassé) : 1983 concessionnaire exclusif Carrier pour Lanaudière ; 2005 recommandée par CAA habitation (cote de satisfaction supérieure à 95 %) ; 2006 acquisition de Service de chauffage Harnois ; 2009 concessionnaire agréé Mitsubishi ; 2010-2011 Solution Ventech (nettoyage de ventilation, unités murales, échangeurs d'air, conduits de sécheuse) ; 2012 déménagement au 304, boulevard de l'Industrie et acquisition de Ventilation Fabro (ventilation commerciale et institutionnelle).
@@ -353,7 +353,7 @@ Bug trouvé et corrigé grâce à ce test : en ajoutant la section SEER2 / HSPF2
 ## Version sobre v3.1 : retours du copropriétaire (14 octobre 2026)
 
 Retours sur la première version sobre : certaines choses bien (les deux panneaux Résidentiel et Commercial), d'autres ordinaires.
-- **Chiffres (65+, 40+)** : trop petits, à gauche, sans animation. Remplacés par une bande pleine largeur de trois très grands chiffres (65+ professionnels, 40+ ans d'expertise, 24 h service d'urgence) avec compteur animé qui monte à l'arrivée dans l'écran (vérifié : valeurs finales 65, 40 et 24).
+- **Chiffres (65+, 40+)** : trop petits, à gauche, sans animation. Remplacés par une bande pleine largeur de trois très grands chiffres (65+ employés, 40+ ans d'expertise, 24 h service d'urgence) avec compteur animé qui monte à l'arrivée dans l'écran (vérifié : valeurs finales 65, 40 et 24).
 - **Avis** : refaits en section marquante : « 4,9 » géant à dégradé qui monte en compteur, cinq étoiles dorées qui apparaissent une à une, et un carrousel de trois citations réelles (Mat L., Martin Loyer, K. Gianna) avec flèches, points et défilement automatique toutes les 7 secondes (arrêt au survol). Trois puces tirées des avis : travail propre, échéances respectées, service courtois. Même bloc sur la page de service pilote.
 - **Logo** : de 46 px à 70 px de haut dans l'en-tête (60 px une fois la page défilée), et 80 px dans le pied de page.
 - **Nos services** : une rangée compacte de 4 tuiles (installation, réparation, entretien, urgence 24 h) au lieu d'un grand bloc de 5 lignes.
@@ -484,3 +484,7 @@ Problème relevé : « Installation de thermopompe », « Climatiseur mural et t
 - **Air et ventilation** : Qualité de l'air.
 - « Installation de thermopompe » reste accessible dans le hub Services et par les liens des pages murale et centrale. « Climatiseurs centraux » (URL `/produits/climatisation-lanaudiere/climatiseur-central/`, 3 liens externes, 0 clic) n'est plus dans le hub; à rediriger (301) vers la thermopompe centrale après le lancement si la page n'a pas de contenu propre.
 - La page « Chauffage d'appoint » garde sa section « Une fournaise qui prend le relais » : elle explique le rôle de la fournaise comme complément, et renvoie vers la page Fournaises électriques (système principal).
+
+## « 65+ » = tous les employés
+
+Précision du client (2026-11-13) : les 65 personnes sont l'ensemble de l'entreprise (techniciens, adjointes administratives, comptabilité, paie, répartition, etc.), pas seulement des professionnels de métier. Tous les textes disent maintenant « 65+ employés » ou « plus de 65 employés » (accueil, pages de services, commercial, contact, carrières, descriptions de la fiche Google). La carte de l'accueil énumère : frigoristes, ferblantiers, dessinateurs, chargés de projets, installation, répartition et administration. Ne plus écrire « professionnels » ou « techniciens » à côté du chiffre 65.
