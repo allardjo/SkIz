@@ -185,5 +185,8 @@ _i = t.index('</style>'); t = t[:_i] + CSS_ILLU + t[_i:]
 # --- tuiles photo : dégradé plus foncé pour que le texte reste lisible sur la photo
 rep('background:linear-gradient(180deg,rgba(0,30,50,.1) 20%,rgba(0,30,50,.92) 100%)', 'background:linear-gradient(180deg,rgba(0,30,50,.5) 0%,rgba(0,30,50,.93) 100%)')
 
+# --- équipe : ajout des chargés de projets
+rep("frigoristes, ferblantiers, dessinateurs et équipes d'installation", "frigoristes, ferblantiers, dessinateurs, chargés de projets et équipes d'installation")
+
 open('source-accueil-v21.template.html', 'w', encoding='utf-8').write(t)
 print(len(t) // 1024, 'Ko')
