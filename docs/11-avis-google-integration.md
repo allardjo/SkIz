@@ -47,3 +47,19 @@ Le propriétaire de la fiche a accès au tableau de bord, mais l'accès **automa
 À éviter : extraire les avis de Google Maps par programme (« scraping »), contraire aux conditions de Google et fragile.
 
 **Recommandation sans Cloud** : A + B maintenant (gratuit, sans risque, prêt au lancement), mur d'avis avec des citations choisies (avec l'accord du client ou en citant brièvement avec le lien vers la fiche), et passage à D si l'automatisation devient souhaitable.
+
+## Vérification des offres gratuites (2026-11-14)
+
+Besoin : gratuit + automatique + aucune mise à jour mensuelle.
+
+- **Trustindex (plugin WordPress gratuit)** : limité à 10 avis par widget; importe les avis à la connexion, mais la synchronisation automatique est réservée à l'abonnement payant (le bouton « Télécharger les nouveaux avis » est manuel). Ne répond pas au besoin. Source : centre d'aide de Trustindex.
+- **Elfsight (plan gratuit)** : 200 affichages du widget par mois, soit quelques jours de trafic. Inutilisable pour un site d'entreprise.
+- **API Google Places** : chaque SKU « Enterprise » a 1 000 requêtes gratuites par mois (grille de Google Maps Platform). Avec 1 appel par jour (environ 30 par mois), la facture attendue est de 0 $. Exige un compte Google Cloud avec une carte enregistrée. Vérifier sur la grille officielle quels champs (note, nombre d'avis, texte des avis) relèvent de quel SKU avant l'activation.
+
+**Conclusion** : la seule solution à la fois gratuite en pratique, automatique et sans entretien est l'API Places dans le quota gratuit. Il faut un compte Cloud (au nom de l'entreprise), mais on peut rendre tout frais impossible :
+1. quota quotidien de l'API plafonné à 10 requêtes;
+2. alerte de budget à 1 $;
+3. clé restreinte au serveur du site;
+4. module avec cache de 24 h et valeur de secours.
+
+Variante sans compte Cloud pour l'entreprise : l'agence utilise son propre projet Google Cloud et sa clé pour le site de Bédard. Gratuit pour Bédard, mais dépendance envers l'agence (si le contrat prend fin, la clé disparaît) : à éviter sauf entente écrite.
