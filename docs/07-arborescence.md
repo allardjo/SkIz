@@ -475,12 +475,12 @@ Constat d'un audit externe : photos insérées en décor de fond (pas d'alt, abs
 - Phrase « Chaque service a sa page dédiée : déroulement, prix, questions fréquentes » retirée (elle promettait un prix sur chaque page).
 - À remplacer par une vraie photo d'une unité murale intérieure installée chez un client de Bédard (demande envoyée avec la liste des photos à fournir). Sur les pages secondaires, la photo de l'unité extérieure sert encore de texture de fond à 42 % d'opacité (pages thermopompe et climatiseur) : à remplacer aussi.
 
-## Hub Résidentiel réorganisé (3 groupes, 7 cartes)
+## Hub Résidentiel réorganisé (3 groupes, 7 cartes; géothermie dans « Climatiser et chauffer », planchers radiants dans « Chauffage »)
 
 Problème relevé : « Installation de thermopompe », « Climatiseur mural et thermopompe » et « Climatiseurs centraux » se chevauchaient, et « Fournaises électriques » et « Chauffage d'appoint » se répétaient.
 
-- **Climatiser et chauffer** : Thermopompe murale (page pilier : sans conduits, aussi appelée climatiseur mural); Thermopompe centrale (avec conduits; remplace aussi un climatiseur central).
-- **Chauffage** : Fournaises électriques (système principal de chauffage); Chauffage d'appoint (le relais de la thermopompe par grand froid). Deux pages distinctes parce que les intentions de recherche diffèrent (« chauffage auxiliaire joliette » : 2 970 impressions).
-- **Air et confort** : Qualité de l'air, Géothermie, Planchers radiants.
+- **Climatiser et chauffer** : Thermopompe murale (page pilier : sans conduits, aussi appelée climatiseur mural); Thermopompe centrale (avec conduits; remplace aussi un climatiseur central); Géothermie (chauffer et climatiser avec l'énergie du sol).
+- **Chauffage** : Fournaises électriques (système principal de chauffage); Chauffage d'appoint (le relais de la thermopompe par grand froid); Planchers radiants. Deux pages distinctes pour fournaises et appoint parce que les intentions de recherche diffèrent (« chauffage auxiliaire joliette » : 2 970 impressions).
+- **Air et ventilation** : Qualité de l'air.
 - « Installation de thermopompe » reste accessible dans le hub Services et par les liens des pages murale et centrale. « Climatiseurs centraux » (URL `/produits/climatisation-lanaudiere/climatiseur-central/`, 3 liens externes, 0 clic) n'est plus dans le hub; à rediriger (301) vers la thermopompe centrale après le lancement si la page n'a pas de contenu propre.
 - La page « Chauffage d'appoint » garde sa section « Une fournaise qui prend le relais » : elle explique le rôle de la fournaise comme complément, et renvoie vers la page Fournaises électriques (système principal).

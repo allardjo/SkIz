@@ -37,11 +37,11 @@ HUBS = {
  'residentiel.html': ('Résidentiel', "Votre maison, tout confort, toute l'année.", 'Chauffage, climatisation, qualité de l\'air et services pour votre maison.',
    [('climatiseur-mural-thermopompe.html', 'Thermopompe murale', 'Aussi appelée climatiseur mural : sans conduits, elle chauffe et climatise.'),
     ('thermopompes-centrales.html', 'Thermopompe centrale', 'Pour une maison avec conduits. Remplace aussi un climatiseur central.'),
+    ('geothermie.html', 'Géothermie', "Chauffer et climatiser avec l'énergie du sol."),
     ('fournaises-electriques.html', 'Fournaises électriques', 'Votre système principal de chauffage : vente, remplacement et installation.'),
     ('chauffage-auxiliaire-joliette.html', "Chauffage d'appoint", 'Le relais de votre thermopompe quand il fait très froid.'),
-    ('qualite-de-l-air.html', "Qualité de l'air", "Échangeurs d'air, humidificateurs, purificateurs."),
-    ('geothermie.html', 'Géothermie', "Chauffer et climatiser avec l'énergie du sol."),
-    ('planchers-radiants.html', 'Planchers radiants', 'Une chaleur douce et uniforme.')]),
+    ('planchers-radiants.html', 'Planchers radiants', 'Une chaleur douce et uniforme.'),
+    ('qualite-de-l-air.html', "Qualité de l'air", "Échangeurs d'air, humidificateurs, purificateurs.")]),
  'services.html': ('Services', "Des services complets d'installation et d'entretien.", 'Réparation, entretien, installation et chauffage : pour la maison comme pour le commerce.',
    [('reparation-thermopompe-climatiseur-joliette.html', 'Réparation et dépannage', 'Thermopompe, climatiseur. Urgence 24 h.'),
     ('entretien-nettoyage-thermopompe-climatiseur-joliette.html', 'Entretien et nettoyage', 'Un entretien périodique personnalisé.'),
@@ -134,7 +134,7 @@ FINAL = f'''<div class="final"><div class="wrap">
 </div></div>
 </main>
 '''
-HUB_GROUPES = {'residentiel.html': [('Climatiser et chauffer', 2), ('Chauffage', 2), ('Air et confort', 3)]}
+HUB_GROUPES = {'residentiel.html': [('Climatiser et chauffer', 3), ('Chauffage', 3), ('Air et ventilation', 1)]}
 def grouped(name, items):
     if name not in HUB_GROUPES: return cards(items)
     out, i = '', 0
