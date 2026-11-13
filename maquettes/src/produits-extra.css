@@ -60,3 +60,13 @@
   .tableau-types tbody th{width:auto}
   .serie dl div{grid-template-columns:6.4rem 1fr}
 }
+
+.hero-prod .wrap>*{min-width:0}
+.acc-grille.acc-3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:1100px){.acc-grille.acc-3{grid-template-columns:1fr 1fr}}
+@media (max-width:720px){
+  .acc-grille.acc-3{grid-template-columns:1fr}
+  .carte-chiffres{padding:1.5rem}
+  .carte-chiffres li{flex-wrap:wrap}
+  .carte-chiffres li b{white-space:normal;font-size:1.4rem}
+}

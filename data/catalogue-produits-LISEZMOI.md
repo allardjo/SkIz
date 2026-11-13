@@ -6,4 +6,4 @@ Source : « Portail vendeur — Bédard » (https://www.cbedard.com/portail-cbed
 
 Utilisation : `maquettes/build_produits.py` génère les pages de produits. Pour mettre à jour : extraire de nouveau le tableau `CATALOGUE` du portail et remplacer ce fichier.
 
-**Avertissement** : les cotes d'efficacité (SEER2, HSPF2, COP) du portail sont à valider contre les fiches des fabricants avant publication (divergences constatées, voir `docs/11-pages-produits.md`).
+**Avertissement** : les cotes d'efficacité (SEER2, HSPF2, COP) du portail sont à valider contre les fiches des fabricants avant publication (divergences constatées, voir `docs/12-pages-produits.md`).

@@ -47,9 +47,11 @@ def serie_card(nom, sous_titre, types, marque, froid=None, extra=None, E=None, e
     assert E, (marque, types)
     froid = froid or common([x.get('froid') for x in E if x.get('froid') and x['froid'] not in ('—', 'n.d.')])
     rows = [('Capacités', btu_txt(btu(E)))]
-    if any(x.get('seer') or x.get('hspf') for x in E): rows.append(('Efficacité', efficacite(E, marque, types[0])))
+    if any(x.get('seer') or x.get('hspf') for x in E): rows.append(('Efficacité', efficacite(E, marque, eff_key or types[0])))
     rows.append(('Garantie', esc(common([x['gar'] for x in E]))))
-    if any(x.get('volt') for x in E) or '115' in nom + sous_titre: rows.append(('Alimentation', '115 V'))
+    v = [x for x in E if x.get('volt')]
+    if (v and len(v) == len(E)) or '115' in nom + sous_titre: rows.append(('Alimentation', f'115{NB}V'))
+    elif v: rows.append(('Alimentation', f'115{NB}V offert en {btu_txt(btu(v))}'))
     for k, v in (extra or []): rows.append((k, v))
     f = fiche(E)
     lien = f'<a class="lien-fiche" href="{esc(f)}" target="_blank" rel="noopener">Fiche technique du fabricant (PDF) {ARROW_I}</a>' if f else ''
@@ -215,3 +217,143 @@ body = (hero('Thermopompes murales', 'Mitsubishi · Carrier · Daikin', 'Thermop
 build('produits-thermopompes-murales.html', 'Thermopompes murales à Joliette : nos séries | Bédard', 'Thermopompes murales (climatiseurs muraux) à Joliette : séries Mitsubishi, Carrier et Daikin, de -15 °C à -37 °C. Soumission gratuite.', 'https://cbedard.com/produits/chauffage/thermopompes-murales/', body,
       jsonld('https://cbedard.com/produits/chauffage/thermopompes-murales/', 'Thermopompes murales', 'Séries de thermopompes murales offertes par Bédard', 'Thermopompes murales', qa_mur,
              [f'{m} {re.search(r"<h4>(.*?)<span", c).group(1)}' for m, lst in mur.items() for (c, _, _) in lst]))
+
+# =====================================================================
+# 2. THERMOPOMPES MULTIZONES ET AUTRES UNITÉS INTÉRIEURES
+# =====================================================================
+def zones(E):
+    z = sorted({int(m.group(1)) for x in E for m in [re.search(r'(\d) zones', x['type'])] if m}); return z
+E_mxz = [x for x in CAT if x['marque'] == 'Mitsubishi' and x['type'].startswith('Multizone — Série MXZ')]
+E_dai = [x for x in CAT if x['marque'] == 'Daikin' and x['type'].startswith('Mural multizone — Aurora')]
+E_car = by_type('Thermopompe murale multizone — Série Performance MG', marque='Carrier')
+zm, zd = zones(E_mxz), zones(E_dai)
+mz = {
+ 'Mitsubishi': [serie_card('Série MXZ', f'Multizone, {zm[0]} à {zm[-1]} zones', [], 'Mitsubishi', froid='-20 °C ou -30 °C', E=E_mxz, eff_key='MXZ', extra=[('Zones', f'{zm[0]} à {zm[-1]}')])],
+ 'Carrier': [serie_card('Série Performance MG', 'Multizone', [], 'Carrier', E=E_car, eff_key='MG')],
+ 'Daikin': [serie_card('Aurora multizone', f'Multizone, {zd[0]} à {zd[-1]} zones', [], 'Daikin', froid='-20 °C ou -25 °C', E=E_dai, eff_key='AUR', extra=[('Zones', f'{zd[0]} à {zd[-1]}')])],
+}
+corps_mz = ''.join(brand_block(m, r, [c for (c, _, _) in mz[m]]) for m, r in [('Mitsubishi', 'Série MXZ'), ('Carrier', 'Série Performance MG'), ('Daikin', 'Aurora multizone')])
+tbl = '''<table class="tableau-types reveal"><thead><tr><th>Type d’unité intérieure</th><th>Pour quoi faire</th><th>Séries offertes</th></tr></thead><tbody>
+<tr><th>Murale</th><td>La plus courante : fixée en haut du mur.</td><td>Mitsubishi (FX, GX, HX, JX), Carrier (Performance, Confort MH), Daikin (Aurora, Atmosphera, Entra, Oterra), Stelpro (Élite-B, Pro-B)</td></tr>
+<tr><th>Console au sol</th><td>Installée près du plancher, là où le haut du mur n’est pas disponible.</td><td>Mitsubishi (SUZ-AA, SUZ-CA), Carrier (Performance), Daikin (Aurora)</td></tr>
+<tr><th>Cassette</th><td>Encastrée dans le plafond, à une ou quatre directions de soufflage.</td><td>Mitsubishi (1 voie et 4 voies), Carrier (Performance), Stelpro (SICB1)</td></tr>
+<tr><th>Gainable</th><td>Cachée dans le plafond, avec de courtes conduites vers les pièces.</td><td>Stelpro (SFCB1)</td></tr>
+</tbody></table>'''
+qa_mz = [
+    ('Qu’est-ce qu’un système multizone?', f'Une seule unité extérieure relie plusieurs unités intérieures ({zm[0]} à {zm[-1]} selon la série). Chaque pièce ou zone se règle séparément.'),
+    ('Multizone ou plusieurs unités simple zone?', 'Les deux approches se valent selon la maison. Le multizone limite le nombre d’unités extérieures sur la façade; plusieurs unités simple zone donnent plus d’indépendance entre les zones. Nous comparons les deux pour votre plan.'),
+    ('Peut-on combiner une murale, une console et une cassette?', 'Souvent oui, selon la série et la capacité de l’unité extérieure. Nous validons la compatibilité avant de vous remettre la soumission.'),
+    ('Combien coûte un système multizone?', 'Le prix augmente avec le nombre de zones et le type d’unités. Nous ne publions pas de prix sans avoir évalué votre maison : la soumission est gratuite et détaillée.'),
+]
+body = (hero('Thermopompes multizones', 'Mitsubishi · Carrier · Daikin', 'Thermopompes <em>multizones</em> et unités intérieures au choix',
+             '<b>Une seule unité extérieure, plusieurs zones à régler séparément.</b> Murales, consoles, cassettes ou gainables : on choisit le bon type d’unité pour chaque pièce.',
+             [('Zones par système', f'{zm[0]} à {zm[-1]}'), ('Marques', '3'), ('Types d’unités', '4'), ('Froid supporté', f'jusqu’à -{max(int(num(x.get("froid"))) for x in E_mxz)}{NB}°C')],
+             'Gamme multizone de notre catalogue, relevé de novembre 2026.', 'Multizone en bref')
+        + section('Nos systèmes', 'Les séries multizones que nous installons', 'Une unité extérieure, plusieurs unités intérieures.', corps_mz + NOTE_VALIDER, cls='fond-beige')
+        + section('Choisir le bon type', 'Quelle unité intérieure pour chaque pièce?', 'Les types d’unités intérieures de notre catalogue.', tbl)
+        + faq('Multizone : vos questions', qa_mz)
+        + lies([('Thermopompes murales', 'Les séries simple zone, par marque.'), ('Installation de thermopompe', 'Déroulement, évaluation et soumission détaillée.'), ('Thermopompes centrales', 'Pour une maison avec conduits.')])
+        + FINAL)
+build('produits-thermopompes-multizones.html', 'Thermopompes multizones à Joliette | Bédard', 'Thermopompes multizones à Joliette : Mitsubishi, Carrier, Daikin. Murales, consoles, cassettes et gainables. Soumission gratuite.', 'https://cbedard.com/produits/chauffage/thermopompes-multizones/', body,
+      jsonld('https://cbedard.com/produits/chauffage/thermopompes-multizones/', 'Thermopompes multizones', 'Systèmes multizones et unités intérieures offerts par Bédard', 'Thermopompes multizones', qa_mz, ['Mitsubishi Série MXZ', 'Carrier Série Performance MG', 'Daikin Aurora multizone']))
+
+# =====================================================================
+# 3. CLIMATISEUR MURAL (refroidissement seulement)
+# =====================================================================
+cl = {
+ 'Mitsubishi': [serie_card('Série GX', 'Climatiseur mural simple zone', ['Climatiseur simple zone — Série GX'], 'Mitsubishi', froid='Refroidissement seul')],
+ 'Daikin': [serie_card('Oterra', 'Climatiseur mural simple zone', ['Climatiseur simple zone — Oterra'], 'Daikin', froid='Refroidissement seul')],
+}
+caps_cl = btu([x for m in cl.values() for (_, E, _) in m for x in E])
+corps_cl = ''.join(brand_block(m, r, [c for (c, _, _) in cl[m]]) for m, r in [('Mitsubishi', 'Série GX'), ('Daikin', 'Oterra')])
+comp = f'''<div class="deux-col">
+  <article class="bande reveal"><h3>Climatiseur mural seul</h3><p>Il rafraîchit et déshumidifie l’air, sans conduits. Il ne chauffe pas.</p><ul><li>Refroidissement seulement</li><li>Sans conduits</li><li>{btu_txt(caps_cl[:1])} à {btu_txt(caps_cl[-1:])}</li></ul></article>
+  <article class="bande fonce reveal d1"><h3>Thermopompe murale</h3><p>Elle climatise de la même façon et chauffe en plus, de l’automne au printemps. C’est ce que nous installons le plus souvent.</p><ul><li>Climatise et chauffe</li><li>Sans conduits</li><li>De -15 °C à -37 °C en chauffage</li></ul><p><a class="lien" href="#" style="color:var(--cyan);font-weight:700">Voir les thermopompes murales</a></p></article>
+</div>'''
+qa_cl = [
+    ('Un climatiseur mural chauffe-t-il?', 'Non. Un climatiseur seul rafraîchit seulement. Pratiquement tous les appareils muraux que nous installons sont des thermopompes, qui chauffent aussi.'),
+    ('Quand choisir un climatiseur seul plutôt qu’une thermopompe?', 'Quand on veut seulement rafraîchir et déshumidifier. Nous comparons les deux pour votre cas avant de recommander un modèle.'),
+    ('Combien coûte un climatiseur mural installé?', 'Le prix dépend de la puissance, de la série et de l’installation. Notre guide des prix explique ce qui le fait varier.'),
+]
+body = (hero('Climatiseur mural', 'Refroidissement seulement', 'Climatiseur mural à <em>Joliette</em>',
+             '<b>Un climatiseur mural rafraîchit et déshumidifie sans conduits. Il ne chauffe pas.</b> Pour la plupart des maisons, nous recommandons plutôt une thermopompe murale, qui climatise de la même façon et chauffe en plus.',
+             [('Séries offertes', str(sum(len(v) for v in cl.values()))), ('Marques', '2'), ('Capacités', f'{caps_cl[0]:,}'.replace(',', NB) + f'{NB}à{NB}' + f'{caps_cl[-1]:,}'.replace(',', NB) + f'{NB}BTU'), ('Chauffage', 'Non')],
+             'Climatiseurs seuls de notre catalogue, relevé de novembre 2026.', 'Notre gamme en bref')
+        + section('Bien choisir', 'Climatiseur seul ou thermopompe murale?', 'La différence tient au chauffage.', comp)
+        + section('Notre gamme', 'Les climatiseurs muraux que nous installons', 'Chaque série existe en plusieurs capacités.', corps_cl + NOTE_VALIDER, cls='fond-beige')
+        + faq('Climatiseur mural : vos questions', qa_cl)
+        + lies([('Thermopompes murales', 'Les séries qui chauffent et climatisent.'), ('Climatiseur mural ou thermopompe', 'Le guide pour comprendre la différence.'), ('Prix d’un climatiseur mural installé', 'Ce qui fait varier le prix.')])
+        + FINAL)
+build('produits-climatiseur-mural.html', 'Climatiseur mural à Joliette : modèles et choix | Bédard', 'Climatiseur mural (refroidissement seulement) à Joliette : séries Mitsubishi et Daikin. Comparez avec la thermopompe murale. Soumission gratuite.', 'https://cbedard.com/produits/climatisation-lanaudiere/climatiseur-mural/', body,
+      jsonld('https://cbedard.com/produits/climatisation-lanaudiere/climatiseur-mural/', 'Climatiseur mural', 'Climatiseurs muraux (refroidissement seulement) offerts par Bédard', 'Climatiseur mural', qa_cl, ['Mitsubishi Série GX', 'Daikin Oterra']))
+
+# =====================================================================
+# 4. THERMOPOMPES CENTRALES
+# =====================================================================
+ce = {
+ 'Carrier': [serie_card('Crossover Performance', 'Thermopompe centrale', ['Thermopompe centrale — Crossover Performance'], 'Carrier')],
+ 'Daikin': [serie_card('Daikin Fit DH7', 'Thermopompe centrale', ['Thermopompe centrale — Daikin Fit DH7'], 'Daikin'), serie_card('Daikin Fit DH9', 'Thermopompe centrale', ['Thermopompe centrale — Daikin Fit DH9'], 'Daikin')],
+ 'Mitsubishi': [serie_card('SVZ-AP / SUZ-AK', 'Thermopompe centrale', ['Thermopompe centrale — SVZ-AP / SUZ-AK (-30°C)'], 'Mitsubishi'), serie_card('ZUBA Central', 'PVA-AA / PUZ-AK', ['ZUBA Central — PVA-AA / PUZ-AK (-30°C)'], 'Mitsubishi')],
+}
+all_ce = [x for m in ce.values() for (_, E, _) in m for x in E]
+caps_ce = btu(all_ce)
+corps_ce = ''.join(brand_block(m, r, [c for (c, _, _) in ce[m]]) for m, r in [('Carrier', 'Une série'), ('Daikin', 'Deux séries'), ('Mitsubishi', 'Deux séries, jusqu’à -30 °C')])
+def kw(entries):
+    v = [int(num(x['cap'])) for x in entries if x.get('cap') and 'KW' in x['cap'].upper()]; return (min(v), max(v)) if v else None
+el = [x for x in CAT if x['type'].startswith('Élément électrique')]
+kmin, kmax = kw(el)
+acc = f'''<div class="acc-grille">
+  <article class="acc reveal"><h4>Cabinets souffleurs</h4><p>Le ventilateur intérieur raccordé aux conduits.</p><ul><li>Carrier Crossover Performance</li><li>Daikin Fit (2 positions et multi-positions)</li><li>Mitsubishi PVA-AA et SVZ-AP</li><li>Stelpro Slim-B (SAHB1)</li></ul></article>
+  <article class="acc reveal d1"><h4>Serpentins</h4><p>L’échangeur de chaleur installé avec le cabinet.</p><ul><li>Carrier Crossover Performance</li><li>Daikin Fit (A-coil et horizontal)</li></ul></article>
+  <article class="acc reveal d2"><h4>Éléments électriques</h4><p>Une résistance électrique prend le relais par grand froid : de {kmin} à {kmax}{NB}kW selon le modèle.</p><ul><li>Carrier (EHKMC)</li><li>Stelpro (EAH)</li><li>Thermolec (pour Mitsubishi SVZ-AP et PVA-AA)</li></ul><p><a class="lien" href="#" style="color:var(--bleu);font-weight:700">Voir le chauffage d’appoint</a></p></article>
+  <article class="acc reveal d3"><h4>Thermostats</h4><p>Pour régler et programmer le système.</p><ul><li>Carrier Côr (Wi-Fi)</li><li>Daikin One+ et One Touch</li><li>Sinopé TH6500WF</li><li>Mitsubishi PAR-42MAA (filaire)</li></ul></article>
+</div>'''
+qa_ce = [
+    ('Thermopompe centrale ou thermopompe murale?', 'La centrale utilise les conduits de la maison pour desservir tous les espaces; la murale chauffe et climatise une zone sans conduits. Le bon choix dépend de la maison : nous évaluons chez vous.'),
+    ('Faut-il changer mes conduits?', 'Pas nécessairement. Nous vérifions l’état et la capacité des conduits existants avant de recommander un système.'),
+    ('Peut-on la combiner avec une fournaise ou un élément électrique?', 'Oui, selon la configuration. Un élément électrique dans le cabinet, ou un chauffage d’appoint, prend le relais par grand froid. Nous évaluons la meilleure combinaison pour votre maison.'),
+    ('Quelle marque choisir?', 'Carrier, Daikin et Mitsubishi sont offertes. Le choix dépend de la maison, du froid à affronter, du budget et de la garantie; nous le faisons avec vous après l’évaluation.'),
+]
+body = (hero('Thermopompes centrales', 'Carrier · Daikin · Mitsubishi', 'Thermopompes centrales à <em>Joliette</em>',
+             '<b>Une thermopompe qui utilise les conduits de votre maison.</b> Elle climatise l’été et chauffe le reste de l’année, pour toutes les pièces avec un seul système.',
+             [('Séries offertes', str(sum(len(v) for v in ce.values()))), ('Marques', '3'), ('Capacités', f'{caps_ce[0]:,}'.replace(',', NB) + f'{NB}à{NB}' + f'{caps_ce[-1]:,}'.replace(',', NB) + f'{NB}BTU'), ('Froid supporté', f'jusqu’à -30{NB}°C')],
+             'Gamme centrale de notre catalogue, relevé de novembre 2026.', 'Notre gamme en bref')
+        + section('Notre gamme', 'Les thermopompes centrales que nous installons', 'Chaque série existe en plusieurs capacités.', corps_ce + NOTE_VALIDER, cls='fond-beige')
+        + section('Accessoires', 'Ce qui complète une thermopompe centrale', 'Cabinets, serpentins, éléments électriques et thermostats de notre catalogue.', acc)
+        + faq('Thermopompes centrales : vos questions', qa_ce)
+        + lies([('Chauffage d’appoint', 'Le relais de votre thermopompe quand il fait très froid.'), ('Thermopompes murales', 'Pour chauffer et climatiser sans conduits.'), ('Installation de thermopompe', 'Déroulement, évaluation et soumission détaillée.')])
+        + FINAL)
+build('produits-thermopompes-centrales.html', 'Thermopompes centrales à Joliette : Carrier, Daikin | Bédard', 'Thermopompes centrales à Joliette : Carrier, Daikin et Mitsubishi, avec cabinets, éléments électriques et thermostats. Soumission gratuite.', 'https://cbedard.com/produits/chauffage/thermopompes-centrales/', body,
+      jsonld('https://cbedard.com/produits/chauffage/thermopompes-centrales/', 'Thermopompes centrales', 'Thermopompes centrales offertes par Bédard', 'Thermopompes centrales', qa_ce, ['Carrier Crossover Performance', 'Daikin Fit DH7', 'Daikin Fit DH9', 'Mitsubishi SVZ-AP / SUZ-AK', 'Mitsubishi ZUBA Central']))
+
+# =====================================================================
+# 5. ÉCHANGEURS D'AIR (Aldes)
+# =====================================================================
+ald = [x for x in CAT if x['marque'] == 'Aldes' and x['type'].startswith('Échangeur')]
+ctl = [x for x in CAT if x['marque'] == 'Aldes' and not x['type'].startswith('Échangeur')]
+rows = ''.join(f'<tr><th>{x["modele"]}</th><td>{"VRC" if "VRC" in x["type"] else "VRE"}</td><td>{x["cap"].replace(" PCM", NB + "pi³/min")}</td><td>{x["seer"].replace(" SRE", NB + "%").replace(" %", NB + "%") if False else x["seer"].replace(" % SRE", NB + "%")}</td></tr>' for x in ald)
+tab_al = f'<table class="tableau-types reveal"><thead><tr><th>Modèle Aldes</th><th>Type</th><th>Débit</th><th>Efficacité de récupération (SRE)</th></tr></thead><tbody>{rows}</tbody></table>'
+vv = f'''<div class="deux-col">
+  <article class="bande reveal"><h3>VRC : récupérateur de chaleur</h3><p>Il récupère la chaleur de l’air extrait pour préchauffer l’air neuf qui entre. Il évacue aussi l’humidité de la maison.</p></article>
+  <article class="bande fonce reveal d1"><h3>VRE : récupérateur d’énergie</h3><p>Il récupère la chaleur et une partie de l’humidité. Utile quand l’air intérieur devient trop sec l’hiver.</p></article>
+</div>'''
+ctls = ''.join(f'<article class="acc reveal d{i}"><h4>{n}</h4><p>{esc(x["desc"])}</p></article>' for i, (n, x) in enumerate(zip(['Contrôle mural multifonction', 'Hygromètre-thermostat LCD', 'Minuterie de salle de bain'], ctl)))
+acc_al = f'<div class="acc-grille acc-3">{ctls}</div>'
+qa_al = [
+    ('VRC ou VRE : lequel choisir?', 'Le VRC récupère la chaleur; le VRE récupère la chaleur et une partie de l’humidité. Nous recommandons selon l’humidité de la maison, le nombre d’occupants et le système de chauffage.'),
+    ('Quelle capacité (pi³/min) me faut-il?', f'Nos modèles vont de {min(int(num(x["cap"])) for x in ald)} à {max(int(num(x["cap"])) for x in ald)}{NB}pi³/min. La bonne capacité dépend de la superficie, du nombre de pièces et de chambres : nous la calculons chez vous.'),
+    ('Les échangeurs Aldes sont-ils homologués Energy Star?', 'Notre catalogue les indique comme homologués Energy Star. <em>[À valider contre les fiches des modèles]</em>'),
+    ('Comment entretenir un échangeur d’air?', 'Les filtres se nettoient ou se remplacent régulièrement, et le noyau s’entretient une à deux fois par an. Nous offrons l’entretien et vendons des filtres Aldes dans notre boutique. <em>[Fréquence à valider]</em>'),
+]
+body = (hero('Échangeurs d’air', 'Aldes · VRC et VRE', 'Échangeurs d’air à <em>Joliette</em>',
+             '<b>Un air neuf et sain dans toute la maison, sans perdre la chaleur.</b> Nous installons les échangeurs d’air Aldes, avec récupération de chaleur (VRC) ou d’énergie (VRE).',
+             [('Modèles Aldes', str(len(ald))), ('Débits', f'{min(int(num(x["cap"])) for x in ald)} à {max(int(num(x["cap"])) for x in ald)}{NB}pi³/min'), ('Récupération', f'jusqu’à {max(int(num(x["seer"])) for x in ald)}{NB}%'), ('Contrôles', str(len(ctl)))],
+             'Gamme Aldes de notre catalogue, relevé de novembre 2026.', 'Notre gamme en bref')
+        + section('Bien choisir', 'VRC ou VRE?', 'Deux types d’échangeurs d’air.', vv)
+        + section('Notre gamme', 'Les échangeurs d’air Aldes', 'Débit et efficacité de récupération selon le modèle.', tab_al + NOTE_VALIDER, cls='fond-beige')
+        + section('Contrôles', 'Les commandes qui vont avec', 'Pour régler et automatiser la ventilation.', acc_al)
+        + faq('Échangeurs d’air : vos questions', qa_al)
+        + lies([('Filtres Aldes', 'Nos filtres de remplacement et haute efficacité.'), ('Entretien et nettoyage', 'Un entretien périodique personnalisé.'), ('Quel est le meilleur système de ventilation résidentiel?', 'Le guide pour comprendre et choisir.')])
+        + FINAL)
+build('produits-echangeurs-air.html', 'Échangeurs d’air à Joliette : VRC et VRE Aldes | Bédard', 'Échangeurs d’air Aldes à Joliette : VRC et VRE, débits de 88 à 218 pi³/min, contrôles. Installation et entretien. Soumission gratuite.', 'https://cbedard.com/produits/qualite-de-lair/echangeurs-dair/', body,
+      jsonld('https://cbedard.com/produits/qualite-de-lair/echangeurs-dair/', 'Échangeurs d’air', 'Échangeurs d’air Aldes offerts par Bédard', 'Échangeurs d’air', qa_al, [x['modele'] for x in ald]))

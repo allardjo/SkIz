@@ -22,6 +22,7 @@ Données Search Console (16 mois, 392 000 impressions, 1 945 clics) :
 - `/services/reparation-thermopompe-climatiseur-joliette/`
 - `/services/entretien-nettoyage-thermopompe-climatiseur-joliette/`
 - `/residentiel/chauffage-auxiliaire-joliette/`
+- `/produits/chauffage/thermopompes-multizones/` (nouvelle page produit)
 - `/commercial/`, `/commercial/ventilation-commerciale-joliette/`, `/commercial/refrigeration-commerciale/`, `/commercial/ferblanterie/`
 
 À faire pour chacune : title et description uniques, balisage, présence dans le sitemap, au moins 3 liens internes entrants (accueil, menu, pages liées).
