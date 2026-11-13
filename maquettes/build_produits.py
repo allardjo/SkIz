@@ -103,6 +103,7 @@ FINAL = f'''<div class="final"><div class="wrap">
 </main>
 '''
 NOTE_VALIDER = '<p class="note-valider reveal">Capacités, températures d’utilisation et garanties tirées de notre catalogue; cotes d’efficacité maximales publiées par les fabricants, selon le modèle. Les fiches techniques font foi. <em>[À valider contre les fiches avant publication]</em></p>'
+NOTE_ALDES = '<p class="note-valider reveal">Débits et efficacités de récupération tirés de notre catalogue; les fiches techniques des modèles font foi. <em>[À valider contre les fiches avant publication]</em></p>'
 def brand_block(marque, resume, cartes):
     return f'<div class="marque-bloc"><div class="marque-titre"><h3>{marque}</h3><span>{resume}</span></div><div class="series">{"".join(cartes)}</div></div>'
 def jsonld(url, nom, desc, fil_nom, qa, series_noms):
@@ -350,7 +351,7 @@ body = (hero('Échangeurs d’air', 'Aldes · VRC et VRE', 'Échangeurs d’air 
              [('Modèles Aldes', str(len(ald))), ('Débits', f'{min(int(num(x["cap"])) for x in ald)} à {max(int(num(x["cap"])) for x in ald)}{NB}pi³/min'), ('Récupération', f'jusqu’à {max(int(num(x["seer"])) for x in ald)}{NB}%'), ('Contrôles', str(len(ctl)))],
              'Gamme Aldes de notre catalogue, relevé de novembre 2026.', 'Notre gamme en bref')
         + section('Bien choisir', 'VRC ou VRE?', 'Deux types d’échangeurs d’air.', vv)
-        + section('Notre gamme', 'Les échangeurs d’air Aldes', 'Débit et efficacité de récupération selon le modèle.', tab_al + NOTE_VALIDER, cls='fond-beige')
+        + section('Notre gamme', 'Les échangeurs d’air Aldes', 'Débit et efficacité de récupération selon le modèle.', tab_al + NOTE_ALDES, cls='fond-beige')
         + section('Contrôles', 'Les commandes qui vont avec', 'Pour régler et automatiser la ventilation.', acc_al)
         + faq('Échangeurs d’air : vos questions', qa_al)
         + lies([('Filtres Aldes', 'Nos filtres de remplacement et haute efficacité.'), ('Entretien et nettoyage', 'Un entretien périodique personnalisé.'), ('Quel est le meilleur système de ventilation résidentiel?', 'Le guide pour comprendre et choisir.')])
