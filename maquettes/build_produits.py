@@ -43,6 +43,22 @@ def efficacite(entries, marque, type0):
     return ' · '.join(p) if p else 'Voir la fiche technique'
 
 
+import os
+from PIL import Image as _Im
+_PH = json.load(open('/home/user/SkIz/data/photos-fabricants.json', encoding='utf-8')) if os.path.exists('/home/user/SkIz/data/photos-fabricants.json') else {}
+def photo_uri(entry_ids):
+    for i in entry_ids:
+        h = _PH.get(i)
+        f = f'{ROOT}img/produits/{h}.webp' if h else None
+        if f and os.path.exists(f):
+            w, hh = _Im.open(f).size
+            return 'data:image/webp;base64,' + base64.b64encode(open(f, 'rb').read()).decode(), w, hh
+    return None
+def img_produit(entry_ids, alt, cls='serie-photo'):
+    p = photo_uri(entry_ids)
+    if not p: return ''
+    return f'<div class="{cls}"><img src="{p[0]}" alt="{esc(alt)}" width="{p[1]}" height="{p[2]}" loading="lazy" decoding="async"></div>'
+
 def capn(x): 
     v = num((x.get('cap') or '').replace(' ', '')); return int(v) if v else 0
 def modeles_html(E, colonnes=None, marque=None, titre_ext='Unité extérieure'):
@@ -75,7 +91,12 @@ def serie_card(nom, sous_titre, types, marque, froid=None, extra=None, E=None, e
     badge = f'<span class="badge-froid">{froid}</span>' if froid else ''
     dl = ''.join(f'<div><dt>{k}</dt><dd>{v}</dd></div>' for k, v in rows)
     mod = modeles_html(E, colonnes, marque) if modeles else ''
-    return f'<article class="serie reveal"><header><h4>{nom}<span class="type">{sous_titre}</span></h4>{badge}</header><dl>{dl}</dl>{mod}{lien}</article>', E, froid
+    ids = []
+    if colonnes and colonnes[0][0] == 'Unité intérieure':
+        ids += [y['id'] for y in CAT if y['type'] in colonnes[0][1] and y['marque'] == marque]
+    ids += [x['id'] for x in E]
+    photo = img_produit(ids, f'{marque} {re.sub(chr(160), " ", nom)}, {re.sub(chr(160), " ", sous_titre).lower()}')
+    return f'<article class="serie reveal">{photo}<header><h4>{nom}<span class="type">{sous_titre}</span></h4>{badge}</header><dl>{dl}</dl>{mod}{lien}</article>', E, froid
 
 # ---------- gabarit de page ----------
 def hero(fil, pastille, h1, lead, facts, note_facts, titre_carte):
@@ -369,13 +390,13 @@ build('produits-thermopompes-centrales.html', 'Thermopompes centrales à Joliett
 # =====================================================================
 ald = [x for x in CAT if x['marque'] == 'Aldes' and x['type'].startswith('Échangeur')]
 ctl = [x for x in CAT if x['marque'] == 'Aldes' and not x['type'].startswith('Échangeur')]
-rows = ''.join(f'<tr><th>{x["modele"]}</th><td>{"VRC" if "VRC" in x["type"] else "VRE"}</td><td>{x["cap"].replace(" PCM", NB + "pi³/min")}</td><td>{x["seer"].replace(" SRE", NB + "%").replace(" %", NB + "%") if False else x["seer"].replace(" % SRE", NB + "%")}</td></tr>' for x in ald)
+rows = ''.join(f'<tr><th>{img_produit([x["id"]], "Échangeur d\u2019air Aldes " + x["modele"], "mini-photo")}{x["modele"]}</th><td>{"VRC" if "VRC" in x["type"] else "VRE"}</td><td>{x["cap"].replace(" PCM", NB + "pi³/min")}</td><td>{x["seer"].replace(" SRE", NB + "%").replace(" %", NB + "%") if False else x["seer"].replace(" % SRE", NB + "%")}</td></tr>' for x in ald)
 tab_al = f'<table class="tableau-types reveal"><thead><tr><th>Modèle Aldes</th><th>Type</th><th>Débit</th><th>Efficacité de récupération (SRE)</th></tr></thead><tbody>{rows}</tbody></table>'
 vv = f'''<div class="deux-col">
   <article class="bande reveal"><h3>VRC : récupérateur de chaleur</h3><p>Il récupère la chaleur de l’air extrait pour préchauffer l’air neuf qui entre. Il évacue aussi l’humidité de la maison.</p></article>
   <article class="bande fonce reveal d1"><h3>VRE : récupérateur d’énergie</h3><p>Il récupère la chaleur et une partie de l’humidité. Utile quand l’air intérieur devient trop sec l’hiver.</p></article>
 </div>'''
-ctls = ''.join(f'<article class="acc reveal d{i}"><h4>{n}</h4><p>{esc(x["desc"])}</p></article>' for i, (n, x) in enumerate(zip(['Contrôle mural multifonction', 'Hygromètre-thermostat LCD', 'Minuterie de salle de bain'], ctl)))
+ctls = ''.join(f'<article class="acc reveal d{i}">{img_produit([x["id"]], n + " Aldes", "serie-photo petite")}<h4>{n}</h4><p>{esc(x["desc"])}</p></article>' for i, (n, x) in enumerate(zip(['Contrôle mural multifonction', 'Hygromètre-thermostat LCD', 'Minuterie de salle de bain'], ctl)))
 acc_al = f'<div class="acc-grille acc-3">{ctls}</div>'
 qa_al = [
     ('VRC ou VRE : lequel choisir?', 'Le VRC récupère la chaleur; le VRE récupère la chaleur et une partie de l’humidité. Nous recommandons selon l’humidité de la maison, le nombre d’occupants et le système de chauffage.'),

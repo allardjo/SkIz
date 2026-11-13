@@ -9,3 +9,8 @@ fonts/
 
 # livrables générés (zip du site hors ligne)
 dist/
+
+# Photos des fabricants et pages qui les intègrent : usage local seulement (dépôt public, droits à confirmer)
+maquettes/img/produits/
+data/photos-fabricants.json
+maquettes/produits-*.html

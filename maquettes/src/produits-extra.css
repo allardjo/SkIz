@@ -87,3 +87,10 @@ details.modeles{border:0;padding:0}
 .modeles-large .tab-mod{font-size:.9rem}
 .modeles-large .tab-mod tbody th{color:var(--marine)}
 @media (max-width:720px){.tab-mod{display:block;overflow-x:auto}}
+
+/* photos de produits (fabricants) */
+.serie-photo{height:10rem;display:grid;place-items:center;background:linear-gradient(180deg,#dde8ec,#c5d6dc);border-radius:1.1rem;padding:.9rem;margin:-.2rem 0 .2rem}
+.serie-photo img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 .5rem .7rem rgba(0,40,60,.15))}
+.serie-photo.petite{height:7.5rem}
+.tableau-types th .mini-photo{display:inline-grid;place-items:center;width:3.6rem;height:3.6rem;margin-right:.9rem;vertical-align:middle;background:#fff;border-radius:.7rem}
+.tableau-types th .mini-photo img{max-width:3.2rem;max-height:3.2rem;object-fit:contain}
