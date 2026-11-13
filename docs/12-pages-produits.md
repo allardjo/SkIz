@@ -43,3 +43,10 @@ Fournaises électriques, humidificateurs et déshumidificateurs, purificateurs, 
 
 ## Migration
 L'adresse `/produits/chauffage/thermopompes-multizones/` est nouvelle : l'ajouter au sitemap et à la liste des nouvelles pages de `09-plan-migration-lancement.md` (section 2B). Les autres adresses sont celles du site actuel (section 2A) : même URL, contenu remplacé.
+
+## Couverture du catalogue (relevé du 2026-11-14)
+Sur 288 entrées du portail : **122** sont décrites par une carte de série ou un tableau (unités extérieures, échangeurs d'air et contrôles Aldes); **60** accessoires (cabinets souffleurs, serpentins, éléments électriques, thermostats) sont cités dans les listes de la page des thermopompes centrales; **106** entrées n'étaient pas représentées individuellement (unités intérieures murales, consoles, cassettes, gainables, et séries R-410A exclues).
+
+**Ajout (choix du client : « liste des modèles dans chaque série »)** : chaque carte de série a maintenant un bouton repliable « Voir les modèles (N) » : numéro de l'unité extérieure, capacité en BTU et unité intérieure associée de même capacité (murales Mitsubishi et Carrier; cabinets souffleurs et serpentins pour les centrales). La page des multizones a une liste repliable des consoles, cassettes et gainables (Mitsubishi, Carrier, Daikin, Stelpro). Les modèles Daikin n'ont pas d'unité intérieure distincte dans le catalogue; les séries R-410A restent exclues (à confirmer).
+
+**Hub Résidentiel** : le groupe « Air et ventilation » devient « Qualité de l'air » avec deux cartes séparées : « Échangeur d'air » (page produit) et « Purificateur d'air » (page à venir, URL actuelle `/produits/qualite-de-lair/purificateurs-dair/`). Les humidificateurs et déshumidificateurs (URL actuelle `/produits/qualite-de-lair/humidificateurs-deshumidificateurs/`, 27 clics) ne sont plus dans le hub : à décider (carte ou page).

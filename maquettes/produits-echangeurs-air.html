@@ -620,6 +620,23 @@ header.site.solid .burger{background:rgba(255,255,255,.14);color:#fff}
   .carte-chiffres li{flex-wrap:wrap}
   .carte-chiffres li b{white-space:normal;font-size:1.4rem}
 }
+
+/* liste repliable des modèles */
+.series{align-items:start}
+.modeles{margin-top:.2rem}
+.modeles summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.5rem;color:var(--bleu);font-weight:700;font-size:.92rem;padding:.2rem 0}
+.modeles summary::-webkit-details-marker{display:none}
+.modeles summary::after{content:"+";font-size:1.2rem;line-height:1;width:auto;height:auto;background:none;border-radius:0;color:var(--bleu);font-weight:600;display:inline;flex:none}
+.modeles[open] summary::after{content:"–";background:none;color:var(--bleu)}
+details.modeles{border:0;padding:0}
+.tab-mod{width:100%;border-collapse:collapse;margin-top:.7rem;font-size:.82rem}
+.tab-mod th,.tab-mod td{padding:.45rem .5rem;text-align:left;border-bottom:1px solid #e6eef0;vertical-align:top}
+.tab-mod thead th{color:var(--doux);font-weight:600;font-size:.76rem;text-transform:uppercase;letter-spacing:.04em}
+.tab-mod td:first-child{white-space:nowrap}
+.modeles-large{margin-top:1.4rem;background:#fff;border:1px solid #dbe6ea;border-radius:1.4rem;padding:1.2rem 1.4rem}
+.modeles-large .tab-mod{font-size:.9rem}
+.modeles-large .tab-mod tbody th{color:var(--marine)}
+@media (max-width:720px){.tab-mod{display:block;overflow-x:auto}}
 </style>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "@id": "https://cbedard.com/produits/qualite-de-lair/echangeurs-dair/#page", "url": "https://cbedard.com/produits/qualite-de-lair/echangeurs-dair/", "name": "Échangeurs d’air", "description": "Échangeurs d’air Aldes offerts par Bédard", "inLanguage": "fr-CA", "about": {"@id": "https://cbedard.com/#entreprise"}}, {"@type": "ItemList", "name": "Échangeurs d’air", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "H95-TRG"}, {"@type": "ListItem", "position": 2, "name": "H120-TQG"}, {"@type": "ListItem", "position": 3, "name": "H150-TQG"}, {"@type": "ListItem", "position": 4, "name": "H190-TQG"}, {"@type": "ListItem", "position": 5, "name": "EK80"}, {"@type": "ListItem", "position": 6, "name": "EK125-TQG"}, {"@type": "ListItem", "position": 7, "name": "EK150-TQG"}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://cbedard.com/"}, {"@type": "ListItem", "position": 2, "name": "Résidentiel", "item": "https://cbedard.com/residentiel/"}, {"@type": "ListItem", "position": 3, "name": "Échangeurs d’air"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "VRC ou VRE : lequel choisir?", "acceptedAnswer": {"@type": "Answer", "text": "Le VRC récupère la chaleur; le VRE récupère la chaleur et une partie de l’humidité. Nous recommandons selon l’humidité de la maison, le nombre d’occupants et le système de chauffage."}}, {"@type": "Question", "name": "Quelle capacité (pi³/min) me faut-il?", "acceptedAnswer": {"@type": "Answer", "text": "Nos modèles vont de 88 à 218 pi³/min. La bonne capacité dépend de la superficie, du nombre de pièces et de chambres : nous la calculons chez vous."}}, {"@type": "Question", "name": "Les échangeurs Aldes sont-ils homologués Energy Star?", "acceptedAnswer": {"@type": "Answer", "text": "Notre catalogue les indique comme homologués Energy Star. [À valider contre les fiches des modèles]"}}, {"@type": "Question", "name": "Comment entretenir un échangeur d’air?", "acceptedAnswer": {"@type": "Answer", "text": "Les filtres se nettoient ou se remplacent régulièrement, et le noyau s’entretient une à deux fois par an. Nous offrons l’entretien et vendons des filtres Aldes dans notre boutique. [Fréquence à valider]"}}]}]}

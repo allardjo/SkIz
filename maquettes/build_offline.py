@@ -46,7 +46,8 @@ HUBS = {
     ('fournaises-electriques.html', 'Fournaises électriques', 'Votre système principal de chauffage : vente, remplacement et installation.'),
     ('chauffage-auxiliaire-joliette.html', "Chauffage d'appoint", 'Le relais de votre thermopompe quand il fait très froid.'),
     ('planchers-radiants.html', 'Planchers radiants', 'Une chaleur douce et uniforme.'),
-    ('echangeurs-d-air.html', "Qualité de l'air", "Échangeurs d'air, humidificateurs, purificateurs.")]),
+    ('echangeurs-d-air.html', "Échangeur d'air", "Un air neuf et sain, sans perdre la chaleur : VRC et VRE."),
+    ('purificateurs-d-air.html', "Purificateur d'air", "Réduire les particules et les odeurs dans l'air de la maison.")]),
  'services.html': ('Services', "Des services complets d'installation et d'entretien.", 'Réparation, entretien, installation et chauffage : pour la maison comme pour le commerce.',
    [('reparation-thermopompe-climatiseur-joliette.html', 'Réparation et dépannage', 'Thermopompe, climatiseur. Urgence 24 h.'),
     ('entretien-nettoyage-thermopompe-climatiseur-joliette.html', 'Entretien et nettoyage', 'Un entretien périodique personnalisé.'),
@@ -65,6 +66,7 @@ STUBS = {
  'climatiseurs-centraux.html': ('Climatiseurs centraux', 'Page produit : climatiser toute la maison par les conduits.'),
  'geothermie.html': ('Géothermie', 'Page produit : conception et installation de systèmes géothermiques (URL actuelle /produits/geothermie/, à garder).'),
  'planchers-radiants.html': ('Planchers radiants', 'Page produit : planchers chauffants (URL actuelle /produits/planchers-radiants/, à garder; 21 000 impressions).'),
+ 'purificateurs-d-air.html': ("Purificateurs d'air", "Page produit à venir : purificateurs d'air (URL actuelle /produits/qualite-de-lair/purificateurs-dair/, à garder)."),
  'qualite-de-l-air.html': ("Qualité de l'air", "Échangeurs d'air, humidificateurs, déshumidificateurs et purificateurs."),
  'guide-remplacer-thermopompe.html': ('Remplacer sa thermopompe : à quel prix?', 'Guide de prix à rafraîchir (article de 2023).'),
  'guide-humidificateur.html': ('Quel est le meilleur humidificateur?', 'Guide à rafraîchir (système de ventilation résidentiel : 5 378 impressions).'),
@@ -137,7 +139,7 @@ FINAL = f'''<div class="final"><div class="wrap">
 </div></div>
 </main>
 '''
-HUB_GROUPES = {'residentiel.html': [('Climatiser et chauffer', 3), ('Chauffage', 3), ('Air et ventilation', 1)]}
+HUB_GROUPES = {'residentiel.html': [('Climatiser et chauffer', 3), ('Chauffage', 3), ("Qualité de l'air", 2)]}
 def grouped(name, items):
     if name not in HUB_GROUPES: return cards(items)
     out, i = '', 0
@@ -200,6 +202,7 @@ RULES = [
  (r'climatiseurs? muraux? seuls?|refroidissement seulement|climatiseur mural a refroidissement', 'climatiseur-mural-seul.html'),
  (r'^filtres aldes|filtres de remplacement', 'boutique.html'),
  (r"^echangeurs? d'air|voir les echangeurs", 'echangeurs-d-air.html'),
+ (r"^purificateurs? d'air", 'purificateurs-d-air.html'),
  (r"prix d'?(un|une) (climatiseur|thermopompe)|a quel prix|guide des prix", 'prix-climatiseur-mural.html'),
  (r'systeme de ventilation residentiel', 'guide-humidificateur.html'),
  (r"chauffage d'appoint", 'chauffage-auxiliaire-joliette.html'),

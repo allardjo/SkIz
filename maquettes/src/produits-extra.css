@@ -70,3 +70,20 @@
   .carte-chiffres li{flex-wrap:wrap}
   .carte-chiffres li b{white-space:normal;font-size:1.4rem}
 }
+
+/* liste repliable des modèles */
+.series{align-items:start}
+.modeles{margin-top:.2rem}
+.modeles summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.5rem;color:var(--bleu);font-weight:700;font-size:.92rem;padding:.2rem 0}
+.modeles summary::-webkit-details-marker{display:none}
+.modeles summary::after{content:"+";font-size:1.2rem;line-height:1;width:auto;height:auto;background:none;border-radius:0;color:var(--bleu);font-weight:600;display:inline;flex:none}
+.modeles[open] summary::after{content:"–";background:none;color:var(--bleu)}
+details.modeles{border:0;padding:0}
+.tab-mod{width:100%;border-collapse:collapse;margin-top:.7rem;font-size:.82rem}
+.tab-mod th,.tab-mod td{padding:.45rem .5rem;text-align:left;border-bottom:1px solid #e6eef0;vertical-align:top}
+.tab-mod thead th{color:var(--doux);font-weight:600;font-size:.76rem;text-transform:uppercase;letter-spacing:.04em}
+.tab-mod td:first-child{white-space:nowrap}
+.modeles-large{margin-top:1.4rem;background:#fff;border:1px solid #dbe6ea;border-radius:1.4rem;padding:1.2rem 1.4rem}
+.modeles-large .tab-mod{font-size:.9rem}
+.modeles-large .tab-mod tbody th{color:var(--marine)}
+@media (max-width:720px){.tab-mod{display:block;overflow-x:auto}}

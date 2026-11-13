@@ -42,7 +42,24 @@ def efficacite(entries, marque, type0):
     if any(h): p.append(f'HSPF2{NB}jusqu’à{NB}{fr(max(v for v in h if v))}')
     return ' · '.join(p) if p else 'Voir la fiche technique'
 
-def serie_card(nom, sous_titre, types, marque, froid=None, extra=None, E=None, eff_key=None):
+
+def capn(x): 
+    v = num((x.get('cap') or '').replace(' ', '')); return int(v) if v else 0
+def modeles_html(E, colonnes=None, marque=None, titre_ext='Unité extérieure'):
+    """Tableau repliable des modèles du catalogue : une ligne par unité extérieure, avec les unités intérieures de même capacité."""
+    colonnes = colonnes or []
+    ent = ''.join(f'<th>{c}</th>' for c, _ in colonnes)
+    rows = ''
+    for x in sorted(E, key=lambda y: (capn(y), y['modele'])):
+        cells = ''
+        for c, types in colonnes:
+            m = [y['modele'] for y in CAT if y['type'] in types and (marque is None or y['marque'] == marque) and capn(y) == capn(x) and capn(x)]
+            cells += f'<td>{", ".join(m) if m else "—"}</td>'
+        cap = f'{capn(x):,}'.replace(',', NB) if capn(x) else '—'
+        rows += f'<tr><td>{cap}</td><td>{esc(x["modele"])}</td>{cells}</tr>'
+    return (f'<details class="modeles"><summary>Voir les modèles ({len(E)})</summary><table class="tab-mod"><thead><tr><th>BTU</th><th>{titre_ext}</th>{ent}</tr></thead><tbody>{rows}</tbody></table></details>')
+
+def serie_card(nom, sous_titre, types, marque, froid=None, extra=None, E=None, eff_key=None, colonnes=None, modeles=True):
     E = E if E is not None else by_type(*types, marque=marque)
     assert E, (marque, types)
     froid = froid or common([x.get('froid') for x in E if x.get('froid') and x['froid'] not in ('—', 'n.d.')])
@@ -57,7 +74,8 @@ def serie_card(nom, sous_titre, types, marque, froid=None, extra=None, E=None, e
     lien = f'<a class="lien-fiche" href="{esc(f)}" target="_blank" rel="noopener">Fiche technique du fabricant (PDF) {ARROW_I}</a>' if f else ''
     badge = f'<span class="badge-froid">{froid}</span>' if froid else ''
     dl = ''.join(f'<div><dt>{k}</dt><dd>{v}</dd></div>' for k, v in rows)
-    return f'<article class="serie reveal"><header><h4>{nom}<span class="type">{sous_titre}</span></h4>{badge}</header><dl>{dl}</dl>{lien}</article>', E, froid
+    mod = modeles_html(E, colonnes, marque) if modeles else ''
+    return f'<article class="serie reveal"><header><h4>{nom}<span class="type">{sous_titre}</span></h4>{badge}</header><dl>{dl}</dl>{mod}{lien}</article>', E, froid
 
 # ---------- gabarit de page ----------
 def hero(fil, pastille, h1, lead, facts, note_facts, titre_carte):
@@ -157,15 +175,15 @@ def build(out, title, desc, canon, body, ld):
 M = lambda *a, **k: serie_card(*a, **k)
 mur = {}
 mur['Mitsubishi'] = [
-    M('Série FX', 'Thermopompe murale simple zone', ['Thermopompe simple zone — Série FX (-37°C)'], 'Mitsubishi'),
-    M('Série GX', 'Grand froid, -37 °C', ['Thermopompe simple zone — Série GX (-37°C)'], 'Mitsubishi'),
-    M('Série GX', 'Climat québécois, -25 °C', ['Thermopompe simple zone — Série GX (-25°C)'], 'Mitsubishi'),
-    M('Série HX', 'Thermopompe murale simple zone', ['Thermopompe simple zone — Série HX'], 'Mitsubishi'),
-    M('Série JX', 'Modèle 115 V', ['Thermopompe simple zone 115V — Série JX'], 'Mitsubishi'),
+    M('Série FX', 'Thermopompe murale simple zone', ['Thermopompe simple zone — Série FX (-37°C)'], 'Mitsubishi', colonnes=[('Unité intérieure', ['Unité intérieure murale — Série FX'])]),
+    M('Série GX', 'Grand froid, -37 °C', ['Thermopompe simple zone — Série GX (-37°C)'], 'Mitsubishi', colonnes=[('Unité intérieure', ['Unité intérieure murale — Série GX'])]),
+    M('Série GX', 'Climat québécois, -25 °C', ['Thermopompe simple zone — Série GX (-25°C)'], 'Mitsubishi', colonnes=[('Unité intérieure', ['Unité intérieure murale — Série GX'])]),
+    M('Série HX', 'Thermopompe murale simple zone', ['Thermopompe simple zone — Série HX'], 'Mitsubishi', colonnes=[('Unité intérieure', ['Unité intérieure murale — Série HX'])]),
+    M('Série JX', 'Modèle 115 V', ['Thermopompe simple zone 115V — Série JX'], 'Mitsubishi', colonnes=[('Unité intérieure', ['Unité intérieure murale — Série JX (115V)'])]),
 ]
 mur['Carrier'] = [
-    M('Série Performance', 'Thermopompe murale simple zone', ['Thermopompe simple zone — Série Performance'], 'Carrier'),
-    M('Série Confort MH', 'Thermopompe murale simple zone', ['Thermopompe simple zone — Série Confort MH'], 'Carrier'),
+    M('Série Performance', 'Thermopompe murale simple zone', ['Thermopompe simple zone — Série Performance'], 'Carrier', colonnes=[('Unité intérieure', ['Unité intérieure murale — Série Performance'])]),
+    M('Série Confort MH', 'Thermopompe murale simple zone', ['Thermopompe simple zone — Série Confort MH'], 'Carrier', colonnes=[('Unité intérieure', ['Unité intérieure murale — Série Confort MH'])]),
 ]
 mur['Daikin'] = [
     M('Aurora', 'Thermopompe murale simple zone', ['Mural simple zone — Aurora'], 'Daikin'),
@@ -240,6 +258,25 @@ tbl = '''<table class="tableau-types reveal"><thead><tr><th>Type d’unité int�
 <tr><th>Cassette</th><td>Encastrée dans le plafond, à une ou quatre directions de soufflage.</td><td>Mitsubishi (1 voie et 4 voies), Carrier (Performance), Stelpro (SICB1)</td></tr>
 <tr><th>Gainable</th><td>Cachée dans le plafond, avec de courtes conduites vers les pièces.</td><td>Stelpro (SFCB1)</td></tr>
 </tbody></table>'''
+def tab_modeles_types():
+    groupes = [
+        ('Console au sol', 'Mitsubishi', ['Console simple zone — SUZ-AA (-30°C)', 'Console simple zone — SUZ-CA (-25°C)']),
+        ('Console au sol', 'Carrier', ['Unité intérieure console au sol — Série Performance']),
+        ('Console au sol', 'Daikin', ['Console simple zone — Aurora']),
+        ('Cassette', 'Mitsubishi', ['Cassette 1 voie simple zone — SUZ-AA (-30°C)', 'Cassette 1 voie simple zone — SUZ-CA (-25°C)', 'Cassette 4 voies simple zone — SUZ-AA (-30°C)', 'Cassette 4 voies simple zone — SUZ-CA (-25°C)']),
+        ('Cassette', 'Carrier', ['Unité intérieure cassette — Série Performance']),
+        ('Cassette', 'Stelpro', ['Cassette 4 voies intérieure — SICB1']),
+        ('Gainable', 'Stelpro', ['Gainable intérieur — SFCB1']),
+        ('Murale (unités intérieures seules)', 'Stelpro', ['Murale intérieure — Élite-B', 'Murale intérieure — Pro-B']),
+    ]
+    out = ''
+    for typ, m, types in groupes:
+        E = by_type(*types, marque=m)
+        vus = set(); E = [x for x in E if not (x['modele'] in vus or vus.add(x['modele']))]
+        if not E: continue
+        liste = ', '.join((x['modele'] + NB + '(' + f'{capn(x) // 1000}' + NB + '000' + NB + 'BTU)') if capn(x) else x['modele'] for x in sorted(E, key=lambda y: (capn(y), y['modele'])))
+        out += f'<tr><th>{typ}</th><td>{m}</td><td>{liste}</td></tr>'
+    return f'<details class="modeles modeles-large reveal"><summary>Voir tous les modèles de consoles, cassettes et gainables</summary><table class="tab-mod"><thead><tr><th>Type</th><th>Marque</th><th>Modèles du catalogue (capacité)</th></tr></thead><tbody>{out}</tbody></table></details>'
 qa_mz = [
     ('Qu’est-ce qu’un système multizone?', f'Une seule unité extérieure relie plusieurs unités intérieures ({zm[0]} à {zm[-1]} selon la série). Chaque pièce ou zone se règle séparément.'),
     ('Multizone ou plusieurs unités simple zone?', 'Les deux approches se valent selon la maison. Le multizone limite le nombre d’unités extérieures sur la façade; plusieurs unités simple zone donnent plus d’indépendance entre les zones. Nous comparons les deux pour votre plan.'),
@@ -251,7 +288,7 @@ body = (hero('Thermopompes multizones', 'Mitsubishi · Carrier · Daikin', 'Ther
              [('Zones par système', f'{zm[0]} à {zm[-1]}'), ('Marques', '3'), ('Types d’unités', '4'), ('Froid supporté', f'jusqu’à -{max(int(num(x.get("froid"))) for x in E_mxz)}{NB}°C')],
              'Gamme multizone de notre catalogue, relevé de novembre 2026.', 'Multizone en bref')
         + section('Nos systèmes', 'Les séries multizones que nous installons', 'Une unité extérieure, plusieurs unités intérieures.', corps_mz + NOTE_VALIDER, cls='fond-beige')
-        + section('Choisir le bon type', 'Quelle unité intérieure pour chaque pièce?', 'Les types d’unités intérieures de notre catalogue.', tbl)
+        + section('Choisir le bon type', 'Quelle unité intérieure pour chaque pièce?', 'Les types d’unités intérieures de notre catalogue.', tbl + tab_modeles_types())
         + faq('Multizone : vos questions', qa_mz)
         + lies([('Thermopompes murales', 'Les séries simple zone, par marque.'), ('Installation de thermopompe', 'Déroulement, évaluation et soumission détaillée.'), ('Thermopompes centrales', 'Pour une maison avec conduits.')])
         + FINAL)
@@ -262,7 +299,7 @@ build('produits-thermopompes-multizones.html', 'Thermopompes multizones à Jolie
 # 3. CLIMATISEUR MURAL (refroidissement seulement)
 # =====================================================================
 cl = {
- 'Mitsubishi': [serie_card('Série GX', 'Climatiseur mural simple zone', ['Climatiseur simple zone — Série GX'], 'Mitsubishi', froid='Refroidissement seul')],
+ 'Mitsubishi': [serie_card('Série GX', 'Climatiseur mural simple zone', ['Climatiseur simple zone — Série GX'], 'Mitsubishi', colonnes=[('Unité intérieure', ['Unité intérieure murale — Série GX (climatiseur)'])], froid='Refroidissement seul')],
  'Daikin': [serie_card('Oterra', 'Climatiseur mural simple zone', ['Climatiseur simple zone — Oterra'], 'Daikin', froid='Refroidissement seul')],
 }
 caps_cl = btu([x for m in cl.values() for (_, E, _) in m for x in E])
@@ -292,9 +329,9 @@ build('produits-climatiseur-mural.html', 'Climatiseur mural à Joliette : modèl
 # 4. THERMOPOMPES CENTRALES
 # =====================================================================
 ce = {
- 'Carrier': [serie_card('Crossover Performance', 'Thermopompe centrale', ['Thermopompe centrale — Crossover Performance'], 'Carrier')],
- 'Daikin': [serie_card('Daikin Fit DH7', 'Thermopompe centrale', ['Thermopompe centrale — Daikin Fit DH7'], 'Daikin'), serie_card('Daikin Fit DH9', 'Thermopompe centrale', ['Thermopompe centrale — Daikin Fit DH9'], 'Daikin')],
- 'Mitsubishi': [serie_card('SVZ-AP / SUZ-AK', 'Thermopompe centrale', ['Thermopompe centrale — SVZ-AP / SUZ-AK (-30°C)'], 'Mitsubishi'), serie_card('ZUBA Central', 'PVA-AA / PUZ-AK', ['ZUBA Central — PVA-AA / PUZ-AK (-30°C)'], 'Mitsubishi')],
+ 'Carrier': [serie_card('Crossover Performance', 'Thermopompe centrale', ['Thermopompe centrale — Crossover Performance'], 'Carrier', colonnes=[('Cabinet souffleur', ['Cabinet souffleur — Crossover Performance']), ('Serpentin', ['Serpentin — Crossover Performance (R-454B)'])])],
+ 'Daikin': [serie_card('Daikin Fit DH7', 'Thermopompe centrale', ['Thermopompe centrale — Daikin Fit DH7'], 'Daikin', colonnes=[('Cabinet souffleur', ['Cabinet souffleur — Daikin Fit (2 pos.)', 'Cabinet souffleur — Daikin Fit (multi-pos.)']), ('Serpentin', ['Serpentin — Daikin Fit (A-coil)', 'Serpentin — Daikin Fit (horizontal)'])]), serie_card('Daikin Fit DH9', 'Thermopompe centrale', ['Thermopompe centrale — Daikin Fit DH9'], 'Daikin', colonnes=[('Cabinet souffleur', ['Cabinet souffleur — Daikin Fit (2 pos.)', 'Cabinet souffleur — Daikin Fit (multi-pos.)']), ('Serpentin', ['Serpentin — Daikin Fit (A-coil)', 'Serpentin — Daikin Fit (horizontal)'])])],
+ 'Mitsubishi': [serie_card('SVZ-AP / SUZ-AK', 'Thermopompe centrale', ['Thermopompe centrale — SVZ-AP / SUZ-AK (-30°C)'], 'Mitsubishi', colonnes=[('Cabinet souffleur', ['Cabinet souffleur — SVZ-AP'])]), serie_card('ZUBA Central', 'PVA-AA / PUZ-AK', ['ZUBA Central — PVA-AA / PUZ-AK (-30°C)'], 'Mitsubishi', colonnes=[('Cabinet souffleur', ['Cabinet souffleur — PVA-AA (ZUBA Central)'])])],
 }
 all_ce = [x for m in ce.values() for (_, E, _) in m for x in E]
 caps_ce = btu(all_ce)
